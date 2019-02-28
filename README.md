@@ -5,12 +5,18 @@ The content.json is for the HD version (that requires ScaleUp), but is easily co
 # Current Config Options
 `*` Options include an `AllowBlank: true` option.
 
-whole file                     | valid values (select only one, values are seperated by a space)
+## Whole File
+These options affect the mod in general.
+
+option                         | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `PortraitStyle`*               | standard dcburger
 `MaterintySprites`             | true false
 
-standard portrait              | valid values (select only one, values are seperated by a space)
+## Standard Portraits
+These options only apply when you set `PortraitStyle` to `standard`.
+
+options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `PennyFallRainPortraitVariant` | standard alternative
 `ElliottSummerPortraitVariant` | standard alternative
@@ -19,7 +25,10 @@ standard portrait              | valid values (select only one, values are seper
 `WillyWinterPortraitVariant`   | standard alternative
 `PamSummerPortraitVariant`     | standard alternative
 
-dcburger portrait              | valid values (select only one, values are seperated by a space)
+## DCBurger Portraits
+These options only apply when you set `PortraitStyle` to `dcburger`.
+
+options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `DC_AlexVersion`               | standard darkerjacket
 `DC_ClintVersion`              | standard snow snowfog
@@ -34,7 +43,10 @@ dcburger portrait              | valid values (select only one, values are seper
 `DC_PierreVersion`             | standard fog
 `DC_SebastianVersion`          | standard choker fog chokerfog
 
-characters                     | valid values (select only one, values are seperated by a space)
+## Characters
+These options affect the character files.
+
+options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `EmilyWinterVariant`           | hatnoscarf hatscarf nohatnoscarf nohatscarf
 `HaleySummerVariant`           | indoor outdoor beach
