@@ -322,7 +322,7 @@
 
         "EmilyWinterVariant":
         {
-            "AllowValues": "hatnoscarf, hatscarf, nohatnoscard, nohatscarf",
+            "AllowValues": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf",
         },
 
         // Haley
@@ -2279,6 +2279,48 @@
             "Action": "Load",
             "Target": "Portraits/Jas",
             "FromFile": "{{Portraits}}/Jas/Jas{{WinterSeasonalVariant}}.png",
+        },
+
+        // Sandy
+
+        {
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor",
+            "Action": "Load",
+            "Target": "Characters/Sandy",
+            "FromFile": "Characters/Sandy/Sandy_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "spring, summer, fall"
+            }
+        },
+        {
+            "LogName": "Sandy Winter - Indoor",
+            "Action": "Load",
+            "Target": "Characters/Sandy",
+            "FromFile": "Characters/Sandy/Sandy{{WinterSeasonalVariant}}.png",
+        },
+
+        // Sandy Portraits
+
+        // Gunther
+
+        // Gunther Portraits
+
+        {
+            "LogName": "Gunther Spring, Summer, & Fall - Indoor",
+            "Action": "Load",
+            "Target": "Portraits/Gunther",
+            "FromFile": "{{Portraits}}/Gunther/Gunther_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "spring, summer, fall"
+            }
+        },
+        {
+            "LogName": "Gunther Winter - Indoor",
+            "Action": "Load",
+            "Target": "Portraits/Gunther",
+            "FromFile": "{{Portraits}}/Gunther/Gunther{{WinterSeasonalVariant}}.png",
         },
 
         // E N D
