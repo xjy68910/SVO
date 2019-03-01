@@ -1639,17 +1639,17 @@
             "LogName": "Lewis Summer - Indoor",
             "Action": "Load",
             "Target": "Characters/Lewis",
-            "FromFile": "Characters/Lewis/Lewis_{{season}}{{Indoor_SeasonalVariant.png",
+            "FromFile": "Characters/Lewis/Lewis_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
                 "Season": "summer",
             }
         },
         {
-            "LogName": "Vincent Spring, Summer, Fall - Rain",
+            "LogName": "Lewis Spring, Summer, Fall - Rain",
             "Action": "Load",
-            "Target": "Characters/Vincent",
-            "FromFile": "Characters/Vincent/Vincent_{{season}}{{RainSeasonalVariant}}.png",
+            "Target": "Characters/Lewis",
+            "FromFile": "Characters/Lewis/Lewis_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
                 "Season": "spring, summer"
