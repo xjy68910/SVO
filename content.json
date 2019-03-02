@@ -504,7 +504,7 @@
             {
                 "Season": "winter",
                 "Weather": "snow",
-                "EmilyWinterVariant": "hatnoscarf, hatscarf, nohatnoscard, nohatscarf"
+                "EmilyWinterVariant": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf"
             },
         },
 
