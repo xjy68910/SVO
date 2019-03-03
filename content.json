@@ -1760,16 +1760,6 @@
             }
         },
         {
-            "LogName": "Kent Spring - Indoor",
-            "Action": "Load",
-            "Target": "Characters/Kent",
-            "FromFile": "Characters/Kent/Kent_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring",
-            }
-        },
-        {
             "LogName": "Kent Winter",
             "Action": "Load",
             "Target": "Characters/Kent",
@@ -1822,6 +1812,10 @@
             "Action": "Load",
             "Target": "Characters/Jodi",
             "FromFile": "Characters/Jodi/Jodi_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring, summer"
+            }
         },
         {
             "LogName": "Jodi Fall - Indoor",
