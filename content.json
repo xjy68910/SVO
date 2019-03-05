@@ -38,6 +38,25 @@
             },
         },
 
+        // Penny
+
+        {
+            "Name": "PennyBrownHair",
+            "Value": "Brunette",
+            "When":
+            {
+                "PennyBrownHair": "true"
+            },
+        },
+        {
+            "Name": "PennyBrownHair",
+            "Value": "Standard",
+            "When":
+            {
+                "PennyBrownHair": "false"
+            },
+        },
+
         // Portraits
 
         {
@@ -230,7 +249,7 @@
         "PortraitStyle":
         {
             "AllowValues": "standard, dcburger, none",
-            "Default": "dcburger"
+            "Default": "dcburger" 
         },
         "MaternitySprites":
         {
@@ -240,10 +259,6 @@
 
         // Standard Portrait Config Options
 
-        "PennyFallRainPortraitVariant":
-        {
-            "AllowValues": "standard, alternative"
-        },
         "ElliottSummerPortraitVariant":
         {
             "AllowValues": "standard, alternative"
@@ -341,6 +356,10 @@
         "PennyFallVariant":
         {
             "AllowValues": "indoor, outdoor"
+        },
+        "PennyBrownHair":
+        {
+            "AllowValues": "true, false"
         },
         /*"PennySwimVariant":
         {
@@ -700,7 +719,7 @@
             "LogName": "Penny Spring - Indoor",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/Penny_Spring{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_Spring{{Indoor_SeasonalVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -710,13 +729,13 @@
             "LogName": "Penny Spring, Summer, & Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/Penny_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
             "LogName": "Penny Summer - Indoor",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/Penny_Summer_{{PennySummerVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_Summer_{{PennySummerVariant}}.png",
             "When":
             {
                 "PennySummerVariant": "indoor, outdoor",
@@ -728,7 +747,7 @@
             "LogName": "Penny Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/Penny_Fall_{{PennyFallVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_Fall_{{PennyFallVariant}}.png",
             "When":
             {
                 "PennyFallVariant": "indoor, outdoor",
@@ -740,7 +759,7 @@
             "LogName": "Penny Winter",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/Penny{{WinterSeasonalVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny{{WinterSeasonalVariant}}.png",
         },
 
         // Penny Portraits
@@ -749,7 +768,7 @@
             "LogName": "Penny Spring - Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/Penny_Spring{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_Spring{{Indoor_SeasonalVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -759,13 +778,13 @@
             "LogName": "Penny Spring, Summer, & Fall - Rain Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/Penny_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
             "LogName": "Penny Summer - Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/Penny_Summer_{{PennySummerVariant}}.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_Summer_{{PennySummerVariant}}.png",
             "When":
             {
                 "PennySummerVariant": "indoor, outdoor",
@@ -777,7 +796,7 @@
             "LogName": "Penny Fall - Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/Penny_Fall_{{PennyFallVariant}}.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_Fall_{{PennyFallVariant}}.png",
             "When":
             {
                 "PennyFallVariant": "indoor, outdoor",
@@ -789,7 +808,7 @@
             "LogName": "Penny Winter - Outdoor",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/Penny_Winter_Outdoor.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_Winter_Outdoor.png",
             "When":
             {
                 "Season": "winter",
@@ -2380,7 +2399,7 @@
             "LogName": "Penny Maternity",
             "Action": "EditImage",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/Penny_Maternity.png",
+            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_Maternity.png",
             "When":
             {
                 "Spouse": "Penny",
@@ -2393,7 +2412,7 @@
         // B E G I N  F E S T I V A L S P I T E S
 
         {
-            "LogName": "Abigail Festival Portrait Sprites",
+            "LogName": "Abigail Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Abigail",
             "FromFile": "Characters/Festivals/{{Festival}}/Abigail_{{Festival}}.png",
@@ -2403,7 +2422,7 @@
             },
         },
         {
-            "LogName": "Alex Festival Portrait Sprites",
+            "LogName": "Alex Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Alex",
             "FromFile": "Characters/Festivals/{{Festival}}/Alex_{{Festival}}.png",
@@ -2413,7 +2432,7 @@
             },
         },
         {
-            "LogName": "Caroline Festival Portrait Sprites",
+            "LogName": "Caroline Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Caroline",
             "FromFile": "Characters/Festivals/{{Festival}}/Caroline_{{Festival}}.png",
@@ -2423,7 +2442,7 @@
             },
         },
         {
-            "LogName": "Clint Festival Portrait Sprites",
+            "LogName": "Clint Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Clint",
             "FromFile": "Characters/Festivals/{{Festival}}/Clint_{{Festival}}.png",
@@ -2433,7 +2452,7 @@
             },
         },
         {
-            "LogName": "Demetrius Festival Portrait Sprites",
+            "LogName": "Demetrius Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Demetrius",
             "FromFile": "Characters/Festivals/{{Festival}}/Demetrius_{{Festival}}.png",
@@ -2443,7 +2462,7 @@
             },
         },
         {
-            "LogName": "Elliott Festival Portrait Sprites",
+            "LogName": "Elliott Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Elliott",
             "FromFile": "Characters/Festivals/{{Festival}}/Elliott_{{Festival}}.png",
@@ -2453,7 +2472,7 @@
             },
         },
         {
-            "LogName": "Emily Festival Portrait Sprites",
+            "LogName": "Emily Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Emily",
             "FromFile": "Characters/Festivals/{{Festival}}/Emily_{{Festival}}.png",
@@ -2463,7 +2482,7 @@
             },
         },
         {
-            "LogName": "Evelyn Festival Portrait Sprites",
+            "LogName": "Evelyn Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Evelyn",
             "FromFile": "Characters/Festivals/{{Festival}}/Evelyn_{{Festival}}.png",
@@ -2473,7 +2492,7 @@
             },
         },
         {
-            "LogName": "George Festival Portrait Sprites",
+            "LogName": "George Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/George",
             "FromFile": "Characters/Festivals/{{Festival}}/George_{{Festival}}.png",
@@ -2483,7 +2502,7 @@
             },
         },
         {
-            "LogName": "Haley Festival Portrait Sprites",
+            "LogName": "Haley Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Haley",
             "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}.png",
@@ -2493,7 +2512,7 @@
             },
         },
         {
-            "LogName": "Harvey Festival Portrait Sprites",
+            "LogName": "Harvey Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Harvey",
             "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}.png",
@@ -2503,7 +2522,7 @@
             },
         },
         {
-            "LogName": "Jas Festival Portrait Sprites",
+            "LogName": "Jas Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Jas",
             "FromFile": "Characters/Festivals/{{Festival}}/Jas_{{Festival}}.png",
@@ -2513,7 +2532,7 @@
             },
         },
         {
-            "LogName": "Jodi Festival Portrait Sprites",
+            "LogName": "Jodi Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Jodi",
             "FromFile": "Characters/Festivals/{{Festival}}/Jodi_{{Festival}}.png",
@@ -2523,7 +2542,7 @@
             },
         },
         {
-            "LogName": "Kent Festival Portrait Sprites",
+            "LogName": "Kent Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Kent",
             "FromFile": "Characters/Festivals/{{Festival}}/Kent_{{Festival}}.png",
@@ -2533,7 +2552,7 @@
             },
         },
         {
-            "LogName": "Leah Festival Portrait Sprites",
+            "LogName": "Leah Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Leah",
             "FromFile": "Characters/Festivals/{{Festival}}/Leah_{{Festival}}.png",
@@ -2543,7 +2562,7 @@
             },
         },
         {
-            "LogName": "Lewis Festival Portrait Sprites",
+            "LogName": "Lewis Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Lewis",
             "FromFile": "Characters/Festivals/{{Festival}}/Lewis_{{Festival}}.png",
@@ -2553,7 +2572,7 @@
             },
         },
         {
-            "LogName": "Marnie Festival Portrait Sprites",
+            "LogName": "Marnie Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Marnie",
             "FromFile": "Characters/Festivals/{{Festival}}/Marnie_{{Festival}}.png",
@@ -2563,7 +2582,7 @@
             },
         },
         {
-            "LogName": "Maru Festival Portrait Sprites",
+            "LogName": "Maru Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Maru",
             "FromFile": "Characters/Festivals/{{Festival}}/Maru_{{Festival}}.png",
@@ -2573,7 +2592,7 @@
             },
         },
         {
-            "LogName": "Pam Festival Portrait Sprites",
+            "LogName": "Pam Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Pam",
             "FromFile": "Characters/Festivals/{{Festival}}/Pam_{{Festival}}.png",
@@ -2583,17 +2602,29 @@
             },
         },
         {
-            "LogName": "Penny Festival Portrait Sprites",
+            "LogName": "Penny Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Penny",
             "FromFile": "Characters/Festivals/{{Festival}}/Penny_{{Festival}}.png",
             "When":
             {
                 "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}.png": true,
+                "PennyBrownHair": "false"
             },
         },
         {
-            "LogName": "Pierre Festival Portrait Sprites",
+            "LogName": "Penny Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Penny",
+            "FromFile": "Characters/Festivals/AlternativeSprites/{{Festival}}/Penny_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/Alternative/{{Festival}}/Penny_{{Festival}}.png": true,
+                "PennyBrownHair": "true"
+            },
+        },
+        {
+            "LogName": "Pierre Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Pierre",
             "FromFile": "Characters/Festivals/{{Festival}}/Pierre_{{Festival}}.png",
@@ -2603,7 +2634,7 @@
             },
         },
         {
-            "LogName": "Robin Festival Portrait Sprites",
+            "LogName": "Robin Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Robin",
             "FromFile": "Characters/Festivals/{{Festival}}/Robin_{{Festival}}.png",
@@ -2613,7 +2644,7 @@
             },
         },
         {
-            "LogName": "Sam Festival Portrait Sprites",
+            "LogName": "Sam Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Sam",
             "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}.png",
@@ -2623,7 +2654,7 @@
             },
         },
         {
-            "LogName": "Sebastian Festival Portrait Sprites",
+            "LogName": "Sebastian Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Sebastian",
             "FromFile": "Characters/Festivals/{{Festival}}/Sebastian_{{Festival}}.png",
@@ -2633,7 +2664,7 @@
             },
         },
         {
-            "LogName": "Shane Festival Portrait Sprites",
+            "LogName": "Shane Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Shane",
             "FromFile": "Characters/Festivals/{{Festival}}/Shane_{{Festival}}.png",
@@ -2643,7 +2674,7 @@
             },
         },
         {
-            "LogName": "Vincent Festival Portrait Sprites",
+            "LogName": "Vincent Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Vincent",
             "FromFile": "Characters/Festivals/{{Festival}}/Vincent_{{Festival}}.png",
@@ -2653,7 +2684,7 @@
             },
         },
         {
-            "LogName": "Willy Festival Portrait Sprites",
+            "LogName": "Willy Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Willy",
             "FromFile": "Characters/Festivals/{{Festival}}/Willy_{{Festival}}.png",
@@ -2861,10 +2892,22 @@
             "LogName": "Penny Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Penny_{{Festival}}.png",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Penny_{{Festival}}.png",
             "When":
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}.png": true,
+                "PennyBrownHair": "false"
+            },
+        },
+        {
+            "LogName": "Penny Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/Festivals/AlternativeSprites/{{Festival}}/Penny_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/Alternative/{{Festival}}/Penny_{{Festival}}.png": true,
+                "PennyBrownHair": "true"
             },
         },
         {
