@@ -41,7 +41,7 @@
         // Penny
 
         {
-            "Name": "PennyBrownHair",
+            "Name": "PennyHair",
             "Value": "Brunette",
             "When":
             {
@@ -49,7 +49,7 @@
             },
         },
         {
-            "Name": "PennyBrownHair",
+            "Name": "PennyHair",
             "Value": "Standard",
             "When":
             {
@@ -719,7 +719,7 @@
             "LogName": "Penny Spring - Indoor",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_Spring{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyHair}}/Penny_Spring{{Indoor_SeasonalVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -729,13 +729,13 @@
             "LogName": "Penny Spring, Summer, & Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyHair}}/Penny_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
             "LogName": "Penny Summer - Indoor",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_Summer_{{PennySummerVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyHair}}/Penny_Summer_{{PennySummerVariant}}.png",
             "When":
             {
                 "PennySummerVariant": "indoor, outdoor",
@@ -747,7 +747,7 @@
             "LogName": "Penny Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_Fall_{{PennyFallVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyHair}}/Penny_Fall_{{PennyFallVariant}}.png",
             "When":
             {
                 "PennyFallVariant": "indoor, outdoor",
@@ -759,7 +759,7 @@
             "LogName": "Penny Winter",
             "Action": "Load",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny{{WinterSeasonalVariant}}.png",
+            "FromFile": "Characters/Penny/{{PennyHair}}/Penny{{WinterSeasonalVariant}}.png",
         },
 
         // Penny Portraits
@@ -768,7 +768,7 @@
             "LogName": "Penny Spring - Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_Spring{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_Spring{{Indoor_SeasonalVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -778,13 +778,13 @@
             "LogName": "Penny Spring, Summer, & Fall - Rain Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
             "LogName": "Penny Summer - Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_Summer_{{PennySummerVariant}}.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_Summer_{{PennySummerVariant}}.png",
             "When":
             {
                 "PennySummerVariant": "indoor, outdoor",
@@ -796,7 +796,7 @@
             "LogName": "Penny Fall - Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_Fall_{{PennyFallVariant}}.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_Fall_{{PennyFallVariant}}.png",
             "When":
             {
                 "PennyFallVariant": "indoor, outdoor",
@@ -808,7 +808,7 @@
             "LogName": "Penny Winter - Outdoor",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/{{PennyBrownHair}}/Penny_Winter_Outdoor.png",
+            "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_Winter_Outdoor.png",
             "When":
             {
                 "Season": "winter",
