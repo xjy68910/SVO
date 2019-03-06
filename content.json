@@ -808,12 +808,7 @@
             "LogName": "Penny Winter - Outdoor",
             "Action": "Load",
             "Target": "Portraits/Penny",
-            "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_Winter_Outdoor.png",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "snow"
-            },
+            "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_{{WinterSeasonalVariant}}.png",
         },
 
         // Leah
