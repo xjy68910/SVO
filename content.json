@@ -38,25 +38,6 @@
             },
         },
 
-        // Penny
-
-        {
-            "Name": "PennyHair",
-            "Value": "Brunette",
-            "When":
-            {
-                "PennyBrownHair": "true"
-            },
-        },
-        {
-            "Name": "PennyHair",
-            "Value": "Standard",
-            "When":
-            {
-                "PennyBrownHair": "false"
-            },
-        },
-
         // Portraits
 
         {
@@ -75,7 +56,6 @@
                 "PortraitStyle": "dcburger"
             },
         },
-
 
         // Festivals
 
@@ -249,7 +229,7 @@
         "PortraitStyle":
         {
             "AllowValues": "standard, dcburger, none",
-            "Default": "dcburger" 
+            "Default": "dcburger"
         },
         "MaternitySprites":
         {
@@ -357,9 +337,9 @@
         {
             "AllowValues": "indoor, outdoor"
         },
-        "PennyBrownHair":
+        "PennyHair":
         {
-            "AllowValues": "true, false"
+            "AllowValues": "standard, brunette"
         },
         /*"PennySwimVariant":
         {
@@ -465,6 +445,13 @@
         {
             "AllowValues": "censored, grassskirt"
         },*/
+
+        // Wizard
+
+        "WizardVersion":
+        {
+            "AllowValues": "standard, pale, saturated"
+        },
     },
 
     "Changes": [
@@ -723,6 +710,7 @@
             "When":
             {
                 "Season": "spring",
+                "PennyHair": "standard, brunette",
             },
         },
         {
@@ -730,6 +718,10 @@
             "Action": "Load",
             "Target": "Characters/Penny",
             "FromFile": "Characters/Penny/{{PennyHair}}/Penny_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "PennyHair": "standard, brunette",
+            }
         },
         {
             "LogName": "Penny Summer - Indoor",
@@ -739,6 +731,7 @@
             "When":
             {
                 "PennySummerVariant": "indoor, outdoor",
+                "PennyHair": "standard, brunette",
                 "Season": "summer",
                 "Weather": "sun, wind, snow"
             },
@@ -751,6 +744,7 @@
             "When":
             {
                 "PennyFallVariant": "indoor, outdoor",
+                "PennyHair": "standard, brunette",
                 "Season": "fall",
                 "Weather": "sun, wind, snow"
             },
@@ -760,6 +754,10 @@
             "Action": "Load",
             "Target": "Characters/Penny",
             "FromFile": "Characters/Penny/{{PennyHair}}/Penny{{WinterSeasonalVariant}}.png",
+            "When":
+            {
+                "PennyHair": "standard, brunette",
+            }
         },
 
         // Penny Portraits
@@ -772,6 +770,7 @@
             "When":
             {
                 "Season": "spring",
+                "PennyHair": "standard, brunette",
             }
         },
         {
@@ -779,6 +778,10 @@
             "Action": "Load",
             "Target": "Portraits/Penny",
             "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "PennyHair": "standard, brunette",
+            }
         },
         {
             "LogName": "Penny Summer - Indoor Portrait",
@@ -788,6 +791,7 @@
             "When":
             {
                 "PennySummerVariant": "indoor, outdoor",
+                "PennyHair": "standard, brunette",
                 "Season": "summer",
                 "Weather": "sun, wind, snow"
             }
@@ -800,6 +804,7 @@
             "When":
             {
                 "PennyFallVariant": "indoor, outdoor",
+                "PennyHair": "standard, brunette",
                 "Season": "fall",
                 "Weather": "sun, wind, snow"
             }
@@ -809,6 +814,10 @@
             "Action": "Load",
             "Target": "Portraits/Penny",
             "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_{{WinterSeasonalVariant}}.png",
+            "When":
+            {
+                "PennyHair": "standard, brunette",
+            }
         },
 
         // Leah
@@ -2301,14 +2310,71 @@
                 "Season": "spring, summer, fall"
             }
         },
-        {
-            "LogName": "Sandy Winter - Indoor",
-            "Action": "Load",
-            "Target": "Characters/Sandy",
-            "FromFile": "Characters/Sandy/Sandy{{WinterSeasonalVariant}}.png",
-        },
 
         // Sandy Portraits
+
+        {
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Sandy",
+            "FromFile": "{{Portraits}}/Sandy/Sandy_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "spring, summer, fall"
+            }
+        },
+
+        // Wizard
+
+        {
+            "LogName": "Wizard Spring & Summer - Indoor",
+            "Action": "Load",
+            "Target": "Characters/Wizard",
+            "FromFile": "Characters/Wizard/{{WizardVersion}}/Wizard_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "spring, summer",
+                "WizardVersion": "standard, pale, saturated",
+            }
+        },
+        {
+            "LogName": "Wizard Winter - Indoor",
+            "Action": "Load",
+            "Target": "Characters/Wizard",
+            "FromFile": "Characters/Wizard/{{WizardVersion}}/Wizard_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "sun, wind, storm, rain",
+                "WizardVersion": "standard, pale, saturated",
+            }
+        },
+
+        // Wizard Portraits
+
+        {
+            "LogName": "Wizard Spring & Summer - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Wizard",
+            "FromFile": "{{Portraits}}/Wizard/{{WizardVersion}}/Wizard_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "spring, summer",
+                "WizardVersion": "standard, pale, saturated",
+            }
+        },
+        {
+            "LogName": "Wizard Winter - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Wizard",
+            "FromFile": "{{Portraits}}/Wizard/{{WizardVersion}}/Wizard_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "sun, wind, storm, rain",
+                "WizardVersion": "standard, pale, saturated",
+            }
+        },
 
         // Gunther
 
@@ -2394,10 +2460,11 @@
             "LogName": "Penny Maternity",
             "Action": "EditImage",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Penny/{{PennyBrownHair}}/Penny_Maternity.png",
+            "FromFile": "Characters/Penny/{{PennyHair}}/Penny_Maternity.png",
             "When":
             {
                 "Spouse": "Penny",
+                "PennyHair": "standard, brunette",
                 "MaternitySprites": "true"
             }
         },
