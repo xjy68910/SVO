@@ -54,6 +54,7 @@ options                        | valid values (select only one, values are seper
 `HaleySummerVariant`           | indoor outdoor beach
 `PennySummerVariant`           | indoor outdoor
 `PennyFallVariant`             | indoor outdoor
+`PennyHair`                    | standard brunette
 `LeahSummerVariant`            | indoor outdoor
 `LeahWinterColorVariant`       | red blue
 `LeahWinterHood`               | up down
@@ -68,3 +69,6 @@ options                        | valid values (select only one, values are seper
 `CarolineSummerVariant`        | indoor outdoor
 `CarolineFallVariant`          | indoor outdoor
 `ClintVariant`                 | standard alternative noapron
+`WizardEnabled`                | true false
+`WizardVersion`                | standard pale saturated
+`SandyEnabled`                 | true false
