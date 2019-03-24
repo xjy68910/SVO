@@ -1080,12 +1080,7 @@
             "LogName": "Elliott Winter - Indoor",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/Elliott/Elliott_Winter_Indoor.png",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind, storm, rain"
-            },
+            "FromFile": "{{Portraits}}/Elliott/Elliott{{WinterSeasonalVariant}}.png",
         },
 
         // Harvey
@@ -2099,6 +2094,7 @@
             "FromFile": "Characters/Clint/{{ClintVersion}}/Clint_{{season}}_Indoor.png",
             "When":
             {
+                "Season": "spring, summer, fall",
                 "ClintVersion": "standard"
             }
         },
