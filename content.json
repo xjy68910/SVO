@@ -444,9 +444,22 @@
 
         // Wizard
 
+        "WizardEnabled":
+        {
+            "AllowValues": "true, false",
+            "Default": "false"
+        },
         "WizardVersion":
         {
             "AllowValues": "standard, pale, saturated"
+        },
+
+        // Sandy
+
+        "SandyEnabled":
+        {
+            "AllowValues": "true, false",
+            "Default": "false"
         },
     },
 
@@ -2315,7 +2328,8 @@
             "FromFile": "Characters/Sandy/Sandy_{{season}}_Indoor.png",
             "When":
             {
-                "Season": "spring, summer, fall"
+                "Season": "spring, summer, fall",
+                "SandyEnabled": "true"
             }
         },
 
@@ -2328,7 +2342,8 @@
             "FromFile": "{{Portraits}}/Sandy/Sandy_{{season}}_Indoor.png",
             "When":
             {
-                "Season": "spring, summer, fall"
+                "Season": "spring, summer, fall",
+                "SandyEnabled": "true"
             }
         },
 
@@ -2343,6 +2358,7 @@
             {
                 "Season": "spring, summer",
                 "WizardVersion": "standard, pale, saturated",
+                "WizardEnabled": "true"
             }
         },
         {
@@ -2355,6 +2371,7 @@
                 "Season": "winter",
                 "Weather": "sun, wind, storm, rain",
                 "WizardVersion": "standard, pale, saturated",
+                "WizardEnabled": "true"
             }
         },
 
@@ -2369,6 +2386,7 @@
             {
                 "Season": "spring, summer",
                 "WizardVersion": "standard, pale, saturated",
+                "WizardEnabled": "true"
             }
         },
         {
@@ -2381,6 +2399,7 @@
                 "Season": "winter",
                 "Weather": "sun, wind, storm, rain",
                 "WizardVersion": "standard, pale, saturated",
+                "WizardEnabled": "true"
             }
         },
 
