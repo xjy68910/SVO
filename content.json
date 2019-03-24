@@ -2677,7 +2677,7 @@
             "When":
             {
                 "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}.png": true,
-                "PennyBrownHair": "false"
+                "PennyHair": "standard"
             },
         },
         {
@@ -2688,7 +2688,7 @@
             "When":
             {
                 "HasFile:Characters/Festivals/Alternative/{{Festival}}/Penny_{{Festival}}.png": true,
-                "PennyBrownHair": "true"
+                "PennyHair": "brunette"
             },
         },
         {
@@ -2964,7 +2964,7 @@
             "When":
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}.png": true,
-                "PennyBrownHair": "false"
+                "PennyHair": "standard"
             },
         },
         {
@@ -2975,7 +2975,7 @@
             "When":
             {
                 "HasFile:Portraits/Festivals/Alternative/{{Festival}}/Penny_{{Festival}}.png": true,
-                "PennyBrownHair": "true"
+                "PennyHair": "brunette"
             },
         },
         {
