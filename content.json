@@ -2145,10 +2145,36 @@
         // Clint Portraits
 
         {
-            "LogName": "Clint - Indoor",
+            "LogName": "Clint Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Clint/Clint_Fall_Indoor.png",
+            "FromFile": "{{Portraits}}/Clint/Clint_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "summer, fall"
+            }
+        },
+        {
+            "LogName": "Clint Spring Rain - Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Clint",
+            "FromFile": "{{Portraits}}/Clint/Clint_Spring_Indoor_Rain.png",
+            "When":
+            {
+                "Season": "spring",
+                "Weather": "rain, storm"
+            }
+        },
+        {
+            "LogName": "Clint - Winter Outdoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Clint",
+            "FromFile": "{{Portraits}}/Clint/Clint_Winter_Outdoor.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "snow"
+            }
         },
 
         // Willy
