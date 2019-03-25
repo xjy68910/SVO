@@ -4,7 +4,7 @@
    "Version": "1.2.10",
    "Description": "Changes what the villagers wear to match the season.",
    "UniqueID": "Tanpoponoko.SeasonalOutfits",
-    "MinimumApiVersion": "2.10.1",
+    "MinimumApiVersion": "2.11.1",
 "UpdateKeys": [ "Nexus:2449" ],
    "ContentPackFor": {
       "UniqueID": "Pathoschild.ContentPatcher",
