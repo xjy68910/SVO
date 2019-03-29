@@ -243,6 +243,10 @@
         {
             "AllowValues": "standard, alternative"
         },
+        "ElliottPortraitStyle":
+        {
+            "AllowValues": "standard, frontfacing"
+        },
         "SamSummerPortraitVariant":
         {
             "AllowValues": "standard, alternative"
@@ -460,6 +464,11 @@
         {
             "AllowValues": "true, false",
             "Default": "false"
+        },
+        "SandyVersion":
+        {
+            "AllowValues": "standard, alternative, zola",
+            "Default": "standard"
         },
     },
 
@@ -1060,40 +1069,47 @@
             "LogName": "Elliott Spring - Indoor",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/Elliott/Elliott_Spring{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott_Spring{{Indoor_SeasonalVariant}}.png",
             "When":
             {
                 "Season": "spring",
+                "ElliottPortraitStyle": "standard, frontfacing"
             }
         },
         {
             "LogName": "Elliott Summer - Indoor v1",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/Elliott/Elliott_Summer_Indoor_{{ElliottSummerVariant}}_{{ElliottSummerPortraitVariant}}.png",
+            "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott_Summer_Indoor_{{ElliottSummerVariant}}_{{ElliottSummerPortraitVariant}}.png",
             "When":
             {
                 "Season": "summer",
                 "ElliottSummerVariant": "nosuspenders, suspenders",
                 "Weather": "sun, wind, snow",
                 "ElliottSummerPortraitVariant": "standard, alternative",
+                "ElliottPortraitStyle": "standard, frontfacing"
             }
         },
         {
             "LogName": "Elliott Fall - Indoor Rain",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/Elliott/Elliott_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
                 "Season": "fall",
+                "ElliottPortraitStyle": "standard, frontfacing"
             }
         },
         {
             "LogName": "Elliott Winter - Indoor",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/Elliott/Elliott{{WinterSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott{{WinterSeasonalVariant}}.png",
+            "When":
+            {
+                "ElliottPortraitStyle": "standard, frontfacing"
+            }
         },
 
         // Harvey
@@ -2348,14 +2364,39 @@
         // Sandy
 
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor",
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor (All Versions)",
             "Action": "Load",
             "Target": "Characters/Sandy",
-            "FromFile": "Characters/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "Characters/{{SandyVersion}}/Sandy/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "Season": "spring, summer, fall",
-                "SandyEnabled": "true"
+                "SandyEnabled": "true",
+                "SandyVersion": "standard, alternative, zola"
+            }
+        },
+        {
+            "LogName": "Sandy Winter - Indoor (Alternative)",
+            "Action": "Load",
+            "Target": "Characters/Sandy",
+            "FromFile": "Characters/{{SandyVersion}}/Sandy/Sandy_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "winter",
+                "SandyEnabled": "true",
+                "SandyVersion": "alternative"
+            }
+        },
+        {
+            "LogName": "Sandy Player Wedding (Zola)",
+            "Action": "Load",
+            "Target": "Characters/Sandy",
+            "FromFile": "Characters/{{SandyVersion}}/Sandy/Sandy_Wedding.png",
+            "When":
+            {
+                "DayEvent": "wedding",
+                "SandyEnabled": "true",
+                "SandyVersion": "zola"
             }
         },
 
@@ -2365,11 +2406,12 @@
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/{{SandyVersion}}/Sandy/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "Season": "spring, summer, fall",
-                "SandyEnabled": "true"
+                "SandyEnabled": "true",
+                "SandyVersion": "standard"
             }
         },
 
