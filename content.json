@@ -474,6 +474,10 @@
             "AllowValues": "standard, alternative, zola",
             "Default": "standard"
         },
+        "SandyPortraitVersion": // Front version works for alternative only
+        {
+            "AllowValues": "side, front"
+        },
 
         // Maru
 
@@ -1424,32 +1428,16 @@
         // Sebastian
 
         {
-            "LogName": "Sebastian Fall - Outdoor",
-            "Action": "Load",
-            "Target": "Characters/Sebastian",
-            "FromFile": "Characters/Sebastian/Sebastian_Fall_{{SebastainFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "SebastainFallVariant": "indoor, outdoor",
-                "Weather": "sun, wind, snow"
-            }
-        },
-        {
             "LogName": "Sebastian Spring, Summer, Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Sebastian",
             "FromFile": "Characters/Sebastian/Sebastian_Fall{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Sebastian Summer & Winter - Indoor",
+            "LogName": "Sebastian Spring, Summer & Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Sebastian",
             "FromFile": "Characters/Sebastian/Sebastian_{{Season}}{{Indoor_SeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring, summer",
-            }
         },
         {
             "LogName": "Sebastian Winter",
@@ -1461,30 +1449,19 @@
         // Sebastian Portraits
 
         {
-            "LogName": "Sebastian Fall - Indoor",
+            "LogName": "Sebastian Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Sebastian",
-            "FromFile": "{{Portraits}}/Sebastian/Sebastian_Fall_Indoor.png",
-            "When":
-            {
-                "Season": "fall",
-                "SebastainFallVariant": "indoor",
-                "Weather": "sun, wind, snow",
-            }
+            "FromFile": "{{Portraits}}/Sebastian/Sebastian_Fall{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Sebastian Summer - Indoor",
+            "LogName": "Sebastian Spring, Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Sebastian",
-            "FromFile": "{{Portraits}}/Sebastian/Sebastian_Summer_Indoor.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "rain, storm, sun",
-            }
+            "FromFile": "{{Portraits}}/Sebastian/Sebastian_{{Season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Sebastian Winter",
+            "LogName": "Sebastian Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Sebastian",
             "FromFile": "{{Portraits}}/Sebastian/Sebastian{{WinterSeasonalVariant}}.png",
@@ -1518,39 +1495,23 @@
         // Sam Portraits
 
         {
-            "LogName": "Sam Summer - Indoor",
+            "LogName": "Sam Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Sam",
-            "FromFile": "{{Portraits}}/Sam/Sam_Summer_Indoor_{{SamSummerPortraitVariant}}.png",
+            "FromFile": "{{Portraits}}/Sam/Sam_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "Sam Summer & Fall - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Sam",
+            "FromFile": "{{Portraits}}/Sam/Sam_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "SamSummerPortraitVariant": "standard, alternative",
+                "Season": "summer, fall",
             }
         },
         {
-            "LogName": "Sam Fall - Outdoor Rain",
-            "Action": "Load",
-            "Target": "Portraits/Sam",
-            "FromFile": "{{Portraits}}/Sam/Sam_Fall{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-            },
-        },
-        {
-            "LogName": "Sam Fall - Outdoor ",
-            "Action": "Load",
-            "Target": "Portraits/Sam",
-            "FromFile": "{{Portraits}}/Sam/Sam_Fall_Indoor.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "sun, wind, snow",
-            }
-        },
-        {
-            "LogName": "Sam Winter - Indoor",
+            "LogName": "Sam Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Sam",
             "FromFile": "{{Portraits}}/Sam/Sam{{WinterSeasonalVariant}}.png",
@@ -1677,25 +1638,41 @@
         // Robin Portraits
 
         {
-            "LogName": "Robin Spring Hair Up - Indoor Portrait",
+            "LogName": "Robin Spring Hair - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Robin",
             "FromFile": "{{Portraits}}/Robin/Robin_Spring_{{RobinHairStyle}}.png",
             "When":
             {
                 "Season": "spring",
-                "RobinHairStyle": "up",
+                "RobinHairStyle": "up, down"
             }
         },
         {
-            "LogName": "Robin Summer - Indoor Portrait",
+            "LogName": "Robin Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Robin",
-            "FromFile": "{{Portraits}}/Robin/Robin_Summer_Indoor.png",
+            "FromFile": "{{Portraits}}/Robin/Robin_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "summer, fall",
+            }
+        },
+        {
+            "LogName": "Robin Summer - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Robin",
+            "FromFile": "{{Portraits}}/Robin/Robin_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
                 "Season": "summer",
             }
+        },
+        {
+            "LogName": "Robin Winter Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Robin",
+            "FromFile": "{{Portraits}}/Robin/Robin{{WinterSeasonalVariant}}.png",
         },
 
         // Demetrius
@@ -2511,15 +2488,40 @@
         // Sandy Portraits
 
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits",
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Standard",
             "Action": "Load",
             "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/{{SandyVersion}}/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Standard/Sandy/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "Season": "spring, summer, fall",
                 "SandyEnabled": "true",
-                "SandyVersion": "standard"
+                "SandyVersion": "standard",
+                "SandyPortraitVersion": "side"
+            }
+        },
+        {
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Alternative",
+            "Action": "Load",
+            "Target": "Portraits/Sandy",
+            "FromFile": "{{Portraits}}/AlternativeSide/Sandy/Sandy_{{season}}_Indoor.png",
+            "When":
+            {
+                "SandyEnabled": "true",
+                "SandyVersion": "alternative",
+                "SandyPortraitVersion": "side"
+            }
+        },
+        {
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Alternative (Front)",
+            "Action": "Load",
+            "Target": "Portraits/Sandy",
+            "FromFile": "{{Portraits}}/AlternativeSide/Sandy/Sandy_{{season}}_Indoor.png",
+            "When":
+            {
+                "SandyEnabled": "true",
+                "SandyVersion": "alternative",
+                "SandyPortraitVersion": "front"
             }
         },
 
