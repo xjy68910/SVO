@@ -251,15 +251,7 @@
         {
             "AllowValues": "standard, alternative"
         },
-        "MarnieSummerPortraitVariant":
-        {
-            "AllowValues": "standard, alternative"
-        },
         "WillyWinterPortraitVariant":
-        {
-            "AllowValues": "standard, alternative"
-        },
-        "PamSummerPortraitVariant":
         {
             "AllowValues": "standard, alternative"
         },
@@ -323,12 +315,24 @@
         {
             "AllowValues": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf",
         },
+        "EmilySpringVersion":
+        {
+            "AllowValues": "pink, yellow, sleeves, nosleeves"
+        },
 
         // Haley
 
         "HaleySummerVariant":
         {
             "AllowValues": "indoor, outdoor, beach"
+        },
+        "HaleyFallColor":
+        {
+            "AllowValues": "red, blue"
+        },
+        "HaleyWinterColor":
+        {
+            "AllowValues": "grey, pink"
         },
 
         // Penny
@@ -427,7 +431,7 @@
 
         "ClintVersion":
         {
-            "AllowValues": "standard, alternative, noapron"
+            "AllowValues": "apron, noapron"
         },
 
         /*// Swimsuit Config (TBA)
@@ -470,6 +474,24 @@
             "AllowValues": "standard, alternative, zola",
             "Default": "standard"
         },
+
+        // Maru
+
+        "MaruScrubColor":
+        {
+            "AllowValues": "dark, light, white"
+        },
+
+        // Harvey
+
+        "HarveySpringVariant":
+        {
+            "AllowValues": "vest, novest"
+        },
+        "HarveyFallRainVariant":
+        {
+            "AllowValues": "blackredscarf, brownnoscarf"
+        },
     },
 
     "Changes": [
@@ -479,34 +501,31 @@
         // Emily
 
         {
-            "LogName": "Emily Spring & Summer - Rain",
+            "LogName": "Emily Spring, Summer & Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Emily",
             "FromFile": "Characters/Emily/Emily_{{season}}{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring, summer"
-            }
         },
         {
-            "LogName": "Emily Spring & Summer - Indoor",
+            "LogName": "Emily Fall & Summer - Indoor",
             "Action": "Load",
             "Target": "Characters/Emily",
             "FromFile": "Characters/Emily/Emily_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "spring, summer"
+                "Season": "fall, summer"
             }
         },
         {
-            "LogName": "Emily Fall - Indoor",
+            "LogName": "Emily Spring",
             "Action": "Load",
             "Target": "Characters/Emily",
-            "FromFile": "Characters/Emily/Emily_Fall_Indoor.png",
+            "FromFile": "Characters/Emily/Emily_Spring_Indoor_{{EmilySpringVersion}}.png",
             "When":
             {
-                "Season": "fall",
-            },
+                "Season": "spring",
+                "EmilySpringVersion": "pink, yellow, sleeves, nosleeves"
+            }
         },
         {
             "LogName": "Emily Winter - Indoor",
@@ -520,7 +539,7 @@
             },
         },
         {
-            "LogName": "Emily Winter",
+            "LogName": "Emily Winter - Outdoor",
             "Action": "Load",
             "Target": "Characters/Emily",
             "FromFile": "Characters/Emily/Emily_Winter_Outdoor_{{EmilyWinterVariant}}.png",
@@ -535,26 +554,54 @@
         // Emily Portrait
 
         {
-            "LogName": "Emily Spring/Summer - Rain Portrait",
+            "LogName": "Emily Spring, Summer & Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Emily",
             "FromFile": "{{Portraits}}/Emily/Emily_{{season}}{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring, summer",
-            }
         },
         {
-            "LogName": "Emily Spring, Summer, & Fall - Portrait",
+            "LogName": "Emily Fall & Summer - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Emily",
             "FromFile": "{{Portraits}}/Emily/Emily_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "fall, summer"
+            }
         },
         {
-            "LogName": "Emily Winter Portrait",
+            "LogName": "Emily Spring Portraits",
             "Action": "Load",
             "Target": "Portraits/Emily",
-            "FromFile": "{{Portraits}}/Emily/Emily{{WinterSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Emily/Emily_Spring_Indoor_{{EmilySpringVersion}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "EmilySpringVersion": "pink, yellow, sleeves, nosleeves"
+            }
+        },
+        {
+            "LogName": "Emily Winter - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Emily",
+            "FromFile": "{{Portraits}}/Emily/Emily_Winter_Indoor.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "sun, wind, storm, rain"
+            },
+        },
+        {
+            "LogName": "Emily Winter - Outdoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Emily",
+            "FromFile": "{{Portraits}}/Emily/Emily_Winter_Outdoor_{{EmilyWinterVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "snow",
+                "EmilyWinterVariant": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf"
+            },
         },
 
         // Maru
@@ -578,6 +625,19 @@
             "FromFile": "Characters/Maru/Maru{{WinterSeasonalVariant}}.png",
         },
 
+        // Maru Hospital
+
+        {
+            "LogName": "Maru Hospital",
+            "Action": "Load",
+            "Target": "Characters/Maru_Hospital",
+            "FromFile": "Characters/Maru/Maru_Hospital_{{MaruScrubColor}}.png",
+            "When":
+            {
+                "MaruScrubColor": "dark, light, white"
+            }
+        },
+
         // Maru Portraits
 
         {
@@ -599,33 +659,62 @@
             "FromFile": "{{Portraits}}/Maru/Maru{{WinterSeasonalVariant}}.png",
         },
 
+        // Maru Hopsital Portraits
+
+        {
+            "LogName": "Maru Hospital Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Maru_Hospital",
+            "FromFile": "{{Portraits}}/Maru/Maru_Hospital_{{MaruScrubColor}}.png",
+            "When":
+            {
+                "MaruScrubColor": "dark, light, white"
+            }
+        },
+
         // Haley
 
         {
             "LogName": "Haley Fall Indoor",
             "Action": "Load",
             "Target": "Characters/Haley",
-            "FromFile": "Characters/Haley/Haley_Fall{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "Characters/Haley/Haley_Fall{{Indoor_SeasonalVariant}}_{{HaleyFallColor}}.png",
             "When":
             {
                 "Season": "fall",
+                "HaleyFallColor": "red, blue"
             }
         },
         {
             "LogName": "Haley Spring & Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Haley",
-            "FromFile": "Characters/Haley/Haley_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "Characters/Haley/Haley_{{season}}{{RainSeasonalVariant}}_{{HaleyFallColor}}.png",
             "When":
             {
-                "Season": "spring, fall"
+                "Season": "fall",
+                "HaleyFallColor": "red, blue"
             }
         },
         {
-            "LogName": "Haley Winter",
+            "LogName": "Haley Spring - Indoor",
             "Action": "Load",
             "Target": "Characters/Haley",
-            "FromFile": "Characters/Haley/Haley{{WinterSeasonalVariant}}.png",
+            "FromFile": "Characters/Haley/Haley_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+            }
+        },
+        {
+            "LogName": "Haley Spring - Indoor Rain",
+            "Action": "Load",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Haley/Haley_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+            }
         },
         {
             "LogName": "Haley Summer - Indoor",
@@ -638,45 +727,80 @@
                 "Season": "summer"
             }
         },
-
+        {
+            "LogName": "Haley Winter",
+            "Action": "Load",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Haley/Haley{{WinterSeasonalVariant}}_{{HaleyWinterColor}}.png",
+            "When":
+            {
+                "HaleyWinterColor": "grey, pink"
+            }
+        },
 
         // Haley Portrait
 
         {
-            "LogName": "Haley Summer - Indoor Portrait",
+            "LogName": "Haley Fall Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Haley",
+            "FromFile": "{{Portraits}}/Haley/Haley_Fall{{Indoor_SeasonalVariant}}_{{HaleyFallColor}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HaleyFallColor": "red, blue"
+            }
+        },
+        {
+            "LogName": "Haley Spring & Fall - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Haley",
+            "FromFile": "{{Portraits}}/Haley/Haley_{{season}}{{RainSeasonalVariant}}_{{HaleyFallColor}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HaleyFallColor": "red, blue"
+            }
+        },
+        {
+            "LogName": "Haley Spring - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Haley",
+            "FromFile": "{{Portraits}}/Haley/Haley_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+            }
+        },
+        {
+            "LogName": "Haley Spring - Indoor Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Haley",
+            "FromFile": "{{Portraits}}/Haley/Haley_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+            }
+        },
+        {
+            "LogName": "Haley Summer - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Haley",
             "FromFile": "{{Portraits}}/Haley/Haley_Summer_{{HaleySummerVariant}}.png",
             "When":
             {
                 "HaleySummerVariant": "indoor, outdoor, beach",
-                "Season": "summer",
+                "Season": "summer"
             }
         },
         {
-            "LogName": "Haley Spring & Fall - Indoor Rain Portrait",
+            "LogName": "Haley Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Haley",
-            "FromFile": "{{Portraits}}/Haley/Haley_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Haley/Haley{{WinterSeasonalVariant}}_{{HaleyWinterColor}}.png",
             "When":
             {
-                "Season": "spring, fall",
-            }
-        },
-        {
-            "LogName": "Haley Winter - Indoor Portrait",
-            "Action": "Load",
-            "Target": "Portraits/Haley",
-            "FromFile": "{{Portraits}}/Haley/Haley{{WinterSeasonalVariant}}.png",
-        },
-        {
-            "LogName": "Haley Fall - Indoor Portrait",
-            "Action": "Load",
-            "Target": "Portraits/Haley",
-            "FromFile": "{{Portraits}}/Haley/Haley_Fall{{Indoor_SeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
+                "HaleyWinterColor": "grey, pink"
             }
         },
 
@@ -895,7 +1019,7 @@
         // Leah Portraits
 
         {
-            "LogName": "Leah Spring Fall - Indoor Portrait",
+            "LogName": "Leah Spring & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Leah",
             "FromFile": "{{Portraits}}/Leah/Leah_{{season}}{{Indoor_SeasonalVariant}}.png",
@@ -905,7 +1029,17 @@
             }
         },
         {
-            "LogName": "Leah Summer - Indoor Portrait",
+            "LogName": "Leah Spring & Fall - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Leah",
+            "FromFile": "{{Portraits}}/Leah/Leah_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring, fall",
+            }
+        },
+        {
+            "LogName": "Leah Summer - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Leah",
             "FromFile": "{{Portraits}}/Leah/Leah_Summer_{{LeahSummerVariant}}.png",
@@ -916,13 +1050,27 @@
             }
         },
         {
-            "LogName": "Leah Fall - Rain Portrait",
+            "LogName": "Leah Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Leah",
-            "FromFile": "{{Portraits}}/Leah/Leah_Fall{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Leah/Leah_Winter_Indoor.png",
             "When":
             {
-                "Season": "fall",
+                "Season": "winter",
+                "Weather": "sun, wind, storm, rain"
+            },
+        },
+        {
+            "LogName": "Leah Winter Hood - Outdoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Leah",
+            "FromFile": "{{Portraits}}/Leah/Leah_Winter_Outdoor{{LeahWinterColorVariant}}_{{LeahWinterHood}}.png",
+            "When":
+            {
+                "LeahWinterHood": "up, down",
+                "LeahWinterColorVariant": "red, blue",
+                "Weather": "snow",
+                "Season": "winter"
             }
         },
 
@@ -983,45 +1131,52 @@
         // Abigail Portraits
 
         {
-            "LogName": "Abigail Summer - Indoor",
+            "LogName": "Abigail Spring & Summer - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Abigail",
             "FromFile": "{{Portraits}}/Abigail/Abigail_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring, summer"
+            },
         },
         {
-            "LogName": "Abigail Spring - Rain",
+            "LogName": "Abigail Summer - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Abigail",
-            "FromFile": "{{Portraits}}/Abigail/Abigail_Spring{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Abigail/Abigail_Summer{{RainSeasonalVariant}}_{{AbigailSummerRainVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "AbigailSummerRainVariant": "hat, nohat"
+            },
+        },
+        {
+            "LogName": "Abigail Spring - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Abigail",
+            "FromFile": "{{Portraits}}/Abigail/Abigail_Spring_{{AbigailSpringRainVariant}}_Rain.png",
             "When":
             {
                 "Season": "spring",
-            }
+                "AbigailFallRainVariant": "indoor, outdoor",
+                "Weather": "rain, storm"
+            },
         },
         {
-            "LogName": "Abigail Fall - Indoor Rain",
+            "LogName": "Abigail Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Abigail",
-            "FromFile": "{{Portraits}}/Abigail/Abigail_Fall{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Abigail/Abigail_Fall_{{AbigailFallRainVariant}}_Rain.png",
             "When":
             {
                 "Season": "fall",
-                "AbigailFallRainVariant": "indoor",
-            }
+                "AbigailFallRainVariant": "indoor, outdoor",
+                "Weather": "rain, storm"
+            },
         },
         {
-            "LogName": "Abigail Fall - Outdoor Rain",
-            "Action": "Load",
-            "Target": "Portraits/Abigail",
-            "FromFile": "{{Portraits}}/Abigail/Abigail_Fall{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "AbigailFallRainVariant": "outdoor",
-            }
-        },
-        {
-            "LogName": "Abigail Winter - Portrait",
+            "LogName": "Abigail Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Abigail",
             "FromFile": "{{Portraits}}/Abigail/Abigail{{WinterSeasonalVariant}}.png",
@@ -1115,16 +1270,47 @@
         // Harvey
 
         {
-            "LogName": "Harvey Spring, Summer, & Fall - Indoor Rain",
+            "LogName": "Harvey Fall - Indoor Rain",
+            "Action": "Load",
+            "Target": "Characters/Harvey",
+            "FromFile": "Characters/Harvey/Harvey_{{season}}{{RainSeasonalVariant}}_{{HarveyFallRainVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HarveyFallRainVariant": "blackredscarf, brownnoscarf"
+            }
+        },
+
+        {
+            "LogName": "Harvey Spring & Summer - Indoor Rain",
             "Action": "Load",
             "Target": "Characters/Harvey",
             "FromFile": "Characters/Harvey/Harvey_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring, summer",
+            }
+        },
+        {
+            "LogName": "Harvey Spring - Indoor",
+            "Action": "Load",
+            "Target": "Characters/Harvey",
+            "FromFile": "Characters/Harvey/Harvey_{{season}}{{Indoor_SeasonalVariant}}_{{HarveySpringVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "HarveySpringVariant": "vest, novest"
+            }
         },
         {
             "LogName": "Harvey Summer & Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Harvey",
             "FromFile": "Characters/Harvey/Harvey_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "summer, fall"
+            }
         },
         {
             "LogName": "Harvey Winter",
@@ -1136,27 +1322,50 @@
         // Harvey Portraits
 
         {
-            "LogName": "Harvey Summer & Fall - Indoor Portrait",
+            "LogName": "Harvey Fall - Indoor Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Harvey",
-            "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{RainSeasonalVariant}}_{{HarveyFallRainVariant}}.png",
             "When":
             {
-                "Season": "summer, fall",
+                "Season": "fall",
+                "HarveyFallRainVariant": "blackredscarf, brownnoscarf"
             }
         },
+
         {
-            "LogName": "Harvey Summer & Fall - Indoor Rain Portrait",
+            "LogName": "Harvey Spring & Summer - Indoor Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Harvey",
             "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
-                "Season": "summer, fall",
+                "Season": "spring, summer",
             }
         },
         {
-            "LogName": "Harvey Winter - Indoor",
+            "LogName": "Harvey Spring - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Harvey",
+            "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{Indoor_SeasonalVariant}}_{{HarveySpringVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "HarveySpringVariant": "vest, novest"
+            }
+        },
+        {
+            "LogName": "Harvey Summer & Fall - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Harvey",
+            "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "summer, fall"
+            }
+        },
+        {
+            "LogName": "Harvey Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Harvey",
             "FromFile": "{{Portraits}}/Harvey/Harvey{{WinterSeasonalVariant}}.png",
@@ -1350,33 +1559,33 @@
         // Alex
 
         {
-            "LogName": "Alex Spring & Summer - Indoor",
+            "LogName": "Alex Spring - Indoor",
             "Action": "Load",
             "Target": "Characters/Alex",
             "FromFile": "Characters/Alex/Alex_{{season}}_Indoor.png",
             "When":
             {
-                "Season": "spring, summer"
+                "Season": "spring"
             }
         },
         {
-            "LogName": "Alex Fall - Indoor",
+            "LogName": "Alex Summer & Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Alex",
-            "FromFile": "Characters/Alex/Alex_Fall{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "Characters/Alex/Alex_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "fall",
+                "Season": "summer, fall",
             }
         },
         {
-            "LogName": "Alex Fall - Outdoor Rain",
+            "LogName": "Alex Summer & Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Alex",
-            "FromFile": "Characters/Alex/Alex_Fall{{RainSeasonalVariant}}.png",
+            "FromFile": "Characters/Alex/Alex_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
-                "Season": "Fall",
+                "Season": "summer, fall",
             }
         },
         {
@@ -1389,38 +1598,37 @@
         // Alex Portraits
 
         {
-            "LogName": "Alex Summer - Indoor Portrait",
+            "LogName": "Alex Spring - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Alex",
-            "FromFile": "{{Portraits}}/Alex/Alex_Summer_Indoor.png",
+            "FromFile": "{{Portraits}}/Alex/Alex_{{season}}_Indoor.png",
             "When":
             {
-                "Season": "summer",
+                "Season": "spring"
             }
         },
         {
-            "LogName": "Alex Fall - Outdoor Portrait",
+            "LogName": "Alex Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Alex",
-            "FromFile": "{{Portraits}}/Alex/Alex_Fall{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Alex/Alex_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "Fall",
+                "Season": "summer, fall",
             }
         },
         {
-            "LogName": "Alex Fall - Outdoor Rain Portrait",
+            "LogName": "Alex Summer & Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Alex",
-            "FromFile": "{{Portraits}}/Alex/Alex_Fall{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Alex/Alex_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
-                "Season": "fall",
-
+                "Season": "summer, fall",
             }
         },
         {
-            "LogName": "Alex Winter - Indoor Portrait",
+            "LogName": "Alex Winter - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Alex",
             "FromFile": "{{Portraits}}/Alex/Alex{{WinterSeasonalVariant}}.png",
@@ -1493,34 +1701,16 @@
         // Demetrius
 
         {
-            "LogName": "Demetrius Spring & Summer - Indoor",
-            "Action": "Load",
-            "Target": "Characters/Demetrius",
-            "FromFile": "Characters/Demetrius/Demetrius_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, summer",
-            }
-        },
-        {
-            "LogName": "Demetrius Fall - Indoor",
+            "LogName": "Demetrius Spring, Summer & Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Demetrius",
             "FromFile": "Characters/Demetrius/Demetrius_{{season}}{{Indoor_SeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-            }
         },
         {
-            "LogName": "Demetrius Fall - Rain",
+            "LogName": "Demetrius Spring, Summer & Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Demetrius",
             "FromFile": "Characters/Demetrius/Demetrius_{{season}}{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-            }
         },
         {
             "LogName": "Demetrius Winter",
@@ -1532,17 +1722,19 @@
         // Demetrius Portraits
 
         {
-            "LogName": "Demetrius Spring & Fall Indoor - Portrait",
+            "LogName": "Demetrius Spring, Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Demetrius",
-            "FromFile": "{{Portraits}}/Demetrius/Demetrius_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, fall",
-            }
+            "FromFile": "{{Portraits}}/Demetrius/Demetrius_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Demetrius Winter - Portrait",
+            "LogName": "Demetrius Spring, Summer & Fall - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Demetrius",
+            "FromFile": "{{Portraits}}/Demetrius/Demetrius_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "Demetrius Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Demetrius",
             "FromFile": "{{Portraits}}/Demetrius/Demetrius{{WinterSeasonalVariant}}.png",
@@ -1551,37 +1743,19 @@
         // Marnie
 
         {
-            "LogName": "Marnie Summer & Fall - Indoor",
-            "Action": "Load",
-            "Target": "Characters/Marnie",
-            "FromFile": "Characters/Marnie/Marnie_{{Season}}_Indoor.png",
-            "When":
-            {
-                "Season": "summer, fall"
-            }
-        },
-        {
-            "LogName": "Marnie Spring - Indoor",
+            "LogName": "Marnie Spring, Summer & Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Marnie",
             "FromFile": "Characters/Marnie/Marnie_{{Season}}{{Indoor_SeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring"
-            }
         },
         {
-            "LogName": "Marnie Spring - Rain",
+            "LogName": "Marnie Spring, Summer & Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Marnie",
             "FromFile": "Characters/Marnie/Marnie_{{Season}}{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring"
-            }
         },
         {
-            "LogName": "Marnie Winter - Indoor",
+            "LogName": "Marnie Winter",
             "Action": "Load",
             "Target": "Characters/Marnie",
             "FromFile": "Characters/Marnie/Marnie{{WinterSeasonalVariant}}.png",
@@ -1590,36 +1764,22 @@
         // Marnie Portraits
 
         {
-            "LogName": "Marnie Spring & Fall - Indoor Portrait",
+            "LogName": "Marnie Spring, Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Portraits}}/Marnie/Marnie_{{Season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, fall",
-            }
+            "FromFile": "{{Portraits}}/Marnie/Marnie_{{Season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Marnie Summer - Indoor Portrait",
+            "LogName": "Marnie Spring, Summer & Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Portraits}}/Marnie/Marnie_Summer_Indoor_{{MarnieSummerPortraitVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "MarnieSummerPortraitVariant": "standard, alternative",
-            }
+            "FromFile": "{{Portraits}}/Marnie/Marnie_{{Season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Marnie Winter - Outdoor Portrait",
+            "LogName": "Marnie Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Portraits}}/Marnie/Marnie_Winter_Outdoor.png",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "snow"
-            },
+            "FromFile": "{{Portraits}}/Marnie/Marnie{{WinterSeasonalVariant}}.png",
         },
 
         // Pam
@@ -1646,28 +1806,37 @@
         // Pam Portraits
 
         {
-            "LogName": "Pam Summer - Indoor Portrait",
+            "LogName": "Pam Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Pam",
-            "FromFile": "{{Portraits}}/Pam/Pam_Summer_Indoor_{{PamSummerPortraitVariant}}.png",
+            "FromFile": "{{Portraits}}/Pam/Pam_{{season}}_Indoor.png",
             "When":
             {
-                "Season": "summer",
-                "PamSummerPortraitVariant": "standard, alternative",
-            }
+                "Season": "fall"
+            },
         },
         {
-            "LogName": "Pam Fall - Indoor Portrait",
+            "LogName": "Pam Spring, Summer - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Pam",
-            "FromFile": "{{Portraits}}/Pam/Pam_Fall_Indoor.png",
+            "FromFile": "{{Portraits}}/Pam/Pam_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "Fall",
-            }
+                "Season": "spring, summer"
+            },
         },
         {
-            "LogName": "Pam Winter - Indoor Portrait",
+            "LogName": "Pam Spring, Summer - Rain",
+            "Action": "Load",
+            "Target": "Portraits/Pam",
+            "FromFile": "{{Portraits}}/Pam/Pam_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring, summer"
+            },
+        },
+        {
+            "LogName": "Pam Winter",
             "Action": "Load",
             "Target": "Portraits/Pam",
             "FromFile": "{{Portraits}}/Pam/Pam{{WinterSeasonalVariant}}.png",
@@ -1676,23 +1845,13 @@
         // Lewis
 
         {
-            "LogName": "Lewis Fall - Indoor",
-            "Action": "Load",
-            "Target": "Characters/Lewis",
-            "FromFile": "Characters/Lewis/Lewis_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "fall",
-            }
-        },
-        {
-            "LogName": "Lewis Summer - Indoor",
+            "LogName": "Lewis Summer & Fall- Indoor",
             "Action": "Load",
             "Target": "Characters/Lewis",
             "FromFile": "Characters/Lewis/Lewis_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "summer",
+                "Season": "fall, summer",
             }
         },
         {
@@ -1700,10 +1859,6 @@
             "Action": "Load",
             "Target": "Characters/Lewis",
             "FromFile": "Characters/Lewis/Lewis_{{season}}{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring, summer"
-            }
         },
         {
             "LogName": "Lewis Winter - Indoor",
@@ -1715,17 +1870,23 @@
         // Lewis Portraits
 
         {
-            "LogName": "Lewis Summer & Fall - Indoor",
+            "LogName": "Lewis Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Lewis",
-            "FromFile": "{{Portraits}}/Lewis/Lewis_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Lewis/Lewis_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "summer, fall",
+                "Season": "fall, summer",
             }
         },
         {
-            "LogName": "Lewis Winter - Indoor",
+            "LogName": "Lewis Spring, Summer, Fall - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Lewis",
+            "FromFile": "{{Portraits}}/Lewis/Lewis_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "Lewis Winter - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Lewis",
             "FromFile": "{{Portraits}}/Lewis/Lewis{{WinterSeasonalVariant}}.png",
@@ -1755,37 +1916,19 @@
         // Vincent Portraits
 
         {
-            "LogName": "Vincent Summer - Indoor Portrait",
+            "LogName": "Vincent Spring, Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Vincent",
-            "FromFile": "{{Portraits}}/Vincent/Vincent_Summer_Indoor.png",
-            "When":
-            {
-                "Season": "summer",
-            }
+            "FromFile": "{{Portraits}}/Vincent/Vincent_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Vincent Fall - Indoor",
+            "LogName": "Vincent Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Vincent",
-            "FromFile": "{{Portraits}}/Vincent/Vincent_Fall{{Indoor_SeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-            }
+            "FromFile": "{{Portraits}}/Vincent/Vincent_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Vincent Fall - Rain",
-            "Action": "Load",
-            "Target": "Portraits/Vincent",
-            "FromFile": "{{Portraits}}/Vincent/Vincent_Fall{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-            }
-        },
-        {
-            "LogName": "Vincent Winter - Indoor Portrait",
+            "LogName": "Vincent Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Vincent",
             "FromFile": "{{Portraits}}/Vincent/Vincent{{WinterSeasonalVariant}}.png",
@@ -1804,10 +1947,6 @@
             "Action": "Load",
             "Target": "Characters/Kent",
             "FromFile": "Characters/Kent/Kent_{{season}}{{Indoor_SeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "summer, fall",
-            }
         },
         {
             "LogName": "Kent Winter",
@@ -1819,27 +1958,19 @@
         // Kent Portraits
 
         {
-            "LogName": "Kent Spring - Outdoor Rain",
+            "LogName": "Kent Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Kent",
-            "FromFile": "{{Portraits}}/Kent/Kent_Spring{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring",
-            }
+            "FromFile": "{{Portraits}}/Kent/Kent_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Kent Summer & Fall - Indoor",
+            "LogName": "Kent Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Kent",
-            "FromFile": "{{Portraits}}/Kent/Kent_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "summer, fall",
-            }
+            "FromFile": "{{Portraits}}/Kent/Kent_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Kent Winter - Indoor",
+            "LogName": "Kent Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Kent",
             "FromFile": "{{Portraits}}/Kent/Kent{{WinterSeasonalVariant}}.png",
@@ -1852,30 +1983,12 @@
             "Action": "Load",
             "Target": "Characters/Jodi",
             "FromFile": "Characters/Jodi/Jodi_{{season}}{{Indoor_SeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring, summer"
-            }
         },
         {
             "LogName": "Jodi Spring & Summer - Rain",
             "Action": "Load",
             "Target": "Characters/Jodi",
             "FromFile": "Characters/Jodi/Jodi_{{season}}{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring, summer"
-            }
-        },
-        {
-            "LogName": "Jodi Fall - Indoor",
-            "Action": "Load",
-            "Target": "Characters/Jodi",
-            "FromFile": "Characters/Jodi/Jodi_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "fall",
-            }
         },
         {
             "LogName": "Jodi Winter - Indoor",
@@ -1887,17 +2000,19 @@
         // Jodi Portraits
 
         {
-            "LogName": "Jodi Spring - Indoor",
+            "LogName": "Jodi Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Jodi",
-            "FromFile": "{{Portraits}}/Jodi/Jodi_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, summer",
-            }
+            "FromFile": "{{Portraits}}/Jodi/Jodi_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Jodi Winter - Indoor",
+            "LogName": "Jodi Spring, Summer, Fall - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Jodi",
+            "FromFile": "{{Portraits}}/Jodi/Jodi_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "Jodi Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Jodi",
             "FromFile": "{{Portraits}}/Jodi/Jodi{{WinterSeasonalVariant}}.png",
@@ -1927,17 +2042,19 @@
         // Pierre Portraits
 
         {
-            "LogName": "Pierre Spring & Summer - Indoor Portrait",
+            "LogName": "Pierre Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Pierre",
-            "FromFile": "{{Portraits}}/Pierre/Pierre_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, summer",
-            }
+            "FromFile": "{{Portraits}}/Pierre/Pierre_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Pierre Winter - Indoor Portrait",
+            "LogName": "Pierre Spring, Summer, Fall - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Pierre",
+            "FromFile": "{{Portraits}}/Pierre/Pierre_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "Pierre Winter - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Pierre",
             "FromFile": "{{Portraits}}/Pierre/Pierre{{WinterSeasonalVariant}}.png",
@@ -1967,25 +2084,22 @@
         // Gus Portraits
 
         {
-            "LogName": "Gus Spring & Summer - Indoor Portrait",
+            "LogName": "Gus Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Gus",
-            "FromFile": "{{Portraits}}/Gus/Gus_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, summer",
-            }
+            "FromFile": "{{Portraits}}/Gus/Gus_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Gus Winter - Indoor Portrait",
+            "LogName": "Gus Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Gus",
-            "FromFile": "{{Portraits}}/Gus/Gus_Winter_Indoor.png",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind, storm, rain"
-            },
+            "FromFile": "{{Portraits}}/Gus/Gus_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "Gus Winter Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Gus",
+            "FromFile": "{{Portraits}}/Gus/Gus{{WinterSeasonalVariant}}.png",
         },
 
         // Caroline
@@ -2004,7 +2118,7 @@
             "When":
             {
                 "Season": "summer",
-                "Weather": "snow, sun",
+                "Weather": "sun, wind, snow",
                 "CarolineSummerVariant": "indoor, outdoor"
             }
         },
@@ -2015,8 +2129,8 @@
             "FromFile": "Characters/Caroline/Caroline_Fall_{{CarolineFallVariant}}.png",
             "When":
             {
-                "Season": "Fall",
-                "Weather": "snow, sun",
+                "Season": "fall",
+                "Weather": "sun, wind, snow",
                 "CarolineFallVariant": "indoor, outdoor"
             }
         },
@@ -2030,37 +2144,37 @@
         // Caroline Portraits
 
         {
-            "LogName": "Caroline Spring, Summer, & Fall - Rain",
+            "LogName": "Caroline Spring, Summer, & Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Caroline",
             "FromFile": "{{Portraits}}/Caroline/Caroline_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Caroline Summer - Indoor",
+            "LogName": "Caroline Summer - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Caroline",
             "FromFile": "{{Portraits}}/Caroline/Caroline_Summer_{{CarolineSummerVariant}}.png",
             "When":
             {
                 "Season": "summer",
-                "Weather": "snow, sun",
-                "CarolineSummerVariant": "indoor, outdoor",
+                "Weather": "sun, wind, snow",
+                "CarolineSummerVariant": "indoor, outdoor"
             }
         },
         {
-            "LogName": "Caroline Fall - Indoor",
+            "LogName": "Caroline Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Caroline",
             "FromFile": "{{Portraits}}/Caroline/Caroline_Fall_{{CarolineFallVariant}}.png",
             "When":
             {
-                "Season": "Fall",
-                "Weather": "snow, sun",
-                "CarolineFallVariant": "indoor, outdoor",
+                "Season": "fall",
+                "Weather": "sun, wind, snow",
+                "CarolineFallVariant": "indoor, outdoor"
             }
         },
         {
-            "LogName": "Caroline Winter - Indoor",
+            "LogName": "Caroline Winter - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Caroline",
             "FromFile": "{{Portraits}}/Caroline/Caroline{{WinterSeasonalVariant}}.png",
@@ -2094,23 +2208,25 @@
         // Evelyn Portraits
 
         {
-            "LogName": "Evelyn Summer & Fall - Indoor Portrait",
+            "LogName": "Evelyn Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Evelyn",
-            "FromFile": "{{Portraits}}/Evelyn/Evelyn_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "summer, fall",
-            }
+            "FromFile": "{{Portraits}}/Evelyn/Evelyn_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Evelyn Spring - Rain",
+            "LogName": "Evelyn Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Evelyn",
-            "FromFile": "{{Portraits}}/Evelyn/Evelyn_Spring{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Evelyn/Evelyn_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "Evelyn Winter Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Evelyn",
+            "FromFile": "{{Portraits}}/Evelyn/Evelyn{{WinterSeasonalVariant}}_{{EvelynWinterColor}}.png",
             "When":
             {
-                "Season": "spring",
+                "EvelynWinterColor": "pink, blue"
             }
         },
 
@@ -2120,21 +2236,10 @@
             "LogName": "Clint All Seasons - Indoor",
             "Action": "Load",
             "Target": "Characters/Clint",
-            "FromFile": "Characters/Clint/{{ClintVersion}}/Clint_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, summer, fall",
-                "ClintVersion": "standard"
-            }
-        },
-        {
-            "LogName": "Clint All Seasons - Indoor",
-            "Action": "Load",
-            "Target": "Characters/Clint",
             "FromFile": "Characters/Clint/{{ClintVersion}}/Clint_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "ClintVersion": "alternative, noapron"
+                "ClintVersion": "apron, noapron"
             }
         },
         {
@@ -2144,7 +2249,7 @@
             "FromFile": "Characters/Clint/{{ClintVersion}}/Clint_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
-                "ClintVersion": "alternative, noapron"
+                "ClintVersion": "apron, noapron"
             }
         },
         {
@@ -2154,42 +2259,40 @@
             "FromFile": "Characters/Clint/{{ClintVersion}}/Clint{{WinterSeasonalVariant}}.png",
             "When":
             {
-                "ClintVersion": "standard, alternative, noapron"
+                "ClintVersion": "apron, alternative, noapron"
             }
         },
 
         // Clint Portraits
 
         {
-            "LogName": "Clint Summer & Fall - Indoor Portraits",
+            "LogName": "Clint All Seasons - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Clint/Clint_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "summer, fall"
+                "ClintVersion": "apron, noapron"
             }
         },
         {
-            "LogName": "Clint Spring Rain - Portraits",
+            "LogName": "Clint All Seasons - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Clint/Clint_Spring_Indoor_Rain.png",
+            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "Weather": "rain, storm"
+                "ClintVersion": "apron, noapron"
             }
         },
         {
-            "LogName": "Clint - Winter Outdoor Portraits",
+            "LogName": "Clint Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Clint/Clint_Winter_Outdoor.png",
+            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint{{WinterSeasonalVariant}}.png",
             "When":
             {
-                "Season": "winter",
-                "Weather": "snow"
+                "ClintVersion": "apron, noapron"
             }
         },
 
@@ -2217,31 +2320,28 @@
         // Willy Portraits
 
         {
-            "LogName": "Willy Spring & Summer - Indoor Portraits",
+            "LogName": "Willy Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Willy",
-            "FromFile": "{{Portraits}}/Willy/Willy_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, summer",
-            }
+            "FromFile": "{{Portraits}}/Willy/Willy_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Willy Winter - Indoor Portraits",
+            "LogName": "Willy Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Willy",
-            "FromFile": "{{Portraits}}/Willy/Willy_Winter_Indoor_{{WillyWinterPortraitVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "WillyWinterPortraitVariant": "standard, alternative",
-            }
+            "FromFile": "{{Portraits}}/Willy/Willy_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "Willy Winter Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Willy",
+            "FromFile": "{{Portraits}}/Willy/Willy{{WinterSeasonalVariant}}.png",
         },
 
         // Linus
 
         {
-            "LogName": "Linus All Seasons - Indoor",
+            "LogName": "Linus Spring, Summer, Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Linus",
             "FromFile": "Characters/Linus/Linus_{{season}}_Indoor.png",
@@ -2260,10 +2360,20 @@
         // Linus Portraits
 
         {
-            "LogName": "Linus All Seasons - Indoor",
+            "LogName": "Linus Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Linus",
-            "FromFile": "{{Portraits}}/Linus/Linus_{{season}}_Indoor.png",
+            "FromFile": "{Portraits}}/Linus/Linus_{{season}}_Indoor.png",
+            "When":
+            {
+                "Season": "spring, summer, fall"
+            }
+        },
+        {
+            "LogName": "Linus Winter Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Linus",
+            "FromFile": "{{Portraits}}/Linus/Linus{{WinterSeasonalVariant}}.png",
         },
 
         // George
@@ -2290,24 +2400,22 @@
         // George Portraits
 
         {
-            "LogName": "George Summer - Indoor Portrait",
+            "LogName": "George Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/George",
-            "FromFile": "{{Portraits}}/George/George_Summer_Indoor.png",
-            "When":
-            {
-                "Season": "summer",
-            }
+            "FromFile": "{{Portraits}}/George/George_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "George Fall - Rain Portrait",
+            "LogName": "George Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/George",
-            "FromFile": "{{Portraits}}/George/George_Fall{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-            }
+            "FromFile": "{{Portraits}}/George/George_{{season}}{{RainSeasonalVariant}}.png",
+        },
+        {
+            "LogName": "George Winter Portraits",
+            "Action": "Load",
+            "Target": "Portraits/George",
+            "FromFile": "{{Portraits}}/George/George{{WinterSeasonalVariant}}.png",
         },
 
         // Jas
