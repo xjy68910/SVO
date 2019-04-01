@@ -1,7 +1,7 @@
 ## FAQ
 * [General Questions](#General-Questions)
   * [Why are some characters missing?](#why-are-some-characters-missing)
-  * [Can you do a version of this that's compatible with ________?](#can-you-do-a-version-of-this-that's-compatible-with)
+  * [Can you do a version of this that's compatible with ________?](#can-you-do-a-version-of-this-thats-compatible-with)
 
 ## General Questions
 
