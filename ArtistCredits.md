@@ -19,6 +19,7 @@
 - Ailin for allowing us to use Jas (Complete Set), Flower Dance, and Sebastian (summer & fall indoor/outdoor) sprites!
 - Airyn for fixing some of the festival sprites & filling in a lot of the missing sprites!
 - bitty-bee for the alternative Penny sprites!
+- [Siv's Marriage Mod](https://github.com/tlcasebeer/SivsMarriageMod) for the Siv's Sandy portrait! 
 - Thank you everyone who has contributed community made portraits!
  
 I think that is everyone who contributed, but if I somehow forgot something/someone, please let me know and I'll add you!
