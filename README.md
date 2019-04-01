@@ -12,7 +12,7 @@ These options affect the mod in general.
 
 option                         | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
-`PortraitStyle`*               | standard dcburger
+`PortraitStyle`*               | standard
 `MaterintySprites`             | true false
 
 ## Standard Portraits
