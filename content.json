@@ -254,7 +254,7 @@
         },
         "WillyWinterPortraitVariant":
         {
-            "AllowValues": "standard, alternative"
+            "AllowValues": "cap, beanie"
         },
         "SandyPortraitVariant": // Front version works for sivs only
         {
@@ -322,7 +322,11 @@
         },
         "EmilySpringVariant":
         {
-            "AllowValues": "pink, yellow, sleeves, nosleeves"
+            "AllowValues": "sleeves, nosleeves"
+        },
+        "EmilySpringRainVariant":
+        {
+            "AllowValues": "pink, yellow"
         },
 
         // Haley
@@ -506,10 +510,14 @@
         // Emily
 
         {
-            "LogName": "Emily Spring, Summer & Fall - Rain",
+            "LogName": "Emily Summer & Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Emily",
             "FromFile": "Characters/Emily/Emily_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "summer, fall"
+            }
         },
         {
             "LogName": "Emily Fall & Summer - Indoor",
@@ -529,7 +537,18 @@
             "When":
             {
                 "Season": "spring",
-                "EmilySpringVariant": "pink, yellow, sleeves, nosleeves"
+                "EmilySpringVariant": "sleeves, nosleeves"
+            }
+        },
+        {
+            "LogName": "Emily Spring - Rain",
+            "Action": "Load",
+            "Target": "Characters/Emily",
+            "FromFile": "Characters/Emily/Emily_{{season}}{{RainSeasonalVariant}}_{{EmilySpringRainVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "EmilySpringRainVariant": "pink, yellow"
             }
         },
         {
@@ -559,10 +578,14 @@
         // Emily Portrait
 
         {
-            "LogName": "Emily Spring, Summer & Fall - Rain Portraits",
+            "LogName": "Emily Summer & Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Emily",
             "FromFile": "{{Portraits}}/Emily/Emily_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "summer, fall"
+            }
         },
         {
             "LogName": "Emily Fall & Summer - Indoor Portraits",
@@ -582,7 +605,18 @@
             "When":
             {
                 "Season": "spring",
-                "EmilySpringVariant": "pink, yellow, sleeves, nosleeves"
+                "EmilySpringVariant": "sleeves, nosleeves"
+            }
+        },
+        {
+            "LogName": "Emily Spring - Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Emily",
+            "FromFile": "{{Portraits}}/Emily/Emily_{{season}}{{RainSeasonalVariant}}_{{EmilySpringRainVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "EmilySpringRainVariant": "pink, yellow"
             }
         },
         {
@@ -728,7 +762,7 @@
             "FromFile": "Characters/Haley/Haley_Summer_{{HaleySummerVariant}}.png",
             "When":
             {
-                "HaleySummerVariant": "indoor, outdoor, beach",
+                "HaleySummerVariant": "indoor, beach",
                 "Season": "summer"
             }
         },
@@ -794,7 +828,7 @@
             "FromFile": "{{Portraits}}/Haley/Haley_Summer_{{HaleySummerVariant}}.png",
             "When":
             {
-                "HaleySummerVariant": "indoor, outdoor, beach",
+                "HaleySummerVariant": "indoor, beach",
                 "Season": "summer"
             }
         },
@@ -1229,7 +1263,7 @@
             "LogName": "Elliott Spring - Indoor",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott_Spring{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_Spring{{Indoor_SeasonalVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -1240,7 +1274,7 @@
             "LogName": "Elliott Summer - Indoor v1",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott_Summer_Indoor_{{ElliottSummerVariant}}_{{ElliottSummerPortraitVariant}}.png",
+            "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_Summer_Indoor_{{ElliottSummerVariant}}_{{ElliottSummerPortraitVariant}}.png",
             "When":
             {
                 "Season": "summer",
@@ -1254,7 +1288,7 @@
             "LogName": "Elliott Fall - Indoor Rain",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
                 "Season": "fall",
@@ -1265,7 +1299,7 @@
             "LogName": "Elliott Winter - Indoor",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott{{WinterSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott{{WinterSeasonalVariant}}.png",
             "When":
             {
                 "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
@@ -2247,7 +2281,7 @@
             "LogName": "Clint All Seasons - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint_{{season}}{{Indoor_SeasonalVariant}}_{{ClintVersion}}.png",
             "When":
             {
                 "ClintVersion": "apron, noapron"
@@ -2257,7 +2291,7 @@
             "LogName": "Clint All Seasons - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint_{{season}}{{RainSeasonalVariant}}_{{ClintVersion}}.png",
             "When":
             {
                 "ClintVersion": "apron, noapron"
@@ -2267,7 +2301,7 @@
             "LogName": "Clint Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint{{WinterSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint{{WinterSeasonalVariant}}_{{ClintVersion}}.png",
             "When":
             {
                 "ClintVersion": "apron, noapron"
@@ -2292,7 +2326,12 @@
             "LogName": "Willy Winter",
             "Action": "Load",
             "Target": "Characters/Willy",
-            "FromFile": "Characters/Willy/Willy{{WinterSeasonalVariant}}.png",
+            "FromFile": "Characters/Willy/Willy_Winter_Indoor_{{WillyWinterPortraitVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "WillyWinterPortraitVariant": "cap, beanie"
+            }
         },
 
         // Willy Portraits
@@ -2313,7 +2352,12 @@
             "LogName": "Willy Winter Portraits",
             "Action": "Load",
             "Target": "Portraits/Willy",
-            "FromFile": "{{Portraits}}/Willy/Willy{{WinterSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Willy/Willy_Winter_Indoor_{{WillyWinterPortraitVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "WillyWinterPortraitVariant": "cap, beanie"
+            }
         },
 
         // Linus
@@ -2453,7 +2497,7 @@
             "LogName": "Sandy Spring, Summer, & Fall - Indoor (All Versions)",
             "Action": "Load",
             "Target": "Characters/Sandy",
-            "FromFile": "Characters/{{SandyVersion}}/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "Characters/Sandy/{{SandyVersion}}/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "Season": "spring, summer, fall",
@@ -2465,7 +2509,7 @@
             "LogName": "Sandy Winter - Indoor (sivs)",
             "Action": "Load",
             "Target": "Characters/Sandy",
-            "FromFile": "Characters/{{SandyVersion}}/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "Characters/Sandy/{{SandyVersion}}/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "Season": "winter",
@@ -2477,7 +2521,7 @@
             "LogName": "Sandy Player Wedding (Zola)",
             "Action": "Load",
             "Target": "Characters/Sandy",
-            "FromFile": "Characters/{{SandyVersion}}/Sandy/Sandy_Wedding.png",
+            "FromFile": "Characters/Sandy/{{SandyVersion}}/Sandy_Wedding.png",
             "When":
             {
                 "DayEvent": "wedding",
@@ -2492,7 +2536,7 @@
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Standard",
             "Action": "Load",
             "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/Standard/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Sandy/Standard/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "Season": "spring, summer, fall",
@@ -2505,7 +2549,7 @@
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Side)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/AlternativeSide/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Sandy/AlternativeSide/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "SandyEnabled": "true",
@@ -2517,7 +2561,7 @@
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Front)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/AlternativeFront/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Sandy/AlternativeFront/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "SandyEnabled": "true",
@@ -2529,7 +2573,7 @@
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Front)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/Sivs/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Sandy/Sivs/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "SandyEnabled": "true",
