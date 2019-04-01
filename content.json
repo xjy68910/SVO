@@ -266,7 +266,7 @@
         {
             "AllowValues": "standard, snow, snowfog"
         },
-        "DC_EmilySpringVersion":
+        "DC_EmilySpringVariant":
         {
             "AllowValues": "standard, alternative"
         },
@@ -315,7 +315,7 @@
         {
             "AllowValues": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf",
         },
-        "EmilySpringVersion":
+        "EmilySpringVariant":
         {
             "AllowValues": "pink, yellow, sleeves, nosleeves"
         },
@@ -524,11 +524,11 @@
             "LogName": "Emily Spring",
             "Action": "Load",
             "Target": "Characters/Emily",
-            "FromFile": "Characters/Emily/Emily_Spring_Indoor_{{EmilySpringVersion}}.png",
+            "FromFile": "Characters/Emily/Emily_Spring_Indoor_{{EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "EmilySpringVersion": "pink, yellow, sleeves, nosleeves"
+                "EmilySpringVariant": "pink, yellow, sleeves, nosleeves"
             }
         },
         {
@@ -577,11 +577,11 @@
             "LogName": "Emily Spring Portraits",
             "Action": "Load",
             "Target": "Portraits/Emily",
-            "FromFile": "{{Portraits}}/Emily/Emily_Spring_Indoor_{{EmilySpringVersion}}.png",
+            "FromFile": "{{Portraits}}/Emily/Emily_Spring_Indoor_{{EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "EmilySpringVersion": "pink, yellow, sleeves, nosleeves"
+                "EmilySpringVariant": "pink, yellow, sleeves, nosleeves"
             }
         },
         {
@@ -2340,7 +2340,7 @@
             "LogName": "Linus Spring, Summer, Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Linus",
-            "FromFile": "{Portraits}}/Linus/Linus_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Linus/Linus_{{season}}_Indoor.png",
             "When":
             {
                 "Season": "spring, summer, fall"
@@ -3428,7 +3428,7 @@
             "LogName": "Emily DCBurger Portraits Spring - Portrait v1",
             "Action": "Load",
             "Target": "Portraits/Emily",
-            "FromFile": "{{DCBurger}}/Emily/Emily_Spring_Indoor_{{DC_EmilySpringVersion}}.png",
+            "FromFile": "{{DCBurger}}/Emily/Emily_Spring_Indoor_{{DC_EmilySpringVariant}}.png",
             "ScaleUp": true,
             "OriginalWidth": 128,
             "When":
@@ -3448,7 +3448,7 @@
             {
                 "Season": "summer",
                 "Weather": "sun, wind, snow",
-                "DC_EmilySpringVersion": "standard, alternative"
+                "DC_EmilySpringVariant": "standard, alternative"
             }
         },
         {
