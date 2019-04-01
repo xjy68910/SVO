@@ -471,12 +471,12 @@
         },
         "SandyVersion":
         {
-            "AllowValues": "standard, alternative, zola",
+            "AllowValues": "standard, sivs, zola",
             "Default": "standard"
         },
         "SandyPortraitVersion": // Front version works for alternative only
         {
-            "AllowValues": "side, front"
+            "AllowValues": "side, front, sivs"
         },
 
         // Maru
@@ -2457,11 +2457,11 @@
             {
                 "Season": "spring, summer, fall",
                 "SandyEnabled": "true",
-                "SandyVersion": "standard, alternative, zola"
+                "SandyVersion": "standard, sivs, zola"
             }
         },
         {
-            "LogName": "Sandy Winter - Indoor (Alternative)",
+            "LogName": "Sandy Winter - Indoor (sivs)",
             "Action": "Load",
             "Target": "Characters/Sandy",
             "FromFile": "Characters/{{SandyVersion}}/Sandy/Sandy_{{season}}_Indoor.png",
@@ -2469,7 +2469,7 @@
             {
                 "Season": "winter",
                 "SandyEnabled": "true",
-                "SandyVersion": "alternative"
+                "SandyVersion": "sivs"
             }
         },
         {
@@ -2501,27 +2501,39 @@
             }
         },
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Alternative",
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Side)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
             "FromFile": "{{Portraits}}/AlternativeSide/Sandy/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "SandyEnabled": "true",
-                "SandyVersion": "alternative",
+                "SandyVersion": "sivs",
                 "SandyPortraitVersion": "side"
             }
         },
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Alternative (Front)",
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Front)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/AlternativeSide/Sandy/Sandy_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/AlternativeFront/Sandy/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "SandyEnabled": "true",
-                "SandyVersion": "alternative",
+                "SandyVersion": "sivs",
                 "SandyPortraitVersion": "front"
+            }
+        },
+        {
+            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Front)",
+            "Action": "Load",
+            "Target": "Portraits/Sandy",
+            "FromFile": "{{Portraits}}/Sivs/Sandy/Sandy_{{season}}_Indoor.png",
+            "When":
+            {
+                "SandyEnabled": "true",
+                "SandyVersion": "sivs",
+                "SandyPortraitVersion": "sivs"
             }
         },
 
