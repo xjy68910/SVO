@@ -258,7 +258,7 @@
         },
         "SandyPortraitVariant": // Front version works for sivs only
         {
-            "AllowValues": "side, front, sivs"
+            "AllowValues": "side, sivs", // Front disabled until permission is obtained
         },
 
         // DCBurger Portrait Config Options
@@ -2545,7 +2545,7 @@
                 "SandyPortraitVariant": "side"
             }
         },
-        {
+        /*{
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Side)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
@@ -2568,7 +2568,7 @@
                 "SandyVersion": "sivs",
                 "SandyPortraitVariant": "front"
             }
-        },
+        },*/
         {
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Front)",
             "Action": "Load",
