@@ -21,9 +21,10 @@ These options only apply when you set `PortraitStyle` to `standard`.
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `ElliottSummerPortraitVariant` | standard alternative
-`ElliottPortraitStyle`         | standard frontfacing
+`ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen
 `SamSummerPortraitVariant`     | standard alternative
 `WillyWinterPortraitVariant`   | standard alternative
+`SandyPortraitVariant`         | side front sivs
 
 ## DCBurger Portraits
 These options only apply when you set `PortraitStyle` to `dcburger`.
@@ -73,7 +74,6 @@ options                        | valid values (select only one, values are seper
 `WizardVersion`                | standard pale saturated
 `SandyEnabled`                 | true false
 `SandyVersion`                 | standard sivs zola
-`SandyPortraitVersion`         | side front sivs
 `MaruScrubColor`               | dark light white
 `HarveySpringVariant`          | vest novest
 `HarveyFallRainVariant`        | blackredscarf brownnoscarf
