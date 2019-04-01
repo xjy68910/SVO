@@ -72,8 +72,8 @@ options                        | valid values (select only one, values are seper
 `WizardEnabled`                | true false
 `WizardVersion`                | standard pale saturated
 `SandyEnabled`                 | true false
-`SandyVersion`                 | standard alternative zola
-`SandyPortraitVersion`         | side front
+`SandyVersion`                 | standard sivs zola
+`SandyPortraitVersion`         | side front sivs
 `MaruScrubColor`               | dark light white
 `HarveySpringVariant`          | vest novest
 `HarveyFallRainVariant`        | blackredscarf brownnoscarf
