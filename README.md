@@ -20,12 +20,10 @@ These options only apply when you set `PortraitStyle` to `standard`.
 
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
-`PennyFallRainPortraitVariant` | standard alternative
 `ElliottSummerPortraitVariant` | standard alternative
+`ElliottPortraitStyle`         | standard frontfacing
 `SamSummerPortraitVariant`     | standard alternative
-`MarnieSummerPortraitVariant`  | standard alternative
 `WillyWinterPortraitVariant`   | standard alternative
-`PamSummerPortraitVariant`     | standard alternative
 
 ## DCBurger Portraits
 These options only apply when you set `PortraitStyle` to `dcburger`.
@@ -51,7 +49,10 @@ These options affect the character files.
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `EmilyWinterVariant`           | hatnoscarf hatscarf nohatnoscarf nohatscarf
+`EmilySpringVariant`           | pink yellow sleeves nosleeves
 `HaleySummerVariant`           | indoor outdoor beach
+`HaleyFallColor`               | red blue
+`HaleyWinterColor`             | grey pink
 `PennySummerVariant`           | indoor outdoor
 `PennyFallVariant`             | indoor outdoor
 `PennyHair`                    | standard brunette
@@ -64,11 +65,15 @@ options                        | valid values (select only one, values are seper
 `ElliottSummerVariant`         | nosuspenders suspenders
 `SebastianFallVariant`         | indoor outdoor
 `RobinHairStyle`               | up down
-`EvelynFallVariant`            | indoor outdoor
 `EvelynWinterColor`            | pink blue
 `CarolineSummerVariant`        | indoor outdoor
 `CarolineFallVariant`          | indoor outdoor
-`ClintVariant`                 | standard alternative noapron
+`ClintVariant`                 | apron noapron
 `WizardEnabled`                | true false
 `WizardVersion`                | standard pale saturated
 `SandyEnabled`                 | true false
+`SandyVersion`                 | standard alternative zola
+`SandyPortraitVersion`         | side front
+`MaruScrubColor`               | dark light white
+`HarveySpringVariant`          | vest novest
+`HarveyFallRainVariant`        | blackredscarf brownnoscarf
