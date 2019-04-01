@@ -228,8 +228,9 @@
 
         "PortraitStyle":
         {
-            "AllowValues": "standard, dcburger, none",
-            "Default": "dcburger"
+            "AllowValues": "standard, dcburger",
+            "Default": "dcburger",
+            "AllowBlank": "true"
         },
         "MaternitySprites":
         {
@@ -245,7 +246,7 @@
         },
         "ElliottPortraitStyle":
         {
-            "AllowValues": "standard, frontfacing"
+            "AllowValues": "standard, frontfacingeemie, frontfacinglumen"
         },
         "SamSummerPortraitVariant":
         {
@@ -1232,7 +1233,7 @@
             "When":
             {
                 "Season": "spring",
-                "ElliottPortraitStyle": "standard, frontfacing"
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
             }
         },
         {
@@ -1246,7 +1247,7 @@
                 "ElliottSummerVariant": "nosuspenders, suspenders",
                 "Weather": "sun, wind, snow",
                 "ElliottSummerPortraitVariant": "standard, alternative",
-                "ElliottPortraitStyle": "standard, frontfacing"
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
             }
         },
         {
@@ -1257,7 +1258,7 @@
             "When":
             {
                 "Season": "fall",
-                "ElliottPortraitStyle": "standard, frontfacing"
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
             }
         },
         {
@@ -1267,7 +1268,7 @@
             "FromFile": "{{Portraits}}/{{ElliottPortraitStyle}}/Elliott/Elliott{{WinterSeasonalVariant}}.png",
             "When":
             {
-                "ElliottPortraitStyle": "standard, frontfacing"
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
             }
         },
 
