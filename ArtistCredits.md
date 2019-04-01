@@ -15,11 +15,12 @@
 - RoyalSpooky for allowing us to use her [Lolita Fashion sprites](https://www.nexusmods.com/stardewvalley/mods/799)!
 - Seyph for the Abigail and Leah Egg festival portrait, Alex and Elliott Spirit's Eve, and the Pam winter outdoor portrait!
 - Chill-T for the DCBurger Seasonal Variations!
-- Zosa for their portrait contributions!
+- Zosa for their portrait contributions and their Sandy sprite version!
 - Ailin for allowing us to use Jas (Complete Set), Flower Dance, and Sebastian (summer & fall indoor/outdoor) sprites!
 - Airyn for fixing some of the festival sprites & filling in a lot of the missing sprites!
 - bitty-bee for the alternative Penny sprites!
 - [Siv's Marriage Mod](https://github.com/tlcasebeer/SivsMarriageMod) for the Siv's Sandy portrait! 
+- LumenDeLumine For their [Front Facing Elliott Portraits](https://www.nexusmods.com/stardewvalley/mods/3488)
 - Thank you everyone who has contributed community made portraits!
  
 I think that is everyone who contributed, but if I somehow forgot something/someone, please let me know and I'll add you!
