@@ -229,7 +229,7 @@
         "PortraitStyle":
         {
             "AllowValues": "standard, dcburger",
-            "Default": "dcburger",
+            "Default": "standard",
             "AllowBlank": "true"
         },
         "MaternitySprites":
@@ -255,6 +255,10 @@
         "WillyWinterPortraitVariant":
         {
             "AllowValues": "standard, alternative"
+        },
+        "SandyPortraitVariant": // Front version works for sivs only
+        {
+            "AllowValues": "side, front, sivs"
         },
 
         // DCBurger Portrait Config Options
@@ -474,10 +478,6 @@
         {
             "AllowValues": "standard, sivs, zola",
             "Default": "standard"
-        },
-        "SandyPortraitVersion": // Front version works for alternative only
-        {
-            "AllowValues": "side, front, sivs"
         },
 
         // Maru
@@ -2498,7 +2498,7 @@
                 "Season": "spring, summer, fall",
                 "SandyEnabled": "true",
                 "SandyVersion": "standard",
-                "SandyPortraitVersion": "side"
+                "SandyPortraitVariant": "side"
             }
         },
         {
@@ -2510,7 +2510,7 @@
             {
                 "SandyEnabled": "true",
                 "SandyVersion": "sivs",
-                "SandyPortraitVersion": "side"
+                "SandyPortraitVariant": "side"
             }
         },
         {
@@ -2522,7 +2522,7 @@
             {
                 "SandyEnabled": "true",
                 "SandyVersion": "sivs",
-                "SandyPortraitVersion": "front"
+                "SandyPortraitVariant": "front"
             }
         },
         {
@@ -2534,7 +2534,7 @@
             {
                 "SandyEnabled": "true",
                 "SandyVersion": "sivs",
-                "SandyPortraitVersion": "sivs"
+                "SandyPortraitVariant": "sivs"
             }
         },
 
