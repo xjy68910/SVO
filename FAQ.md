@@ -1,9 +1,14 @@
 ## FAQ
+* [General Questions](#General-Questions)
+  * [Why are some characters missing?](#why-are-some-characters-missing?)
+  * [Can you do a version of this that's compatible with ________?](#can-you-do-a-version-of-this-that's-compatible-with?)
+
+## General Questions
 
 ### Why are some characters missing?
 Because I made this mod with [Longevity's](https://www.nexusmods.com/stardewvalley/mods/649?tab=files) DNPCC in mind. I didn't want the outfits to have a huge overlap and also the sprites they have are wonderful! We do not have permission to upload their artwork, so if you want to combine the two outfit sets, you will have to add them to the mod and only use it personally. [Content patcher instructions are here](https://github.com/Pathoschild/StardewMods/tree/stable/ContentPatcher#readme).
 
-### Can you do a version of this that's compatible with ________?
+### Can you do a version of this that's compatible with?
 Maybe! I don't have a ton of free time, so if I do it'll probably be a long time. Leave me a request in the posts section. Also, if you really would like to do a crossover version with your favorite mod and you want to create it, you totally have permission on my end (don't forget to ask the other mod author of whichever mod you want to combine it with). I will happily add it to the mod.
 
 ### May I contribute my own art for portraits and such?
