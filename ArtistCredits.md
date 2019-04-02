@@ -21,6 +21,7 @@
 - bitty-bee for the alternative Penny sprites!
 - [Siv's Marriage Mod](https://github.com/tlcasebeer/SivsMarriageMod) for the Siv's Sandy portrait! 
 - LumenDeLumine For their [Front Facing Elliott Portraits](https://www.nexusmods.com/stardewvalley/mods/3488)
+- Eemie's base for front facing elliott as well (open source)!
 - Thank you everyone who has contributed community made portraits!
  
 I think that is everyone who contributed, but if I somehow forgot something/someone, please let me know and I'll add you!
