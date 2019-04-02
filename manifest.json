@@ -1,7 +1,7 @@
 {
    "Name": "Seasonal Villager Outfits for ContentPatcher",
    "Author": "Tanpoponoko (Art) Paradigmnomad (Coding) & Various Contributors",
-   "Version": "1.2.12",
+   "Version": "1.2.13",
    "Description": "Changes what the villagers wear to match the season.",
    "UniqueID": "Tanpoponoko.SeasonalOutfits",
     "MinimumApiVersion": "2.11.1",
@@ -9,10 +9,4 @@
    "ContentPackFor": {
       "UniqueID": "Pathoschild.ContentPatcher",
    },
- "Dependencies": [
-   {
-      "UniqueID": "Platonymous.ScaleUp",
-      "IsRequired": true,
-   },
-]
 }
