@@ -228,7 +228,7 @@
 
         "PortraitStyle":
         {
-            "AllowValues": "standard, dcburger",
+            "AllowValues": "standard",
             "Default": "standard",
             "AllowBlank": "true"
         },
@@ -240,10 +240,6 @@
 
         // Standard Portrait Config Options
 
-        "ElliottSummerPortraitVariant":
-        {
-            "AllowValues": "standard, alternative"
-        },
         "ElliottPortraitStyle":
         {
             "AllowValues": "standard, frontfacingeemie, frontfacinglumen"
@@ -1280,7 +1276,6 @@
                 "Season": "summer",
                 "ElliottSummerVariant": "nosuspenders, suspenders",
                 "Weather": "sun, wind, snow",
-                "ElliottSummerPortraitVariant": "standard, alternative",
                 "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
             }
         },
@@ -2271,7 +2266,7 @@
             "FromFile": "Characters/Clint/{{ClintVersion}}/Clint{{WinterSeasonalVariant}}.png",
             "When":
             {
-                "ClintVersion": "apron, alternative, noapron"
+                "ClintVersion": "apron, noapron"
             }
         },
 
