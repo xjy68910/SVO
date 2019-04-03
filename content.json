@@ -244,6 +244,10 @@
         {
             "AllowValues": "standard, frontfacingeemie, frontfacinglumen"
         },
+        "ElliottSummerPortraitVariant":
+        {
+            "AllowValues": "alternative, standard"
+        },
         "SamSummerPortraitVariant":
         {
             "AllowValues": "standard, alternative"
