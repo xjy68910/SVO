@@ -501,6 +501,13 @@
         {
             "AllowValues": "blackredscarf, brownnoscarf"
         },
+
+        // Alex
+
+        "AlexSummerVariant":
+        {
+            "AllowValues": "sunglasses, nosunglasses"
+        },
     },
 
     "Changes": [
@@ -1564,13 +1571,24 @@
             }
         },
         {
-            "LogName": "Alex Summer & Fall - Indoor",
+            "LogName": "Alex Summer - Indoor",
+            "Action": "Load",
+            "Target": "Characters/Alex",
+            "FromFile": "Characters/Alex/Alex_{{season}}{{Indoor_SeasonalVariant}}_{{AlexSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "AlexSummerVariant": "sunglasses, nosunglasses"
+            }
+        },
+         {
+            "LogName": "Alex Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Alex",
             "FromFile": "Characters/Alex/Alex_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "summer, fall",
+                "Season": "fall",
             }
         },
         {
@@ -1606,10 +1624,21 @@
             "LogName": "Alex Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Alex",
+            "FromFile": "{{Portraits}}/Alex/Alex_{{season}}{{Indoor_SeasonalVariant}}_{{AlexSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "AlexSummerVariant": "sunglasses, nosunglasses"
+            }
+        },
+        {
+            "LogName": "Alex Fall - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Alex",
             "FromFile": "{{Portraits}}/Alex/Alex_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "summer, fall",
+                "Season": "fall",
             }
         },
         {
