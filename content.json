@@ -601,7 +601,7 @@
             "LogName": "Emily Spring Portraits",
             "Action": "Load",
             "Target": "Portraits/Emily",
-            "FromFile": "{{Portraits}}/Emily/Emily_Spring_Indoor_{{EmilySpringVariant}}.png",
+            "FromFile": "{{Portraits}}/Emily/Emily_Spring{{Indoor_SeasonalVariant}}_{{EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
