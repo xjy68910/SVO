@@ -1274,7 +1274,7 @@
             "LogName": "Elliott Summer - Indoor v1",
             "Action": "Load",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_Summer_Indoor_{{ElliottSummerVariant}}_{{ElliottSummerPortraitVariant}}.png",
+            "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_Summer_Indoor_{{ElliottSummerVariant}}.png",
             "When":
             {
                 "Season": "summer",
