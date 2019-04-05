@@ -540,7 +540,7 @@
             "LogName": "Emily Spring",
             "Action": "Load",
             "Target": "Characters/Emily",
-            "FromFile": "Characters/Emily/Emily_Spring_Indoor_{{EmilySpringVariant}}.png",
+            "FromFile": "Characters/Emily/Emily_{{season}}{{Indoor_SeasonalVariant}}{{EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -608,7 +608,7 @@
             "LogName": "Emily Spring Portraits",
             "Action": "Load",
             "Target": "Portraits/Emily",
-            "FromFile": "{{Portraits}}/Emily/Emily_Spring{{Indoor_SeasonalVariant}}_{{EmilySpringVariant}}.png",
+            "FromFile": "{{Portraits}}/Emily/Emily_{{season}}{{Indoor_SeasonalVariant}}_{{EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -1440,24 +1440,16 @@
         // Shane Portraits
 
         {
-            "LogName": "Shane Spring & Fall- Outdoor Rain",
+            "LogName": "Shane Spring, Summer & Fall- Outdoor Rain",
             "Action": "Load",
             "Target": "Portraits/Shane",
             "FromFile": "{{Portraits}}/Shane/Shane_{{season}}{{RainSeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "spring, fall",
-            }
         },
         {
-            "LogName": "Shane Summer & Fall - Indoor",
+            "LogName": "Shane Spring, Summer & Fall - Indoor",
             "Action": "Load",
             "Target": "Portraits/Shane",
             "FromFile": "{{Portraits}}/Shane/Shane_{{season}}{{Indoor_SeasonalVariant}}.png",
-            "When":
-            {
-                "Season": "summer, fall",
-            }
         },
         {
             "LogName": "Shane Winter - Outdoor",
@@ -1581,7 +1573,7 @@
                 "AlexSummerVariant": "sunglasses, nosunglasses"
             }
         },
-         {
+        {
             "LogName": "Alex Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Alex",
@@ -2573,7 +2565,7 @@
                 "SandyPortraitVariant": "side"
             }
         },
-        /*{
+        {
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Side)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
@@ -2596,7 +2588,7 @@
                 "SandyVersion": "sivs",
                 "SandyPortraitVariant": "front"
             }
-        },*/
+        },
         {
             "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Front)",
             "Action": "Load",
@@ -3331,727 +3323,727 @@
 
         // Abigail
 
-/*        {
-            "LogName": "Abigail DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Abigail",
-            "FromFile": "{{DCBurger}}/Abigail/Abigail_Summer_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "Summer",
-            }
-        },
+        /*        {
+                    "LogName": "Abigail DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Abigail",
+                    "FromFile": "{{DCBurger}}/Abigail/Abigail_Summer_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "Summer",
+                    }
+                },
 
-        // Alex
+                // Alex
 
-        {
-            "LogName": "Alex DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Alex",
-            "FromFile": "{{DCBurger}}/Alex/Alex_Spring_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring",
-                "Weather": "sun, wind, snow",
-            }
-        },
-        {
-            "LogName": "Alex DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Alex",
-            "FromFile": "{{DCBurger}}/Alex/Alex_Spring{{RainSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring",
-            }
-        },
-        {
-            "LogName": "Alex DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Alex",
-            "FromFile": "{{DCBurger}}/Alex/Alex_Fall_Outdoor_{{DC_AlexVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "sun, wind, snow",
-                "DC_AlexVersion": "standard, darkerjacket",
-            }
-        },
-        {
-            "LogName": "Alex DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Alex",
-            "FromFile": "{{DCBurger}}/Alex/Alex_Fall_Outdoor_Rain_{{DC_AlexVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "rain, storm",
-                "DC_AlexVersion": "standard, darkerjacket",
-            }
-        },
+                {
+                    "LogName": "Alex DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Alex",
+                    "FromFile": "{{DCBurger}}/Alex/Alex_Spring_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring",
+                        "Weather": "sun, wind, snow",
+                    }
+                },
+                {
+                    "LogName": "Alex DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Alex",
+                    "FromFile": "{{DCBurger}}/Alex/Alex_Spring{{RainSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring",
+                    }
+                },
+                {
+                    "LogName": "Alex DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Alex",
+                    "FromFile": "{{DCBurger}}/Alex/Alex_Fall_Outdoor_{{DC_AlexVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall",
+                        "Weather": "sun, wind, snow",
+                        "DC_AlexVersion": "standard, darkerjacket",
+                    }
+                },
+                {
+                    "LogName": "Alex DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Alex",
+                    "FromFile": "{{DCBurger}}/Alex/Alex_Fall_Outdoor_Rain_{{DC_AlexVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall",
+                        "Weather": "rain, storm",
+                        "DC_AlexVersion": "standard, darkerjacket",
+                    }
+                },
 
-        // Clint
+                // Clint
 
-        {
-            "LogName": "Clint DCBurger Portraits - Spring, Summer, Fall",
-            "Action": "Load",
-            "Target": "Portraits/Clint",
-            "FromFile": "{{DCBurger}}/Clint/Clint_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer, fall",
-            }
-        },
-        {
-            "LogName": "Clint DCBurger Portraits - Winter Outdoor v1",
-            "Action": "Load",
-            "Target": "Portraits/Clint",
-            "FromFile": "{{DCBurger}}/Clint/Clint_Winter_Outdoor_{{DC_ClintVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "winter",
-                "DC_ClintVersion": "standard, snow, snowfog",
-            }
-        },
+                {
+                    "LogName": "Clint DCBurger Portraits - Spring, Summer, Fall",
+                    "Action": "Load",
+                    "Target": "Portraits/Clint",
+                    "FromFile": "{{DCBurger}}/Clint/Clint_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer, fall",
+                    }
+                },
+                {
+                    "LogName": "Clint DCBurger Portraits - Winter Outdoor v1",
+                    "Action": "Load",
+                    "Target": "Portraits/Clint",
+                    "FromFile": "{{DCBurger}}/Clint/Clint_Winter_Outdoor_{{DC_ClintVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "winter",
+                        "DC_ClintVersion": "standard, snow, snowfog",
+                    }
+                },
 
-        // Demetrius
+                // Demetrius
 
-        {
-            "LogName": "Demetrius DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Demetrius",
-            "FromFile": "{{DCBurger}}/Demetrius/Demetrius_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer, fall",
-            }
-        },
-        {
-            "LogName": "Demetrius DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Demetrius",
-            "FromFile": "{{DCBurger}}/Demetrius/Demetrius{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Demetrius DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Demetrius",
+                    "FromFile": "{{DCBurger}}/Demetrius/Demetrius_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer, fall",
+                    }
+                },
+                {
+                    "LogName": "Demetrius DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Demetrius",
+                    "FromFile": "{{DCBurger}}/Demetrius/Demetrius{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Elliott
+                // Elliott
 
-        {
-            "LogName": "Elliott DCBurger Portraits - Spring & Fall",
-            "Action": "Load",
-            "Target": "Portraits/Elliott",
-            "FromFile": "{{DCBurger}}/Elliott/Elliott_{{season}}{{Indoor_SeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, fall"
-            }
-        },
-        {
-            "LogName": "Elliott DCBurger Portraits - Spring, Summer & Fall Rain",
-            "Action": "Load",
-            "Target": "Portraits/Elliott",
-            "FromFile": "{{DCBurger}}/Elliott/Elliott_{{season}}{{RainSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
-        {
-            "LogName": "Elliott DCBurger Portraits - Summer",
-            "Action": "Load",
-            "Target": "Portraits/Elliott",
-            "FromFile": "{{DCBurger}}/Elliott/Elliott_Summer{{Indoor_SeasonalVariant}}_{{ElliottSummerVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "ElliottSummerVariant": "suspenders, nosuspenders",
-                "Season": "summer"
-            }
-        },
-        {
-            "LogName": "Elliott DCBurger Portraits - Winter",
-            "Action": "Load",
-            "Target": "Portraits/Elliott",
-            "FromFile": "{{DCBurger}}/Elliott/Elliott{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Elliott DCBurger Portraits - Spring & Fall",
+                    "Action": "Load",
+                    "Target": "Portraits/Elliott",
+                    "FromFile": "{{DCBurger}}/Elliott/Elliott_{{season}}{{Indoor_SeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, fall"
+                    }
+                },
+                {
+                    "LogName": "Elliott DCBurger Portraits - Spring, Summer & Fall Rain",
+                    "Action": "Load",
+                    "Target": "Portraits/Elliott",
+                    "FromFile": "{{DCBurger}}/Elliott/Elliott_{{season}}{{RainSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
+                {
+                    "LogName": "Elliott DCBurger Portraits - Summer",
+                    "Action": "Load",
+                    "Target": "Portraits/Elliott",
+                    "FromFile": "{{DCBurger}}/Elliott/Elliott_Summer{{Indoor_SeasonalVariant}}_{{ElliottSummerVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "ElliottSummerVariant": "suspenders, nosuspenders",
+                        "Season": "summer"
+                    }
+                },
+                {
+                    "LogName": "Elliott DCBurger Portraits - Winter",
+                    "Action": "Load",
+                    "Target": "Portraits/Elliott",
+                    "FromFile": "{{DCBurger}}/Elliott/Elliott{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Emily
+                // Emily
 
-        {
-            "LogName": "Emily DCBurger Portraits Spring, Summer, Fall - Rain Portrait",
-            "Action": "Load",
-            "Target": "Portraits/Emily",
-            "FromFile": "{{DCBurger}}/Emily/Emily_{{season}}{{RainSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer",
-            }
-        },
-        {
-            "LogName": "Emily DCBurger Portraits Spring - Portrait v1",
-            "Action": "Load",
-            "Target": "Portraits/Emily",
-            "FromFile": "{{DCBurger}}/Emily/Emily_Spring_Indoor_{{DC_EmilySpringVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring",
-                "Weather": "sun, wind, snow",
-            }
-        },
-        {
-            "LogName": "Emily DCBurger Portraits Summer - Portrait",
-            "Action": "Load",
-            "Target": "Portraits/Emily",
-            "FromFile": "{{DCBurger}}/Emily/Emily_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "sun, wind, snow",
-                "DC_EmilySpringVariant": "standard, alternative"
-            }
-        },
-        {
-            "LogName": "Emily DCBurger Portraits Fall - Portrait v1",
-            "Action": "Load",
-            "Target": "Portraits/Emily",
-            "FromFile": "{{DCBurger}}/Emily/Emily_Fall_Indoor_{{DC_EmilyFallVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall",
-                "DC_EmilyFallVersion": "standard, alternative"
-            }
-        },
-        {
-            "LogName": "Emily DCBurger Portraits Winter - Indoor Portrait",
-            "Action": "Load",
-            "Target": "Portraits/Emily",
-            "FromFile": "{{DCBurger}}/Emily/Emily{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Emily DCBurger Portraits Spring, Summer, Fall - Rain Portrait",
+                    "Action": "Load",
+                    "Target": "Portraits/Emily",
+                    "FromFile": "{{DCBurger}}/Emily/Emily_{{season}}{{RainSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer",
+                    }
+                },
+                {
+                    "LogName": "Emily DCBurger Portraits Spring - Portrait v1",
+                    "Action": "Load",
+                    "Target": "Portraits/Emily",
+                    "FromFile": "{{DCBurger}}/Emily/Emily_Spring_Indoor_{{DC_EmilySpringVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring",
+                        "Weather": "sun, wind, snow",
+                    }
+                },
+                {
+                    "LogName": "Emily DCBurger Portraits Summer - Portrait",
+                    "Action": "Load",
+                    "Target": "Portraits/Emily",
+                    "FromFile": "{{DCBurger}}/Emily/Emily_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "summer",
+                        "Weather": "sun, wind, snow",
+                        "DC_EmilySpringVariant": "standard, alternative"
+                    }
+                },
+                {
+                    "LogName": "Emily DCBurger Portraits Fall - Portrait v1",
+                    "Action": "Load",
+                    "Target": "Portraits/Emily",
+                    "FromFile": "{{DCBurger}}/Emily/Emily_Fall_Indoor_{{DC_EmilyFallVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall",
+                        "DC_EmilyFallVersion": "standard, alternative"
+                    }
+                },
+                {
+                    "LogName": "Emily DCBurger Portraits Winter - Indoor Portrait",
+                    "Action": "Load",
+                    "Target": "Portraits/Emily",
+                    "FromFile": "{{DCBurger}}/Emily/Emily{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Gus
+                // Gus
 
-        {
-            "LogName": "Gus DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Gus",
-            "FromFile": "{{DCBurger}}/Gus/Gus_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer, fall",
-            }
-        },
+                {
+                    "LogName": "Gus DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Gus",
+                    "FromFile": "{{DCBurger}}/Gus/Gus_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer, fall",
+                    }
+                },
 
-        // Haley
+                // Haley
 
-        {
-            "LogName": "Haley Fall Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Haley",
-            "FromFile": "{{DCBurger}}/Haley/Haley_Fall{{Indoor_SeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, fall",
-            }
-        },
-        {
-            "LogName": "Haley Spring & Fall - Rain",
-            "Action": "Load",
-            "Target": "Portraits/Haley",
-            "FromFile": "{{DCBurger}}/Haley/Haley_{{season}}{{RainSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring"
-            }
-        },
-        {
-            "LogName": "Haley Fall - Rain",
-            "Action": "Load",
-            "Target": "Portraits/Haley",
-            "FromFile": "{{DCBurger}}/Haley/Haley_Fall{{RainSeasonalVariant}}_{{DC_HaleyFallRainVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall",
-                "DC_HaleyFallRainVersion": "standard, alternative"
-            }
-        },
-        {
-            "LogName": "Haley Summer - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Haley",
-            "FromFile": "{{DCBurger}}/Haley/Haley_Summer_{{HaleySummerVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "HaleySummerVariant": "indoor, outdoor, beach",
-                "Season": "summer"
-            }
-        },
+                {
+                    "LogName": "Haley Fall Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Haley",
+                    "FromFile": "{{DCBurger}}/Haley/Haley_Fall{{Indoor_SeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, fall",
+                    }
+                },
+                {
+                    "LogName": "Haley Spring & Fall - Rain",
+                    "Action": "Load",
+                    "Target": "Portraits/Haley",
+                    "FromFile": "{{DCBurger}}/Haley/Haley_{{season}}{{RainSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring"
+                    }
+                },
+                {
+                    "LogName": "Haley Fall - Rain",
+                    "Action": "Load",
+                    "Target": "Portraits/Haley",
+                    "FromFile": "{{DCBurger}}/Haley/Haley_Fall{{RainSeasonalVariant}}_{{DC_HaleyFallRainVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall",
+                        "DC_HaleyFallRainVersion": "standard, alternative"
+                    }
+                },
+                {
+                    "LogName": "Haley Summer - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Haley",
+                    "FromFile": "{{DCBurger}}/Haley/Haley_Summer_{{HaleySummerVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "HaleySummerVariant": "indoor, outdoor, beach",
+                        "Season": "summer"
+                    }
+                },
 
-        // Harvey
+                // Harvey
 
-        {
-            "LogName": "Harvey DCBurger Portraits - Spring Rain",
-            "Action": "Load",
-            "Target": "Portraits/Harvey",
-            "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring",
-                "Weather": "rain, storm"
-            }
-        },
-        {
-            "LogName": "Harvey DCBurger Portraits - Spring - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Harvey",
-            "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}/{{season}}_{{HarveyVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring",
-                "Weather": "sun, wind, snow"
-            }
-        },
-        {
-            "LogName": "Harvey DCBurger Portraits - Winter, & Fall - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Harvey",
-            "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}/{{season}}_{{HarveyVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall, winter",
-            }
-        },
-        {
-            "LogName": "Harvey DCBurger Portraits - Summer - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Harvey",
-            "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}/{{HarveyVersion}}{{DCShirt}}{{DCTie}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "DC_HarveySummerShirt": "whitenotie, bluenotie, whitetie, bluetie",
-                "Season": "summer",
-                "Weather": "sun, wind, snow"
-            }
-        },
-        {
-            "LogName": "Harvey DCBurger Portraits - Summer Rain - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Harvey",
-            "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}/{{HarveyVersion}}{{DCShirt}}{{DCTie}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "DC_HarveySummerShirt": "whitenotie, bluenotie, whitetie, bluetie",
-                "Season": "summer",
-                "Weather": "rain, storm"
-            }
-        },
+                {
+                    "LogName": "Harvey DCBurger Portraits - Spring Rain",
+                    "Action": "Load",
+                    "Target": "Portraits/Harvey",
+                    "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring",
+                        "Weather": "rain, storm"
+                    }
+                },
+                {
+                    "LogName": "Harvey DCBurger Portraits - Spring - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Harvey",
+                    "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}/{{season}}_{{HarveyVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring",
+                        "Weather": "sun, wind, snow"
+                    }
+                },
+                {
+                    "LogName": "Harvey DCBurger Portraits - Winter, & Fall - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Harvey",
+                    "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}/{{season}}_{{HarveyVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall, winter",
+                    }
+                },
+                {
+                    "LogName": "Harvey DCBurger Portraits - Summer - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Harvey",
+                    "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}/{{HarveyVersion}}{{DCShirt}}{{DCTie}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "DC_HarveySummerShirt": "whitenotie, bluenotie, whitetie, bluetie",
+                        "Season": "summer",
+                        "Weather": "sun, wind, snow"
+                    }
+                },
+                {
+                    "LogName": "Harvey DCBurger Portraits - Summer Rain - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Harvey",
+                    "FromFile": "{{DCBurger}}/Harvey/{{F_HarveyVersion}}/{{HarveyVersion}}/{{HarveyVersion}}{{DCShirt}}{{DCTie}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "DC_HarveySummerShirt": "whitenotie, bluenotie, whitetie, bluetie",
+                        "Season": "summer",
+                        "Weather": "rain, storm"
+                    }
+                },
 
-        // Jodi
+                // Jodi
 
-        {
-            "LogName": "Jodi DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Jodi",
-            "FromFile": "{{DCBurger}}/Jodi/Jodi_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer, fall",
-            }
-        },
+                {
+                    "LogName": "Jodi DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Jodi",
+                    "FromFile": "{{DCBurger}}/Jodi/Jodi_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer, fall",
+                    }
+                },
 
-        // Kent
+                // Kent
 
-        {
-            "LogName": "Kent DCBurger Portraits Fall - Indoor v1",
-            "Action": "Load",
-            "Target": "Portraits/Kent",
-            "FromFile": "{{DCBurger}}/Kent/Kent_Fall_Indoor_{{DC_KentVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall",
-                "DC_KentVersion": "standard, outline, alternative",
-            }
-        },
-        {
-            "LogName": "Kent DCBurger Portraits Winter - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Kent",
-            "FromFile": "{{DCBurger}}/Kent/Kent{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Kent DCBurger Portraits Fall - Indoor v1",
+                    "Action": "Load",
+                    "Target": "Portraits/Kent",
+                    "FromFile": "{{DCBurger}}/Kent/Kent_Fall_Indoor_{{DC_KentVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall",
+                        "DC_KentVersion": "standard, outline, alternative",
+                    }
+                },
+                {
+                    "LogName": "Kent DCBurger Portraits Winter - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Kent",
+                    "FromFile": "{{DCBurger}}/Kent/Kent{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Lewis
+                // Lewis
 
-        {
-            "LogName": "Lewis DCBurger Portraits - Spring & Summer",
-            "Action": "Load",
-            "Target": "Portraits/Lewis",
-            "FromFile": "{{DCBurger}}/Lewis/Lewis_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, fall",
-            }
-        },
-        {
-            "LogName": "Lewis DCBurger Portraits - Summer v1",
-            "Action": "Load",
-            "Target": "Portraits/Lewis",
-            "FromFile": "{{DCBurger}}/Lewis/Lewis_Summer_Indoor_{{DC_LewisVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "summer",
-                "DC_LewisVersion": "tie, notie"
-            }
-        },
-        {
-            "LogName": "Lewis DCBurger Portraits Winter - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Lewis",
-            "FromFile": "{{DCBurger}}/Lewis/Lewis{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Lewis DCBurger Portraits - Spring & Summer",
+                    "Action": "Load",
+                    "Target": "Portraits/Lewis",
+                    "FromFile": "{{DCBurger}}/Lewis/Lewis_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, fall",
+                    }
+                },
+                {
+                    "LogName": "Lewis DCBurger Portraits - Summer v1",
+                    "Action": "Load",
+                    "Target": "Portraits/Lewis",
+                    "FromFile": "{{DCBurger}}/Lewis/Lewis_Summer_Indoor_{{DC_LewisVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "summer",
+                        "DC_LewisVersion": "tie, notie"
+                    }
+                },
+                {
+                    "LogName": "Lewis DCBurger Portraits Winter - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Lewis",
+                    "FromFile": "{{DCBurger}}/Lewis/Lewis{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Linus
+                // Linus
 
-        {
-            "LogName": "Linus DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Linus",
-            "FromFile": "{{DCBurger}}/Linus/Linus_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Linus DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Linus",
+                    "FromFile": "{{DCBurger}}/Linus/Linus_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Maru
+                // Maru
 
-        {
-            "LogName": "Maru DCBurger Portraits - Spring Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Maru",
-            "FromFile": "{{DCBurger}}/Maru/Maru_{{season}}{{Indoor_SeasonalVariant}}_{{DC_MaruVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring",
-                "DC_MaruVersion": "noglasses, glasses"
-            }
-        },
+                {
+                    "LogName": "Maru DCBurger Portraits - Spring Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Maru",
+                    "FromFile": "{{DCBurger}}/Maru/Maru_{{season}}{{Indoor_SeasonalVariant}}_{{DC_MaruVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring",
+                        "DC_MaruVersion": "noglasses, glasses"
+                    }
+                },
 
-        // Pam
+                // Pam
 
-        {
-            "LogName": "Pam DCBurger Portraits Summer & Fall - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Pam",
-            "FromFile": "{{DCBurger}}/Pam/Pam_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer, fall",
-            },
-        },
-        {
-            "LogName": "Pam DCBurger Portraits Winter - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Pam",
-            "FromFile": "{{DCBurger}}/Pam/Pam{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Pam DCBurger Portraits Summer & Fall - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Pam",
+                    "FromFile": "{{DCBurger}}/Pam/Pam_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer, fall",
+                    },
+                },
+                {
+                    "LogName": "Pam DCBurger Portraits Winter - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Pam",
+                    "FromFile": "{{DCBurger}}/Pam/Pam{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Pierre
+                // Pierre
 
-        {
-            "LogName": "Pierre DCBurger Portraits Spring, Summer, Fall - Indoor Portrait",
-            "Action": "Load",
-            "Target": "Portraits/Pierre",
-            "FromFile": "{{DCBurger}}/Pierre/Pierre_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer, fall",
-            }
-        },
-        {
-            "LogName": "Pierre DCBurger Portraits Winter - Indoor Portrait",
-            "Action": "Load",
-            "Target": "Portraits/Pierre",
-            "FromFile": "{{DCBurger}}/Pierre/Pierre_Winter_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind, storm, rain"
-            },
-        },
-        {
-            "LogName": "Pierre DCBurger Portraits Winter - Outdoor Portrait",
-            "Action": "Load",
-            "Target": "Portraits/Pierre",
-            "FromFile": "{{DCBurger}}/Pierre/Pierre_Winter_Outdoor_{{DC_PierreVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "winter",
-                "DC_PierreVersion": "standard, fog",
-                "Weather": "snow"
-            }
-        },
+                {
+                    "LogName": "Pierre DCBurger Portraits Spring, Summer, Fall - Indoor Portrait",
+                    "Action": "Load",
+                    "Target": "Portraits/Pierre",
+                    "FromFile": "{{DCBurger}}/Pierre/Pierre_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer, fall",
+                    }
+                },
+                {
+                    "LogName": "Pierre DCBurger Portraits Winter - Indoor Portrait",
+                    "Action": "Load",
+                    "Target": "Portraits/Pierre",
+                    "FromFile": "{{DCBurger}}/Pierre/Pierre_Winter_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "winter",
+                        "Weather": "sun, wind, storm, rain"
+                    },
+                },
+                {
+                    "LogName": "Pierre DCBurger Portraits Winter - Outdoor Portrait",
+                    "Action": "Load",
+                    "Target": "Portraits/Pierre",
+                    "FromFile": "{{DCBurger}}/Pierre/Pierre_Winter_Outdoor_{{DC_PierreVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "winter",
+                        "DC_PierreVersion": "standard, fog",
+                        "Weather": "snow"
+                    }
+                },
 
-        // Robin
+                // Robin
 
-        {
-            "LogName": "Robin DCBurger Portraits Spring Hair Up - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Robin",
-            "FromFile": "{{DCBurger}}/Robin/Robin_Spring_{{RobinHairStyle}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring",
-                "RobinHairStyle": "up, down"
-            }
-        },
-        {
-            "LogName": "Robin DCBurger Portraits Summer - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Robin",
-            "FromFile": "{{DCBurger}}/Robin/Robin_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "summer",
-            }
-        },
-        {
-            "LogName": "Robin DCBurger Portraits Winter",
-            "Action": "Load",
-            "Target": "Portraits/Robin",
-            "FromFile": "{{DCBurger}}/Robin/Robin{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Robin DCBurger Portraits Spring Hair Up - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Robin",
+                    "FromFile": "{{DCBurger}}/Robin/Robin_Spring_{{RobinHairStyle}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring",
+                        "RobinHairStyle": "up, down"
+                    }
+                },
+                {
+                    "LogName": "Robin DCBurger Portraits Summer - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Robin",
+                    "FromFile": "{{DCBurger}}/Robin/Robin_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "summer",
+                    }
+                },
+                {
+                    "LogName": "Robin DCBurger Portraits Winter",
+                    "Action": "Load",
+                    "Target": "Portraits/Robin",
+                    "FromFile": "{{DCBurger}}/Robin/Robin{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Sam
+                // Sam
 
-        {
-            "LogName": "Sam DCBurger Portraits Spring & Summer - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Sam",
-            "FromFile": "{{DCBurger}}/Sam/Sam_Summer_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "summer",
-            }
-        },
-        {
-            "LogName": "Sam DCBurger Portraits Fall - Outdoor Rain",
-            "Action": "Load",
-            "Target": "Portraits/Sam",
-            "FromFile": "{{DCBurger}}/Sam/Sam_{{Season}}{{RainSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, fall",
-            },
-        },
-        {
-            "LogName": "Sam DCBurger Portraits Fall",
-            "Action": "Load",
-            "Target": "Portraits/Sam",
-            "FromFile": "{{DCBurger}}/Sam/Sam_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, fall",
-                "Weather": "sun, wind, snow",
-            }
-        },
-        {
-            "LogName": "Sam DCBurger Portraits Winter - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Sam",
-            "FromFile": "{{DCBurger}}/Sam/Sam{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Sam DCBurger Portraits Spring & Summer - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Sam",
+                    "FromFile": "{{DCBurger}}/Sam/Sam_Summer_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "summer",
+                    }
+                },
+                {
+                    "LogName": "Sam DCBurger Portraits Fall - Outdoor Rain",
+                    "Action": "Load",
+                    "Target": "Portraits/Sam",
+                    "FromFile": "{{DCBurger}}/Sam/Sam_{{Season}}{{RainSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, fall",
+                    },
+                },
+                {
+                    "LogName": "Sam DCBurger Portraits Fall",
+                    "Action": "Load",
+                    "Target": "Portraits/Sam",
+                    "FromFile": "{{DCBurger}}/Sam/Sam_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, fall",
+                        "Weather": "sun, wind, snow",
+                    }
+                },
+                {
+                    "LogName": "Sam DCBurger Portraits Winter - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Sam",
+                    "FromFile": "{{DCBurger}}/Sam/Sam{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Sebastian
+                // Sebastian
 
-        {
-            "LogName": "Sebastian DCBurger Portraits Spring, Summer, & Winter - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Sebastian",
-            "FromFile": "{{DCBurger}}/Sebastian/Sebastian_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer, winter",
-            }
-        },
-        {
-            "LogName": "Sebastian DCBurger Portraits Fall v2",
-            "Action": "Load",
-            "Target": "Portraits/Sebastian",
-            "FromFile": "{{DCBurger}}/Sebastian/Sebastian_Fall_Outdoor_{{DC_SebastianVersion}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall",
-                "DC_SebastianVersion": "standard, choker, chokerfog, fog"
-            }
-        },
+                {
+                    "LogName": "Sebastian DCBurger Portraits Spring, Summer, & Winter - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Sebastian",
+                    "FromFile": "{{DCBurger}}/Sebastian/Sebastian_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer, winter",
+                    }
+                },
+                {
+                    "LogName": "Sebastian DCBurger Portraits Fall v2",
+                    "Action": "Load",
+                    "Target": "Portraits/Sebastian",
+                    "FromFile": "{{DCBurger}}/Sebastian/Sebastian_Fall_Outdoor_{{DC_SebastianVersion}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall",
+                        "DC_SebastianVersion": "standard, choker, chokerfog, fog"
+                    }
+                },
 
 
-        // Shane
+                // Shane
 
-        {
-            "LogName": "Shane DCBurger Portraits Fall - Outdoor Rain",
-            "Action": "Load",
-            "Target": "Portraits/Shane",
-            "FromFile": "{{DCBurger}}/Shane/Shane_Fall_Outdoor_Rain.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "rain, storm",
-            }
-        },
-        {
-            "LogName": "Shane DCBurger Portraits Fall - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Shane",
-            "FromFile": "{{DCBurger}}/Shane/Shane_Fall_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "sun, wind, snow",
-            }
-        },
-        {
-            "LogName": "Shane DCBurger Portraits Spring, Summer, Winter - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Shane",
-            "FromFile": "{{DCBurger}}/Shane/Shane_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer, winter",
-            }
-        },
+                {
+                    "LogName": "Shane DCBurger Portraits Fall - Outdoor Rain",
+                    "Action": "Load",
+                    "Target": "Portraits/Shane",
+                    "FromFile": "{{DCBurger}}/Shane/Shane_Fall_Outdoor_Rain.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall",
+                        "Weather": "rain, storm",
+                    }
+                },
+                {
+                    "LogName": "Shane DCBurger Portraits Fall - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Shane",
+                    "FromFile": "{{DCBurger}}/Shane/Shane_Fall_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "fall",
+                        "Weather": "sun, wind, snow",
+                    }
+                },
+                {
+                    "LogName": "Shane DCBurger Portraits Spring, Summer, Winter - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Shane",
+                    "FromFile": "{{DCBurger}}/Shane/Shane_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer, winter",
+                    }
+                },
 
-        // Vincent
+                // Vincent
 
-        {
-            "LogName": "Vincent DCBurger Portraits Spring & Summer - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Vincent",
-            "FromFile": "{{DCBurger}}/Vincent/Vincent_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "spring, summer",
-            }
-        },
-        {
-            "LogName": "Vincent DCBurger Portraits Winter - Indoor",
-            "Action": "Load",
-            "Target": "Portraits/Vincent",
-            "FromFile": "{{DCBurger}}/Vincent/Vincent{{WinterSeasonalVariant}}.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-        },
+                {
+                    "LogName": "Vincent DCBurger Portraits Spring & Summer - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Vincent",
+                    "FromFile": "{{DCBurger}}/Vincent/Vincent_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "spring, summer",
+                    }
+                },
+                {
+                    "LogName": "Vincent DCBurger Portraits Winter - Indoor",
+                    "Action": "Load",
+                    "Target": "Portraits/Vincent",
+                    "FromFile": "{{DCBurger}}/Vincent/Vincent{{WinterSeasonalVariant}}.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                },
 
-        // Willy
+                // Willy
 
-        {
-            "LogName": "Willy DCBurger Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Willy",
-            "FromFile": "{{DCBurger}}/Willy/Willy_{{season}}_Indoor.png",
-            "ScaleUp": true,
-            "OriginalWidth": 128,
-            "When":
-            {
-                "Season": "summer, fall, winter",
-            }
-        },*/
+                {
+                    "LogName": "Willy DCBurger Portraits",
+                    "Action": "Load",
+                    "Target": "Portraits/Willy",
+                    "FromFile": "{{DCBurger}}/Willy/Willy_{{season}}_Indoor.png",
+                    "ScaleUp": true,
+                    "OriginalWidth": 128,
+                    "When":
+                    {
+                        "Season": "summer, fall, winter",
+                    }
+                },*/
     ]
 }
