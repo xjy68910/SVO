@@ -6,6 +6,7 @@
 - DaniAlbrtSancEs for the Demetrius, Jodi, Pam, Vincent, Summer Pierre, Kent, Elliott, Leah, Lewis, Linus, Marnie and Willy portraits
 - FallinStar93 for the Fall Rain Penny and Pierre portraits
 - akarihora for the Abigail rain, Leah, Sam, Evelyn, and Elliott portraits
+- ChefRude for the swimsuits!
 - XAreontheBrave for the Marnie, Sam, Pam, George, Lewis, Abigail fall rain, and summer Vincent portraits. 
 - RTGoat and Alvadea for allowing me to use sprites from Longevity, including the Haley sprites and the hat in Haley's winter portrait.
 - Goodledoodoo for allowing me to use their mod for [Linus' fall outfit](https://www.nexusmods.com/stardewvalley/mods/1512).
@@ -22,6 +23,7 @@
 - [Siv's Marriage Mod](https://github.com/tlcasebeer/SivsMarriageMod) for the Siv's Sandy portrait! 
 - LumenDeLumine For their [Front Facing Elliott Portraits](https://www.nexusmods.com/stardewvalley/mods/3488)
 - Eemie's base for front facing elliott as well (open source)!
+- Riiao for the egg festival portraits!
 - Thank you everyone who has contributed community made portraits!
  
 I think that is everyone who contributed, but if I somehow forgot something/someone, please let me know and I'll add you!

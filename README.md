@@ -20,7 +20,6 @@ These options only apply when you set `PortraitStyle` to `standard`.
 
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
-`ElliottSummerPortraitVariant` | standard alternative
 `ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen
 `SamSummerPortraitVariant`     | standard alternative
 `WillyWinterPortraitVariant`   | standard alternative
@@ -77,3 +76,4 @@ options                        | valid values (select only one, values are seper
 `MaruScrubColor`               | dark light white
 `HarveySpringVariant`          | vest novest
 `HarveyFallRainVariant`        | blackredscarf brownnoscarf
+`AlexSummerVariant`            | sunglasses nosunglasses
