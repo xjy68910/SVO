@@ -258,7 +258,7 @@
         },
         "SandyPortraitVariant": // Front version works for sivs only
         {
-            "AllowValues": "side, sivs", // Front disabled until permission is obtained
+            "AllowValues": "side, sivs, front", // Front disabled until permission is obtained
         },
 
         // DCBurger Portrait Config Options
@@ -540,10 +540,11 @@
             "LogName": "Emily Spring",
             "Action": "Load",
             "Target": "Characters/Emily",
-            "FromFile": "Characters/Emily/Emily_{{season}}{{Indoor_SeasonalVariant}}{{EmilySpringVariant}}.png",
+            "FromFile": "Characters/Emily/Emily_{{season}}{{Indoor_SeasonalVariant}}_{{EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
+                "Weather": "sun, wind, snow",
                 "EmilySpringVariant": "sleeves, nosleeves"
             }
         },
@@ -555,6 +556,7 @@
             "When":
             {
                 "Season": "spring",
+                "Weather": "rain, storm",
                 "EmilySpringRainVariant": "pink, yellow"
             }
         },
