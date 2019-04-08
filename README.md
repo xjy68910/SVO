@@ -23,7 +23,7 @@ options                        | valid values (select only one, values are seper
 `ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen
 `SamSummerPortraitVariant`     | standard alternative
 `WillyWinterPortraitVariant`   | standard alternative
-`SandyPortraitVariant`         | side sivs
+`SandyPortraitVariant`         | side sivs front
 
 ## DCBurger Portraits
 These options only apply when you set `PortraitStyle` to `dcburger`.
