@@ -544,7 +544,6 @@
             "When":
             {
                 "Season": "spring",
-                "Weather": "sun, wind, snow",
                 "EmilySpringVariant": "sleeves, nosleeves"
             }
         },
@@ -556,7 +555,6 @@
             "When":
             {
                 "Season": "spring",
-                "Weather": "rain, storm",
                 "EmilySpringRainVariant": "pink, yellow"
             }
         },
@@ -2858,7 +2856,7 @@
             "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/{{Festival}}/Harvey{{Festival}}.png": true,
+                "HasFile:Characters/Festivals/{{Festival}}/Harvey_{{Festival}}.png": true,
             },
         },
         {
