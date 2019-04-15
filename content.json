@@ -512,6 +512,42 @@
 
     "Changes": [
 
+        // B E G I N  C U R S O R S  E D I T S
+
+        {
+            "LogName": "Cursors Spring, Summer, & Fall",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Cursors_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Language": "de, en, es, ja, ru, pt, zh"
+            }
+        },
+        {
+            "LogName": "Cursors Spring, Summer, & Fall Rain",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Cursors_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Language": "de, en, es, ja, ru, pt, zh"
+            }
+        },
+        {
+            "LogName": "Cursors Winter",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Cursors_Winter{{WinterSeasonalVariant}}.png",
+            "When":
+            {
+                "Language": "de, en, es, ja, ru, pt, zh",
+                "Season": "winter"
+            }
+        },
+
+        // E N D  C U R S O R S  E D I T S
+
         // B E G I N  C H A R A C T E R  E D I T S
 
         // Emily
