@@ -1129,7 +1129,7 @@
             "FromFile": "Characters/Abigail/Abigail_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "spring, summer"
+                "Season": "spring, summer, fall"
             },
         },
         {
@@ -1183,7 +1183,7 @@
             "FromFile": "{{Portraits}}/Abigail/Abigail_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "spring, summer"
+                "Season": "spring, summer, fall"
             },
         },
         {
