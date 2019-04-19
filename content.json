@@ -522,7 +522,8 @@
             "When":
             {
                 "Language": "de, en, es, ja, ru, pt, zh"
-            }
+            },
+            "PatchMode": "overlay"
         },
         {
             "LogName": "Cursors Spring, Summer, & Fall Rain",
@@ -532,7 +533,8 @@
             "When":
             {
                 "Language": "de, en, es, ja, ru, pt, zh"
-            }
+            },
+            "PatchMode": "overlay"
         },
         {
             "LogName": "Cursors Winter",
@@ -543,7 +545,8 @@
             {
                 "Language": "de, en, es, ja, ru, pt, zh",
                 "Season": "winter"
-            }
+            },
+            "PatchMode": "overlay"
         },
 
         // E N D  C U R S O R S  E D I T S
