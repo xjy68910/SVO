@@ -540,7 +540,7 @@
             "LogName": "Cursors Winter",
             "Action": "EditImage",
             "Target": "LooseSprites/Cursors",
-            "FromFile": "Cursors/Cursors_Winter{{WinterSeasonalVariant}}.png",
+            "FromFile": "Cursors/Cursors{{WinterSeasonalVariant}}.png",
             "When":
             {
                 "Language": "de, en, es, ja, ru, pt, zh",
