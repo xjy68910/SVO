@@ -3182,7 +3182,7 @@
             "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Harvey_{{Festival}}.png",
             "When":
             {
-                "HasFile:Portraits/Festivals/{{Festival}}/Harvey{{Festival}}.png": true,
+                "HasFile:Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}.png": true,
             },
         },
         {
