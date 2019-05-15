@@ -24,8 +24,8 @@
             "Value": "_Winter_Indoor",
             "When":
             {
+                "IsOutdoors": "false",
                 "Season": "winter",
-                "Weather": "sun, wind, storm, rain"
             },
         },
         {
@@ -33,10 +33,51 @@
             "Value": "_Winter_Outdoor",
             "When":
             {
+                "IsOutdoors": "true",
                 "Season": "winter",
-                "Weather": "snow"
             },
         },
+
+        // Test Tokens (All Encompassing)
+
+        {
+            "Name": "AllEncompassing",
+            "Value": "_Indoor_Rain",
+            "When":
+            {
+                "Season": "spring, summer, fall",
+                "Weather": "rain, storm"
+            },
+        },
+        {
+            "Name": "AllEncompassing",
+            "Value": "_Indoor",
+            "When":
+            {
+                "Season": "spring, summer, fall",
+                "Weather": "sun, wind, snow"
+            },
+        },
+        {
+            "Name": "AllEncompassing",
+            "Value": "_Winter_Indoor",
+            "When":
+            {
+                "IsOutdoors": "false",
+                "Season": "winter",
+            },
+        },
+        {
+            "Name": "AllEncompassing",
+            "Value": "_Winter_Outdoor",
+            "When":
+            {
+                "IsOutdoors": "true",
+                "Season": "winter",
+            },
+        },
+
+
 
         // Portraits
 
@@ -443,8 +484,8 @@
             "FromFile": "Characters/Emily/Emily_Winter_Indoor.png",
             "When":
             {
+                "IsOutdoors": "false",
                 "Season": "winter",
-                "Weather": "sun, wind, storm, rain"
             },
         },
         {
@@ -454,8 +495,8 @@
             "FromFile": "Characters/Emily/Emily_Winter_Outdoor_{{EmilyWinterVariant}}.png",
             "When":
             {
+                "IsOutdoors": "true",
                 "Season": "winter",
-                "Weather": "snow",
                 "EmilyWinterVariant": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf"
             },
         },
@@ -511,8 +552,8 @@
             "FromFile": "{{Portraits}}/Emily/Emily_Winter_Indoor.png",
             "When":
             {
+                "IsOutdoors": "false",
                 "Season": "winter",
-                "Weather": "sun, wind, storm, rain"
             },
         },
         {
@@ -522,8 +563,8 @@
             "FromFile": "{{Portraits}}/Emily/Emily_Winter_Outdoor_{{EmilyWinterVariant}}.png",
             "When":
             {
+                "IsOutdoors": "true",
                 "Season": "winter",
-                "Weather": "snow",
                 "EmilyWinterVariant": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf"
             },
         },
@@ -543,7 +584,7 @@
             "FromFile": "Characters/Maru/Maru_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Maru Winter",
+            "LogName": "Maru Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Maru",
             "FromFile": "Characters/Maru/Maru{{WinterSeasonalVariant}}.png",
@@ -577,7 +618,7 @@
             "FromFile": "{{Portraits}}/Maru/Maru_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Maru Winter Portrait",
+            "LogName": "Maru Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Maru",
             "FromFile": "{{Portraits}}/Maru/Maru{{WinterSeasonalVariant}}.png",
@@ -652,7 +693,7 @@
             }
         },
         {
-            "LogName": "Haley Winter",
+            "LogName": "Haley Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Haley",
             "FromFile": "Characters/Haley/Haley{{WinterSeasonalVariant}}_{{HaleyWinterColor}}.png",
@@ -718,7 +759,7 @@
             }
         },
         {
-            "LogName": "Haley Winter Portraits",
+            "LogName": "Haley Winter Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Haley",
             "FromFile": "{{Portraits}}/Haley/Haley{{WinterSeasonalVariant}}_{{HaleyWinterColor}}.png",
@@ -812,7 +853,7 @@
             },
         },
         {
-            "LogName": "Penny Winter",
+            "LogName": "Penny Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Penny",
             "FromFile": "Characters/Penny/{{PennyHair}}/Penny{{WinterSeasonalVariant}}.png",
@@ -872,7 +913,7 @@
             }
         },
         {
-            "LogName": "Penny Winter - Outdoor",
+            "LogName": "Penny Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Penny",
             "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny{{WinterSeasonalVariant}}.png",
@@ -1068,7 +1109,7 @@
             },
         },
         {
-            "LogName": "Abigail Winter",
+            "LogName": "Abigail Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Abigail",
             "FromFile": "Characters/Abigail/Abigail{{WinterSeasonalVariant}}.png",
@@ -1122,7 +1163,7 @@
             },
         },
         {
-            "LogName": "Abigail Winter Portraits",
+            "LogName": "Abigail Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Abigail",
             "FromFile": "{{Portraits}}/Abigail/Abigail{{WinterSeasonalVariant}}.png",
@@ -1158,7 +1199,7 @@
             }
         },
         {
-            "LogName": "Elliott Winter",
+            "LogName": "Elliott Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Elliott",
             "FromFile": "Characters/Elliott/Elliott{{WinterSeasonalVariant}}.png",
@@ -1167,7 +1208,7 @@
         // Elliott Portrait
 
         {
-            "LogName": "Elliott Spring - Indoor",
+            "LogName": "Elliott Spring - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Elliott",
             "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_Spring{{Indoor_SeasonalVariant}}.png",
@@ -1178,7 +1219,7 @@
             }
         },
         {
-            "LogName": "Elliott Summer - Indoor v1",
+            "LogName": "Elliott Summer - Indoor v1 Portraits",
             "Action": "Load",
             "Target": "Portraits/Elliott",
             "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_Summer_Indoor_{{ElliottSummerVariant}}.png",
@@ -1191,7 +1232,7 @@
             }
         },
         {
-            "LogName": "Elliott Fall - Indoor Rain",
+            "LogName": "Elliott Fall - Indoor Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Elliott",
             "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{season}}{{RainSeasonalVariant}}.png",
@@ -1202,12 +1243,13 @@
             }
         },
         {
-            "LogName": "Elliott Winter - Indoor",
+            "LogName": "Elliott Winter - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Elliott",
             "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott{{WinterSeasonalVariant}}.png",
             "When":
             {
+
                 "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
             }
         },
@@ -1258,7 +1300,7 @@
             }
         },
         {
-            "LogName": "Harvey Winter",
+            "LogName": "Harvey Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Harvey",
             "FromFile": "Characters/Harvey/Harvey{{WinterSeasonalVariant}}.png",
@@ -1310,7 +1352,7 @@
             }
         },
         {
-            "LogName": "Harvey Winter Portraits",
+            "LogName": "Harvey Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Harvey",
             "FromFile": "{{Portraits}}/Harvey/Harvey{{WinterSeasonalVariant}}.png",
@@ -1331,7 +1373,7 @@
             "FromFile": "Characters/Shane/Shane_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Shane Winter",
+            "LogName": "Shane Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Shane",
             "FromFile": "Characters/Shane/Shane{{WinterSeasonalVariant}}.png",
@@ -1352,10 +1394,10 @@
             "FromFile": "{{Portraits}}/Shane/Shane_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Shane Winter - Outdoor",
+            "LogName": "Shane Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Shane",
-            "FromFile": "{{Portraits}}/Shane/Shane{{WinterSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Shane/Shane_{{WinterSeasonalVariant}}.png",
         },
 
         // Sebastian
@@ -1364,16 +1406,16 @@
             "LogName": "Sebastian Spring, Summer, Fall - Rain",
             "Action": "Load",
             "Target": "Characters/Sebastian",
-            "FromFile": "Characters/Sebastian/Sebastian_Fall{{RainSeasonalVariant}}.png",
+            "FromFile": "Characters/Sebastian/Sebastian_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
             "LogName": "Sebastian Spring, Summer & Fall - Indoor",
             "Action": "Load",
             "Target": "Characters/Sebastian",
-            "FromFile": "Characters/Sebastian/Sebastian_{{Season}}{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "Characters/Sebastian/Sebastian_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Sebastian Winter",
+            "LogName": "Sebastian Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Sebastian",
             "FromFile": "Characters/Sebastian/Sebastian{{WinterSeasonalVariant}}.png",
@@ -1385,7 +1427,7 @@
             "LogName": "Sebastian Spring, Summer, Fall - Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Sebastian",
-            "FromFile": "{{Portraits}}/Sebastian/Sebastian_Fall{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Sebastian/Sebastian_{{Season}}{{RainSeasonalVariant}}.png",
         },
         {
             "LogName": "Sebastian Spring, Summer & Fall - Indoor Portraits",
@@ -1394,7 +1436,7 @@
             "FromFile": "{{Portraits}}/Sebastian/Sebastian_{{Season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Sebastian Winter Portraits",
+            "LogName": "Sebastian Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Sebastian",
             "FromFile": "{{Portraits}}/Sebastian/Sebastian{{WinterSeasonalVariant}}.png",
@@ -1419,7 +1461,7 @@
             }
         },
         {
-            "LogName": "Sam Winter ",
+            "LogName": "Sam Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Sam",
             "FromFile": "Characters/Sam/Sam{{WinterSeasonalVariant}}.png",
@@ -1444,7 +1486,7 @@
             }
         },
         {
-            "LogName": "Sam Winter Portraits",
+            "LogName": "Sam Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Sam",
             "FromFile": "{{Portraits}}/Sam/Sam{{WinterSeasonalVariant}}.png",
@@ -1494,7 +1536,7 @@
             }
         },
         {
-            "LogName": "Alex Winter - Indoor",
+            "LogName": "Alex Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Alex",
             "FromFile": "Characters/Alex/Alex{{WinterSeasonalVariant}}.png",
@@ -1544,7 +1586,7 @@
             }
         },
         {
-            "LogName": "Alex Winter - Indoor Portraits",
+            "LogName": "Alex Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Alex",
             "FromFile": "{{Portraits}}/Alex/Alex{{WinterSeasonalVariant}}.png",
@@ -1584,7 +1626,7 @@
             }
         },
         {
-            "LogName": "Robin Winter",
+            "LogName": "Robin Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Robin",
             "FromFile": "Characters/Robin/Robin{{WinterSeasonalVariant}}.png",
@@ -1624,7 +1666,7 @@
             }
         },
         {
-            "LogName": "Robin Winter Portraits",
+            "LogName": "Robin Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Robin",
             "FromFile": "{{Portraits}}/Robin/Robin{{WinterSeasonalVariant}}.png",
@@ -1645,7 +1687,7 @@
             "FromFile": "Characters/Demetrius/Demetrius_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Demetrius Winter",
+            "LogName": "Demetrius Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Demetrius",
             "FromFile": "Characters/Demetrius/Demetrius{{WinterSeasonalVariant}}.png",
@@ -1666,7 +1708,7 @@
             "FromFile": "{{Portraits}}/Demetrius/Demetrius_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Demetrius Winter Portraits",
+            "LogName": "Demetrius Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Demetrius",
             "FromFile": "{{Portraits}}/Demetrius/Demetrius{{WinterSeasonalVariant}}.png",
@@ -1687,7 +1729,7 @@
             "FromFile": "Characters/Marnie/Marnie_{{Season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Marnie Winter",
+            "LogName": "Marnie Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Marnie",
             "FromFile": "Characters/Marnie/Marnie{{WinterSeasonalVariant}}.png",
@@ -1708,7 +1750,7 @@
             "FromFile": "{{Portraits}}/Marnie/Marnie_{{Season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Marnie Winter Portraits",
+            "LogName": "Marnie Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Marnie",
             "FromFile": "{{Portraits}}/Marnie/Marnie{{WinterSeasonalVariant}}.png",
@@ -1729,7 +1771,7 @@
             "FromFile": "Characters/Pam/Pam_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Pam Winter",
+            "LogName": "Pam Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Pam",
             "FromFile": "Characters/Pam/Pam{{WinterSeasonalVariant}}.png",
@@ -1768,7 +1810,7 @@
             },
         },
         {
-            "LogName": "Pam Winter",
+            "LogName": "Pam Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Pam",
             "FromFile": "{{Portraits}}/Pam/Pam{{WinterSeasonalVariant}}.png",
@@ -1793,7 +1835,7 @@
             "FromFile": "Characters/Lewis/Lewis_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Lewis Winter - Indoor",
+            "LogName": "Lewis Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Lewis",
             "FromFile": "Characters/Lewis/Lewis{{WinterSeasonalVariant}}.png",
@@ -1818,7 +1860,7 @@
             "FromFile": "{{Portraits}}/Lewis/Lewis_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Lewis Winter - Indoor Portraits",
+            "LogName": "Lewis Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Lewis",
             "FromFile": "{{Portraits}}/Lewis/Lewis{{WinterSeasonalVariant}}.png",
@@ -1839,7 +1881,7 @@
             "FromFile": "Characters/Vincent/Vincent_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Vincent Winter",
+            "LogName": "Vincent Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Vincent",
             "FromFile": "Characters/Vincent/Vincent{{WinterSeasonalVariant}}.png",
@@ -1860,7 +1902,7 @@
             "FromFile": "{{Portraits}}/Vincent/Vincent_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Vincent Winter Portraits",
+            "LogName": "Vincent Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Vincent",
             "FromFile": "{{Portraits}}/Vincent/Vincent{{WinterSeasonalVariant}}.png",
@@ -1881,7 +1923,7 @@
             "FromFile": "Characters/Kent/Kent_{{season}}{{Indoor_SeasonalVariant}}.png",
         },
         {
-            "LogName": "Kent Winter",
+            "LogName": "Kent Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Kent",
             "FromFile": "Characters/Kent/Kent{{WinterSeasonalVariant}}.png",
@@ -1902,7 +1944,7 @@
             "FromFile": "{{Portraits}}/Kent/Kent_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Kent Winter Portraits",
+            "LogName": "Kent Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Kent",
             "FromFile": "{{Portraits}}/Kent/Kent{{WinterSeasonalVariant}}.png",
@@ -1923,7 +1965,7 @@
             "FromFile": "Characters/Jodi/Jodi_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Jodi Winter - Indoor",
+            "LogName": "Jodi Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Jodi",
             "FromFile": "Characters/Jodi/Jodi{{WinterSeasonalVariant}}.png",
@@ -1944,7 +1986,7 @@
             "FromFile": "{{Portraits}}/Jodi/Jodi_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Jodi Winter Portraits",
+            "LogName": "Jodi Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Jodi",
             "FromFile": "{{Portraits}}/Jodi/Jodi{{WinterSeasonalVariant}}.png",
@@ -1965,7 +2007,7 @@
             "FromFile": "Characters/Pierre/Pierre_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Pierre Winter - Indoor",
+            "LogName": "Pierre Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Pierre",
             "FromFile": "Characters/Pierre/Pierre{{WinterSeasonalVariant}}.png",
@@ -1986,7 +2028,7 @@
             "FromFile": "{{Portraits}}/Pierre/Pierre_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Pierre Winter - Indoor Portraits",
+            "LogName": "Pierre Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Pierre",
             "FromFile": "{{Portraits}}/Pierre/Pierre{{WinterSeasonalVariant}}.png",
@@ -2007,7 +2049,7 @@
             "FromFile": "Characters/Gus/Gus_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Gus Winter",
+            "LogName": "Gus Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Gus",
             "FromFile": "Characters/Gus/Gus{{WinterSeasonalVariant}}.png",
@@ -2028,7 +2070,7 @@
             "FromFile": "{{Portraits}}/Gus/Gus_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Gus Winter Portraits",
+            "LogName": "Gus Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Gus",
             "FromFile": "{{Portraits}}/Gus/Gus{{WinterSeasonalVariant}}.png",
@@ -2067,7 +2109,7 @@
             }
         },
         {
-            "LogName": "Caroline Winter - Indoor",
+            "LogName": "Caroline Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Caroline",
             "FromFile": "Characters/Caroline/Caroline{{WinterSeasonalVariant}}.png",
@@ -2106,7 +2148,7 @@
             }
         },
         {
-            "LogName": "Caroline Winter - Indoor Portraits",
+            "LogName": "Caroline Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Caroline",
             "FromFile": "{{Portraits}}/Caroline/Caroline{{WinterSeasonalVariant}}.png",
@@ -2127,10 +2169,10 @@
             "FromFile": "Characters/Evelyn/Evelyn_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Evelyn Winter",
+            "LogName": "Evelyn Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Evelyn",
-            "FromFile": "Characters/Evelyn/Evelyn{{WinterSeasonalVariant}}_{{EvelynWinterColor}}.png",
+            "FromFile": "Characters/Evelyn/Evelyn{{WinterSeasonalVariant}}{{EvelynWinterColor}}.png",
             "When":
             {
                 "EvelynWinterColor": "pink, blue"
@@ -2152,10 +2194,10 @@
             "FromFile": "{{Portraits}}/Evelyn/Evelyn_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Evelyn Winter Portraits",
+            "LogName": "Evelyn Winter Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Evelyn",
-            "FromFile": "{{Portraits}}/Evelyn/Evelyn{{WinterSeasonalVariant}}_{{EvelynWinterColor}}.png",
+            "FromFile": "{{Portraits}}/Evelyn/Evelyn{{WinterSeasonalVariant}}{{EvelynWinterColor}}.png",
             "When":
             {
                 "EvelynWinterColor": "pink, blue"
@@ -2185,7 +2227,7 @@
             }
         },
         {
-            "LogName": "Clint Winter",
+            "LogName": "Clint Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Clint",
             "FromFile": "Characters/Clint/{{ClintVersion}}/Clint{{WinterSeasonalVariant}}.png",
@@ -2218,7 +2260,7 @@
             }
         },
         {
-            "LogName": "Clint Winter Portraits",
+            "LogName": "Clint Winter Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Clint",
             "FromFile": "{{Portraits}}/Clint/{{ClintVersion}}/Clint{{WinterSeasonalVariant}}_{{ClintVersion}}.png",
@@ -2293,7 +2335,7 @@
             }
         },
         {
-            "LogName": "Linus Winter",
+            "LogName": "Linus Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Linus",
             "FromFile": "Characters/Linus/Linus{{WinterSeasonalVariant}}.png",
@@ -2312,7 +2354,7 @@
             }
         },
         {
-            "LogName": "Linus Winter Portraits",
+            "LogName": "Linus Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Linus",
             "FromFile": "{{Portraits}}/Linus/Linus{{WinterSeasonalVariant}}.png",
@@ -2333,7 +2375,7 @@
             "FromFile": "Characters/George/George_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "George Winter",
+            "LogName": "George Winter Indoor",
             "Action": "Load",
             "Target": "Characters/George",
             "FromFile": "Characters/George/George{{WinterSeasonalVariant}}.png",
@@ -2354,7 +2396,7 @@
             "FromFile": "{{Portraits}}/George/George_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "George Winter Portraits",
+            "LogName": "George Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/George",
             "FromFile": "{{Portraits}}/George/George{{WinterSeasonalVariant}}.png",
@@ -2380,7 +2422,7 @@
             "FromFile": "Characters/Jas/Jas_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Jas Winter - Indoor",
+            "LogName": "Jas Winter Indoor",
             "Action": "Load",
             "Target": "Characters/Jas",
             "FromFile": "Characters/Jas/Jas{{WinterSeasonalVariant}}.png",
@@ -2405,7 +2447,7 @@
             "FromFile": "{{Portraits}}/Jas/Jas_{{season}}{{RainSeasonalVariant}}.png",
         },
         {
-            "LogName": "Jas Winter - Indoor Portrait",
+            "LogName": "Jas Winter Indoor Portrait",
             "Action": "Load",
             "Target": "Portraits/Jas",
             "FromFile": "{{Portraits}}/Jas/Jas{{WinterSeasonalVariant}}.png",
@@ -2429,7 +2471,7 @@
             "LogName": "Sandy Winter - Indoor (sivs)",
             "Action": "Load",
             "Target": "Characters/Sandy",
-            "FromFile": "Characters/Sandy/{{SandyVersion}}/Sandy_{{season}}_Indoor.png",
+            "FromFile": "Characters/Sandy/{{SandyVersion}}/Sandy_Winter_Indoor.png",
             "When":
             {
                 "Season": "winter",
@@ -2466,7 +2508,7 @@
             }
         },
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Side)",
+            "LogName": "Sandy All Seasons - Indoor Portraits Sivs (Side)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
             "FromFile": "{{Portraits}}/Sandy/AlternativeSide/Sandy_{{season}}_Indoor.png",
@@ -2478,7 +2520,7 @@
             }
         },
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Front)",
+            "LogName": "Sandy All Seasons - Indoor Portraits Sivs (Front)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
             "FromFile": "{{Portraits}}/Sandy/AlternativeFront/Sandy_{{season}}_Indoor.png",
@@ -2490,7 +2532,7 @@
             }
         },
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Sivs (Front)",
+            "LogName": "Sandy All Seasons - Indoor Portraits Sivs (Sivs)",
             "Action": "Load",
             "Target": "Portraits/Sandy",
             "FromFile": "{{Portraits}}/Sandy/Sivs/Sandy_{{season}}_Indoor.png",
@@ -2511,20 +2553,7 @@
             "FromFile": "Characters/Wizard/{{WizardVersion}}/Wizard_{{season}}_Indoor.png",
             "When":
             {
-                "Season": "spring, summer",
-                "WizardVersion": "standard, pale, saturated",
-                "WizardEnabled": "true"
-            }
-        },
-        {
-            "LogName": "Wizard Winter - Indoor",
-            "Action": "Load",
-            "Target": "Characters/Wizard",
-            "FromFile": "Characters/Wizard/{{WizardVersion}}/Wizard_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind, storm, rain",
+                "Season": "spring, summer, winter",
                 "WizardVersion": "standard, pale, saturated",
                 "WizardEnabled": "true"
             }
@@ -2539,20 +2568,7 @@
             "FromFile": "{{Portraits}}/Wizard/{{WizardVersion}}/Wizard_{{season}}_Indoor.png",
             "When":
             {
-                "Season": "spring, summer",
-                "WizardVersion": "standard, pale, saturated",
-                "WizardEnabled": "true"
-            }
-        },
-        {
-            "LogName": "Wizard Winter - Indoor Portraits",
-            "Action": "Load",
-            "Target": "Portraits/Wizard",
-            "FromFile": "{{Portraits}}/Wizard/{{WizardVersion}}/Wizard_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind, storm, rain",
+                "Season": "spring, summer, winter",
                 "WizardVersion": "standard, pale, saturated",
                 "WizardEnabled": "true"
             }
@@ -2567,10 +2583,6 @@
             "Action": "Load",
             "Target": "Portraits/Gunther",
             "FromFile": "{{Portraits}}/Gunther/Gunther_{{season}}_Indoor.png",
-            "When":
-            {
-                "Season": "spring, summer, fall, winter"
-            }
         },
 
         // E N D
@@ -2578,57 +2590,13 @@
         // B E G I N M A T E R N I T Y  S P R I T E S
 
         {
-            "LogName": "Abigail Maternity",
+            "LogName": "Maternity",
             "Action": "EditImage",
-            "Target": "Characters/Abigail",
-            "FromFile": "Characters/Abigail/Abigail_Maternity.png",
+            "Target": "Characters/{{Spouse}}",
+            "FromFile": "Characters/{{Spouse}}/{{Spouse}}_Maternity.png",
             "When":
             {
-                "Spouse": "Abigail",
-                "MaternitySprites": "true"
-            }
-        },
-        {
-            "LogName": "Emily Maternity",
-            "Action": "EditImage",
-            "Target": "Characters/Emily",
-            "FromFile": "Characters/Emily/Emily_Maternity.png",
-            "When":
-            {
-                "Spouse": "Emily",
-                "MaternitySprites": "true"
-            }
-        },
-        {
-            "LogName": "Haley Maternity",
-            "Action": "EditImage",
-            "Target": "Characters/Haley",
-            "FromFile": "Characters/Haley/Haley_Maternity.png",
-            "When":
-            {
-                "Spouse": "Haley",
-                "MaternitySprites": "true"
-            }
-        },
-        {
-            "LogName": "Leah Maternity",
-            "Action": "EditImage",
-            "Target": "Characters/Leah",
-            "FromFile": "Characters/Leah/Leah_Maternity.png",
-            "When":
-            {
-                "Spouse": "Leah",
-                "MaternitySprites": "true"
-            }
-        },
-        {
-            "LogName": "Maru Maternity",
-            "Action": "EditImage",
-            "Target": "Characters/Maru",
-            "FromFile": "Characters/Maru/Maru_Maternity.png",
-            "When":
-            {
-                "Spouse": "Maru",
+                "Spouse": "Abigail, Emily, Haley, Leah, Maru",
                 "MaternitySprites": "true"
             }
         },
@@ -2649,196 +2617,6 @@
 
         // B E G I N  F E S T I V A L S P I T E S
 
-        {
-            "LogName": "Abigail Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Abigail",
-            "FromFile": "Characters/Festivals/{{Festival}}/Abigail_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Abigail_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Alex Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Alex",
-            "FromFile": "Characters/Festivals/{{Festival}}/Alex_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Alex_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Caroline Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Caroline",
-            "FromFile": "Characters/Festivals/{{Festival}}/Caroline_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Caroline_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Clint Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Clint",
-            "FromFile": "Characters/Festivals/{{Festival}}/Clint_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Clint_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Demetrius Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Demetrius",
-            "FromFile": "Characters/Festivals/{{Festival}}/Demetrius_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Demetrius_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Elliott Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Elliott",
-            "FromFile": "Characters/Festivals/{{Festival}}/Elliott_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Elliott_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Emily Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Emily",
-            "FromFile": "Characters/Festivals/{{Festival}}/Emily_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Emily_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Evelyn Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Evelyn",
-            "FromFile": "Characters/Festivals/{{Festival}}/Evelyn_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Evelyn_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "George Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/George",
-            "FromFile": "Characters/Festivals/{{Festival}}/George_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/George_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Haley Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Haley",
-            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Haley_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Harvey Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Harvey",
-            "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Harvey_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Jas Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Jas",
-            "FromFile": "Characters/Festivals/{{Festival}}/Jas_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Jas_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Jodi Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Jodi",
-            "FromFile": "Characters/Festivals/{{Festival}}/Jodi_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Jodi_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Kent Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Kent",
-            "FromFile": "Characters/Festivals/{{Festival}}/Kent_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Kent_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Leah Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Leah",
-            "FromFile": "Characters/Festivals/{{Festival}}/Leah_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Leah_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Lewis Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Lewis",
-            "FromFile": "Characters/Festivals/{{Festival}}/Lewis_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Lewis_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Marnie Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Marnie",
-            "FromFile": "Characters/Festivals/{{Festival}}/Marnie_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Marnie_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Maru Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Maru",
-            "FromFile": "Characters/Festivals/{{Festival}}/Maru_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Maru_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Pam Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Pam",
-            "FromFile": "Characters/Festivals/{{Festival}}/Pam_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Pam_{{Festival}}.png": true,
-            },
-        },
         {
             "LogName": "Penny Festival Character Sprites",
             "Action": "EditImage",
@@ -2862,270 +2640,20 @@
             },
         },
         {
-            "LogName": "Pierre Festival Character Sprites",
+            "LogName": "Festival Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Pierre",
-            "FromFile": "Characters/Festivals/{{Festival}}/Pierre_{{Festival}}.png",
+            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Emily, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Haley, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent, Characters/Willy",
+            "FromFile": "Characters/Festivals/{{Festival}}{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/{{Festival}}/Pierre_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Robin Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Robin",
-            "FromFile": "Characters/Festivals/{{Festival}}/Robin_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Robin_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Sam Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Sam",
-            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Sam_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Sebastian Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Sebastian",
-            "FromFile": "Characters/Festivals/{{Festival}}/Sebastian_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Sebastian_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Shane Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Shane",
-            "FromFile": "Characters/Festivals/{{Festival}}/Shane_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Shane_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Vincent Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Vincent",
-            "FromFile": "Characters/Festivals/{{Festival}}/Vincent_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Vincent_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Willy Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Willy",
-            "FromFile": "Characters/Festivals/{{Festival}}/Willy_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Willy_{{Festival}}.png": true,
+                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
             },
         },
 
-        // E N D
+        // E N D  F E S T I V A L  C H A R A C T E R S
 
-        // B E G I N  F E S T I V A L  P O R T R A I T S
+        // B E G I N  F E S T I V A L  P O R T R A I T S    
 
-        {
-            "LogName": "Abigail Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Abigail",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Abigail_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Abigail_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Alex Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Alex",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Alex_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Alex_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Caroline Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Caroline",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Caroline_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Caroline_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Clint Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Clint_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Clint_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Demetrius Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Demetrius",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Demetrius_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Demetrius_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Elliott Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Elliott_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Elliott_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Emily Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Emily",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Emily_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Emily_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Evelyn Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Evelyn",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Evelyn_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Evelyn_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "George Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/George",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/George_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/George_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Haley Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Haley_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Haley_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Harvey Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Harvey",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Harvey_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Jas Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Jas",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Jas_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Jas_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Jodi Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Jodi",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Jodi_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Jodi_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Kent Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Kent",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Kent_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Kent_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Leah Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Leah",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Leah_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Leah_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Lewis Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Lewis",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Lewis_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Lewis_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Marnie Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Marnie",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Marnie_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Marnie_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Maru Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Maru",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Maru_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Maru_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Pam Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Pam",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Pam_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Pam_{{Festival}}.png": true,
-            },
-        },
         {
             "LogName": "Penny Festival Portrait Sprites",
             "Action": "EditImage",
@@ -3149,163 +2677,18 @@
             },
         },
         {
-            "LogName": "Pierre Festival Portrait Sprites",
+            "LogName": "Festival Character Sprites",
             "Action": "EditImage",
-            "Target": "Portraits/Pierre",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Pierre_{{Festival}}.png",
+            "Target": "Portraits/Abigail, Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Emily, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Haley, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Leah, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Maru, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
+            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:Portraits/Festivals/{{Festival}}/Pierre_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Robin Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Robin",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Robin_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Robin_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Sam Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Sam",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Sam_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Sam_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Sebastian Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Sebastian",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Sebastian_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Sebastian_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Shane Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Shane",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Shane_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Shane_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Vincent Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Vincent",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Vincent_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Vincent_{{Festival}}.png": true,
-            },
-        },
-        {
-            "LogName": "Willy Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Willy",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/Willy_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Willy_{{Festival}}.png": true,
+                "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
             },
         },
 
         // B E G I N  S W I M S U I T  C H A R A C T E R S
 
-        {
-            "LogName": "Abigail Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Abigail",
-            "FromFile": "Characters/Swimsuits/AbigailSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Alex Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Alex",
-            "FromFile": "Characters/Swimsuits/AlexSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Caroline Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Caroline",
-            "FromFile": "Characters/Swimsuits/CarolineSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Clint Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Clint",
-            "FromFile": "Characters/Swimsuits/ClintSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Demetrius Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Demetrius",
-            "FromFile": "Characters/Swimsuits/DemetriusSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
         {
             "LogName": "Elliott Swimsuits Character Sprites",
             "Action": "EditImage",
@@ -3321,41 +2704,9 @@
             "When":
             {
                 "ElliottSwimVariant": "paunch, thin",
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Emily Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Emily",
-            "FromFile": "Characters/Swimsuits/EmilySwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Evelyn Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Evelyn",
-            "FromFile": "Characters/Swimsuits/EvelynSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false
             }
         },
         {
@@ -3373,126 +2724,9 @@
             "When":
             {
                 "GeorgeSwimVariant": "default, floaties",
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Haley Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Haley",
-            "FromFile": "Characters/Swimsuits/HaleySwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Harvey Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Harvey",
-            "FromFile": "Characters/Swimsuits/HarveySwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Jas Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Jas",
-            "FromFile": "Characters/Swimsuits/JasSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Jodi Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Jodi",
-            "FromFile": "Characters/Swimsuits/JodiSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Kent Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Kent",
-            "FromFile": "Characters/Swimsuits/KentSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Leah Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Leah",
-            "FromFile": "Characters/Swimsuits/LeahSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Lewis Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Lewis",
-            "FromFile": "Characters/Swimsuits/LewisSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false
             }
         },
         {
@@ -3510,58 +2744,9 @@
             "When":
             {
                 "LinusSwimVariant": "censored, grassskirt",
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Marnie Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Marnie",
-            "FromFile": "Characters/Swimsuits/MarnieSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Maru Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Maru",
-            "FromFile": "Characters/Swimsuits/MaruSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Pam Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Pam",
-            "FromFile": "Characters/Swimsuits/PamSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false
             }
         },
         {
@@ -3580,14 +2765,16 @@
             {
                 "PennyHair": "standard",
                 "PennySwimVariant": "blue, yellow",
-                "LocationName": "beach"
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false
             },
         },
         {
-            "LogName": "Pierre Swimsuits Character Sprites",
+            "LogName": "Swimsuits Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Pierre",
-            "FromFile": "Characters/Swimsuits/PierreSwim.png",
+            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Emily, Characters/Evelyn, Characters/Gus, Characters/Haley, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent",
+            "FromFile": "Characters/Swimsuits/{{TargetWithoutPath}}Swim.png",
             "ToArea":
             {
                 "X": 0,
@@ -3597,109 +2784,9 @@
             },
             "When":
             {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Robin Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Robin",
-            "FromFile": "Characters/Swimsuits/RobinSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Sam Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Sam",
-            "FromFile": "Characters/Swimsuits/SamSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Sebastian Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Sebastian",
-            "FromFile": "Characters/Swimsuits/SebastianSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Shane Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Shane",
-            "FromFile": "Characters/Swimsuits/ShaneSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Vincent Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Vincent",
-            "FromFile": "Characters/Swimsuits/VincentSwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Willy Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Willy",
-            "FromFile": "Characters/Swimsuits/WillySwim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach"
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false
             }
         },
 
@@ -3708,86 +2795,6 @@
         // B E G I N  S W I M S U I T  P O R T R A I T S
 
         {
-            "LogName": "Abigail Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Abigail",
-            "FromFile": "{{Portraits}}/Swimsuits/AbigailPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Alex Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Alex",
-            "FromFile": "{{Portraits}}/Swimsuits/AlexPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Caroline Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Caroline",
-            "FromFile": "{{Portraits}}/Swimsuits/CarolinePortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Clint Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Clint",
-            "FromFile": "{{Portraits}}/Swimsuits/ClintPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Demetrius Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Demetrius",
-            "FromFile": "{{Portraits}}/Swimsuits/DemetriusPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Elliott Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Elliott",
-            "FromFile": "{{Portraits}}/Swimsuits/ElliottPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Emily Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Emily",
-            "FromFile": "{{Portraits}}/Swimsuits/EmilyPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Evelyn Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Evelyn",
-            "FromFile": "{{Portraits}}/Swimsuits/EvelynPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
             "LogName": "George Swimsuits Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/George",
@@ -3795,117 +2802,9 @@
             "When":
             {
                 "GeorgeSwimVariant": "default, floaties",
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Haley Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "{{Portraits}}/Swimsuits/HaleyPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Harvey Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Harvey",
-            "FromFile": "{{Portraits}}/Swimsuits/HarveyPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Jas Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Jas",
-            "FromFile": "{{Portraits}}/Swimsuits/JasPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Jodi Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Jodi",
-            "FromFile": "{{Portraits}}/Swimsuits/JodiPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Kent Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Kent",
-            "FromFile": "{{Portraits}}/Swimsuits/KentPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Leah Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Leah",
-            "FromFile": "{{Portraits}}/Swimsuits/LeahPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Lewis Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Lewis",
-            "FromFile": "{{Portraits}}/Swimsuits/LewisPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Linus Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Linus",
-            "FromFile": "{{Portraits}}/Swimsuits/LinusPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Marnie Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Marnie",
-            "FromFile": "{{Portraits}}/Swimsuits/MarniePortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Maru Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Maru",
-            "FromFile": "{{Portraits}}/Swimsuits/MaruPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Pam Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Pam",
-            "FromFile": "{{Portraits}}/Swimsuits/PamPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false
             }
         },
         {
@@ -3917,77 +2816,21 @@
             {
                 "PennyHair": "standard",
                 "PennySwimVariant": "blue, yellow",
-                "LocationName": "beach"
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false
             },
         },
         {
-            "LogName": "Pierre Swimsuits Portrait Sprites",
+            "LogName": "Swimsuits Portrait Sprites",
             "Action": "EditImage",
-            "Target": "Portraits/Pierre",
-            "FromFile": "{{Portraits}}/Swimsuits/PierrePortraitSwim.png",
+            "Target": "Portraits/Abigail, Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Emily, Portraits/Evelyn, Portraits/Gus, Portraits/Haley, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Leah, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Maru, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent",
+            "FromFile": "{{Portraits}}/Swimsuits/{{TargetWithoutPath}}PortraitSwim.png",
             "When":
             {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Robin Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Robin",
-            "FromFile": "{{Portraits}}/Swimsuits/RobinPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Sam Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Sam",
-            "FromFile": "{{Portraits}}/Swimsuits/SamPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Sebastian Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Sebastian",
-            "FromFile": "{{Portraits}}/Swimsuits/SebastianPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Shane Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Shane",
-            "FromFile": "{{Portraits}}/Swimsuits/ShanePortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Vincent Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Vincent",
-            "FromFile": "{{Portraits}}/Swimsuits/VincentPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
-            }
-        },
-        {
-            "LogName": "Willy Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Willy",
-            "FromFile": "{{Portraits}}/Swimsuits/WillyPortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach"
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false
             }
         },
 
