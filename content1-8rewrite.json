@@ -166,6 +166,11 @@
             "AllowValues": "true, false",
             "Default": "false",
         },
+        "SwimSuitsEnabled":
+        {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
 
         // Standard Portrait Config Options
 
@@ -2329,6 +2334,26 @@
         // B E G I N  S W I M S U I T  C H A R A C T E R S
 
         {
+            "LogName": "Swimsuits Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Emily, Characters/Evelyn, Characters/Gus, Characters/Haley, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent",
+            "FromFile": "Characters/Swimsuits/{{TargetWithoutPath}}Swim.png",
+            "ToArea":
+            {
+                "X": 0,
+                "Y": 0,
+                "Width": 64,
+                "Height": 128
+            },
+            "When":
+            {
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
+            }
+        },
+        {
             "LogName": "Elliott Swimsuits Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Elliott",
@@ -2345,7 +2370,8 @@
                 "ElliottSwimVariant": "paunch, thin",
                 "LocationName": "beach",
                 "Season": "summer",
-                "DayEvent:Luau": false
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
             }
         },
         {
@@ -2365,7 +2391,8 @@
                 "GeorgeSwimVariant": "default, floaties",
                 "LocationName": "beach",
                 "Season": "summer",
-                "DayEvent:Luau": false
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
             }
         },
         {
@@ -2385,7 +2412,8 @@
                 "LinusSwimVariant": "censored, grassskirt",
                 "LocationName": "beach",
                 "Season": "summer",
-                "DayEvent:Luau": false
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
             }
         },
         {
@@ -2406,33 +2434,28 @@
                 "PennySwimVariant": "blue, yellow",
                 "LocationName": "beach",
                 "Season": "summer",
-                "DayEvent:Luau": false
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
             },
-        },
-        {
-            "LogName": "Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Emily, Characters/Evelyn, Characters/Gus, Characters/Haley, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent",
-            "FromFile": "Characters/Swimsuits/{{TargetWithoutPath}}Swim.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
-            "When":
-            {
-                "LocationName": "beach",
-                "Season": "summer",
-                "DayEvent:Luau": false
-            }
         },
 
         //  E N D  S W I M S U I T  C H A R A C T E R S
 
         // B E G I N  S W I M S U I T  P O R T R A I T S
 
+        {
+            "LogName": "Swimsuits Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Abigail, Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Emily, Portraits/Evelyn, Portraits/Gus, Portraits/Haley, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Leah, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Maru, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent",
+            "FromFile": "{{Portraits}}/Swimsuits/{{TargetWithoutPath}}PortraitSwim.png",
+            "When":
+            {
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
+            }
+        },
         {
             "LogName": "George Swimsuits Portrait Sprites",
             "Action": "EditImage",
@@ -2443,7 +2466,8 @@
                 "GeorgeSwimVariant": "default, floaties",
                 "LocationName": "beach",
                 "Season": "summer",
-                "DayEvent:Luau": false
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
             }
         },
         {
@@ -2457,20 +2481,9 @@
                 "PennySwimVariant": "blue, yellow",
                 "LocationName": "beach",
                 "Season": "summer",
-                "DayEvent:Luau": false
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
             },
-        },
-        {
-            "LogName": "Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Abigail, Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Emily, Portraits/Evelyn, Portraits/Gus, Portraits/Haley, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Leah, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Maru, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent",
-            "FromFile": "{{Portraits}}/Swimsuits/{{TargetWithoutPath}}PortraitSwim.png",
-            "When":
-            {
-                "LocationName": "beach",
-                "Season": "summer",
-                "DayEvent:Luau": false
-            }
         },
 
         // E N D  S W I M S U I T  P O R T R A I T S
