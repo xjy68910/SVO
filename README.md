@@ -2,8 +2,6 @@
 
 [Neuxs Page](https://www.nexusmods.com/stardewvalley/mods/2449/)
 
-The content.json is for the HD version (that requires ScaleUp), but is easily converted over to the non-HD version. Non-HD portraits are included in the DCBurger folder but will need to be moved out from !NonHDPortraits to their own DCBurger folder. 
-
 # Current Config Options
 `*` Options include an `AllowBlank: true` option.
 
@@ -14,6 +12,7 @@ option                         | valid values (select only one, values are seper
 ----------------------------   | ------- 
 `PortraitStyle`*               | standard
 `MaterintySprites`             | true false
+`SwimSuitsEnabled`             | true false
 
 ## Standard Portraits
 These options only apply when you set `PortraitStyle` to `standard`.
@@ -21,10 +20,10 @@ These options only apply when you set `PortraitStyle` to `standard`.
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen
+`ElliottSummerPortraitVariant` | alternative standard
 `SamSummerPortraitVariant`     | standard alternative
-`WillyWinterPortraitVariant`   | standard alternative
 `SandyPortraitVariant`         | side sivs front
-
+`WillyWinterPortraitVariant`   | standard alternative
 ## DCBurger Portraits
 These options only apply when you set `PortraitStyle` to `dcburger`.
 
@@ -48,32 +47,34 @@ These options affect the character files.
 
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
+`AlexSummerVariant`            | sunglasses nosunglasses
+`AbigailSummerRainVariant`     | nohat hat
+`ClintVariant`                 | apron noapron
 `EmilyWinterVariant`           | hatnoscarf hatscarf nohatnoscarf nohatscarf
 `EmilySpringVariant`           | pink yellow sleeves nosleeves
-`HaleySummerVariant`           | indoor outdoor beach
+`ElliottSummerVariant`         | nosuspenders suspenders
+`EvelynWinterColor`            | pink blue
+`HaleySummerVariant`           | indoor beach
 `HaleyFallColor`               | red blue
 `HaleyWinterColor`             | grey pink
-`PennySummerVariant`           | indoor outdoor
-`PennyFallVariant`             | indoor outdoor
-`PennyHair`                    | standard brunette
-`LeahSummerVariant`            | indoor outdoor
+`HarveySpringVariant`          | vest novest
+`HarveyFallRainVariant`        | blackredscarf brownnoscarf
 `LeahWinterColorVariant`       | red blue
 `LeahWinterHood`               | up down
-`AbigailSpringRainVariant`     | indoor outdoor
-`AbigailSummerRainVariant`     | nohat hat
-`AbigailFallRainVariant`       | indoor outdoor
-`ElliottSummerVariant`         | nosuspenders suspenders
-`SebastianFallVariant`         | indoor outdoor
+`MaruScrubColor`               | dark light white
+`PennyHair`                    | standard brunette
 `RobinHairStyle`               | up down
-`EvelynWinterColor`            | pink blue
-`CarolineSummerVariant`        | indoor outdoor
-`CarolineFallVariant`          | indoor outdoor
-`ClintVariant`                 | apron noapron
 `WizardEnabled`                | true false
 `WizardVersion`                | standard pale saturated
 `SandyEnabled`                 | true false
 `SandyVersion`                 | standard sivs zola
-`MaruScrubColor`               | dark light white
-`HarveySpringVariant`          | vest novest
-`HarveyFallRainVariant`        | blackredscarf brownnoscarf
-`AlexSummerVariant`            | sunglasses nosunglasses
+
+## Swimsuits
+These options affect the swimsuit options in Summer on the beach (if enabled).
+
+options                        | valid values (select only one, values are seperated by a space)
+----------------------------   | ------- 
+`ElliottSwimVariant`           | paunch thin
+`GeorgeSwimVariant`            | default floaties
+`LinusSwimVariant`             | censored grassskirt
+`PennySwimVariant`             | blue yellow
