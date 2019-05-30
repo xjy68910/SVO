@@ -82,7 +82,7 @@
         },
         {
             "Name": "AllEncompassing",
-            "Value": "_Winter_Indoor",
+            "Value": "_Indoor",
             "When":
             {
                 "IsOutdoors": "false",
@@ -91,7 +91,7 @@
         },
         {
             "Name": "AllEncompassing",
-            "Value": "_Winter_Outdoor",
+            "Value": "_Outdoor",
             "When":
             {
                 "IsOutdoors": "true",
@@ -371,6 +371,11 @@
         {
             "AllowValues": "standard, brunette",
             "Default": "standard",
+        },
+        "PennyEggFestivalVariant":
+        {
+            "AllowValues": "standard, alternative",
+            "Default": "standard"
         },
 
         // Robin
