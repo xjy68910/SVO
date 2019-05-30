@@ -2324,7 +2324,8 @@
             "When":
             {
                 "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
-                "PennyHair": "standard, brunette"
+                "PennyHair": "standard, brunette",
+                "DayEvent:EggFestival": false
             },
         },
         {
@@ -2420,6 +2421,29 @@
             },
         },
         {
+            "LogName": "Penny Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Penny",
+            "FromFile": "Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyEggFestivalVariant}}.png",
+            "When":
+            {
+                "PennyEggFestivalVariant": "standard, alternative",
+                "PennyHair": "standard",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Penny Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Penny",
+            "FromFile": "Characters/Festivals/{{Festival}}/Penny_{{Festival}}_Brunette.png",
+            "When":
+            {
+                "PennyHair": "brunette",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
             "LogName": "Maru Egg Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Maru",
@@ -2438,18 +2462,19 @@
         // B E G I N  F E S T I V A L  P O R T R A I T S    
 
         {
-            "LogName": "Penny Festival Character Sprites",
+            "LogName": "Penny Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
             "FromFile": "Portraits/Festivals/{{Festival}}/Penny_{{Festival}}.png",
             "When":
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
-                "PennyHair": "standard, brunette"
+                "PennyHair": "standard, brunette",
+                "DayEvent:EggFestival": false
             },
         },
         {
-            "LogName": "Festival Character Sprites Bachlorettes",
+            "LogName": "Festival Portrait Sprites Bachlorettes",
             "Action": "EditImage",
             "Target": "Portraits/Abigail, Portraits/Emily, Portraits/Haley, Portraits/Leah, Portraits/Maru,",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
@@ -2460,7 +2485,7 @@
             },
         },
         {
-            "LogName": "Festival Character Sprites Bachelors & NPCs",
+            "LogName": "Festival Portrait Sprites Bachelors & NPCs",
             "Action": "EditImage",
             "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
@@ -2473,7 +2498,7 @@
         // B E G I N  E G G  F E S T I V A L  A L T E R N A T I V E S  B A C H E L O R E T T E S
 
         {
-            "LogName": "Abigail Egg Festival Character Sprites",
+            "LogName": "Abigail Egg Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Abigail",
             "FromFile": "Portraits/Festivals/{{Festival}}/Abigail_{{Festival}}_{{AbigailEggFestivalVariant}}.png",
@@ -2484,7 +2509,7 @@
             },
         },
         {
-            "LogName": "Emily Egg Festival Character Sprites",
+            "LogName": "Emily Egg Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
             "FromFile": "Portraits/Festivals/{{Festival}}/Emily_{{Festival}}_{{EmilyEggFestivalVariant}}.png",
@@ -2495,7 +2520,7 @@
             },
         },
         {
-            "LogName": "Emily Egg Festival Character Sprites",
+            "LogName": "Emily Egg Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
             "FromFile": "Portraits/Festivals/{{Festival}}/Emily_{{Festival}}_{{EmilyEggFestivalVariant}}_{{EmilyEggFestivalVariantColor}}.png",
@@ -2507,7 +2532,7 @@
             },
         },
         {
-            "LogName": "Haley Egg Festival Character Sprites",
+            "LogName": "Haley Egg Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
             "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{HaleyEggFestivalVariant}}.png",
@@ -2518,7 +2543,7 @@
             },
         },
         {
-            "LogName": "Haley Egg Festival Character Sprites",
+            "LogName": "Haley Egg Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
             "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{HaleyEggFestivalVariant}}_{{HaleyEggFestivalVariantColor}}.png",
@@ -2530,7 +2555,7 @@
             },
         },
         {
-            "LogName": "Leah Egg Festival Character Sprites",
+            "LogName": "Leah Egg Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Leah",
             "FromFile": "Portraits/Festivals/{{Festival}}/Leah_{{Festival}}_{{LeahEggFestivalVariant}}.png",
@@ -2541,7 +2566,30 @@
             },
         },
         {
-            "LogName": "Maru Egg Festival Character Sprites",
+            "LogName": "Penny Egg Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyEggFestivalVariant}}.png",
+            "When":
+            {
+                "PennyEggFestivalVariant": "standard, alternative",
+                "PennyHair": "standard",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Penny Egg Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_Brunette.png",
+            "When":
+            {
+                "PennyHair": "brunette",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Maru Egg Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Maru",
             "FromFile": "Portraits/Festivals/{{Festival}}/Maru_{{Festival}}_{{MaruEggFestivalVariant}}.png",
