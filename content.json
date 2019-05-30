@@ -2,7 +2,7 @@
     "Format": "1.8",
     "DynamicTokens": [
         {
-            "Name": "RainSeasonalVariant",
+            "Name": "RainSeasonalVariant", // raining & outdoors
             "Value": "_Indoor_Rain",
             "When":
             {
@@ -11,35 +11,27 @@
                 "Weather": "rain, storm"
             },
         },
-        /*{
-            "Name": "RainSeasonalVariant",
-            "Value": "" // blank if not overridden by a specific value
-        },*/
         {
-            "Name": "Indoor_SeasonalVariant",
+            "Name": "Indoor_SeasonalVariant", // raining & indoors
             "Value": "_Indoor",
             "When":
-            {                
+            {
+                "IsOutdoors": "false",
+                "Season": "spring, summer, fall",
+                "Weather": "rain, storm"
+            },
+        },
+        {
+            "Name": "Indoor_SeasonalVariant", // not raining & either indoor or outdoor
+            "Value": "_Indoor",
+            "When":
+            {
                 "Season": "spring, summer, fall",
                 "Weather": "sun, wind, snow"
             },
         },
         {
-            "Name": "Indoor_SeasonalVariant",
-            "Value": "_Indoor",
-            "When":
-            {   
-                "IsOutdoors": "false",         
-                "Season": "spring, summer, fall",
-                "Weather": "rain, storm"
-            },
-        },
-        /*{
-            "Name": "Indoor_SeasonalVariant",
-            "Value": "" // blank if not overridden by a specific value
-        },*/
-        {
-            "Name": "WinterSeasonalVariant",
+            "Name": "WinterSeasonalVariant", // winter & inside
             "Value": "_Winter_Indoor",
             "When":
             {
@@ -48,7 +40,7 @@
             },
         },
         {
-            "Name": "WinterSeasonalVariant",
+            "Name": "WinterSeasonalVariant", // winter & outside
             "Value": "_Winter_Outdoor",
             "When":
             {
@@ -56,10 +48,6 @@
                 "Season": "winter",
             },
         },
-        /*{
-            "Name": "WinterSeasonalVariant",
-            "Value": "" // blank if not overridden by a specific value
-        },*/
 
         // Test Tokens (All Encompassing)
 
@@ -77,19 +65,19 @@
             "Name": "AllEncompassing",
             "Value": "_Indoor",
             "When":
-            {                
+            {
+                "IsOutdoors": "false",
                 "Season": "spring, summer, fall",
-                "Weather": "sun, wind, snow"
+                "Weather": "rain, storm"
             },
         },
         {
             "Name": "AllEncompassing",
             "Value": "_Indoor",
             "When":
-            {   
-                "IsOutdoors": "false",         
+            {
                 "Season": "spring, summer, fall",
-                "Weather": "rain, storm"
+                "Weather": "sun, wind, snow"
             },
         },
         {
@@ -110,10 +98,6 @@
                 "Season": "winter",
             },
         },
-        /*{
-            "Name": "AllEncompassing",
-            "Value": "" // blank if not overridden by a specific value
-        },*/
 
         // Portraits
 
@@ -125,10 +109,6 @@
                 "PortraitStyle": "standard"
             },
         },
-        /*{
-            "Name": "Portraits",
-            "Value": "" // blank if not overridden by a specific value
-        },*/
 
         // Festivals
 
@@ -188,10 +168,6 @@
                 "DayEvent": "feast of the winter star"
             }
         },
-        /*{
-            "Name": "Festival",
-            "Value": "" // blank if not overridden by a specific value
-        },*/
     ],
 
     "ConfigSchema":
@@ -251,6 +227,11 @@
             "AllowValues": "nohat, hat",
             "Default": "nohat"
         },
+        "AbigailEggFestivalVariant":
+        {
+            "AllowValues": "standard, alternative",
+            "Default": "standard"
+        },
 
         // Alex
 
@@ -293,6 +274,16 @@
             "AllowValues": "pink, yellow",
             "Default": "pink"
         },
+        "EmilyEggFestivalVariant":
+        {
+            "AllowValues": "standard, alternative",
+            "Default": "standard"
+        },
+        "EmilyEggFestivalVariantColor":
+        {
+            "AllowValues": "blue, red",
+            "Default": "blue"
+        },
 
         // Evelyn
 
@@ -317,6 +308,16 @@
         "HaleyWinterColor":
         {
             "AllowValues": "grey, pink",
+            "Default": "pink"
+        },
+        "HaleyEggFestivalVariant":
+        {
+            "AllowValues": "standard, alternative",
+            "Default": "standard"
+        },
+        "HaleyEggFestivalVariantColor":
+        {
+            "AllowValues": "blue, pink",
             "Default": "pink"
         },
 
@@ -345,6 +346,11 @@
             "AllowValues": "up, down",
             "Default": "up"
         },
+        "LeahEggFestivalVariant":
+        {
+            "AllowValues": "standard, alternative",
+            "Default": "standard"
+        },
 
         // Maru
 
@@ -352,6 +358,11 @@
         {
             "AllowValues": "dark, light, white",
             "Default": "light"
+        },
+        "MaruEggFestivalVariant":
+        {
+            "AllowValues": "standard, alternative",
+            "Default": "standard"
         },
 
         // Penny
@@ -2312,25 +2323,25 @@
             "FromFile": "Characters/Festivals/{{Festival}}/Penny_{{Festival}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}.png": true,
-                "PennyHair": "standard"
+                "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
+                "PennyHair": "standard, brunette"
             },
         },
         {
-            "LogName": "Penny Festival Character Sprites",
+            "LogName": "Festival Character Sprites Bachlorettes",
             "Action": "EditImage",
-            "Target": "Characters/Penny",
-            "FromFile": "Characters/Festivals/AlternativeSprites/{{Festival}}/Penny_{{Festival}}.png",
+            "Target": "Characters/Abigail, Characters/Emily, Characters/Haley, Characters/Leah, Characters/Maru,",
+            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/Alternative/{{Festival}}/Penny_{{Festival}}.png": true,
-                "PennyHair": "brunette"
+                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
+                "DayEvent:EggFestival": false,
             },
         },
         {
-            "LogName": "Festival Character Sprites",
+            "LogName": "Festival Character Sprites Bachelors & NPCs",
             "Action": "EditImage",
-            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Emily, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Haley, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent, Characters/Willy",
+            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent, Characters/Willy",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -2338,42 +2349,212 @@
             },
         },
 
+        // B E G I N  E G G  F E S T I V A L  A L T E R N A T I V E S  B A C H E L O R E T T E S
+
+        {
+            "LogName": "Abigail Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Abigail",
+            "FromFile": "Characters/Festivals/{{Festival}}/Abigail_{{Festival}}_{{AbigailEggFestivalVariant}}.png",
+            "When":
+            {
+                "AbigailEggFestivalVariant": "standard, alternative",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Emily Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Emily",
+            "FromFile": "Characters/Festivals/{{Festival}}/Emily_{{Festival}}_{{EmilyEggFestivalVariant}}.png",
+            "When":
+            {
+                "EmilyEggFestivalVariant": "standard",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Emily Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Emily",
+            "FromFile": "Characters/Festivals/{{Festival}}/Emily_{{Festival}}_{{EmilyEggFestivalVariant}}_{{EmilyEggFestivalVariantColor}}.png",
+            "When":
+            {
+                "EmilyEggFestivalVariant": "alternative",
+                "EmilyEggFestivalVariantColor": "blue, red",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Haley Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{HaleyEggFestivalVariant}}.png",
+            "When":
+            {
+                "HaleyEggFestivalVariant": "standard",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Haley Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{HaleyEggFestivalVariant}}_{{HaleyEggFestivalVariantColor}}.png",
+            "When":
+            {
+                "HaleyEggFestivalVariant": "alternative",
+                "HaleyEggFestivalVariantColor": "blue, pink",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Leah Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Leah",
+            "FromFile": "Characters/Festivals/{{Festival}}/Leah_{{Festival}}_{{LeahEggFestivalVariant}}.png",
+            "When":
+            {
+                "LeahEggFestivalVariant": "standard, alternative",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Maru Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Maru",
+            "FromFile": "Characters/Festivals/{{Festival}}/Maru_{{Festival}}_{{MaruEggFestivalVariant}}.png",
+            "When":
+            {
+                "MaruEggFestivalVariant": "standard, alternative",
+                "DayEvent:EggFestival": true
+            },
+        },
+
+        // E N D  E G G  F E S T I V A L  A L T E R N A T I V E S  B A C H E L O R E T T E S
+
         // E N D  F E S T I V A L  C H A R A C T E R S
 
         // B E G I N  F E S T I V A L  P O R T R A I T S    
 
         {
-            "LogName": "Penny Festival Portrait Sprites",
+            "LogName": "Penny Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
             "FromFile": "Portraits/Festivals/{{Festival}}/Penny_{{Festival}}.png",
             "When":
             {
-                "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}.png": true,
-                "PennyHair": "standard"
+                "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
+                "PennyHair": "standard, brunette"
             },
         },
         {
-            "LogName": "Penny Festival Character Sprites",
+            "LogName": "Festival Character Sprites Bachlorettes",
             "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/Festivals/AlternativeSprites/{{Festival}}/Penny_{{Festival}}.png",
+            "Target": "Portraits/Abigail, Portraits/Emily, Portraits/Haley, Portraits/Leah, Portraits/Maru,",
+            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:Portraits/Festivals/Alternative/{{Festival}}/Penny_{{Festival}}.png": true,
-                "PennyHair": "brunette"
+                "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
+                "DayEvent:EggFestival": false,
             },
         },
         {
-            "LogName": "Festival Character Sprites",
+            "LogName": "Festival Character Sprites Bachelors & NPCs",
             "Action": "EditImage",
-            "Target": "Portraits/Abigail, Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Emily, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Haley, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Leah, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Maru, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
-            "FromFile": "{{Portraits}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
+            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
             },
         },
+
+        // B E G I N  E G G  F E S T I V A L  A L T E R N A T I V E S  B A C H E L O R E T T E S
+
+        {
+            "LogName": "Abigail Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Abigail",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Abigail_{{Festival}}_{{AbigailEggFestivalVariant}}.png",
+            "When":
+            {
+                "AbigailEggFestivalVariant": "standard, alternative",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Emily Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Emily",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Emily_{{Festival}}_{{EmilyEggFestivalVariant}}.png",
+            "When":
+            {
+                "EmilyEggFestivalVariant": "standard",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Emily Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Emily",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Emily_{{Festival}}_{{EmilyEggFestivalVariant}}_{{EmilyEggFestivalVariantColor}}.png",
+            "When":
+            {
+                "EmilyEggFestivalVariant": "alternative",
+                "EmilyEggFestivalVariantColor": "blue, red",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Haley Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{HaleyEggFestivalVariant}}.png",
+            "When":
+            {
+                "HaleyEggFestivalVariant": "standard",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Haley Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{HaleyEggFestivalVariant}}_{{HaleyEggFestivalVariantColor}}.png",
+            "When":
+            {
+                "HaleyEggFestivalVariant": "alternative",
+                "HaleyEggFestivalVariantColor": "blue, pink",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Leah Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Leah",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Leah_{{Festival}}_{{LeahEggFestivalVariant}}.png",
+            "When":
+            {
+                "LeahEggFestivalVariant": "standard, alternative",
+                "DayEvent:EggFestival": true
+            },
+        },
+        {
+            "LogName": "Maru Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Maru",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Maru_{{Festival}}_{{MaruEggFestivalVariant}}.png",
+            "When":
+            {
+                "MaruEggFestivalVariant": "standard, alternative",
+                "DayEvent:EggFestival": true
+            },
+        },
+
+        // E N D  E G G  F E S T I V A L  A L T E R N A T I V E S  B A C H E L O R E T T E S
+
+        // E N D  F E S T I V A L  P O R T R A I T S    
 
         // B E G I N  S W I M S U I T  C H A R A C T E R S
 
@@ -2394,7 +2575,8 @@
                 "LocationName": "beach",
                 "Season": "summer",
                 "DayEvent:Luau": false,
-                "SwimSuitsEnabled": "true"
+                "SwimSuitsEnabled": "true",
+                "HasFile:Characters/SwimSuits/{{TargetWithoutPath}}Swim.png": true,
             }
         },
         {
@@ -2497,7 +2679,8 @@
                 "LocationName": "beach",
                 "Season": "summer",
                 "DayEvent:Luau": false,
-                "SwimSuitsEnabled": "true"
+                "SwimSuitsEnabled": "true",
+                "HasFile:Portraits/SwimSuits/{{TargetWithoutPath}}Swim.png": true,
             }
         },
         {
