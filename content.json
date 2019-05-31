@@ -1,6 +1,9 @@
 {
     "Format": "1.8",
     "DynamicTokens": [
+
+        // Standard Dynamic Tokens
+
         {
             "Name": "RainSeasonalVariant", // raining & outdoors
             "Value": "_Indoor_Rain",
@@ -2330,7 +2333,7 @@
             {
                 "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
                 "PennyHair": "standard, brunette",
-                "DayEvent:EggFestival": false
+                "DayEvent:Egg Festival": false
             },
         },
         {
@@ -2341,7 +2344,7 @@
             "When":
             {
                 "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
-                "DayEvent:EggFestival": false,
+                "DayEvent:Egg Festival": false,
             },
         },
         {
@@ -2365,7 +2368,7 @@
             "When":
             {
                 "AbigailEggFestivalVariant": "standard, alternative",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2376,7 +2379,7 @@
             "When":
             {
                 "EmilyEggFestivalVariant": "standard",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2388,7 +2391,7 @@
             {
                 "EmilyEggFestivalVariant": "alternative",
                 "EmilyEggFestivalVariantColor": "blue, red",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2399,7 +2402,7 @@
             "When":
             {
                 "HaleyEggFestivalVariant": "standard",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2411,7 +2414,7 @@
             {
                 "HaleyEggFestivalVariant": "alternative",
                 "HaleyEggFestivalVariantColor": "blue, pink",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2422,7 +2425,7 @@
             "When":
             {
                 "LeahEggFestivalVariant": "standard, alternative",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2434,7 +2437,7 @@
             {
                 "PennyEggFestivalVariant": "standard, alternative",
                 "PennyHair": "standard",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2445,7 +2448,7 @@
             "When":
             {
                 "PennyHair": "brunette",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2456,7 +2459,7 @@
             "When":
             {
                 "MaruEggFestivalVariant": "standard, alternative",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
 
@@ -2475,7 +2478,7 @@
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
                 "PennyHair": "standard, brunette",
-                "DayEvent:EggFestival": false
+                "DayEvent:Egg Festival": false
             },
         },
         {
@@ -2486,7 +2489,7 @@
             "When":
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
-                "DayEvent:EggFestival": false,
+                "DayEvent:Egg Festival": false,
             },
         },
         {
@@ -2510,7 +2513,7 @@
             "When":
             {
                 "AbigailEggFestivalVariant": "standard, alternative",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2521,7 +2524,7 @@
             "When":
             {
                 "EmilyEggFestivalVariant": "standard",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2533,7 +2536,7 @@
             {
                 "EmilyEggFestivalVariant": "alternative",
                 "EmilyEggFestivalVariantColor": "blue, red",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2544,7 +2547,7 @@
             "When":
             {
                 "HaleyEggFestivalVariant": "standard",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2556,7 +2559,7 @@
             {
                 "HaleyEggFestivalVariant": "alternative",
                 "HaleyEggFestivalVariantColor": "blue, pink",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2567,7 +2570,7 @@
             "When":
             {
                 "LeahEggFestivalVariant": "standard, alternative",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2579,7 +2582,7 @@
             {
                 "PennyEggFestivalVariant": "standard, alternative",
                 "PennyHair": "standard",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2590,7 +2593,7 @@
             "When":
             {
                 "PennyHair": "brunette",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
         {
@@ -2601,7 +2604,7 @@
             "When":
             {
                 "MaruEggFestivalVariant": "standard, alternative",
-                "DayEvent:EggFestival": true
+                "DayEvent:Egg Festival": true
             },
         },
 
