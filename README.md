@@ -48,12 +48,13 @@ These options affect the character files.
 
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
-`AlexSummerVariant`            | sunglasses nosunglasses
 `AbigailSummerRainVariant`     | nohat hat
 `AbigailEggFestivalVariant`    | standard alternative
+`AlexSummerVariant`            | sunglasses nosunglasses
 `ClintVariant`                 | apron noapron
 `EmilyWinterVariant`           | hatnoscarf hatscarf nohatnoscarf nohatscarf
-`EmilySpringVariant`           | pink yellow sleeves nosleeves
+`EmilySpringVariant`           | sleeves nosleeves
+`EmilySpringRainVariant`       | pink yellow
 `ElliottSummerVariant`         | nosuspenders suspenders
 `EmilyEggFestivalVariant`      | standard alternative
 `EmilyEggFestivalVariantColor` | blue red
