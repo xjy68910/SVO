@@ -10,6 +10,7 @@ These options affect the mod in general.
 
 option                         | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
+`EnableOptimization`           | true false
 `PortraitStyle`*               | standard
 `MaterintySprites`             | true false
 `SwimSuitsEnabled`             | true false
@@ -47,22 +48,31 @@ These options affect the character files.
 
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
-`AlexSummerVariant`            | sunglasses nosunglasses
 `AbigailSummerRainVariant`     | nohat hat
+`AbigailEggFestivalVariant`    | standard alternative
+`AlexSummerVariant`            | sunglasses nosunglasses
 `ClintVariant`                 | apron noapron
 `EmilyWinterVariant`           | hatnoscarf hatscarf nohatnoscarf nohatscarf
-`EmilySpringVariant`           | pink yellow sleeves nosleeves
+`EmilySpringVariant`           | sleeves nosleeves
+`EmilySpringRainVariant`       | pink yellow
 `ElliottSummerVariant`         | nosuspenders suspenders
+`EmilyEggFestivalVariant`      | standard alternative
+`EmilyEggFestivalVariantColor` | blue red
 `EvelynWinterColor`            | pink blue
 `HaleySummerVariant`           | indoor beach
 `HaleyFallColor`               | red blue
 `HaleyWinterColor`             | grey pink
+`HaleyEggFestivalVariant`      | standard alternative
+`HaleyEggFestivalVariantColor` | blue pink
 `HarveySpringVariant`          | vest novest
 `HarveyFallRainVariant`        | blackredscarf brownnoscarf
 `LeahWinterColorVariant`       | red blue
 `LeahWinterHood`               | up down
+`LeahEggFestivalVariant`       | standard alternative
 `MaruScrubColor`               | dark light white
+`MaruEggFestivalVariant`       | standard alternative
 `PennyHair`                    | standard brunette
+`PennyEggFestivalVariant`      | standard alternative
 `RobinHairStyle`               | up down
 `WizardEnabled`                | true false
 `WizardVersion`                | standard pale saturated

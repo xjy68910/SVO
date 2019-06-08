@@ -23,6 +23,7 @@
 - bitty-bee for the alternative Penny sprites.
 - Riiao for the egg festival portraits.
 - Mycenia for their festival portrait contributions.
+- PKpixel for their festival portrait contributions & optional Kent military style character sheet.
 
 ## Sprites From Other Mods
 - Dizor for letting us use their [Dizor's Oasis Character Redraw](https://www.nexusmods.com/stardewvalley/mods/90) for Sandy.
