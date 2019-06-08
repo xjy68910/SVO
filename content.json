@@ -2,6 +2,36 @@
     "Format": "1.8",
     "DynamicTokens": [
 
+        // Optimization Check
+
+        {
+            "Name": "IsOutdoorsOptimized",
+            "Value": "false",
+            "When":
+            {
+                "EnableOptimization": "true, false",
+            }
+        },
+        {
+            "Name": "IsOutdoorsOptimized",
+            "Value": "true",
+            "When":
+            {
+                "IsOutdoors": "true",
+                "LocationName:Farm": "false",
+                "EnableOptimization": "true"
+            }
+        },
+        {
+            "Name": "IsOutdoorsOptimized",
+            "Value": "true",
+            "When":
+            {
+                "IsOutdoors": "true",
+                "EnableOptimization": "false"
+            }
+        },
+
         // Standard Dynamic Tokens
 
         {
@@ -9,7 +39,7 @@
             "Value": "_Indoor_Rain",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "spring, summer, fall",
                 "Weather": "rain, storm"
             },
@@ -19,7 +49,7 @@
             "Value": "_Indoor",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "spring, summer, fall",
                 "Weather": "rain, storm"
             },
@@ -38,7 +68,7 @@
             "Value": "_Winter_Indoor",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "winter",
             },
         },
@@ -47,7 +77,7 @@
             "Value": "_Winter_Outdoor",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "winter",
             },
         },
@@ -59,7 +89,7 @@
             "Value": "_Indoor_Rain",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "spring, summer, fall",
                 "Weather": "rain, storm"
             },
@@ -69,7 +99,7 @@
             "Value": "_Indoor",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "spring, summer, fall",
                 "Weather": "rain, storm"
             },
@@ -88,7 +118,7 @@
             "Value": "_Indoor",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "winter",
             },
         },
@@ -97,7 +127,7 @@
             "Value": "_Outdoor",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "winter",
             },
         },
@@ -176,6 +206,11 @@
     "ConfigSchema":
     {
 
+        "EnableOptimization":
+        {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
         "PortraitStyle":
         {
             "AllowValues": "standard",
@@ -200,10 +235,15 @@
             "AllowValues": "standard, frontfacingeemie, frontfacinglumen",
             "Default": "standard",
         },
-        "ElliottSummerPortraitVariant":
+        "HarveyFacialHair":
         {
-            "AllowValues": "alternative, standard",
-            "Default": "standard",
+            "AllowValues": "mustache, shaved",
+            "Default": "mustache"
+        },
+        "HarveyShavedVariant":
+        {
+            "AllowValues": "round, slim",
+            "Default": "round"
         },
         "SamSummerPortraitVariant":
         {
@@ -256,7 +296,7 @@
 
         "ElliottSummerVariant":
         {
-            "AllowValues": "nosuspenders, suspenders",
+            "AllowValues": "nosuspenders, suspenders, vest, novest",
             "Default": "nosuspenders"
         },
 
@@ -298,11 +338,6 @@
 
         // Haley
 
-        "HaleySummerVariant":
-        {
-            "AllowValues": "indoor, beach",
-            "Default": "indoor"
-        },
         "HaleyFallColor":
         {
             "AllowValues": "red, blue",
@@ -433,6 +468,14 @@
             "Default": "default"
         },
 
+        // Haley Swimsuit
+
+        "HaleySwimVariant":
+        {
+            "AllowValues": "white, pink",
+            "Default": "white"
+        },
+
         // Linus Swimsuit
 
         "LinusSwimVariant":
@@ -451,6 +494,31 @@
     },
 
     "Changes": [
+
+        // S E C R E T  C O D E (I really don't do anything and am here for a reminder)
+
+        /*{
+            "Action": "Load",
+            "Target": "Characters/Abigail, Characters/Leah, ...",
+            "FromFile": "assets/{{TargetName}}_outside.png",
+            "When":
+            {
+                "IsOutdoorsOptimized": "true"
+            }
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Abigail, Characters/Leah, ...",
+            "FromFile": "assets/{{TargetName}}_outside.png",
+            "When":
+            {
+                "IsOutdoorsOptimized": "false",
+                "LocationName": "Farm",
+                "Spouse": "{{TargetName}}"
+            }
+        }*/
+
+        // E N D  S E C R E T  C O D E
 
         // B E G I N  C U R S O R S  E D I T S
 
@@ -546,7 +614,7 @@
             "FromFile": "Characters/Abigail/Abigail_{{season}}_Indoor_Rain.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "spring, fall",
                 "Weather": "rain, storm"
             },
@@ -558,7 +626,7 @@
             "FromFile": "Characters/Abigail/Abigail_{{season}}_Outdoor_Rain.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "spring, fall",
                 "Weather": "rain, storm"
             },
@@ -601,7 +669,7 @@
             "FromFile": "{{Portraits}}/Abigail/Abigail_{{season}}_Indoor_Rain.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "spring, fall",
                 "Weather": "rain, storm"
             },
@@ -613,7 +681,7 @@
             "FromFile": "{{Portraits}}/Abigail/Abigail_{{season}}_Outdoor_Rain.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "spring, fall",
                 "Weather": "rain, storm"
             },
@@ -740,7 +808,7 @@
             "FromFile": "Characters/Caroline/Caroline_{{Season}}_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "summer, fall",
                 "Weather": "sun, wind, snow",
             }
@@ -752,7 +820,7 @@
             "FromFile": "Characters/Caroline/Caroline_{{Season}}_Outdoor.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "summer, fall",
                 "Weather": "sun, wind, snow",
             }
@@ -779,7 +847,7 @@
             "FromFile": "{{Portraits}}/Caroline/Caroline_{{Season}}_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "summer, fall",
                 "Weather": "sun, wind, snow",
             }
@@ -791,7 +859,7 @@
             "FromFile": "{{Portraits}}/Caroline/Caroline_{{Season}}_Outdoor.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "summer, fall",
                 "Weather": "sun, wind, snow",
             }
@@ -895,7 +963,7 @@
             "When":
             {
                 "Season": "summer",
-                "ElliottSummerVariant": "nosuspenders, suspenders",
+                "ElliottSummerVariant": "nosuspenders, suspenders, novest, vest",
             }
         },
         {
@@ -915,7 +983,8 @@
             "When":
             {
                 "Season": "spring",
-                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen",
+                "HasFile:{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_Spring{{Indoor_SeasonalVariant}}.png": true,
             }
         },
         {
@@ -926,9 +995,10 @@
             "When":
             {
                 "Season": "summer",
-                "ElliottSummerVariant": "nosuspenders, suspenders",
+                "ElliottSummerVariant": "nosuspenders, suspenders, vest, novest",
                 "Weather": "sun, wind, snow",
-                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen",
+                "HasFile:{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_Summer_Indoor_{{ElliottSummerVariant}}.png": true,
             }
         },
         {
@@ -939,7 +1009,8 @@
             "When":
             {
                 "Season": "fall",
-                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen",
+                "HasFile:{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{season}}{{RainSeasonalVariant}}.png": true,
             }
         },
         {
@@ -949,8 +1020,8 @@
             "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott{{WinterSeasonalVariant}}.png",
             "When":
             {
-
-                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen"
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen",
+                "HasFile:{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott{{WinterSeasonalVariant}}.png": true,
             }
         },
 
@@ -1005,7 +1076,7 @@
             "FromFile": "Characters/Emily/Emily_Winter_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "winter",
             },
         },
@@ -1016,7 +1087,7 @@
             "FromFile": "Characters/Emily/Emily_Winter_Outdoor_{{EmilyWinterVariant}}.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "winter",
                 "EmilyWinterVariant": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf"
             },
@@ -1073,7 +1144,7 @@
             "FromFile": "{{Portraits}}/Emily/Emily_Winter_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "winter",
             },
         },
@@ -1084,7 +1155,7 @@
             "FromFile": "{{Portraits}}/Emily/Emily_Winter_Outdoor_{{EmilyWinterVariant}}.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "winter",
                 "EmilyWinterVariant": "hatnoscarf, hatscarf, nohatnoscarf, nohatscarf"
             },
@@ -1199,10 +1270,9 @@
             "LogName": "Haley Summer - Indoor",
             "Action": "Load",
             "Target": "Characters/Haley",
-            "FromFile": "Characters/Haley/Haley_Summer_{{HaleySummerVariant}}.png",
+            "FromFile": "Characters/Haley/Haley_Summer_Indoor.png",
             "When":
             {
-                "HaleySummerVariant": "indoor, beach",
                 "Season": "summer"
             }
         },
@@ -1265,10 +1335,9 @@
             "LogName": "Haley Summer - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Haley",
-            "FromFile": "{{Portraits}}/Haley/Haley_Summer_{{HaleySummerVariant}}.png",
+            "FromFile": "{{Portraits}}/Haley/Haley_Summer_Indoor.png",
             "When":
             {
-                "HaleySummerVariant": "indoor, beach",
                 "Season": "summer"
             }
         },
@@ -1289,10 +1358,9 @@
             "LogName": "Haley Cow Photos - Summer",
             "Action": "Load",
             "Target": "LooseSprites/cowPhotos",
-            "FromFile": "Characters/Haley/cowPhotos_Summer_{{HaleySummerVariant}}.png",
+            "FromFile": "Characters/Haley/cowPhotos_Summer_Indoor.png",
             "When":
             {
-                "HaleySummerVariant": "indoor",
                 "Season": "summer"
             }
         },
@@ -1371,54 +1439,127 @@
 
         // Harvey Portraits
 
+        // Harvey Mustache
+
         {
             "LogName": "Harvey Fall - Indoor Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Harvey",
-            "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{RainSeasonalVariant}}_{{HarveyFallRainVariant}}.png",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/Harvey_{{season}}{{RainSeasonalVariant}}_{{HarveyFallRainVariant}}.png",
             "When":
             {
                 "Season": "fall",
-                "HarveyFallRainVariant": "blackredscarf, brownnoscarf"
+                "HarveyFallRainVariant": "blackredscarf, brownnoscarf",
+                "HarveyFacialHair": "mustache"
             }
         },
-
         {
             "LogName": "Harvey Spring & Summer - Indoor Rain Portraits",
             "Action": "Load",
             "Target": "Portraits/Harvey",
-            "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{RainSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/Harvey_{{season}}{{RainSeasonalVariant}}.png",
             "When":
             {
                 "Season": "spring, summer",
+                "HarveyFacialHair": "mustache"
             }
         },
         {
             "LogName": "Harvey Spring - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Harvey",
-            "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{Indoor_SeasonalVariant}}_{{HarveySpringVariant}}.png",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/Harvey_{{season}}{{Indoor_SeasonalVariant}}_{{HarveySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "HarveySpringVariant": "vest, novest"
+                "HarveySpringVariant": "vest, novest",
+                "HarveyFacialHair": "mustache"
             }
         },
         {
             "LogName": "Harvey Summer & Fall - Indoor Portraits",
             "Action": "Load",
             "Target": "Portraits/Harvey",
-            "FromFile": "{{Portraits}}/Harvey/Harvey_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/Harvey_{{season}}{{Indoor_SeasonalVariant}}.png",
             "When":
             {
-                "Season": "summer, fall"
+                "Season": "summer, fall",
+                "HarveyFacialHair": "mustache"
             }
         },
         {
             "LogName": "Harvey Winter Portrait",
             "Action": "Load",
             "Target": "Portraits/Harvey",
-            "FromFile": "{{Portraits}}/Harvey/Harvey{{WinterSeasonalVariant}}.png",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/Harvey{{WinterSeasonalVariant}}.png",
+            "When":
+            {
+                "HarveyFacialHair": "mustache"
+            }
+        },
+
+        // Harvey Shaved
+
+        {
+            "LogName": "Harvey Fall - Indoor Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Harvey",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/{{HarveyShavedVariant}}/Harvey_{{season}}{{RainSeasonalVariant}}_{{HarveyFallRainVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HarveyFallRainVariant": "blackredscarf, brownnoscarf",
+                "HarveyFacialHair": "shaved",
+                "HarveyShavedVariant": "round, slim"
+            }
+        },
+        {
+            "LogName": "Harvey Spring & Summer - Indoor Rain Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Harvey",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/{{HarveyShavedVariant}}/Harvey_{{season}}{{RainSeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "spring, summer",
+                "HarveyFacialHair": "shaved",
+                "HarveyShavedVariant": "round, slim"
+            }
+        },
+        {
+            "LogName": "Harvey Spring - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Harvey",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/{{HarveyShavedVariant}}/Harvey_{{season}}{{Indoor_SeasonalVariant}}_{{HarveySpringVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "HarveySpringVariant": "vest, novest",
+                "HarveyFacialHair": "shaved",
+                "HarveyShavedVariant": "round, slim"
+            }
+        },
+        {
+            "LogName": "Harvey Summer & Fall - Indoor Portraits",
+            "Action": "Load",
+            "Target": "Portraits/Harvey",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/{{HarveyShavedVariant}}/Harvey_{{season}}{{Indoor_SeasonalVariant}}.png",
+            "When":
+            {
+                "Season": "summer, fall",
+                "HarveyFacialHair": "shaved",
+                "HarveyShavedVariant": "round, slim"
+            }
+        },
+        {
+            "LogName": "Harvey Winter Portrait",
+            "Action": "Load",
+            "Target": "Portraits/Harvey",
+            "FromFile": "{{Portraits}}/Harvey/{{HarveyFacialHair}}/{{HarveyShavedVariant}}/Harvey{{WinterSeasonalVariant}}.png",
+            "When":
+            {
+                "HarveyFacialHair": "shaved",
+                "HarveyShavedVariant": "round, slim"
+            }
         },
 
         // Jas
@@ -1502,7 +1643,7 @@
             "FromFile": "Characters/Leah/Leah_Summer_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "summer",
             }
         },
@@ -1513,7 +1654,7 @@
             "FromFile": "Characters/Leah/Leah_Summer_Outdoor.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "summer",
             }
         },
@@ -1524,7 +1665,7 @@
             "FromFile": "Characters/Leah/Leah_Winter_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "winter",
             },
         },
@@ -1535,7 +1676,7 @@
             "FromFile": "Characters/Leah/Leah_Winter_Outdoor{{LeahWinterColorVariant}}_{{LeahWinterHood}}.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "LeahWinterHood": "up, down",
                 "LeahWinterColorVariant": "red, blue",
                 "Season": "winter"
@@ -1571,7 +1712,7 @@
             "FromFile": "{{Portraits}}/Leah/Leah_Summer_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "summer",
             }
         },
@@ -1582,7 +1723,7 @@
             "FromFile": "{{Portraits}}/Leah/Leah_Summer_Outdoor.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "Season": "summer",
             }
         },
@@ -1593,7 +1734,7 @@
             "FromFile": "{{Portraits}}/Leah/Leah_Winter_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "Season": "winter",
             },
         },
@@ -1604,7 +1745,7 @@
             "FromFile": "{{Portraits}}/Leah/Leah_Winter_Outdoor{{LeahWinterColorVariant}}_{{LeahWinterHood}}.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "LeahWinterHood": "up, down",
                 "LeahWinterColorVariant": "red, blue",
                 "Season": "winter"
@@ -1857,7 +1998,7 @@
             "FromFile": "Characters/Penny/{{PennyHair}}/Penny_{{Season}}_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "PennyHair": "standard, brunette",
                 "Season": "summer, fall",
                 "Weather": "sun, wind, snow"
@@ -1870,7 +2011,7 @@
             "FromFile": "Characters/Penny/{{PennyHair}}/Penny_{{Season}}_Outdoor.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "PennyHair": "standard, brunette",
                 "Season": "summer, fall",
                 "Weather": "sun, wind, snow"
@@ -1917,7 +2058,7 @@
             "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_{{Season}}_Indoor.png",
             "When":
             {
-                "IsOutdoors": "false",
+                "IsOutdoorsOptimized": "false",
                 "PennyHair": "standard, brunette",
                 "Season": "summer, fall",
                 "Weather": "sun, wind, snow"
@@ -1930,7 +2071,7 @@
             "FromFile": "{{Portraits}}/Penny/{{PennyHair}}/Penny_{{Season}}_Outdoor.png",
             "When":
             {
-                "IsOutdoors": "true",
+                "IsOutdoorsOptimized": "true",
                 "PennyHair": "standard, brunette",
                 "Season": "summer, fall",
                 "Weather": "sun, wind, snow"
@@ -2325,19 +2466,7 @@
         // B E G I N  F E S T I V A L S P I T E S
 
         {
-            "LogName": "Penny Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Penny",
-            "FromFile": "Characters/Festivals/{{Festival}}/Penny_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
-                "PennyHair": "standard, brunette",
-                "DayEvent:Egg Festival": false
-            },
-        },
-        {
-            "LogName": "Festival Character Sprites Bachlorettes",
+            "LogName": "Festival Character Sprites Bachlorettes - Excludes Egg Festival",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Characters/Emily, Characters/Haley, Characters/Leah, Characters/Maru,",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
@@ -2355,6 +2484,21 @@
             "When":
             {
                 "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
+            },
+        },
+
+        // Penny
+
+        {
+            "LogName": "Penny Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Penny",
+            "FromFile": "Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
+                "PennyHair": "standard, brunette",
+                "DayEvent:Egg Festival": false
             },
         },
 
@@ -2470,19 +2614,7 @@
         // B E G I N  F E S T I V A L  P O R T R A I T S    
 
         {
-            "LogName": "Penny Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Penny_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
-                "PennyHair": "standard, brunette",
-                "DayEvent:Egg Festival": false
-            },
-        },
-        {
-            "LogName": "Festival Portrait Sprites Bachlorettes",
+            "LogName": "Festival Portrait Sprites Bachlorettes - Excludes Egg Festival",
             "Action": "EditImage",
             "Target": "Portraits/Abigail, Portraits/Emily, Portraits/Haley, Portraits/Leah, Portraits/Maru,",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
@@ -2493,13 +2625,68 @@
             },
         },
         {
-            "LogName": "Festival Portrait Sprites Bachelors & NPCs",
+            "LogName": "Festival Portrait Sprites Bachelors & NPCs (Excludes Harvey)",
             "Action": "EditImage",
-            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
+            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
+            },
+        },
+
+        // Elliott
+
+        {
+            "LogName": "Elliott Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Elliott",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Elliott_{{Festival}}_{{ElliottPortraitStyle}}.png": true,
+                "ElliottPortraitStyle": "standard, frontfacingeemie, frontfacinglumen",
+            },
+        },
+
+        // Harvey
+
+        {
+            "LogName": "Harvey Festival Portrait Sprites (Unshaved)",
+            "Action": "EditImage",
+            "Target": "Portraits/Harvey",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}.png": true,
+                "HarveyFacialHair": "mustache",
+            },
+        },
+        {
+            "LogName": "Harvey Festival Portrait Sprites (Shaved)",
+            "Action": "EditImage",
+            "Target": "Portraits/Harvey",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}_{{HarveyShavedVariant}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}_{{HarveyShavedVariant}}.png": true,
+                "HarveyFacialHair": "shaved",
+                "HarveyShavedVariant": "round, slim"
+            },
+        },
+
+        // Penny
+
+        {
+            "LogName": "Penny Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
+                "PennyHair": "standard, brunette",
+                "DayEvent:Egg Festival": false
             },
         },
 
@@ -2617,7 +2804,7 @@
         {
             "LogName": "Swimsuits Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Emily, Characters/Evelyn, Characters/Gus, Characters/Haley, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent",
+            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Emily, Characters/Evelyn, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent",
             "FromFile": "Characters/Swimsuits/{{TargetWithoutPath}}Swim.png",
             "ToArea":
             {
@@ -2678,6 +2865,27 @@
             }
         },
         {
+            "LogName": "Haley Swimsuits Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Swimsuits/HaleySwim_{{HaleySwimVariant}}.png",
+            "ToArea":
+            {
+                "X": 0,
+                "Y": 0,
+                "Width": 64,
+                "Height": 128
+            },
+            "When":
+            {
+                "HaleySwimVariant": "white, pink",
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
+            }
+        },
+        {
             "LogName": "Linus Swimsuits Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Linus",
@@ -2728,7 +2936,7 @@
         {
             "LogName": "Swimsuits Portrait Sprites",
             "Action": "EditImage",
-            "Target": "Portraits/Abigail, Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Emily, Portraits/Evelyn, Portraits/Gus, Portraits/Haley, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Leah, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Maru, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent",
+            "Target": "Portraits/Abigail, Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Emily, Portraits/Evelyn, Portraits/Gus, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Leah, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Maru, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent",
             "FromFile": "{{Portraits}}/Swimsuits/{{TargetWithoutPath}}PortraitSwim.png",
             "When":
             {
@@ -2747,6 +2955,27 @@
             "When":
             {
                 "GeorgeSwimVariant": "default, floaties",
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false,
+                "SwimSuitsEnabled": "true"
+            }
+        },
+        {
+            "LogName": "Haley Swimsuits Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Swimsuits/HaleyPortraitSwim_{{HaleySwimVariant}}.png",
+            "ToArea":
+            {
+                "X": 0,
+                "Y": 0,
+                "Width": 64,
+                "Height": 128
+            },
+            "When":
+            {
+                "HaleySwimVariant": "white, pink",
                 "LocationName": "beach",
                 "Season": "summer",
                 "DayEvent:Luau": false,
