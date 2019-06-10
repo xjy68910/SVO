@@ -437,6 +437,14 @@
             "Default": "standard"
         },
 
+        // Sebastian
+
+        "SebastianSpiritsEve":
+        {
+            "AllowValues": "mask, nomask",
+            "Default": "mask"
+        },
+
         // Wizard
 
         "WizardEnabled":
@@ -2477,9 +2485,9 @@
             },
         },
         {
-            "LogName": "Festival Character Sprites Bachelors & NPCs",
+            "LogName": "Festival Character Sprites Bachelors (Exludes Sebastian Spirits Eve) & NPCs",
             "Action": "EditImage",
-            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent, Characters/Willy",
+            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Shane, Characters/Vincent, Characters/Willy",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -2499,6 +2507,32 @@
                 "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
                 "PennyHair": "standard, brunette",
                 "DayEvent:Egg Festival": false
+            },
+        },
+
+        // Sebastian
+
+        {
+            "LogName": "Sebastian Spirit's Eve Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sebastian",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sebastian_{{Festival}}_{{SebastianSpiritsEve}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/{{Festival}}/Sebastian_{{Festival}}_{{SebastianSpiritsEve}}.png": true,
+                "SebastianSpiritsEve": "mask, nomask",
+                "DayEvent:spirit's eve": true
+            },
+        },
+        {
+            "LogName": "Sebastian Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sebastian",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sebastian_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/{{Festival}}/Sebastian_{{Festival}}.png": true,
+                "DayEvent:spirit's eve": false
             },
         },
 
@@ -2625,9 +2659,9 @@
             },
         },
         {
-            "LogName": "Festival Portrait Sprites Bachelors & NPCs (Excludes Harvey)",
+            "LogName": "Festival Portrait Sprites Bachelors & NPCs (Excludes Harvey & Sebastian)",
             "Action": "EditImage",
-            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
+            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -2687,6 +2721,32 @@
                 "HasFile:Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
                 "PennyHair": "standard, brunette",
                 "DayEvent:Egg Festival": false
+            },
+        },
+
+        // Sebastian
+
+        {
+            "LogName": "Sebastian Spirit's Eve Festival Portraits Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sebastian_{{Festival}}_{{SebastianSpiritsEve}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Sebastian_{{Festival}}_{{SebastianSpiritsEve}}.png": true,
+                "SebastianSpiritsEve": "mask, nomask",
+                "DayEvent:spirit's eve": true
+            },
+        },
+        {
+            "LogName": "Sebastian Festival Portraits Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sebastian_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Sebastian_{{Festival}}.png": true,
+                "DayEvent:spirit's eve": false
             },
         },
 
