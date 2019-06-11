@@ -21,10 +21,12 @@ These options only apply when you set `PortraitStyle` to `standard`.
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen
-`ElliottSummerPortraitVariant` | alternative standard
+`HarveyFacialHair`             | mustache shaved
+`HarveyShavedVariant`          | round slim
 `SamSummerPortraitVariant`     | standard alternative
 `SandyPortraitVariant`         | side sivs front
 `WillyWinterPortraitVariant`   | standard alternative
+
 ## DCBurger Portraits
 These options only apply when you set `PortraitStyle` to `dcburger`.
 
@@ -52,10 +54,10 @@ options                        | valid values (select only one, values are seper
 `AbigailEggFestivalVariant`    | standard alternative
 `AlexSummerVariant`            | sunglasses nosunglasses
 `ClintVariant`                 | apron noapron
+`ElliottSummerVariant`         | nosuspenders suspenders vest novest
 `EmilyWinterVariant`           | hatnoscarf hatscarf nohatnoscarf nohatscarf
 `EmilySpringVariant`           | sleeves nosleeves
 `EmilySpringRainVariant`       | pink yellow
-`ElliottSummerVariant`         | nosuspenders suspenders
 `EmilyEggFestivalVariant`      | standard alternative
 `EmilyEggFestivalVariantColor` | blue red
 `EvelynWinterColor`            | pink blue
@@ -74,10 +76,14 @@ options                        | valid values (select only one, values are seper
 `PennyHair`                    | standard brunette
 `PennyEggFestivalVariant`      | standard alternative
 `RobinHairStyle`               | up down
-`WizardEnabled`                | true false
-`WizardVersion`                | standard pale saturated
+`SamSpiritsEve`                | madscientist scarecrow
+`SamScarecrowFacepaint`        | facepaint nofacepaint
 `SandyEnabled`                 | true false
 `SandyVersion`                 | standard sivs zola
+`SebastianSpiritsEve`          | mask nomask
+`WizardEnabled`                | true false
+`WizardVersion`                | standard pale saturated
+
 
 ## Swimsuits
 These options affect the swimsuit options in Summer on the beach (if enabled).
@@ -86,5 +92,6 @@ options                        | valid values (select only one, values are seper
 ----------------------------   | ------- 
 `ElliottSwimVariant`           | paunch thin
 `GeorgeSwimVariant`            | default floaties
+`HaleySwimVariant`             | white pink
 `LinusSwimVariant`             | censored grassskirt
 `PennySwimVariant`             | blue yellow
