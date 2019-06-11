@@ -424,6 +424,19 @@
             "Default": "up"
         },
 
+        // Sam
+
+        "SamSpiritsEve":
+        {
+            "AllowValues": "madscientist, scarecrow",
+            "Default": "scarecrow"
+        },
+        "SamScarecrowFacepaint":
+        {
+            "AllowValues": "facepaint, nofacepaint",
+            "Default": "facepaint"
+        },
+
         // Sandy
 
         "SandyEnabled":
@@ -2485,9 +2498,9 @@
             },
         },
         {
-            "LogName": "Festival Character Sprites Bachelors (Exludes Sebastian Spirits Eve) & NPCs",
+            "LogName": "Festival Character Sprites Bachelors (Exludes Sebastian & Sam Spirits Eve) & NPCs",
             "Action": "EditImage",
-            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Shane, Characters/Vincent, Characters/Willy",
+            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Shane, Characters/Vincent, Characters/Willy",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -2507,6 +2520,45 @@
                 "HasFile:Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{PennyHair}}.png": true,
                 "PennyHair": "standard, brunette",
                 "DayEvent:Egg Festival": false
+            },
+        },
+
+        // Sam
+
+        {
+            "LogName": "Sam Spirit's Eve Festival Characters Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{SamSpiritsEve}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{SamSpiritsEve}}.png": true,
+                "SamSpiritsEve": "madscientist",
+                "DayEvent:spirit's eve": true
+            },
+        },
+        {
+            "LogName": "Sam Spirit's Eve Festival Characters Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{SamSpiritsEve}}_{{SamScarecrowFacepaint}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{SamSpiritsEve}}_{{SamScarecrowFacepaint}}.png": true,
+                "SamSpiritsEve": "scarecrow",
+                "SamScarecrowFacepaint": "facepaint, nofacepaint",
+                "DayEvent:spirit's eve": true
+            },
+        },
+        {
+            "LogName": "Sam Festival Characters Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/{{Festival}}/Sam_{{Festival}}.png": true,
+                "DayEvent:spirit's eve": false
             },
         },
 
@@ -2659,9 +2711,9 @@
             },
         },
         {
-            "LogName": "Festival Portrait Sprites Bachelors & NPCs (Excludes Harvey & Sebastian)",
+            "LogName": "Festival Portrait Sprites Bachelors & NPCs (Excludes Harvey, Sebastian, Elliott, Sam)",
             "Action": "EditImage",
-            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
+            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -2724,6 +2776,45 @@
             },
         },
 
+        // Sam
+
+        {
+            "LogName": "Sam Spirit's Eve Festival Portraits Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{SamSpiritsEve}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{SamSpiritsEve}}.png": true,
+                "SamSpiritsEve": "madscientist",
+                "DayEvent:spirit's eve": true
+            },
+        },
+        {
+            "LogName": "Sam Spirit's Eve Festival Portraits Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{SamSpiritsEve}}_{{SamScarecrowFacepaint}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{SamSpiritsEve}}_{{SamScarecrowFacepaint}}.png": true,
+                "SamSpiritsEve": "scarecrow",
+                "SamScarecrowFacepaint": "facepaint, nofacepaint",
+                "DayEvent:spirit's eve": true
+            },
+        },
+        {
+            "LogName": "Sam Festival Portraits Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/Sam_{{Festival}}.png": true,
+                "DayEvent:spirit's eve": false
+            },
+        },
+
         // Sebastian
 
         {
@@ -2749,6 +2840,7 @@
                 "DayEvent:spirit's eve": false
             },
         },
+
 
         // B E G I N  E G G  F E S T I V A L  A L T E R N A T I V E S  B A C H E L O R E T T E S
 
