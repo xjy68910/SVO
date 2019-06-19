@@ -1035,7 +1035,7 @@
             }
         },
         {
-            "LogName": "Elliott Winter - Indoor Portraits",
+            "LogName": "Elliott Winter - Portraits",
             "Action": "Load",
             "Target": "Portraits/Elliott",
             "FromFile": "{{Portraits}}/Elliott/{{ElliottPortraitStyle}}/Elliott{{WinterSeasonalVariant}}.png",
@@ -2727,7 +2727,7 @@
             "LogName": "Elliott Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Elliott",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}.png",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Elliott_{{Festival}}_{{HarveyFacialHair}}.png",
             "When":
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/Elliott_{{Festival}}_{{ElliottPortraitStyle}}.png": true,
