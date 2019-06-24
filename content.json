@@ -2,7 +2,7 @@
     "Format": "1.8",
     "DynamicTokens": [
 
-        // Optimization Check
+        // Optimization Check <- I don't think this even works properly
 
         {
             "Name": "IsOutdoorsOptimized",
@@ -85,7 +85,7 @@
         // Test Tokens (All Encompassing)
 
         {
-            "Name": "AllEncompassing",
+            "Name": "AllEncompassing", // raining & outdoors
             "Value": "_Indoor_Rain",
             "When":
             {
@@ -95,7 +95,7 @@
             },
         },
         {
-            "Name": "AllEncompassing",
+            "Name": "AllEncompassing", // raining & indoors
             "Value": "_Indoor",
             "When":
             {
@@ -105,7 +105,7 @@
             },
         },
         {
-            "Name": "AllEncompassing",
+            "Name": "AllEncompassing", // not raining & either indoor or outdoor
             "Value": "_Indoor",
             "When":
             {
@@ -114,7 +114,7 @@
             },
         },
         {
-            "Name": "AllEncompassing",
+            "Name": "AllEncompassing", // winter & inside
             "Value": "_Indoor",
             "When":
             {
@@ -123,7 +123,7 @@
             },
         },
         {
-            "Name": "AllEncompassing",
+            "Name": "AllEncompassing", // winter & outside
             "Value": "_Outdoor",
             "When":
             {
@@ -515,31 +515,6 @@
     },
 
     "Changes": [
-
-        // S E C R E T  C O D E (I really don't do anything and am here for a reminder)
-
-        /*{
-            "Action": "Load",
-            "Target": "Characters/Abigail, Characters/Leah, ...",
-            "FromFile": "assets/{{TargetName}}_outside.png",
-            "When":
-            {
-                "IsOutdoorsOptimized": "true"
-            }
-        },
-        {
-            "Action": "Load",
-            "Target": "Characters/Abigail, Characters/Leah, ...",
-            "FromFile": "assets/{{TargetName}}_outside.png",
-            "When":
-            {
-                "IsOutdoorsOptimized": "false",
-                "LocationName": "Farm",
-                "Spouse": "{{TargetName}}"
-            }
-        }*/
-
-        // E N D  S E C R E T  C O D E
 
         // B E G I N  C U R S O R S  E D I T S
 
@@ -2487,7 +2462,7 @@
         // B E G I N  F E S T I V A L S P I T E S
 
         {
-            "LogName": "Festival Character Sprites Bachlorettes - Excludes Egg Festival",
+            "LogName": "Festival Character Sprites Bachlorettes - Excludes Penny & Egg Festival",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Characters/Emily, Characters/Haley, Characters/Leah, Characters/Maru,",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
@@ -2700,7 +2675,7 @@
         // B E G I N  F E S T I V A L  P O R T R A I T S    
 
         {
-            "LogName": "Festival Portrait Sprites Bachlorettes - Excludes Egg Festival",
+            "LogName": "Festival Portrait Sprites Bachlorettes - Excludes Penny & Egg Festival",
             "Action": "EditImage",
             "Target": "Portraits/Abigail, Portraits/Emily, Portraits/Haley, Portraits/Leah, Portraits/Maru,",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
