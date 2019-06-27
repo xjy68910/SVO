@@ -213,7 +213,7 @@
         },
         "PortraitStyle":
         {
-            "AllowValues": "standard",
+            "AllowValues": "standard, disabled",
             "Default": "standard",
             "AllowBlank": "true"
         },
@@ -244,11 +244,6 @@
         {
             "AllowValues": "round, slim",
             "Default": "round"
-        },
-        "SandyPortraitVariant": // Front version works for sivs only
-        {
-            "AllowValues": "side, sivs, front",
-            "Default": "side"
         },
         "WillyWinterPortraitVariant":
         {
@@ -441,7 +436,7 @@
         },
         "SandyVersion":
         {
-            "AllowValues": "standard, sivs, zola",
+            "AllowValues": "standard, sivs, dizor",
             "Default": "standard"
         },
 
@@ -480,8 +475,8 @@
 
         "GeorgeSwimVariant":
         {
-            "AllowValues": "default, floaties",
-            "Default": "default"
+            "AllowValues": "nofloaties, floaties",
+            "Default": "nofloaties"
         },
 
         // Haley Swimsuit
@@ -2212,91 +2207,29 @@
         // Sandy
 
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor (All Versions)",
+            "LogName": "Sandy All Seasons - Indoor (Excludes Dizor Character Sheet)",
             "Action": "Load",
             "Target": "Characters/Sandy",
             "FromFile": "Characters/Sandy/{{SandyVersion}}/Sandy_{{season}}_Indoor.png",
             "When":
             {
-                "Season": "spring, summer, fall",
                 "SandyEnabled": "true",
-                "SandyVersion": "standard, sivs, zola"
-            }
-        },
-        {
-            "LogName": "Sandy Winter - Indoor (sivs)",
-            "Action": "Load",
-            "Target": "Characters/Sandy",
-            "FromFile": "Characters/Sandy/{{SandyVersion}}/Sandy_Winter_Indoor.png",
-            "When":
-            {
-                "Season": "winter",
-                "SandyEnabled": "true",
-                "SandyVersion": "sivs"
-            }
-        },
-        {
-            "LogName": "Sandy Player Wedding (Zola)",
-            "Action": "Load",
-            "Target": "Characters/Sandy",
-            "FromFile": "Characters/Sandy/{{SandyVersion}}/Sandy_Wedding.png",
-            "When":
-            {
-                "DayEvent": "wedding",
-                "SandyEnabled": "true",
-                "SandyVersion": "zola"
+                "SandyVersion": "standard, sivs"
             }
         },
 
         // Sandy Portraits
 
         {
-            "LogName": "Sandy Spring, Summer, & Fall - Indoor Portraits Standard",
+            "LogName": "Sandy All Seasons - Portraits",
             "Action": "Load",
             "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/Sandy/Standard/Sandy_{{season}}_Indoor.png",
+            "FromFile": "{{Portraits}}/Sandy/{{SandyVersion}}/Sandy_{{season}}_Indoor.png",
             "When":
             {
                 "Season": "spring, summer, fall",
                 "SandyEnabled": "true",
-                "SandyVersion": "standard",
-                "SandyPortraitVariant": "side"
-            }
-        },
-        {
-            "LogName": "Sandy All Seasons - Indoor Portraits Sivs (Side)",
-            "Action": "Load",
-            "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/Sandy/AlternativeSide/Sandy_{{season}}_Indoor.png",
-            "When":
-            {
-                "SandyEnabled": "true",
-                "SandyVersion": "sivs",
-                "SandyPortraitVariant": "side"
-            }
-        },
-        {
-            "LogName": "Sandy All Seasons - Indoor Portraits Sivs (Front)",
-            "Action": "Load",
-            "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/Sandy/AlternativeFront/Sandy_{{season}}_Indoor.png",
-            "When":
-            {
-                "SandyEnabled": "true",
-                "SandyVersion": "sivs",
-                "SandyPortraitVariant": "front"
-            }
-        },
-        {
-            "LogName": "Sandy All Seasons - Indoor Portraits Sivs (Sivs)",
-            "Action": "Load",
-            "Target": "Portraits/Sandy",
-            "FromFile": "{{Portraits}}/Sandy/Sivs/Sandy_{{season}}_Indoor.png",
-            "When":
-            {
-                "SandyEnabled": "true",
-                "SandyVersion": "sivs",
-                "SandyPortraitVariant": "sivs"
+                "SandyVersion": "standard, sivs, dizor"
             }
         },
 
@@ -2979,7 +2912,7 @@
             },
             "When":
             {
-                "GeorgeSwimVariant": "default, floaties",
+                "GeorgeSwimVariant": "nofloaties, floaties",
                 "LocationName": "beach",
                 "Season": "summer",
                 "DayEvent:Luau": false,
@@ -3076,7 +3009,7 @@
             "FromFile": "{{Portraits}}/Swimsuits/GeorgePortraitSwim_{{GeorgeSwimVariant}}.png",
             "When":
             {
-                "GeorgeSwimVariant": "default, floaties",
+                "GeorgeSwimVariant": "nofloaties, floaties",
                 "LocationName": "beach",
                 "Season": "summer",
                 "DayEvent:Luau": false,
@@ -3086,8 +3019,8 @@
         {
             "LogName": "Haley Swimsuits Portrait Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Haley",
-            "FromFile": "Characters/Swimsuits/HaleyPortraitSwim_{{HaleySwimVariant}}.png",
+            "Target": "Portraits/Haley",
+            "FromFile": "{{Portraits}}/Swimsuits/HaleyPortraitSwim_{{HaleySwimVariant}}.png",
             "ToArea":
             {
                 "X": 0,
@@ -3108,7 +3041,7 @@
             "LogName": "Penny Swimsuits Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/Swimsuits/PennyPortraitSwim_{{PennySwimVariant}}.png",
+            "FromFile": "{{Portraits}}/Swimsuits/PennyPortraitSwim_{{PennySwimVariant}}.png",
             "When":
             {
                 "PennyHair": "standard",
