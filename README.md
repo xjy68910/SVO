@@ -23,7 +23,6 @@ options                        | valid values (select only one, values are seper
 `ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen
 `HarveyFacialHair`             | mustache shaved
 `HarveyShavedVariant`          | round slim
-`SamSummerPortraitVariant`     | standard alternative
 `SandyPortraitVariant`         | side sivs front
 `WillyWinterPortraitVariant`   | standard alternative
 
