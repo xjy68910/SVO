@@ -245,11 +245,6 @@
             "AllowValues": "round, slim",
             "Default": "round"
         },
-        "SamSummerPortraitVariant":
-        {
-            "AllowValues": "standard, alternative",
-            "Default": "standard",
-        },
         "SandyPortraitVariant": // Front version works for sivs only
         {
             "AllowValues": "side, sivs, front",
