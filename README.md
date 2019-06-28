@@ -1,6 +1,7 @@
 # Seasonal Villager Outfits
 
 [Neuxs Page](https://www.nexusmods.com/stardewvalley/mods/2449/)
+
 [Visual CONFIG Guide](https://github.com/paradigmnomad/SVO/wiki)
 
 # Current Config Options
