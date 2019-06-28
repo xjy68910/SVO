@@ -1,6 +1,7 @@
 # Seasonal Villager Outfits
 
 [Neuxs Page](https://www.nexusmods.com/stardewvalley/mods/2449/)
+[Visual CONFIG Guide](https://github.com/paradigmnomad/SVO/wiki)
 
 # Current Config Options
 `*` Options include an `AllowBlank: true` option.
@@ -23,26 +24,7 @@ options                        | valid values (select only one, values are seper
 `ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen
 `HarveyFacialHair`             | mustache shaved
 `HarveyShavedVariant`          | round slim
-`SandyPortraitVariant`         | side sivs front
 `WillyWinterPortraitVariant`   | standard alternative
-
-## DCBurger Portraits
-These options only apply when you set `PortraitStyle` to `dcburger`.
-
-options                        | valid values (select only one, values are seperated by a space)
-----------------------------   | ------- 
-`DC_AlexVersion`               | standard darkerjacket
-`DC_ClintVersion`              | standard snow snowfog
-`DC_EmilySpringVersion`        | standard alternative
-`DC_EmilyFallyVersion`         | standard alternative
-`DC_LewisVersion`              | tie notie
-`DC_HaleyFallRainVersion`      | standard alternative
-`DC_HarveyVersion`             | standard nobeard nobeardglasses noglasses
-`DC_HarveySummerShirt`         | whitenotie bluenotie whitetie bluetie
-`DC_KentVersion`               | standard outline alternative
-`DC_MaruVersion`               | noglasses glasses
-`DC_PierreVersion`             | standard fog
-`DC_SebastianVersion`          | standard choker fog chokerfog
 
 ## Characters
 These options affect the character files.
@@ -60,7 +42,6 @@ options                        | valid values (select only one, values are seper
 `EmilyEggFestivalVariant`      | standard alternative
 `EmilyEggFestivalVariantColor` | blue red
 `EvelynWinterColor`            | pink blue
-`HaleySummerVariant`           | indoor beach
 `HaleyFallColor`               | red blue
 `HaleyWinterColor`             | grey pink
 `HaleyEggFestivalVariant`      | standard alternative
@@ -78,7 +59,7 @@ options                        | valid values (select only one, values are seper
 `SamSpiritsEve`                | madscientist scarecrow
 `SamScarecrowFacepaint`        | facepaint nofacepaint
 `SandyEnabled`                 | true false
-`SandyVersion`                 | standard sivs zola
+`SandyVersion`                 | standard sivs dizor
 `SebastianSpiritsEve`          | mask nomask
 `WizardEnabled`                | true false
 `WizardVersion`                | standard pale saturated
@@ -90,7 +71,7 @@ These options affect the swimsuit options in Summer on the beach (if enabled).
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `ElliottSwimVariant`           | paunch thin
-`GeorgeSwimVariant`            | default floaties
+`GeorgeSwimVariant`            | nofloaties floaties
 `HaleySwimVariant`             | white pink
 `LinusSwimVariant`             | censored grassskirt
 `PennySwimVariant`             | blue yellow
