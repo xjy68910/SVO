@@ -4,6 +4,8 @@
 
 [Visual CONFIG Guide](https://github.com/paradigmnomad/SVO/wiki)
 
+This is the text-based config guide. A visual guide is provided above.
+
 # Current Config Options
 `*` Options include an `AllowBlank: true` option.
 
