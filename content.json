@@ -2384,6 +2384,29 @@
                 "MaternitySprites": "true"
             }
         },
+        {
+            "LogName": "Maternity Portraits",
+            "Action": "EditImage",
+            "Target": "Portraits/{{Spouse}}",
+            "FromFile": "Portraits/{{Spouse}}/{{Spouse}}_Maternity.png",
+            "When":
+            {
+                "Spouse": "Abigail, Emily, Haley, Leah, Maru",
+                "MaternitySprites": "true"
+            }
+        },
+        {
+            "LogName": "Penny Portraits",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/Penny/{{PennyHair}}/Penny_Maternity.png",
+            "When":
+            {
+                "Spouse": "Penny",
+                "PennyHair": "standard",
+                "MaternitySprites": "true"
+            }
+        },
 
         // E N D 
 
@@ -3020,14 +3043,7 @@
             "LogName": "Haley Swimsuits Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "{{Portraits}}/Swimsuits/HaleyPortraitSwim_{{HaleySwimVariant}}.png",
-            "ToArea":
-            {
-                "X": 0,
-                "Y": 0,
-                "Width": 64,
-                "Height": 128
-            },
+            "FromFile": "{{Portraits}}/Swimsuits/HaleyPortraitSwim_{{HaleySwimVariant}}.png",           
             "When":
             {
                 "HaleySwimVariant": "white, pink",
