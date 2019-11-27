@@ -323,7 +323,8 @@
             "When":
             {
                 "Season": "summer",
-                "Weather": "rain, storm"
+                "Weather": "rain, storm",
+                "HasFile:{{Target}}/Abigail_{{season}}{{WeatherVariant}}_{{Random:hat, nohat}}.png": true
             },
         },
 
@@ -350,6 +351,7 @@
             {
                 "Season": "summer",
                 "Relationship:Abigail": "Married, Engaged",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{season}}{{WeatherVariant}}_{{Random:hat, nohat}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -375,6 +377,7 @@
             {
                 "Season": "summer",
                 "Weather": "sun, wind",
+                "HasFile:{{Target}}/Alex_{{season}}{{WeatherVariant}}_{{Random:sunglasses, nosunglasses}}.png": true
             }
         },
         {
@@ -386,6 +389,7 @@
             {
                 "Season": "summer",
                 "Weather": "rain, storm",
+                "HasFile:{{Target}}/Alex_{{season}}{{WeatherVariant}}_{{Random:grey, red}}.png": true
             },
         },
 
@@ -413,6 +417,7 @@
                 "Season": "summer",
                 "Weather": "sun, wind",
                 "Relationship:Alex": "Married, Engaged",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{season}}{{WeatherVariant}}_{{Random:sunglasses, nosunglasses}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -426,6 +431,7 @@
                 "Season": "summer",
                 "Weather": "rain, storm",
                 "Relationship:Alex": "Married, Engaged",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{season}}{{WeatherVariant}}_{{Random:grey, red}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -617,6 +623,7 @@
             {
                 "Season": "spring",
                 "Weather": "sun, wind",
+                "HasFile:{{Target}}/Emily_{{season}}{{WeatherVariant}}_{{Random:sleeves, nosleeves}}.png": true,
             }
         },
         {
@@ -628,6 +635,7 @@
             {
                 "Season": "spring",
                 "Weather": "rain, storm",
+                "HasFile:{{Target}}/Emily_{{season}}{{WeatherVariant}}_{{Random:pink, yellow}}.png": true
             }
         },
         {
@@ -638,6 +646,7 @@
             "When":
             {
                 "Season": "winter",
+                "HasFile:{{Target}}/Emily_{{season}}{{WeatherVariant}}_{{Random:hatnoscarf, nohatnoscarf, hatscarf, nohatscarf}}.png": true
             },
         },
 
@@ -692,6 +701,7 @@
             {
                 "Season": "winter",
                 "Relationship:Emily": "Married, Engaged",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{season}}{{WeatherVariant}}_{{Random:hatnoscarf, nohatnoscarf}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -716,6 +726,7 @@
             "When":
             {
                 "Season": "winter",
+                "HasFile:{{Target}}/Evelyn_{{season}}{{WeatherVariant}}_{{Random:pink, blue}}.png": true
             },
         },
 
@@ -765,7 +776,8 @@
             "When":
             {
                 "Season": "spring",
-                "Weather": "sun, wind"
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Haley_{{season}}{{WeatherVariant}}_{{Random:white, yellow, pink}}.png": true,
             }
         },
         {
@@ -775,7 +787,8 @@
             "FromFile": "{{Target}}/Haley_{{season}}{{WeatherVariant}}_{{Random:grey, pink}}.png",
             "When":
             {
-                "Season": "winter"
+                "Season": "winter",
+                "HasFile:{{Target}}/Haley_{{season}}{{WeatherVariant}}_{{Random:grey, pink}}.png": true
             }
         },
 
@@ -988,7 +1001,8 @@
             "FromFile": "{{Target}}/Leah_{{season}}{{WeatherVariant}}_{{Random:red, blue}}_{{Random:up, down}}.png",
             "When":
             {
-                "Season": "winter"
+                "Season": "winter",
+                "HasFile:{{Target}}/Leah_{{season}}{{WeatherVariant}}_{{Random:red, blue}}_{{Random:up, down}}.png": true
             }
         },
 
@@ -1029,7 +1043,8 @@
             "FromFile": "{{Target}}/Linus_{{season}}{{WeatherVariant}}.png",
             "When":
             {
-                "Season": "winter"
+                "Season": "winter",
+                "HasFile:{{Target}}/Linus_{{season}}{{WeatherVariant}}.png": true
             }
         },
 
@@ -1282,6 +1297,10 @@
             "Action": "EditImage",
             "Target": "Characters/Willy, Portraits/Willy",
             "FromFile": "{{Target}}/Willy_{{season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{Target}}/Willy_{{season}}{{WeatherVariant}}.png": true
+            }
         },
         {
             "LogName": "Willy Winter",
@@ -1290,7 +1309,8 @@
             "FromFile": "{{Target}}/Willy_{{season}}{{WeatherVariant}}_{{Random:cap, beanie}}.png",
             "When":
             {
-                "Season": "winter"
+                "Season": "winter",
+                "HasFile:{{Target}}/Willy_{{season}}{{WeatherVariant}}_{{Random:cap, beanie}}.png": true
             }
         },
 
