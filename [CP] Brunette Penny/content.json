@@ -2,29 +2,21 @@
     "Format": "1.10",
     "DynamicTokens": [
 
-        // Standard Dynamic Tokens
-
+       // Standard Dynamic Tokens
+       
         {
-            "Name": "WeatherVariant", // All Seasons, All Conditions
-            "Value": "_Base",
-        },
-        {
-            "Name": "WeatherVariant", // Indoors
-            "Value": "_Sun_Indoor",
+            "Name": "IndoorVariant", // Indoors
+            "Value": "_Indoor",
             "When":
             {
-                "Season": "spring, summer, fall",
-                "Weather": "sun, wind",
                 "IsOutdoors": "false"
             },
         },
         {
-            "Name": "WeatherVariant", // Outdoors
-            "Value": "_Sun_Outdoor",
+            "Name": "IndoorVariant", // Outdoors
+            "Value": "_Outdoor",
             "When":
             {
-                "Season": "spring, summer, fall",
-                "Weather": "sun, wind",
                 "IsOutdoors": "true"
             },
         },
@@ -38,52 +30,12 @@
             },
         },
         {
-            "Name": "WeatherVariant", // Rain Indoors
-            "Value": "_Rain_Indoor",
-            "When":
-            {
-                "Season": "spring, summer, fall",
-                "Weather": "rain, storm",
-                "IsOutdoors": "false"
-            },
-        },
-        {
-            "Name": "WeatherVariant", // Rain Outdoors
-            "Value": "_Rain_Outdoor",
-            "When":
-            {
-                "Season": "spring, summer, fall",
-                "Weather": "rain, storm",
-                "IsOutdoors": "true"
-            },
-        },
-        {
             "Name": "WeatherVariant", // Rain Indoors/Outdoors
             "Value": "_Rain",
             "When":
             {
                 "Season": "spring, summer, fall",
                 "Weather": "rain, storm",
-            },
-        },
-        {
-            "Name": "WeatherVariant", // Snow Indoors
-            "Value": "_Snow_Indoor",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind, snow",
-                "IsOutdoors": "false"
-            },
-        },
-        {
-            "Name": "WeatherVariant", // Snow Outdoors
-            "Value": "_Snow_Outdoor",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind, snow",
-                "IsOutdoors": "true"
             },
         },
         {
@@ -95,7 +47,6 @@
                 "Weather": "sun, wind, snow",
             },
         },
-
 
         // Festivals
 
@@ -226,6 +177,16 @@
             "LogName": "Penny Main",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
+            },
+        },
+        {
+            "LogName": "Penny Main",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
             "FromFile": "{{Target}}/Penny_{{season}}{{WeatherVariant}}.png",
             "When":
             {
@@ -244,6 +205,19 @@
             "When":
             {
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{WeatherVariant}}.png": true,
+                "Relationship:Penny": "Married, Engaged",
+            },
+            "PatchMode": "Overlay",
+            "Disabled": true,
+        },
+        {
+            "LogName": "Penny Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{IndoorVariant}}{{WeatherVariant}}.png": true,
                 "Relationship:Penny": "Married, Engaged",
             },
             "PatchMode": "Overlay",
