@@ -294,10 +294,10 @@
             "LogName": "Demetrius, George, Gus, Jodi, Kent, Marnie, Pierre, Vincent",
             "Action": "EditImage",
             "Target": "Characters/Pam, Portraits/Pam, Characters/Lewis, Portraits/Lewis, Characters/Jas, Portraits/Jas, Characters/Demetrius, Characters/George, Characters/Gus, Characters/Jodi, Characters/Kent, Characters/Marnie, Characters/Pierre, Characters/Vincent, Portraits/Demetrius, Portraits/George, Portraits/Gus, Portraits/Jodi, Portraits/Kent, Portraits/Marnie, Portraits/Pierre, Portraits/Vincent",
-            "FromFile": "{{Target}}/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{season}}{{WeatherVariant}}.png",
+            "FromFile": "{{Target}}/{{TargetWithoutPath}}_{{season}}{{WeatherVariant}}.png",
             "When":
             {
-                "HasFile:{{Target}}/{{TargetWithoutPath}}/{{TargetWithoutPath}}_{{season}}{{WeatherVariant}}.png": true
+                "HasFile:{{Target}}/{{TargetWithoutPath}}_{{season}}{{WeatherVariant}}.png": true
             }
         },
 
@@ -1272,7 +1272,7 @@
             "LogName": "Shane Joja Mart",
             "Action": "EditImage",
             "Target": "Characters/Shane_JojaMart",
-            "FromFile": "{{Target}}/Shane_JojaMart.png",           
+            "FromFile": "Characters/Shane/Shane_JojaMart.png",           
         },
 
         // Shane Portraits Mermaid Pendant
@@ -1670,7 +1670,7 @@
             "When":
             {
 
-                "HasFile:Characters/SwimSuits/{{TargetWithoutPath}}Swim.png": true,
+                "HasFile:Characters/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png": true,
             }
         },
         {
@@ -1719,7 +1719,7 @@
             "FromFile": "Portraits/{{Swimsuits}}/{{TargetWithoutPath}}PortraitSwim.png",
             "When":
             {
-                "HasFile:Portraits/SwimSuits/{{TargetWithoutPath}}PortraitSwim.png": true,
+                "HasFile:Portraits/{{Swimsuits}}/{{TargetWithoutPath}}PortraitSwim.png": true,
             }
         },
         {
@@ -1781,10 +1781,10 @@
             "LogName": "Aerobics Portraits",
             "Action": "EditImage",
             "Target": "Portraits/Jodi, Portraits/Marnie, Portraits/Caroline, Portraits/Robin, Portraits/Emily, Portraits/Harvey",
-            "FromFile": "{{Target}}/{TargetWithoutPath}_Aerobics.png",
+            "FromFile": "{{Target}}/{{TargetWithoutPath}}_Aerobics.png",
             "When":
             {
-                "HasFile:{{Target}}/{TargetWithoutPath}_Aerobics.png": true,
+                "HasFile:{{Target}}/{{TargetWithoutPath}}_Aerobics.png": true,
                 "DayOfWeek": "Tuesday",
                 "LocationName": "SeedShop",
             }
