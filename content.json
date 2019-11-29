@@ -281,12 +281,12 @@
             "LogName": "Abigail Summer - Rain",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Portraits/Abigail",
-            "FromFile": "{{Target}}/Abigail_{{season}}{{WeatherVariant}}_{{Random:hat, nohat}}.png",
+            "FromFile": "{{Target}}/Abigail_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:hat, nohat}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "rain, storm",
-                "HasFile:{{Target}}/Abigail_{{season}}{{WeatherVariant}}_{{Random:hat, nohat}}.png": true
+                "HasFile:{{Target}}/Abigail_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:hat, nohat}}.png": true
             },
         },
 
@@ -308,12 +308,13 @@
             "LogName": "Abigail Summer - Rain Portraits - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Abigail",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{season}}{{WeatherVariant}}_{{Random:hat, nohat}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:hat, nohat}}.png",
             "When":
             {
                 "Season": "summer",
+                "Weather": "rain, storm",
                 "Relationship:Abigail": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{season}}{{WeatherVariant}}_{{Random:hat, nohat}}.png": true
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:hat, nohat}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -1055,13 +1056,13 @@
             "LogName": "Krobus",
             "Action": "EditImage",
             "Target": "Characters/Krobus, Portraits/Krobus",
-            "FromFile": "{{Target}}/Krobus_{{Random:purple, yellow, blue}}_Weather_Outdoor{{Random:umbrella, null}}.png",
+            "FromFile": "{{Target}}/Krobus_{{Random:purple, yellow, blue}}_Weather_OutdoorUmbrella.png",
             "When":
             {
                 "Season": "spring, summer, fall",
                 "Weather": "rain, storm",
                 "LocationName": "farm",
-                "HasFile:{{Target}}/Krobus_{{Random:purple, yellow, blue}}_Weather_Outdoor{{Random:umbrella, null}}.png": true
+                "HasFile:{{Target}}/Krobus_{{Random:purple, yellow, blue}}_Weather_OutdoorUmbrella.png": true
             }
         },
         {
@@ -1104,11 +1105,11 @@
             "LogName": "Leah Winter Hood - Outdoor",
             "Action": "EditImage",
             "Target": "Characters/Leah, Portraits/Leah",
-            "FromFile": "{{Target}}/Leah_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:red, blue}}_{{Random:up, down}}.png",
+            "FromFile": "{{Target}}/Leah_{{season}}{{IndoorVariant}}{{WeatherVariant}}{{Random:red, blue}}_{{Random:up, down}}.png",
             "When":
             {
                 "Season": "winter",
-                "HasFile:{{Target}}/Leah_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:red, blue}}_{{Random:up, down}}.png": true
+                "HasFile:{{Target}}/Leah_{{season}}{{IndoorVariant}}{{WeatherVariant}}{{Random:red, blue}}_{{Random:up, down}}.png": true
             }
         },
 
@@ -1189,6 +1190,18 @@
                 "HasFile:{{Target}}/Maru_{{season}}{{WeatherVariant}}.png": true
             }
         },
+        {
+            "LogName": "Maru Main",
+            "Action": "EditImage",
+            "Target": "Characters/Maru, Portraits/Maru",
+            "FromFile": "{{Target}}/Maru_{{season}}{{WeatherVariant}}_{{Random:purple, orange}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "Weather": "rain, storm",
+                "HasFile:{{Target}}/Maru_{{season}}{{WeatherVariant}}_{{Random:purple, orange}}.png": true
+            }
+        },
 
         // Maru Hospital
 
@@ -1225,6 +1238,20 @@
             },
             "PatchMode": "Overlay"
         },
+        {
+            "LogName": "Maru Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Maru",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Maru/Maru_{{season}}{{WeatherVariant}}_{{Random:purple, orange}}.png",
+            "When":
+            {
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Maru/Maru_{{season}}{{WeatherVariant}}_{{Random:purple, orange}}.png": true,
+                "Relationship:Maru": "Married, Engaged",
+                "Season": "fall",
+                "Weather": "rain, storm",
+            },
+            "PatchMode": "Overlay"
+        },
 
 
         // Penny
@@ -1247,6 +1274,18 @@
             "When":
             {
                 "HasFile:{{Target}}/Penny_{{season}}{{WeatherVariant}}.png": true,
+            },
+        },
+        {
+            "LogName": "Penny Main",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{season}}{{WeatherVariant}}_{{Random:yellow, white}}.png",
+            "When":
+            {
+                "HasFile:{{Target}}/Penny_{{season}}{{WeatherVariant}}_{{Random:yellow, white}}.png": true,
+                "Season": "summer",
+                "Weather": "rain, storm"
             },
         },
 
@@ -1273,6 +1312,20 @@
             {
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{WeatherVariant}}.png": true,
                 "Relationship:Penny": "Married, Engaged",
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Penny Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{WeatherVariant}}_{{Random:yellow, white}}.png",
+            "When":
+            {
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{WeatherVariant}}_{{Random:yellow, white}}.png": true,
+                "Relationship:Penny": "Married, Engaged",
+                "Season": "summer",
+                "Weather": "rain, storm"
             },
             "PatchMode": "Overlay"
         },
