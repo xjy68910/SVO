@@ -278,6 +278,16 @@
             },
         },
         {
+            "LogName": "Abigail Spring, Summer & Fall - Indoor",
+            "Action": "EditImage",
+            "Target": "Characters/Abigail, Portraits/Abigail",
+            "FromFile": "{{Target}}/Abigail_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{Target}}/Abigail_{{season}}{{WeatherVariant}}.png": true,
+            },
+        },
+        {
             "LogName": "Abigail Summer - Rain",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Portraits/Abigail",
@@ -300,6 +310,18 @@
             "When":
             {
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
+                "Relationship:Abigail": "Married, Engaged",
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Abigail Spring, Summer & Fall - Indoor Portraits - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Abigail",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{season}}{{WeatherVariant}}.png": true,
                 "Relationship:Abigail": "Married, Engaged",
             },
             "PatchMode": "Overlay"
@@ -768,6 +790,28 @@
             {
                 "HasFile:{{Target}}/Evelyn_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png": true
             }
+        },
+        {
+            "LogName": "Evelyn Spring, Summer, Fall - Indoor",
+            "Action": "EditImage",
+            "Target": "Characters/Evelyn, Portraits/Evelyn",
+            "FromFile": "{{Target}}/Evelyn_{{season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{Target}}/Evelyn_{{season}}{{WeatherVariant}}.png": true
+            }
+        },
+        {
+            "LogName": "Evelyn Summer Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Evelyn, Portraits/Evelyn",
+            "FromFile": "{{Target}}/Evelyn_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:pink, blue}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Evelyn_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:pink, blue}}.png": true
+            },
         },
         {
             "LogName": "Evelyn Winter",
