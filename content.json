@@ -2116,9 +2116,9 @@
         // B E G I N  A E R O B I C S  P O R T R A I T S
 
         {
-            "LogName": "Aerobics Portraits",
+            "LogName": "Aerobics",
             "Action": "EditImage",
-            "Target": "Portraits/Jodi, Portraits/Marnie, Portraits/Caroline, Portraits/Robin, Portraits/Emily, Portraits/Harvey",
+            "Target": "Portraits/Jodi, Portraits/Marnie, Portraits/Caroline, Portraits/Robin, Portraits/Emily, Portraits/Harvey, Characters/Jodi, Characters/Marnie, Characters/Caroline, Characters/Robin, Characters/Emily, Characters/Harvey",
             "FromFile": "{{Target}}/{{TargetWithoutPath}}_Aerobics.png",
             "When":
             {
