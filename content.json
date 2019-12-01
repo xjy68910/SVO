@@ -650,7 +650,7 @@
             "When":
             {
                 "Season": "spring",
-                "HasFile:{{Target}}/Caroline_{{season}}{{WeatherVariant}}_{CarolineSpringSunVariant}}.png": true
+                "HasFile:{{Target}}/Caroline_{{season}}{{WeatherVariant}}_{{CarolineSpringSunVariant}}.png": true
             },
         },
 
@@ -1731,7 +1731,7 @@
             {
                 "Season": "winter",
                 "Relationship:Sebastian": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Sebastian/Sebastian_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{SebastianWinterIndoor}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Sebastian/Sebastian_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{SebastianWinterIndoor}}.png": true,
             },
             "PatchMode": "Overlay"
         },
