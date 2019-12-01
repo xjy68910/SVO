@@ -281,7 +281,7 @@
             "LogName": "Abigail Spring, Summer & Fall - Indoor",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Portraits/Abigail",
-            "FromFile": "{{Target}}/Abigail_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "FromFile": "{{Target}}/Abigail_{{season}}{{WeatherVariant}}.png",
             "When":
             {
                 "HasFile:{{Target}}/Abigail_{{season}}{{WeatherVariant}}.png": true,
