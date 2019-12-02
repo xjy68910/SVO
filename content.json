@@ -255,7 +255,7 @@
         },
         {
             "Name": "MaruScrubColor",
-            "Value": "{{Random:dark, light, white}}",
+            "Value": "{{Random:dark, light, white, green}}",
         },
         {
             "Name": "MaruFallRain",
