@@ -1115,7 +1115,7 @@
             "LogName": "Haley Spring Sun",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Haley_{{season}}{{WeatherVariant}}_{{HaleySpringOutfit}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{season}}{{WeatherVariant}}_{{HaleySpringOutfit}}.png",
             "When":
             {
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{season}}{{WeatherVariant}}_{{HaleySpringOutfit}}.png": true,
