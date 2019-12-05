@@ -1,4 +1,4 @@
-# Seasonal Villager Outfits
+![svo banner](https://i.imgur.com/SrwU0rw.png)
 
 [Neuxs Page](https://www.nexusmods.com/stardewvalley/mods/2449/)
 
