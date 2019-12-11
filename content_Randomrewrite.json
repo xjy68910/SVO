@@ -1096,6 +1096,33 @@
 
         // Krobus (Krobus is a little different and only targets him on the farm)
 
+        // Krobus Standard
+
+        {
+            "LogName": "Krobus Standard",
+            "Action": "EditImage",
+            "Target": "Characters/Krobus, Portraits/Krobus",
+            "FromFile": "{{Target}}/Krobus_Scarf.png",
+            "When":
+            {   
+                "Weather": "sun, wind",
+                "LocationName": "farm",
+                "HasFile:{{Target}}/Krobus_Scarf.png": true
+            }
+        },
+        {
+            "LogName": "Krobus Trenchcoat",
+            "Action": "EditImage",
+            "Target": "Characters/Krobus_Trenchcoat, Portraits/Krobus_Trenchcoat",
+            "FromFile": "{{Target}}/Krobus_Trenchcoat.png",
+            "When":
+            {                
+                "HasFile:{{Target}}/Krobus_Trenchcoat.png": true
+            }
+        },
+
+        // Krobus Rain
+
         {
             "LogName": "Krobus Main",
             "Action": "EditImage",
