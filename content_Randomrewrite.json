@@ -1702,7 +1702,7 @@
         {
             "LogName": "Festival Character Sprites Bachlorettes - Excludes Egg Festival",
             "Action": "EditImage",
-            "Target": "Characters/Abigail, Characters/Emily, Characters/Haley, Characters/Leah, Characters/Maru, Characters/Penny",
+            "Target": "Characters/Abigail, Characters/Emily, Characters/Leah, Characters/Maru, Characters/Penny",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -1718,6 +1718,40 @@
             "When":
             {
                 "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
+            },
+        },
+
+        // Haley
+
+        {
+            "LogName": "Haley Egg Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Standard, AltBlue, AltPink | HaleyEggFestivalVariant}}.png",
+            "When":
+            {
+                "DayEvent:Egg Festival": true
+            },
+        },
+        {
+            "LogName": "Haley Spirit Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy | HaleySpritsEveVariant}}.png",
+            "When":
+            {
+                "DayEvent:SpiritsEve": true
+            },
+        },
+        {
+            "LogName": "Haley Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}.png",
+            "When":
+            {
+                "DayEvent:SpiritsEve": false,
+                "DayEvent:Egg Festival": false,
             },
         },
 
@@ -1792,17 +1826,7 @@
             {
                 "DayEvent:Egg Festival": true
             },
-        },
-        {
-            "LogName": "Haley Egg Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Haley",
-            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Standard, AltBlue, AltPink | HaleyEggFestivalVariant}}.png",
-            "When":
-            {
-                "DayEvent:Egg Festival": true
-            },
-        },
+        },        
         {
             "LogName": "Leah Egg Festival Character Sprites",
             "Action": "EditImage",
@@ -1873,6 +1897,40 @@
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/Elliott_{{Festival}}_{{ElliottPortraitStyle}}.png": true,
                 "ElliottPortraitStyle": "Standard, FrontFacingEemie, FrontFacingLumen",
+            },
+        },
+
+        // Haley
+
+        {
+            "LogName": "Haley Egg Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Standard, AltBlue, AltPink | HaleyEggFestivalVariant}}.png",
+            "When":
+            {
+                "DayEvent:Egg Festival": true
+            },
+        },
+        {
+            "LogName": "Haley Spirit Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy | HaleySpritsEveVariant}}.png",
+            "When":
+            {
+                "DayEvent:SpiritsEve": true
+            },
+        },
+        {
+            "LogName": "Haley Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}.png",
+            "When":
+            {
+                "DayEvent:SpiritsEve": false,
+                "DayEvent:Egg Festival": false,
             },
         },
 
@@ -1962,16 +2020,6 @@
             "When":
             {
 
-                "DayEvent:Egg Festival": true
-            },
-        },
-        {
-            "LogName": "Haley Egg Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Standard, AltBlue, AltPink | HaleyEggFestivalVariant}}.png",
-            "When":
-            {
                 "DayEvent:Egg Festival": true
             },
         },
