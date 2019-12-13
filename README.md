@@ -23,7 +23,7 @@ These options only apply when you set `PortraitStyle` to `standard`.
 
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
-`ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen
+`ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen frontfacingsabreene
 `HarveyFacialHair`             | mustache shaved
 `WillyWinterPortraitVariant`   | standard alternative
 
