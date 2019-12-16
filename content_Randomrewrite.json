@@ -1798,10 +1798,10 @@
             "LogName": "Sam Spirit's Eve Festival Characters Sprites",
             "Action": "EditImage",
             "Target": "Characters/Sam",
-            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:MadScientist, Scarecrow_Facepaint, Scarecrow_NoFacepaint | SamSpiritsEve}}.png",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:Scarecrow_Facepaint, Scarecrow_NoFacepaint | SamSpiritsEve}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:MadScientist, Scarecrow_Facepaint, Scarecrow_NoFacepaint | SamSpiritsEve}}.png": true,
+                "HasFile:Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:Scarecrow_Facepaint, Scarecrow_NoFacepaint | SamSpiritsEve}}.png": true,
                 "DayEvent:spirit's eve": true
             },
         },
@@ -1991,10 +1991,10 @@
             "LogName": "Sam Spirit's Eve Festival Portraits Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Sam",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:MadScientist, Scarecrow_Facepaint, Scarecrow_NoFacepaint | SamSpiritsEve}}",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:Scarecrow_Facepaint, Scarecrow_NoFacepaint | SamSpiritsEve}}",
             "When":
             {
-                "HasFile:Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:MadScientist, Scarecrow_Facepaint, Scarecrow_NoFacepaint | SamSpiritsEve}}": true,
+                "HasFile:Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:Scarecrow_Facepaint, Scarecrow_NoFacepaint | SamSpiritsEve}}": true,
                 "DayEvent:spirit's eve": true
             },
         },
