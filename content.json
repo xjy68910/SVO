@@ -1496,7 +1496,7 @@
         {
             "LogName": "Sandy All Seasons - Standard/Sivs",
             "Action": "EditImage",
-            "Target": "Characters/Sandy. Portraits/Sandy",
+            "Target": "Characters/Sandy, Portraits/Sandy",
             "FromFile": "{{Target}}/{{SandyVersion}}/Sandy_{{Season}}_Base.png",
             "When":
             {
