@@ -1789,7 +1789,7 @@
             "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy, QueenofHearts | HaleySpritsEveVariant}}.png",
             "When":
             {
-                "DayEvent:DayEvent:spirit's evee": true
+                "DayEvent:DayEvent:spirit's eve": true
             },
         },
 
@@ -1988,7 +1988,7 @@
             "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy, QueenofHearts | HaleySpritsEveVariant}}.png",
             "When":
             {
-                "DayEvent:DayEvent:spirit's evee": true
+                "DayEvent:DayEvent:spirit's eve": true
             },
         },
 
