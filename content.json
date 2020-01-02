@@ -1736,7 +1736,7 @@
         {
             "LogName": "Festival Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Shane, Characters/Willy",
+            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Shane, Characters/Willy",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -1754,6 +1754,19 @@
             "When":
             {
                 "DayEvent:Egg Festival": true
+            },
+        },
+
+        // Elliott
+
+        {
+            "LogName": "Elliott Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Elliott",
+            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png": true,
             },
         },
 
@@ -1786,10 +1799,23 @@
             "LogName": "Haley Spirit Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Haley",
-            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy, QueenofHearts | HaleySpritsEveVariant}}.png",
+            "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy, QueenofHearts | HaleySpiritsEveVariant}}.png",
             "When":
             {
                 "DayEvent:DayEvent:spirit's eve": true
+            },
+        },
+
+        // Harvey
+
+        {
+            "LogName": "Harvey Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Harvey",
+            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png",
+            "When":
+            {
+                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png": true,
             },
         },
 
@@ -1935,7 +1961,7 @@
         {
             "LogName": "Festival Portrait Sprites",
             "Action": "EditImage",
-            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Harvey, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Shane, Portraits/Willy",
+            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Shane, Portraits/Willy",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -1953,6 +1979,19 @@
             "When":
             {
                 "DayEvent:Egg Festival": true
+            },
+        },
+
+        // Elliott
+
+        {
+            "LogName": "Elliott Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Elliott",
+            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png": true,
             },
         },
 
@@ -1985,10 +2024,23 @@
             "LogName": "Haley Spirit Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy, QueenofHearts | HaleySpritsEveVariant}}.png",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy, QueenofHearts | HaleySpiritsEveVariant}}.png",
             "When":
             {
                 "DayEvent:DayEvent:spirit's eve": true
+            },
+        },
+
+        // Harvey
+
+        {
+            "LogName": "Harvey Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Harvey",
+            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png",
+            "When":
+            {
+                "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png": true,
             },
         },
 
