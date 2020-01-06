@@ -299,12 +299,12 @@
             "LogName": "Abigail Summer - Rain",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Portraits/Abigail",
-            "FromFile": "{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Hat, NoHat | AbigailSummerRainVariant}}.png",
+            "FromFile": "{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatPins, NoHatNoPins, HatNoPins | AbigailSummerRainVariant}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "rain, storm",
-                "HasFile:{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Hat, NoHat | AbigailSummerRainVariant}}.png": true
+                "HasFile:{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatPins, NoHatNoPins, HatNoPinst | AbigailSummerRainVariant}}.png": true
             },
         },
 
@@ -338,13 +338,13 @@
             "LogName": "Abigail Summer - Rain Portraits - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Abigail",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Hat, NoHat | AbigailSummerRainVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatPins, NoHatNoPins, HatNoPins | AbigailSummerRainVariant}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "rain, storm",
                 "Relationship:Abigail": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Hat, NoHat | AbigailSummerRainVariant}}.png": true
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatPins, NoHatNoPins, HatNoPins | AbigailSummerRainVariant}}.png": true
             },
             "PatchMode": "Overlay"
         },
