@@ -1613,21 +1613,7 @@
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/Shane/Shane_{{Season}}{{WeatherVariant}}.png": true
             },
             "PatchMode": "Overlay"
-        },
-
-        // Willy Main
-
-        {
-            "LogName": "Willy Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Willy, Portraits/Willy",
-            "FromFile": "{{Target}}/Willy_{{Season}}_Base_{{Random:Cap, Beanie | WillyWinterPortraitVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{Target}}/Willy_{{Season}}_Base_{{Random:Cap, Beanie | WillyWinterPortraitVariant}}.png": true
-            }
-        },
+        },        
 
         // Wizard Main
 
