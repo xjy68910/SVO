@@ -183,21 +183,6 @@ AlexSummerRainVariant: `"grey", "red"`
 [Back to top](https://github.com/paradigmnomad/SVO/wiki/List-of-Options#individual-toggle-options)
 </details>
 
-#### Clint
-<details>
-<summary> Show options and preview</summary>
-
-ClintVariant: `"apron", "noapron"`
-
-| | |
-|:-----:|:-----:|
-| ![Apron Portrait](https://i.imgur.com/t5r6elj.png)| ![NoApron Portrait](https://i.imgur.com/bdfWGQk.png) |
-| `apron` | `noapron` |
-
-[Back to top](https://github.com/paradigmnomad/SVO/wiki/List-of-Options#individual-toggle-options)
-</details>
-
-
 #### Elliott
 <details>
 <summary> Show options and preview</summary>
