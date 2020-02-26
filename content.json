@@ -198,14 +198,6 @@
         },
         {
             "Name": "MermaidPendantOverlay_Relationship",
-            "Value": "Elliott",
-            "When":
-            {
-                "Relationship:Elliott": "Married, Engaged",
-            }
-        },
-        {
-            "Name": "MermaidPendantOverlay_Relationship",
             "Value": "Emily",
             "When":
             {
@@ -218,14 +210,6 @@
             "When":
             {
                 "Relationship:Haley": "Married, Engaged",
-            }
-        },
-        {
-            "Name": "MermaidPendantOverlay_Relationship",
-            "Value": "Harvey",
-            "When":
-            {
-                "Relationship:Harvey": "Married, Engaged",
             }
         },
         {
@@ -369,7 +353,7 @@
         {
             "LogName": "Location Specific",
             "Action": "EditImage",
-            "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
+            "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Clint, Portraits/Clint, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
             "FromFile": "{{Target}}/{{TargetWithoutPath}}_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
             "When":
             {
@@ -379,7 +363,7 @@
         {
             "LogName": "Non-Location Specific",
             "Action": "EditImage",
-            "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
+            "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Clint, Portraits/Clint, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
             "FromFile": "{{Target}}/{{TargetWithoutPath}}_{{Season}}{{WeatherVariant}}.png",
             "When":
             {
@@ -387,22 +371,35 @@
             }
         },
 
+        // Mermaid Pendants
+
+        {
+            "LogName": "Mermaid Pendant #1",
+            "Action": "EditImage",
+            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,                
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Mermaid Pendant #2",
+            "Action": "EditImage",
+            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{WeatherVariant}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },
+
         // E N D  A L L  E N C O M P A S S I N G  E D I T S
 
         // Abigail
 
-        {
-            "LogName": "Abigail Spring",
-            "Action": "EditImage",
-            "Target": "Characters/Abigail, Portraits/Abigail",
-            "FromFile": "{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Jacket, Hat | AbigailSpringVariant}}.png",
-            "When":
-            {
-                "Season": "spring",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Jacket, Hat | AbigailSpringVariant}}.png": true
-            },
-        },
         {
             "LogName": "Abigail Summer - Rain",
             "Action": "EditImage",
@@ -417,19 +414,19 @@
             },
         },
         {
-            "LogName": "Abigail Winter",
+            "LogName": "Abigail Winter - Snow",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Portraits/Abigail",
-            "FromFile": "{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown | AbigailWinterSnowVariant}}.png",
+            "FromFile": "{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown, Grey | AbigailWinterSnowVariant}}.png",
             "When":
             {
                 "Season": "winter",
                 "Weather": "snow",
-                "HasFile:{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown | AbigailWinterSnowVariant}}.png": true
+                "HasFile:{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown, Grey | AbigailWinterSnowVariant}}.png": true
             },
         },
         {
-            "LogName": "Abigail Winter",
+            "LogName": "Abigail Winter - Sun",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Portraits/Abigail",
             "FromFile": "{{Target}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown, Grey | AbigailWinterSunVariant}}.png",
@@ -442,42 +439,44 @@
         },
 
         // Abigail Portraits Mermaid Pendant
-
+        
         {
-            "LogName": "Abigail Mermaid Pendant",
+            "LogName": "Abigail Summer - Rain - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Abigail",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Abigail": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Abigail Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Abigail",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{WeatherVariant}}.png": true,
-                "Relationship:Abigail": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Abigail Summer - Rain Portraits - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Abigail",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatPins, NoHatNoPins, HatNoPins | AbigailSummerRainVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatPins, NoHatNoPins, HatNoPins | AbigailSummerRainVariant}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "rain, storm",
-                "Relationship:Abigail": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Abigail/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatPins, NoHatNoPins, HatNoPins | AbigailSummerRainVariant}}.png": true
+                "IsOutdoors": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatPins, NoHatNoPins, HatNoPins | AbigailSummerRainVariant}}.png": true
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Abigail Winter - Snow - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Abigail",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown, Grey | AbigailWinterSnowVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "snow",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown, Grey | AbigailWinterSnowVariant}}.png": true
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Abigail Winter - Sun - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Abigail",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown, Grey | AbigailWinterSunVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Abigail_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Navy, Brown, Grey | AbigailWinterSunVariant}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -510,42 +509,17 @@
         },
 
         // Alex Portrait Mermaid Pendant
-
-        {
-            "LogName": "Alex Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Alex",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Alex": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Alex Spring Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Alex",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{Season}}{{WeatherVariant}}.png": true,
-                "Relationship:Alex": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
+        
         {
             "LogName": "Alex Summer - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Alex",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{Season}}{{WeatherVariant}}_{{Random:Sunglasses, NoSunglasses | AlexSummerVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Alex_{{Season}}{{WeatherVariant}}_{{Random:Sunglasses, NoSunglasses | AlexSummerVariant}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "sun, wind",
-                "Relationship:Alex": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{Season}}{{WeatherVariant}}_{{Random:Sunglasses, NoSunglasses | AlexSummerVariant}}.png": true
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Alex_{{Season}}{{WeatherVariant}}_{{Random:Sunglasses, NoSunglasses | AlexSummerVariant}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -553,13 +527,12 @@
             "LogName": "Alex Summer Rain - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Alex",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{Season}}{{WeatherVariant}}_{{Random:Grey, Red | AlexSummerRainVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Alex_{{Season}}{{WeatherVariant}}_{{Random:Grey, Red | AlexSummerRainVariant}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "rain, storm",
-                "Relationship:Alex": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Alex/Alex_{{Season}}{{WeatherVariant}}_{{Random:Grey, Red | AlexSummerRainVariant}}.png": true
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Alex_{{Season}}{{WeatherVariant}}_{{Random:Grey, Red | AlexSummerRainVariant}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -567,7 +540,7 @@
         // Caroline
 
         {
-            "LogName": "Caroline Fall Rain",
+            "LogName": "Caroline Fall",
             "Action": "EditImage",
             "Target": "Characters/Caroline, Portraits/Caroline",
             "FromFile": "{{Target}}/Caroline_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown | CarolineFallRainVariant}}.png",
@@ -602,27 +575,18 @@
             },
         },
 
-        // Clint
+        // Clint Work
 
         {
-            "LogName": "Clint Main - Spring, Summer, Fall",
+            "LogName": "Clint Work",
             "Action": "EditImage",
             "Target": "Characters/Clint, Portraits/Clint",
-            "FromFile": "{{Target}}/{{Random:apron, noapron | ClintVariant}}/Clint_{{Season}}{{WeatherVariant}}.png",
+            "FromFile": "{{Target}}/Clint_Apron.png",
             "When":
             {
-                "HasFile:{{Target}}/{{Random:apron, noapron | ClintVariant}}/Clint_{{Season}}{{WeatherVariant}}.png": true,
-            }
-        },
-        {
-            "LogName": "Clint Main - Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Clint, Portraits/Clint",
-            "FromFile": "{{Target}}/{{Random:apron, noapron | ClintVariant}}/Clint_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:{{Target}}/{{Random:apron, noapron | ClintVariant}}/Clint_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-            }
+                "LocationName": "Blacksmith"
+            },
+            "PatchMode": "Overlay"
         },
 
         // Demetrius Work
@@ -634,7 +598,7 @@
             "FromFile": "{{Target}}/Demetrius_LabCoat.png",
             "When":
             {
-                "LocationName": "Town"
+                "LocationName": "ScienceHouse"
             },
         },
 
@@ -719,7 +683,7 @@
         // Elliott Portrait Mermaid Pendant
 
         {
-            "LogName": "Elliott Spring - Indoor Portraits",
+            "LogName": "Elliott Spring - Indoor Portraits - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Elliott",
             "FromFile": "Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
@@ -732,7 +696,7 @@
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Elliott Spring - Indoor Portraits",
+            "LogName": "Elliott Spring - Indoor Portraits - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Elliott",
             "FromFile": "Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}.png",
@@ -745,7 +709,7 @@
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Elliott Summer - Indoor Portraits",
+            "LogName": "Elliott Summer - Indoor Portraits - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Elliott",
             "FromFile": "Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:NoSuspenders, Suspenders | ElliottSummerSunVariant}}.png",
@@ -753,13 +717,14 @@
             {
                 "ElliottPortraitStyle": "Standard, FrontFacingSabreene",
                 "Season": "summer",
+                "Weather": "sun, wind",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:NoSuspenders, Suspenders | ElliottSummerSunVariant}}.png": true,
                 "Relationship:Elliott": "Married, Engaged",
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Elliott Summer - Indoor Portraits",
+            "LogName": "Elliott Summer - Indoor Portraits - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Elliott",
             "FromFile": "Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:Vest, NoVest | ElliottSummerRainVariant}}.png",
@@ -767,6 +732,7 @@
             {
                 "ElliottPortraitStyle": "Standard,FrontFacingSabreene",
                 "Season": "summer",
+                "Weather": "rain, storm",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:Vest, NoVest | ElliottSummerRainVariant}}.png": true,
                 "Relationship:Elliott": "Married, Engaged",
             },
@@ -812,72 +778,47 @@
         },
 
         // Emily Portrait Mermaid Pendant
-
+        
         {
-            "LogName": "Emily Summer & Fall - Rain Portraits",
+            "LogName": "Emily Spring Portraits - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Emily": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Emily Summer & Fall - Rain Portraits",
-            "Action": "EditImage",
-            "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{WeatherVariant}}.png": true,
-                "Relationship:Emily": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Emily Spring Portraits",
-            "Action": "EditImage",
-            "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{WeatherVariant}}_{{Random:Sleeves, Pink | EmilySpringVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Sleeves, Pink | EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "Relationship:Emily": "Married, Engaged",
                 "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{WeatherVariant}}_{{Random:Sleeves, Pink | EmilySpringVariant}}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Sleeves, Pink | EmilySpringVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Emily Spring - Rain Portraits",
+            "LogName": "Emily Spring - Rain - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{WeatherVariant}}_{{Random:Pink, Yellow | EmilySpringRainVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Pink, Yellow | EmilySpringRainVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "Relationship:Emily": "Married, Engaged",
                 "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{WeatherVariant}}_{{Random:Pink, Yellow | EmilySpringRainVariant}}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Pink, Yellow | EmilySpringRainVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Emily Winter - Outdoor Portraits",
+            "LogName": "Emily Winter - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatNoScarf, HatScarf, NoHatNoScarf, NoHatScarf | EmilyWinterVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatNoScarf, HatScarf, NoHatNoScarf, NoHatScarf | EmilyWinterVariant}}.png",
             "When":
             {
                 "Season": "winter",
-                "Relationship:Emily": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Emily/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatNoScarf, HatScarf, NoHatNoScarf, NoHatScarf | EmilyWinterVariant}}.png": true
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatNoScarf, HatScarf, NoHatNoScarf, NoHatScarf | EmilyWinterVariant}}.png": true
             },
             "PatchMode": "Overlay"
         },
+
+        // 🕷 You've found a bug 🦋 !
 
         // Evelyn
 
@@ -922,38 +863,40 @@
 
         // Haley
 
-        {
+       {
             "LogName": "Haley Fall Sun",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png",
             "When":
             {
                 "Season": "fall",
-                "HasFile:{{Target}}/Haley_{{Season}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png": true,
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png": true,
             }
         },
         {
             "LogName": "Haley Fall Rain",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png",
             "When":
             {
                 "Season": "fall",
-                "HasFile:{{Target}}/Haley_{{Season}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png": true,
+                "Weather": "rain, storm",
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png": true,
             }
         },
         {
             "LogName": "Haley Spring Sun",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png",
             "When":
             {
                 "Season": "spring",
                 "Weather": "sun, wind",
-                "HasFile:{{Target}}/Haley_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png": true,
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png": true,
             }
         },
         {
@@ -984,66 +927,67 @@
         // Haley Portrait Mermaid Pendant
 
         {
-            "LogName": "Haley Spring - Indoor Portraits",
+            "LogName": "Haley Fall - Sun - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "Relationship:Haley": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Haley Spring - Indoor Portraits",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "Relationship:Haley": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{WeatherVariant}}.png": true
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Haley Fall Portraits",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallColor}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png",
             "When":
             {
                 "Season": "fall",
-                "Relationship:Haley": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallColor}}.png": true,
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Haley Spring Sun",
+            "LogName": "Haley Fall - Rain - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png",
             "When":
             {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png": true,
-                "Relationship:Haley": "Married, Engaged",
+                "Season": "fall",
+                "Weather": "rain, storm",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Haley Spring - Sun - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png",
+            "When":
+            {
                 "Season": "spring",
-                "Weather": "sun, wind"
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Haley Winter Portraits",
+            "LogName": "Haley Winter - Snow - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSnowColor}}.png",
             "When":
             {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Haley/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png": true,
-                "Relationship:Haley": "Married, Engaged",
-                "Season": "winter"
+                "Season": "winter",
+                "Weather": "snow",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSnowColor}}.png": true
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Haley Winter - Sun - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSunColor}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSunColor}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -1258,36 +1202,7 @@
                 "Season": "winter",
                 "HasFile:{{Target}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}{{Random:Red, Blue | LeahWinterColorVariant}}_{{Random:Up, Down | LeahWinterHood}}.png": true
             }
-        },
-
-        // Leah Portraits Mermaid Pendant
-
-        {
-            "LogName": "Leah Main - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Leah",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Leah/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Leah/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Leah": "Married, Engaged",
-
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Leah Main - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Leah",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Leah/Leah_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Leah/Leah_{{Season}}{{WeatherVariant}}.png": true,
-                "Relationship:Leah": "Married, Engaged",
-
-            },
-            "PatchMode": "Overlay"
-        },
+        },        
 
         // Linus Main
 
@@ -1341,6 +1256,20 @@
             },
         },
 
+        // Marnie Work
+
+        {
+            "LogName": "Marnie Work",
+            "Action": "EditImage",
+            "Target": "Characters/Marnie Portraits/Marnie",
+            "FromFile": "{{Target}}/Marnie_Apron.png",
+            "When":
+            {
+                "LocationName": "AnimalShop"
+            },
+            "PatchMode": "Overlay"
+        },
+
         // Maru Main
 
         {
@@ -1366,40 +1295,15 @@
         },
 
         // Maru Portraits Mermaid Pendant
-
+        
         {
-            "LogName": "Maru Main - Mermaid Pendant",
+            "LogName": "Maru Fall - Rain - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Maru",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Maru/Maru_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Maru_{{Season}}{{WeatherVariant}}_{{Random:Orange, Purple | MaruFallRain}}.png",
             "When":
             {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Maru/Maru_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Maru": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Maru Main - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Maru",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Maru/Maru_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Maru/Maru_{{Season}}{{WeatherVariant}}.png": true,
-                "Relationship:Maru": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Maru Fall Rain - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Maru",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Maru/Maru_{{Season}}{{WeatherVariant}}_{{Random:Orange, Purple | MaruFallRain}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Maru/Maru_{{Season}}{{WeatherVariant}}_{{Random:Orange, Purple | MaruFallRain}}.png": true,
-                "Relationship:Maru": "Married, Engaged",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Maru_{{Season}}{{WeatherVariant}}_{{Random:Orange, Purple | MaruFallRain}}.png": true,
                 "Season": "fall",
                 "Weather": "rain, storm",
             },
@@ -1449,40 +1353,41 @@
         // Penny Portraits Mermaid Pendant
 
         {
-            "LogName": "Penny Main - Mermaid Pendant",
+            "LogName": "Penny Summer - Sun - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png",
             "When":
             {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Penny Main - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{Season}}{{WeatherVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Penny Summer Rain - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
                 "Season": "summer",
-                "Weather": "rain, storm"
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Penny Summer - Rain - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "rain, storm",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Penny Winter - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "Weather": "snow",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
@@ -1526,34 +1431,7 @@
                 "Season": "summer",
                 "Weather": "rain, storm"
             }
-        },
-
-        // Sam Portraits Mermaid Pendant
-
-        {
-            "LogName": "Sam Main - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Sam",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Sam/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Sam/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Sam": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Sam Main - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Sam",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Sam/Sam_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Sam/Sam_{{Season}}{{WeatherVariant}}.png": true,
-                "Relationship:Sam": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
+        },        
 
         // Sandy Standard & Sivs
 
@@ -1612,67 +1490,19 @@
         },
 
         // Sebastian Portraits Mermaid Pendant
-
+        
         {
-            "LogName": "Mermaid Pendant #1",
-            "Action": "EditImage",
-            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,                
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Mermaid Pendant #2",
-            "Action": "EditImage",
-            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{WeatherVariant}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-
-        /*{
-            "LogName": "Sebastian Spring, Summer, Fall - Rain Portraits",
+            "LogName": "Sebastian Winter Indoor - Jacket - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Sebastian",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Sebastian/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "Relationship:Sebastian": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Sebastian/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Sebastian Spring, Summer, Fall - Rain Portraits",
-            "Action": "EditImage",
-            "Target": "Portraits/Sebastian",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Sebastian/Sebastian_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "Relationship:Sebastian": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Sebastian/Sebastian_{{Season}}{{WeatherVariant}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Sebastian Winter Indoor - Jacket",
-            "Action": "EditImage",
-            "Target": "Portraits/Sebastian",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Sebastian/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Jacket, NoJacket | SebastianWinterIndoor}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Sebastian/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Jacket, NoJacket | SebastianWinterIndoor}}.png",
             "When":
             {
                 "Season": "winter",
-                "Relationship:Sebastian": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Sebastian/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Jacket, NoJacket | SebastianWinterIndoor}}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Sebastian/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Jacket, NoJacket | SebastianWinterIndoor}}.png": true,
             },
             "PatchMode": "Overlay"
-        },*/
+        },
 
         // Shane Main
 
@@ -1692,34 +1522,7 @@
             "Action": "EditImage",
             "Target": "Characters/Shane_JojaMart",
             "FromFile": "Characters/Shane/Shane_JojaMart.png",
-        },
-
-        // Shane Portraits Mermaid Pendant
-
-        {
-            "LogName": "Shane - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Shane",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "Relationship:Shane": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Shane - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Shane",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Shane/Shane_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "Relationship:Shane": "Married, Engaged",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Shane/Shane_{{Season}}{{WeatherVariant}}.png": true
-            },
-            "PatchMode": "Overlay"
-        },        
+        }, 
 
         // Wizard Main
 
@@ -1834,10 +1637,10 @@
             "LogName": "Elliott Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Characters/Elliott",
-            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png",
+            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png": true,
+                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
             },
         },
 
@@ -2025,6 +1828,21 @@
             },
         },
 
+        // Random Flower Queen
+
+        /*{
+            "LogName": "Random Flower Queen Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Abigail, Characters/Emily, Characters/Haley, Characters/Leah, Characters/Maru, Characters/Penny",
+            "FromFile": "Characters/RandomFlowerQueen/{{Target}}_RFQ.png",
+            "When":
+            {
+                "HasMod": "Candidus42.RandomFlowerQueen",
+                "FlowerQueen:Haley": false,
+                "DayEvent:Flower Dance": true,
+            },
+        },*/
+       
         // E N D  F E S T I V A L  C H A R A C T E R S
 
         // B E G I N  F E S T I V A L  P O R T R A I T S
@@ -2062,7 +1880,8 @@
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png",
             "When":
             {
-                "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png": true,
+                "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png": true,                
+                "ElliottPortraitStyle": "Standard, FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
             },
         },
 
@@ -2112,6 +1931,7 @@
             "When":
             {
                 "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png": true,
+                "HarveyFacialHair": "Mustache, Shaved"
             },
         },
 
