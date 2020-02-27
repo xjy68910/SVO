@@ -823,7 +823,7 @@
         // Evelyn
 
         {
-            "LogName": "Evelyn Summer Sun",
+            "LogName": "Evelyn Summer - Sun",
             "Action": "EditImage",
             "Target": "Characters/Evelyn, Portraits/Evelyn",
             "FromFile": "{{Target}}/Evelyn_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Blue | EvelynSummerColor}}.png",
@@ -835,16 +835,18 @@
             },
         },
         {
-            "LogName": "Evelyn Winter",
+            "LogName": "Evelyn Summer - Rain",
             "Action": "EditImage",
             "Target": "Characters/Evelyn, Portraits/Evelyn",
-            "FromFile": "{{Target}}/Evelyn_{{Season}}{{IndoorVariant}}_Base_{{Random:Pink, Blue | EvelynWinterColor}}.png",
+            "FromFile": "{{Target}}/Evelyn_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Blue | EvelynSummerRainVariant}}.png",
             "When":
             {
-                "Season": "winter",
-                "HasFile:{{Target}}/Evelyn_{{Season}}{{IndoorVariant}}_Base_{{Random:Pink, Blue | EvelynWinterColor}}.png": true
+                "Season": "summer",
+                "Weather": "rain, storm",
+                "HasFile:{{Target}}/Evelyn_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Blue | EvelynSummerRainVariant}}.png": true
             },
         },
+        
 
         // Gunther
 
@@ -1313,28 +1315,54 @@
         // Penny Main
 
         {
-            "LogName": "Penny Summer Sun",
+            "LogName": "Penny Spring - Sun",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, White, Jumper, Brown | PennySpringVariant}}.png",
             "When":
             {
-                "Season": "summer",
+                "Season": "spring",
                 "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png": true,
+                "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, White, Jumper, Brown | PennySpringVariant}}.png": true,
 
             },
         },
         {
-            "LogName": "Penny Summer Rain",
+            "LogName": "Penny Summer - Sun",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green, Lime, Fruitcake | PennySummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green, Lime, Fruitcake | PennySummerVariant}}.png": true,
+
+            },
+        },
+        {
+            "LogName": "Penny Summer - Rain",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow, Denim | PennySummerRain}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "rain, storm",
-                "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png": true,
+                "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow, Denim | PennySummerRain}}.png": true,
+            },
+        },
+        {
+            "LogName": "Penny Fall - Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Brown, DeepRed, Frills, Sweater | PennyFallVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, White, Jumper, Brown | PennyFallVariant}}.png": true,
+
             },
         },
         {
@@ -1345,7 +1373,6 @@
             "When":
             {
                 "Season": "winter",
-                "Weather": "snow",
                 "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
             },
         },
@@ -1353,15 +1380,28 @@
         // Penny Portraits Mermaid Pendant
 
         {
+            "LogName": "Penny Spring - Sun - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, White, Jumper, Brown | PennySpringVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, White, Jumper, Brown | PennySpringVariant}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
             "LogName": "Penny Summer - Sun - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green, Lime, Fruitcake | PennySummerVariant}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Blue, Green, Lime, Fruitcake | PennySummerVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
@@ -1369,12 +1409,26 @@
             "LogName": "Penny Summer - Rain - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow, Denim | PennySummerRain}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow, Denim | PennySummerRain}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Penny Fall - Sun - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Brown, DeepRed, Frills, Sweater | PennyFallVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, White, Jumper, Brown | PennyFallVariant}}.png": true,
+
             },
             "PatchMode": "Overlay"
         },
@@ -1386,7 +1440,6 @@
             "When":
             {
                 "Season": "winter",
-                "Weather": "snow",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
             },
             "PatchMode": "Overlay"
