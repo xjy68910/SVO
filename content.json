@@ -1277,7 +1277,7 @@
         {
             "LogName": "Marnie Work",
             "Action": "EditImage",
-            "Target": "Characters/Marnie Portraits/Marnie",
+            "Target": "Characters/Marnie, Portraits/Marnie",
             "FromFile": "{{Target}}/Marnie_Apron.png",
             "When":
             {
@@ -1743,7 +1743,7 @@
             "FromFile": "Characters/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy, QueenofHearts | HaleySpiritsEveVariant}}.png",
             "When":
             {
-                "DayEvent:DayEvent:spirit's eve": true
+                "DayEvent:spirit's eve": true
             },
         },
 
@@ -1757,6 +1757,7 @@
             "When":
             {
                 "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png": true,
+                "HarveyFacialHair": "mustache, shaved"
             },
         },
 
@@ -1984,7 +1985,7 @@
             "FromFile": "Portraits/Festivals/{{Festival}}/Haley_{{Festival}}_{{Random:Princess, Fairy, QueenofHearts | HaleySpiritsEveVariant}}.png",
             "When":
             {
-                "DayEvent:DayEvent:spirit's eve": true
+                "DayEvent:spirit's eve": true
             },
         },
 
