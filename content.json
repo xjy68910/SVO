@@ -301,7 +301,7 @@
 
         // Sandy
 
-        "SandyEna led":
+        "SandyEnabled":
         {
             "AllowValues": "true, false",
             "Default": "false"
@@ -356,7 +356,7 @@
         {
             "LogName": "Location Specific",
             "Action": "EditImage",
-            "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Clint, Portraits/Clint, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Portraits/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
+            "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Clint, Portraits/Clint, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Portraits/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Linus, Portraits/Linus, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
             "FromFile": "{{Target}}/{{TargetWithoutPath}}_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
             "When":
             {
@@ -366,7 +366,7 @@
         {
             "LogName": "Non-Location Specific",
             "Action": "EditImage",
-            "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Clint, Portraits/Clint, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Portraits/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
+            "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Clint, Portraits/Clint, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Portraits/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Linus, Portraits/Linus, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
             "FromFile": "{{Target}}/{{TargetWithoutPath}}_{{Season}}{{WeatherVariant}}.png",
             "When":
             {
@@ -880,7 +880,8 @@
                 "Season": "spring",
                 "Weather": "rain, storm",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:NoSunglasses, Stripes, Sunglasses | HaleySpringRainVariant}}.png": true,
-            }
+            },
+            "PatchMode": "Overlay"
         },
         {
             "LogName": "Haley Fall - Sun - Mermaid Pendant",
@@ -976,7 +977,7 @@
             "LogName": "Harvey Fall - Indoor Rain Portraits",
             "Action": "EditImage",
             "Target": "Characters/Harvey, Portraits/Harvey",
-            "FromFile": "{{Target}}/{{HarveyFacialHair}}/Harvey_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:BlackRedScarf, BrownNoScarf | HarveyFallRainVariant}}.png",
+            "FromFile": "{{Target}}/{{HarveyFacialHair}}/Harvey_{{Season}}{{WeatherVariant}}_{{Random:BlackRedScarf, BrownNoScarf | HarveyFallRainVariant}}.png",
             "When":
             {
                 "Season": "fall",
@@ -1040,7 +1041,7 @@
             "LogName": "Harvey Fall Rain - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Harvey",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Harvey/{{HarveyFacialHair}}/Harvey_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:BlackRedScarf, BrownNoScarf | HarveyFallRainVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Harvey/{{HarveyFacialHair}}/Harvey_{{Season}}{{WeatherVariant}}_{{Random:BlackRedScarf, BrownNoScarf | HarveyFallRainVariant}}.png",
             "When":
             {
                 "Season": "fall",
@@ -1159,32 +1160,8 @@
             {
                 "Season": "spring",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | LeahSpringColorVariant}}.png": true
-            }
-        },
-
-        // Linus Main
-
-        {
-            "LogName": "Linus Main",
-            "Action": "EditImage",
-            "Target": "Characters/Linus, Portraits/Linus",
-            "FromFile": "{{Target}}/Linus_{{Season}}_Base_{{Random:FlowerCrown, NoFlowerCrown | LinusFlowerCrown}}.png",
-            "When":
-            {
-                "Season": "spring, summer, fall",
-                "HasFile:{{Target}}/Linus_{{Season}}_Base_{{Random:FlowerCrown, NoFlowerCrown | LinusFlowerCrown}}.png": true
-            }
-        },
-        {
-            "LogName": "Linus Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Linus, Portraits/Linus",
-            "FromFile": "{{Target}}/Linus_{{Season}}{{IndoorVariant}}_Base.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{Target}}/Linus_{{Season}}{{IndoorVariant}}_Base.png": true
-            }
+            },
+            "PatchMode": "Overlay",
         },
 
         // Marnie Main
