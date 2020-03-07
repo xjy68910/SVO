@@ -17,15 +17,14 @@ option                         | valid values (select only one, values are seper
 ----------------------------   | ------- 
 `EnableMermaidPendants`        | true false
 `SwimSuitsEnabled`             | true false
+`WeddingStyle`                 | VCSO original
 
 ## Standard Portraits
 These options only apply when you set `PortraitStyle` to `standard`.
 
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
-`ElliottPortraitStyle`         | standard frontfacingeemie frontfacinglumen frontfacingsabreene
 `HarveyFacialHair`             | mustache shaved
-`WillyWinterPortraitVariant`   | standard alternative
 
 ## Characters
 These options affect the character files.
