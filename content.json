@@ -855,6 +855,21 @@
             }
         },
 
+        {
+            "LogName": "Haley Spring & Fall - Monday Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Haley, Portraits/Haley",
+            "FromFile": "{{Target}}/Haley_Photokit.png",
+            "When":
+            {
+                "Season": "spring, fall",
+                "DayOfWeek": "Monday",
+                "Weather": "sun, wind",
+                "Spouse:Haley": false,
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png": true,
+            }
+        },
+
         // Haley Portrait Mermaid Pendant
 
         {
@@ -1243,6 +1258,33 @@
                 "Weather": "rain, storm",
             },
             "PatchMode": "Overlay"
+        },
+
+        // Pam Bus Stop Repair
+
+        {
+            "LogName": "Pam - Rain/Snow Bus Stop Repair CC Completion",
+            "Action": "EditImage",
+            "Target": "Characters/Pam, Portraits/Pam",
+            "FromFile": "{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
+            "When":
+            {                
+                "Weather": "rain, storm, snow",
+                "HasFlag": "ccVault",
+                "HasFile:{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png": true,
+            },
+        },
+        {
+            "LogName": "Pam - Rain/Snow Bus Stop Repair Joja Completion",
+            "Action": "EditImage",
+            "Target": "Characters/Pam, Portraits/Pam",
+            "FromFile": "{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
+            "When":
+            {                
+                "Weather": "rain, storm, snow",
+                "HasFlag": "jojaVault",
+                "HasFile:{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png": true,
+            },
         },
 
         // Penny Main
