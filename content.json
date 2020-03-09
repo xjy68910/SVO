@@ -1465,7 +1465,7 @@
         // Sebastian Main
 
         {
-            "LogName": "Sebastian Winter Indoor - Jacket",
+            "LogName": "Sebastian Winter Indoor - Jacket", 
             "Action": "EditImage",
             "Target": "Characters/Sebastian, Portraits/Sebastian",
             "FromFile": "{{Target}}/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Jacket, NoJacket | SebastianWinterIndoor}}.png",
