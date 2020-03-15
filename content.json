@@ -631,7 +631,7 @@
         },
 
         // Elliott Portrait Mermaid Pendant
-        
+
         {
             "LogName": "Elliott Summer - Indoor Portraits - Mermaid Pendant",
             "Action": "EditImage",
@@ -665,24 +665,47 @@
             "LogName": "Emily Spring",
             "Action": "EditImage",
             "Target": "Characters/Emily, Portraits/Emily",
-            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sleeves, Pink | EmilySpringVariant}}.png",
+            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Red, Short | EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sleeves, Pink | EmilySpringVariant}}.png": true,
+                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Red, Short | EmilySpringVariant}}.png": true,
             }
         },
         {
-            "LogName": "Emily Spring - Rain",
+            "LogName": "Emily Summer - Sun",
             "Action": "EditImage",
             "Target": "Characters/Emily, Portraits/Emily",
-            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Yellow | EmilySpringRainVariant}}.png",
+            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png",
             "When":
             {
-                "Season": "spring",
+                "Season": "summer",
+                "Weather": "spring, wind",
+                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png": true,
+            }
+        },
+        {
+            "LogName": "Emily Summer - Rain",
+            "Action": "EditImage",
+            "Target": "Characters/Emily, Portraits/Emily",
+            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
                 "Weather": "rain, storm",
-                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Yellow | EmilySpringRainVariant}}.png": true
+                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png": true,
+            }
+        },
+        {
+            "LogName": "Emily Fall - Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Emily, Portraits/Emily",
+            "FromFile": "{{Target}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Red, White | EmilyFallVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Red, White | EmilySpringVariant}}.png": true,
             }
         },
         {
@@ -700,33 +723,58 @@
         // Emily Portrait Mermaid Pendant
 
         {
-            "LogName": "Emily Spring Portraits - Mermaid Pendant",
+            "LogName": "Emily Spring - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sleeves, Pink | EmilySpringVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Red, Short | EmilySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sleeves, Pink | EmilySpringVariant}}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Red, Short | EmilySpringVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Emily Spring - Rain - Mermaid Pendant",
+            "LogName": "Emily Summer - Sun - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Yellow | EmilySpringRainVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png",
             "When":
             {
-                "Season": "spring",
+                "Season": "summer",
+                "Weather": "spring, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Emily Summer - Rain - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Emily",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
                 "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Yellow | EmilySpringRainVariant}}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Emily Winter - Mermaid Pendant",
+            "LogName": "Emily Fall - Sun - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Emily",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Red, White | EmilyFallVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Red, White | EmilySpringVariant}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Emily Winter - Outdoor - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
             "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:HatNoScarf, HatScarf, NoHatNoScarf, NoHatScarf | EmilyWinterVariant}}.png",
@@ -1268,7 +1316,7 @@
             "Target": "Characters/Pam, Portraits/Pam",
             "FromFile": "{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
             "When":
-            {                
+            {
                 "Weather": "rain, storm, snow",
                 "HasFlag": "ccVault",
                 "HasFile:{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png": true,
@@ -1280,7 +1328,7 @@
             "Target": "Characters/Pam, Portraits/Pam",
             "FromFile": "{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
             "When":
-            {                
+            {
                 "Weather": "rain, storm, snow",
                 "HasFlag": "jojaVault",
                 "HasFile:{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png": true,
@@ -1457,7 +1505,7 @@
             "When":
             {
                 "Season": "summer",
-                "Weather": "rain, storm", 
+                "Weather": "rain, storm",
                 "HasFile:{{Target}}/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Black, Blue | SamSummerRainVariant}}.png": true,
             }
         },
@@ -1507,7 +1555,7 @@
         // Sebastian Main
 
         {
-            "LogName": "Sebastian Winter Indoor - Jacket", 
+            "LogName": "Sebastian Winter Indoor - Jacket",
             "Action": "EditImage",
             "Target": "Characters/Sebastian, Portraits/Sebastian",
             "FromFile": "{{Target}}/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Jacket, NoJacket | SebastianWinterIndoor}}.png",
@@ -1886,7 +1934,7 @@
             {
                 "DayEvent:Egg Festival": true
             },
-        },        
+        },
 
         // Emily
 
