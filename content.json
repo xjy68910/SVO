@@ -697,18 +697,6 @@
             }
         },
         {
-            "LogName": "Emily Fall - Sun",
-            "Action": "EditImage",
-            "Target": "Characters/Emily, Portraits/Emily",
-            "FromFile": "{{Target}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Red, White | EmilyFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Red, White | EmilySpringVariant}}.png": true,
-            }
-        },
-        {
             "LogName": "Emily Winter - Outdoor",
             "Action": "EditImage",
             "Target": "Characters/Emily, Portraits/Emily",
@@ -757,19 +745,6 @@
                 "Season": "summer",
                 "Weather": "rain, storm",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Emily Fall - Sun - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Red, White | EmilyFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{WeatherVariant}}_{{Random:Red, White | EmilySpringVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
@@ -1217,7 +1192,7 @@
         {
             "LogName": "Leah Spring - Mermaid Pendant",
             "Action": "EditImage",
-            "Target": "Characters/Leah, Portraits/Leah",
+            "Target": "Portraits/Leah",
             "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | LeahSpringColorVariant}}.png",
             "When":
             {
