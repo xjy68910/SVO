@@ -269,6 +269,13 @@
             }
         },
 
+        // Flower Queen
+
+        {
+            "Name": "FlowerQueen",
+            "Value": "{{Random: Abigail, Emily, Haley, Leah, Maru, Penny | RandomFlowerQueen}}"
+        },
+
     ],
 
     "ConfigSchema":
@@ -285,8 +292,8 @@
         },
         "WeddingStyle":
         {
-            "AllowValues": "VCSO, Original",
-            "Default": "Original"
+            "AllowValues": "VCSO, DesertDove, SCS, Vanilla",
+            "Default": "DesertDove"
         },
 
         // Seasonal Villager Outfits        
@@ -680,7 +687,7 @@
             "When":
             {
                 "Season": "summer",
-                "Weather": "spring, wind",
+                "Weather": "sun, wind",
                 "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png": true,
             }
         },
@@ -730,7 +737,7 @@
             "When":
             {
                 "Season": "summer",
-                "Weather": "spring, wind",
+                "Weather": "sun, wind",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png": true,
             },
             "PatchMode": "Overlay"
@@ -1722,14 +1729,13 @@
         // Harvey
 
         {
-            "LogName": "Harvey Festival Portrait Sprites",
+            "LogName": "Harvey Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Harvey",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png": true,
-                "HarveyFacialHair": "mustache, shaved"
+                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
             },
         },
 
@@ -2198,7 +2204,7 @@
             },
             "When":
             {
-                "WeddingStyle": "VCSO, Original"
+                "WeddingStyle": "VCSO, DesertDove, Vanilla, SCS"
             }
         },
         {
@@ -2215,7 +2221,7 @@
             },
             "When":
             {
-                "WeddingStyle": "VCSO, Original"
+                "WeddingStyle": "VCSO, DesertDove, Vanilla, SCS"
             }
         },
 
@@ -2237,5 +2243,58 @@
         },
 
         // E N D  A E R O B I C S  P O R T R A I T S
+
+        // B E G I N  R A N D O M  F L O W E R  Q U E E N
+
+        {
+            "LogName": "Random Flower Queen Characters",
+            "Action": "EditImage",
+            "Target": "Characters/{{FlowerQueen}}",
+            "FromFile": "Characters/RandomFlowerQueen/{{FlowerQueen}}_RFQ.png",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "FlowerQueen:Haley": false,
+                "HasMod:Candidus42.RandomFlowerQueen": false,
+            }
+        },
+        {
+            "LogName": "Random Flower Queen Portraits",
+            "Action": "EditImage",
+            "Target": "Portraits/{{FlowerQueen}}",
+            "FromFile": "Portraits/RandomFlowerQueen/{{FlowerQueen}}_RFQ.png",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "FlowerQueen:Haley": false,
+                "HasMod:Candidus42.RandomFlowerQueen": false,
+            }
+        },
+        {
+            "LogName": "Random Flower Queen Characters - Haley False",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "Characters/RandomFlowerQueen/Haley_RFQ.png",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "FlowerQueen:Haley": false,
+                "HasMod:Candidus42.RandomFlowerQueen": false,
+            }
+        },
+        {
+            "LogName": "Random Flower Queen Portraits - Haley False",
+            "Action": "EditImage",
+            "Target": "Portraits/Haley",
+            "FromFile": "Portraits/RandomFlowerQueen/Haley_RFQ.png",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "FlowerQueen:Haley": false,
+                "HasMod:Candidus42.RandomFlowerQueen": false,
+            }
+        },
+
+        // E N D  R A N D O M  F L O W E R  Q U E E N
     ]
 }
