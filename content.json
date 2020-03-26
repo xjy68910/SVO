@@ -269,11 +269,23 @@
             }
         },
 
-        // Flower Queen
+        // Flower Queen & King
 
         {
             "Name": "FlowerQueen",
-            "Value": "{{Random: Abigail, Emily, Haley, Leah, Maru, Penny | RandomFlowerQueen}}"
+            "Value": "{{Random: Abigail, Abigail, Emily, Emily, Haley, Leah, Leah, Maru, Maru, Penny, Penny | RandomFlowerQueen}}",
+            "When":
+            {
+                "AllowBachelorsToBeFlowerKing": "false",
+            }
+        },
+        {
+            "Name": "FlowerQueen",
+            "Value": "{{Random: Abigail, Emily, Haley, Leah, Maru, Penny, Alex, Elliott, Harvey, Sam, Sebastian, Shane | RandomFlowerQueenKing}}",
+            "When":
+            {
+                "AllowBachelorsToBeFlowerKing": "true",
+            }
         },
 
     ],
@@ -294,6 +306,11 @@
         {
             "AllowValues": "VCSO, DesertDove, SCS, Vanilla",
             "Default": "DesertDove"
+        },
+        "AllowBachelorsToBeFlowerKing":
+        {
+            "AllowValues": "true, false",
+            "Default": "true"
         },
 
         // Seasonal Villager Outfits        
@@ -1053,6 +1070,19 @@
                 "LocationName": "Hospital"
             },
         },
+        /*{
+            "LogName": "Harvey - Dad",
+            "Action": "EditImage",
+            "Target": "Characters/Harvey, Portraits/Harvey",
+            "FromFile": "{{Target}}/{{HarveyFacialHair}}/Harvey_Dad.png",
+            "When":
+            {
+                "HarveyFacialHair": "Mustache, Shaved",
+                "LocationName:Hospital": "false",
+                "Relationship:Harvey": "Married",
+                "HavingChild:Harvey": "true",
+            },
+        },*/
 
         // Harvey Portrait Mermaid Pendant
 
@@ -1100,7 +1130,7 @@
             "LogName": "Harvey Spring Sun - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Harvey",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Harvey/{{HarveyFacialHair}}/Harvey_{{Season}}{{WeatherVariant}}_{{Random:Vest, NoVest | HarveySpringVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Harvey/{{HarveyFacialHair}}/Harvey_{{Season}}{{WeatherVariant}}_{{Random:NoVest, Sweater | HarveySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -1288,6 +1318,29 @@
                 "Weather": "rain, storm",
             },
             "PatchMode": "Overlay"
+        },
+
+        // Pam Hug Overlay
+
+        {
+            "LogName": "Pam Hug Overlay",
+            "Action": "EditImage",
+            "Target": "Characters/Penny",
+            "FromFile": "Characters/Pam/Overlay/Pam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "ToArea":
+            {
+                "X": 48,
+                "Y": 288,
+                "Width": 16,
+                "Height": 32
+            },
+            "FromArea":
+            {
+                "X": 48,
+                "Y": 288,
+                "Width": 16,
+                "Height": 32
+            },
         },
 
         // Pam Bus Stop Repair
@@ -1669,7 +1722,7 @@
         {
             "LogName": "Festival Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Shane, Characters/Willy",
+            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marlon, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Shane, Characters/Willy",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -1723,19 +1776,6 @@
             "When":
             {
                 "DayEvent:spirit's eve": true
-            },
-        },
-
-        // Harvey
-
-        {
-            "LogName": "Harvey Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Harvey",
-            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{HarveyFacialHair}}.png",
-            "When":
-            {
-                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
             },
         },
 
@@ -1896,7 +1936,7 @@
         {
             "LogName": "Festival Portrait Sprites",
             "Action": "EditImage",
-            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Shane, Portraits/Willy",
+            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marlon, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Shane, Portraits/Willy",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -2254,7 +2294,6 @@
             "When":
             {
                 "DayEvent": "flower dance",
-                "FlowerQueen:Haley": false,
                 "HasMod:Candidus42.RandomFlowerQueen": false,
             }
         },
@@ -2266,31 +2305,89 @@
             "When":
             {
                 "DayEvent": "flower dance",
-                "FlowerQueen:Haley": false,
+                "HasMod:Candidus42.RandomFlowerQueen": false,
+            }
+        },
+
+        // Harvey
+
+        {
+            "LogName": "Random Flower Queen Characters - Harvey",
+            "Action": "EditImage",
+            "Target": "Characters/Harvey",
+            "FromFile": "Characters/RandomFlowerQueen/Harvey_RFQ_{{HarveyFacialHair}}.png",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "FlowerQueen:Harvey": true,
+                "HarveyFacialHair": "Mustache, Shaved",
                 "HasMod:Candidus42.RandomFlowerQueen": false,
             }
         },
         {
-            "LogName": "Random Flower Queen Characters - Haley False",
+            "LogName": "Random Flower Queen Portraits - Harvey",
             "Action": "EditImage",
-            "Target": "Characters/Haley",
-            "FromFile": "Characters/RandomFlowerQueen/Haley_RFQ.png",
+            "Target": "Portraits/Harvey",
+            "FromFile": "Portraits/RandomFlowerQueen/Harvey_RFQ_{{HarveyFacialHair}}.png",
             "When":
             {
                 "DayEvent": "flower dance",
-                "FlowerQueen:Haley": false,
+                "FlowerQueen:Harvey": true,
+                "HarveyFacialHair": "Mustache, Shaved",
+                "HasMod:Candidus42.RandomFlowerQueen": false,
+            }
+        },
+
+        // Jas
+
+        {
+            "LogName": "Random Flower Queen Characters - Jas",
+            "Action": "EditImage",
+            "Target": "Characters/Jas",
+            "FromFile": "Characters/RandomFlowerQueen/Jas_RFQ.png",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "FlowerQueen:Shane": true,
                 "HasMod:Candidus42.RandomFlowerQueen": false,
             }
         },
         {
-            "LogName": "Random Flower Queen Portraits - Haley False",
+            "LogName": "Random Flower Queen Portraits - Jas",
             "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "Portraits/RandomFlowerQueen/Haley_RFQ.png",
+            "Target": "Portraits/Jas",
+            "FromFile": "Portraits/RandomFlowerQueen/Jas_RFQ.png",
             "When":
             {
                 "DayEvent": "flower dance",
-                "FlowerQueen:Haley": false,
+                "FlowerQueen:Shane": true,
+                "HasMod:Candidus42.RandomFlowerQueen": false,
+            }
+        },
+
+        // Vincent
+
+        {
+            "LogName": "Random Flower Queen Characters - Vincent",
+            "Action": "EditImage",
+            "Target": "Characters/Vincent",
+            "FromFile": "Characters/RandomFlowerQueen/Vincent_RFQ.png",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "FlowerQueen:Sam": true,
+                "HasMod:Candidus42.RandomFlowerQueen": false,
+            }
+        },
+        {
+            "LogName": "Random Flower Queen Portraits - Vincent",
+            "Action": "EditImage",
+            "Target": "Portraits/Vincent",
+            "FromFile": "Portraits/RandomFlowerQueen/Vincent_RFQ.png",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "FlowerQueen:Sam": true,
                 "HasMod:Candidus42.RandomFlowerQueen": false,
             }
         },
