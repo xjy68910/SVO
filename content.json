@@ -1181,6 +1181,19 @@
             },
             "PatchMode": "Overlay"
         },
+        {
+            "LogName": "Harvey - Mustache Overlay",
+            "Action": "EditImage",
+            "Target": "Characters/Harvey, Portraits/Harvey",
+            "FromFile": "{{Target}}/Harvey_MustacheOverlay.png",
+            "When":
+            {
+                "HarveyFacialHair": "Mustache",
+                "DayEvent:spirit's eve": true,
+                "LocationName": "Farm"
+            },
+            "PatchMode": "Overlay"
+        },
         /*
         {
             "LogName": "Harvey - Dad",
