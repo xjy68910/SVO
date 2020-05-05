@@ -17,7 +17,9 @@ option                         | valid values (select only one, values are seper
 ----------------------------   | ------- 
 `EnableMermaidPendants`        | true false
 `SwimSuitsEnabled`             | true false
-`WeddingStyle`                 | VCSO original
+`WeddingStyle`                 | VCSO DesertDove SCS Vanilla
+`EnableFlowerQueen`            | true false
+`AllowBachelorsToBeFlowerKing` | true false
 
 ## Standard Portraits
 These options only apply when you set `PortraitStyle` to `standard`.
@@ -32,7 +34,7 @@ These options affect the character files.
 options                        | valid values (select only one, values are seperated by a space)
 ----------------------------   | ------- 
 `SandyEnabled`                 | true false
-`SandyVersion`                 | standard sivs dizor
+`SandyVersion`                 | standard sivs dizor poltergeister
 `WizardEnabled`                | true false
 
 
