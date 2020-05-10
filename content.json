@@ -475,6 +475,79 @@
             },
             "PatchMode": "Overlay"
         },
+        {
+            "LogName": "Cursors - Shane",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true
+            },
+            "ToArea":
+            {
+                "X": 533,
+                "Y": 1864,
+                "Width": 20,
+                "Height": 28
+            },
+        },
+        {
+            "LogName": "Cursors Shane Spring - Rain",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Grey | ShaneSpringRainVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "Weather": "rain, storm",
+                "HasFile:Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Grey | ShaneSpringRainVariant}}.png": true,
+            },
+            "ToArea":
+            {
+                "X": 533,
+                "Y": 1864,
+                "Width": 20,
+                "Height": 28
+            },
+        },
+        {
+            "LogName": "Cursors Shane Fall - Sun",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Tan, Purple | ShaneFallSunVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "Weather": "sun, wind",
+                "HasFile:Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Tan, Purple | ShaneFallSunVariant}}.png": true,
+            },
+            "ToArea":
+            {
+                "X": 533,
+                "Y": 1864,
+                "Width": 20,
+                "Height": 28
+            },
+        },
+        {
+            "LogName": "Cursors Shane Winter - Jacket",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Joja, NoJoja | ShaneJojaJacket}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "HasFile:Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Joja, NoJoja | ShaneJojaJacket}}.png": true,
+            },
+            "ToArea":
+            {
+                "X": 533,
+                "Y": 1864,
+                "Width": 20,
+                "Height": 28
+            },
+        },
 
         // E N D  C U R S O R S  E D I T S
 
