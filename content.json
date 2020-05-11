@@ -420,6 +420,14 @@
 
         // Seasonal Villager Outfits        
 
+        // Haley
+
+        "HaleyCowPhotoVariant":
+        {
+            "AllowValues": "Seasonal, Vanilla",
+            "Default": "Seasonal"
+        },
+
         // Harvey
 
         "HarveyFacialHair":
@@ -1008,78 +1016,49 @@
         // Haley
 
         {
-            "LogName": "Haley Spring Sun",
+            "LogName": "Haley Spring",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png",
             "When":
             {
                 "Season": "spring",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png": true,
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png": true,
             }
         },
         {
-            "LogName": "Haley Spring Sun",
+            "LogName": "Haley Summer",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:NoSunglasses, Stripes, Sunglasses | HaleySpringRainVariant}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png",
             "When":
             {
-                "Season": "spring",
-                "Weather": "rain, storm",
-                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:NoSunglasses, Stripes, Sunglasses | HaleySpringRainVariant}}.png": true,
+                "Season": "summer",
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png": true,
             }
         },
         {
-            "LogName": "Haley Fall Sun",
+            "LogName": "Haley Fall",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png": true,
-            }
-        },
-        {
-            "LogName": "Haley Fall Rain",
-            "Action": "EditImage",
-            "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Updo, Down | HaleyFallHairstyle}}_{{Random:Red, Blue | HaleyFallColor}}.png",
             "When":
             {
                 "Season": "fall",
-                "Weather": "rain, storm",
-                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png": true,
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Updo, Down | HaleyFallHairstyle}}_{{Random:Red, Blue | HaleyFallColor}}.png": true,
             }
         },
         {
             "LogName": "Haley Winter",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSnowColor}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png",
             "When":
             {
                 "Season": "winter",
-                "Weather": "snow",
-                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSnowColor}}.png": true
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png": true
             }
         },
-        {
-            "LogName": "Haley Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSunColor}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSunColor}}.png": true
-            }
-        },
-
         {
             "LogName": "Haley Spring & Fall - Monday Sun",
             "Action": "EditImage",
@@ -1097,94 +1076,97 @@
         // Haley Portrait Mermaid Pendant
 
         {
-            "LogName": "Haley Spring - Sun - Mermaid Pendant",
+            "LogName": "Haley Spring - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png",
             "When":
             {
                 "Season": "spring",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:White, Yellow, Pink | HaleySpringOutfit}}.png": true,
-            },
-            "PatchMode": "Overlay"
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png": true,
+            }
         },
         {
-            "LogName": "Haley Spring Sun",
+            "LogName": "Haley Summer - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:NoSunglasses, Stripes, Sunglasses | HaleySpringRainVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png",
             "When":
             {
-                "Season": "spring",
-                "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:NoSunglasses, Stripes, Sunglasses | HaleySpringRainVariant}}.png": true,
-            },
-            "PatchMode": "Overlay"
+                "Season": "summer",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png": true,
+            }
         },
         {
-            "LogName": "Haley Fall - Sun - Mermaid Pendant",
+            "LogName": "Haley Fall  - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Updo, Down | HaleyFallHairstyle}}_{{Random:Red, Blue | HaleyFallColor}}.png",
             "When":
             {
                 "Season": "fall",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Blue | HaleyFallSunColor}}.png": true,
-            },
-            "PatchMode": "Overlay"
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Updo, Down | HaleyFallHairstyle}}_{{Random:Red, Blue | HaleyFallColor}}.png": true,
+            }
         },
         {
-            "LogName": "Haley Fall - Rain - Mermaid Pendant",
+            "LogName": "Haley Winter - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:RedScarf, BlueScarf, BlueJacket, RedJacket | HaleyFallRainColor}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Haley Winter - Snow - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSnowColor}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png",
             "When":
             {
                 "Season": "winter",
-                "Weather": "snow",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSnowColor}}.png": true
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Haley Winter - Sun - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSunColor}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterSunColor}}.png": true
-            },
-            "PatchMode": "Overlay"
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png": true
+            }
         },
 
         // Haley Cow Photos
 
         {
-            "LogName": "Haley Cow Photos",
+            "LogName": "Haley Spring - Cow Photos",
             "Action": "EditImage",
             "Target": "LooseSprites/cowPhotos",
-            "FromFile": "Characters/Haley/cowPhotos{{Season}}.png",
+            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png",
             "When":
             {
-                "Season": "summer, fall, winter"
+                "Season": "spring",
+                "Weather": "sun, wind",
+                "HasFile:Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png": true,
+            }
+        },
+        {
+            "LogName": "Haley Summer - Cow Photos",
+            "Action": "EditImage",
+            "Target": "LooseSprites/cowPhotos",
+            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "sun, wind",
+                "HasFile:Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png": true,
+            }
+        },
+        {
+            "LogName": "Haley Fall - Cow Photos",
+            "Action": "EditImage",
+            "Target": "LooseSprites/cowPhotos",
+            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Updo, Down | HaleyFallHairstyle}}_{{Random:Red, Blue | HaleyFallColor}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "Weather": "sun, wind",
+                "HasFile:Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Updo, Down | HaleyFallHairstyle}}_{{Random:Red, Blue | HaleyFallColor}}.png": true,
+            }
+        },
+        {
+            "LogName": "Haley Winter - Cow Photos",
+            "Action": "EditImage",
+            "Target": "LooseSprites/cowPhotos",
+            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "HasFile:Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png": true
             }
         },
 
