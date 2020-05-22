@@ -131,6 +131,80 @@
             }
         },
 
+        // Experimental Festival Stuff
+        {
+            "Name": "Festival",
+            "Value": "EggFestival",
+            "When":
+            {
+                "DayEvent": "egg festival",
+                "LocationName": "Temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "FlowerDance",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "LocationName": "Temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "IceFestival",
+            "When":
+            {
+                "DayEvent": "festival of ice",
+                "LocationName": "Temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "Luau",
+            "When":
+            {
+                "DayEvent": "luau",
+                "LocationName": "Temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "MoonlightJellies",
+            "When":
+            {
+                "DayEvent": "dance of the moonlight jellies",
+                "LocationName": "Temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "SpiritsEve",
+            "When":
+            {
+                "DayEvent": "spirit's eve",
+                "LocationName": "Temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "SVFair",
+            "When":
+            {
+                "DayEvent": "stardew valley fair",
+                "LocationName": "Temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "WinterStar",
+            "When":
+            {
+                "DayEvent": "feast of the winter star",
+                "LocationName": "Temp"
+            }
+        },
+
         // Misc
 
         {
@@ -191,6 +265,66 @@
             "When":
             {
                 "HasFile:{{Target}}/Penny_{{season}}{{WeatherVariant}}.png": true,
+            },
+        },
+
+        {
+            "LogName": "Penny Spring Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green, Jumper, White | PennySpringSunVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green, Jumper, White | PennySpringSunVariant}}.png": true,
+            },
+        },
+        {
+            "LogName": "Penny Summer Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Fruitcake, Lime, Green | PennySummerSunVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Fruitcake, Lime, Green | PennySummerSunVariant}}.png": true,
+            },
+        },
+        {
+            "LogName": "Penny Summer Rain",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{season}}{{WeatherVariant}}_{{Random:Denim, White, Yellow | PennySummerRainVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "rain, storm",
+                "HasFile:{{Target}}/Penny_{{season}}{{WeatherVariant}}_{{Random:Denim, White, Yellow | PennySummerRainVariant}}.png": true,
+            },
+        },
+        {
+            "LogName": "Penny Fall Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed, Frills, Sweater | PennyFallSunVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "Weather": "sun, wind",
+                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed, Frills, Sweater | PennyFallSunVariant}}.png": true,
+            },
+        },
+        {
+            "LogName": "Penny Winter",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
             },
         },
 
