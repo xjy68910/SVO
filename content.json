@@ -7,7 +7,7 @@
 
 
 {
-    "Format": "1.13.0",
+    "Format": "1.14.0",
     "DynamicTokens": [
 
         // Standard Dynamic Tokens
@@ -355,7 +355,7 @@
 
         {
             "Name": "FlowerQueen",
-            "Value": "{{Random: Abigail, Abigail, Emily, Emily, Haley, Leah, Leah, Maru, Maru, Penny, Penny | RandomFlowerQueen}}",
+            "Value": "{{Random:Abigail, Abigail, Emily, Emily, Haley, Leah, Leah, Maru, Maru, Penny, Penny | RandomFlowerQueen}}",
             "When":
             {
                 "AllowBachelorsToBeFlowerKing": "false",
@@ -364,7 +364,7 @@
         },
         {
             "Name": "FlowerQueen",
-            "Value": "{{Random: Abigail, Emily, Haley, Leah, Maru, Penny, Alex, Elliott, Harvey, Sam, Sebastian, Shane | RandomFlowerQueenKing}}",
+            "Value": "{{Random:Abigail, Emily, Haley, Leah, Maru, Penny, Alex, Elliott, Harvey, Sam, Sebastian, Shane | RandomFlowerQueenKing}}",
             "When":
             {
                 "AllowBachelorsToBeFlowerKing": "true",
@@ -373,7 +373,7 @@
         },
         {
             "Name": "JasFlowerQueen",
-            "Value": "{{Random: Jas, Disabled | JasFlowerQueen}}",
+            "Value": "{{Random:Jas, Disabled | JasFlowerQueen}}",
             "When":
             {
                 "EnableFlowerQueen": "true"
@@ -381,7 +381,7 @@
         },
         {
             "Name": "VincentFlowerQueen",
-            "Value": "{{Random: Vincent, Disabled | VincentFlowerQueen}}",
+            "Value": "{{Random:Vincent, Disabled | VincentFlowerQueen}}",
             "When":
             {
                 "EnableFlowerQueen": "true"
@@ -470,36 +470,109 @@
 
     "Changes": [
 
-        // B E G I N  C U R S O R S  E D I T S
+        // B E G I N  C U R S O R S  E D I T S        
+
+        // Marnie
 
         {
-            "LogName": "Cursors",
+            "LogName": "Cursors Marnie Spring",
             "Action": "EditImage",
             "Target": "LooseSprites/Cursors",
-            "FromFile": "Cursors/Cursors_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Green, Yellow | MarnieSpringVariant}}.png",
             "When":
             {
-                "HasFile:Cursors/Cursors_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Cursors - Shane",
-            "Action": "EditImage",
-            "Target": "LooseSprites/Cursors",
-            "FromFile": "Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Cursors/Shane/Shane_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true
+                "Season": "spring",
+                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Green, Yellow | MarnieSpringVariant}}.png": true,
             },
             "ToArea":
             {
-                "X": 533,
-                "Y": 1864,
-                "Width": 20,
+                "X": 558,
+                "Y": 1423,
+                "Width": 60,
                 "Height": 28
             },
+            "PatchMode": "Replace",
         },
+        {
+            "LogName": "Cursors Marnie Summer",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png": true,
+            },
+            "ToArea":
+            {
+                "X": 558,
+                "Y": 1423,
+                "Width": 60,
+                "Height": 28
+            },
+            "PatchMode": "Replace",
+        },
+        {
+            "LogName": "Cursors Marnie Fall",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png": true,
+            },
+            "ToArea":
+            {
+                "X": 558,
+                "Y": 1423,
+                "Width": 60,
+                "Height": 28
+            },
+            "PatchMode": "Replace",
+        },
+        {
+            "LogName": "Cursors Marnie Winter",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png": true,
+            },
+            "ToArea":
+            {
+                "X": 558,
+                "Y": 1423,
+                "Width": 60,
+                "Height": 28
+            },
+            "PatchMode": "Replace",
+        },
+
+        // Pam
+
+        {
+            "LogName": "Cursors Pam",
+            "Action": "EditImage",
+            "Target": "LooseSprites/Cursors",
+            "FromFile": "Cursors/Pam/Pam_{{Season}}_Outdoor{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:Cursors/Pam/Pam_{{Season}}_Outdoor{{WeatherVariant}}.png": true,
+            },
+            "ToArea":
+            {
+                "X": 384,
+                "Y": 1311,
+                "Width": 15,
+                "Height": 19
+            },
+        },
+
+        // Shane
+
         {
             "LogName": "Cursors Shane Spring - Rain",
             "Action": "EditImage",
@@ -1084,7 +1157,8 @@
             {
                 "Season": "spring",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png": true,
-            }
+            },
+            "PatchMode": "Overlay"
         },
         {
             "LogName": "Haley Summer - Mermaid Pendant",
@@ -1095,7 +1169,8 @@
             {
                 "Season": "summer",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png": true,
-            }
+            },
+            "PatchMode": "Overlay"
         },
         {
             "LogName": "Haley Fall  - Mermaid Pendant",
@@ -1106,7 +1181,8 @@
             {
                 "Season": "fall",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Updo, Down | HaleyFallHairstyle}}_{{Random:Red, Blue | HaleyFallColor}}.png": true,
-            }
+            },
+            "PatchMode": "Overlay"
         },
         {
             "LogName": "Haley Winter - Mermaid Pendant",
@@ -1117,7 +1193,8 @@
             {
                 "Season": "winter",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey | HaleyWinterColor}}.png": true
-            }
+            },
+            "PatchMode": "Overlay"
         },
 
         // Haley Cow Photos
@@ -1351,8 +1428,19 @@
             "When":
             {
                 "Season": "summer",
-                "Weather": "rain, storm",
+                "Weather": "sun, wind",
                 "HasFile:{{Target}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Hat, NoHat | LeahSummerSunVariant}}.png": true
+            }
+        },
+        {
+            "LogName": "Leah Fall",
+            "Action": "EditImage",
+            "Target": "Characters/Leah, Portraits/Leah",
+            "FromFile": "{{Target}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown, Black | LeahFallVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HasFile:{{Target}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown, Black | LeahFallVariant}}.png": true
             }
         },
         {
@@ -1382,19 +1470,43 @@
             },
             "PatchMode": "Overlay",
         },
+        {
+            "LogName": "Leah Summer - Sun - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Leah",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Hat, NoHat | LeahSummerSunVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Hat, NoHat | LeahSummerSunVariant}}.png": true
+            },
+            "PatchMode": "Overlay",
+        },
+        {
+            "LogName": "Leah Fall - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Leah",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown, Black | LeahFallVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Leah_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown, Black | LeahFallVariant}}.png": true
+            },
+            "PatchMode": "Overlay",
+        },
 
         // Marnie Main
 
         {
-            "LogName": "Marnie Fall Main",
+            "LogName": "Marnie Spring Main",
             "Action": "EditImage",
             "Target": "Characters/Marnie, Portraits/Marnie",
-            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
+            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Yellow | MarnieSpringVariant}}.png",
             "When":
             {
-                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png": true,
-                "Season": "fall",
-                "Weather": "sun, wind"
+                "Season": "spring",
+                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Yellow | MarnieSpringVariant}}.png": true,
             },
         },
         {
@@ -1404,21 +1516,91 @@
             "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png",
             "When":
             {
-                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png": true,
                 "Season": "summer",
-                "Weather": "sun, wind"
+                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png": true,
             },
         },
+        {
+            "LogName": "Marnie Fall Main",
+            "Action": "EditImage",
+            "Target": "Characters/Marnie, Portraits/Marnie",
+            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png": true,
+            },
+        },
+        {
+            "LogName": "Marnie Winter Main",
+            "Action": "EditImage",
+            "Target": "Characters/Marnie, Portraits/Marnie",
+            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png": true,
+            },
+        },
+
 
         // Marnie Work
 
         {
-            "LogName": "Marnie Work",
+            "LogName": "Marnie - Apron Overlay Character",
             "Action": "EditImage",
-            "Target": "Characters/Marnie, Portraits/Marnie",
+            "Target": "Characters/Marnie",
             "FromFile": "{{Target}}/Marnie_Apron.png",
             "When":
             {
+                "LocationName": "AnimalShop"
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Marnie Spring - Apron Overlay Portrait",
+            "Action": "EditImage",
+            "Target": "Portraits/Marnie",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}Work_{{Random:Green, Yellow | MarnieSpringVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "LocationName": "AnimalShop"
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Marnie Summer - Apron Overlay Portrait",
+            "Action": "EditImage",
+            "Target": "Portraits/Marnie",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}{{IndoorVariant}}Work_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "LocationName": "AnimalShop"
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Marnie Fall - Apron Overlay Portrait",
+            "Action": "EditImage",
+            "Target": "Portraits/Marnie",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}{{IndoorVariant}}Work_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "LocationName": "AnimalShop"
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Marnie Winter - Apron Overlay Portrait",
+            "Action": "EditImage",
+            "Target": "Portraits/Marnie",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}{{IndoorVariant}}Work_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
                 "LocationName": "AnimalShop"
             },
             "PatchMode": "Overlay"
@@ -1470,15 +1652,8 @@
             "LogName": "Pam Hug Overlay",
             "Action": "EditImage",
             "Target": "Characters/Penny",
-            "FromFile": "Characters/Pam/Overlay/Pam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "FromFile": "Characters/Pam/HugOverlay/Pam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
             "ToArea":
-            {
-                "X": 48,
-                "Y": 288,
-                "Width": 16,
-                "Height": 32
-            },
-            "FromArea":
             {
                 "X": 48,
                 "Y": 288,
@@ -1487,7 +1662,7 @@
             },
             "When":
             {
-                "HasFile:Characters/Pam/Overlay/Pam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png": true
+                "HasFile:Characters/Pam/HugOverlay/Pam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png": true
             },
             "PatchMode": "Overlay"
         },
@@ -1498,24 +1673,24 @@
             "LogName": "Pam - Rain/Snow Bus Stop Repair CC Completion",
             "Action": "EditImage",
             "Target": "Characters/Pam, Portraits/Pam",
-            "FromFile": "{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
+            "FromFile": "{{Target}}/PostBus/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
             "When":
             {
                 "Weather": "rain, storm, snow",
                 "HasFlag": "ccVault",
-                "HasFile:{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png": true,
+                "HasFile:{{Target}}/PostBus/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png": true,
             },
         },
         {
             "LogName": "Pam - Rain/Snow Bus Stop Repair Joja Completion",
             "Action": "EditImage",
             "Target": "Characters/Pam, Portraits/Pam",
-            "FromFile": "{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
+            "FromFile": "{{Target}}/PostBus/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
             "When":
             {
                 "Weather": "rain, storm, snow",
                 "HasFlag": "jojaVault",
-                "HasFile:{{Target}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png": true,
+                "HasFile:{{Target}}/PostBus/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png": true,
             },
         },
 
@@ -2323,19 +2498,13 @@
         {
             "LogName": "Swimsuits Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Emily, Characters/Evelyn, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent",
+            "Target": "Characters/Abigail, Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Emily, Characters/Evelyn, Characters/Gus, Characters/Harvey, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent",
             "FromFile": "Characters/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
             "When":
             {
 
                 "HasFile:Characters/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png": true,
             }
-        },
-        {
-            "LogName": "Elliott Swimsuits Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Elliott",
-            "FromFile": "Characters/{{Swimsuits}}/ElliottSwim_{{Random:Paunch, Thin | ElliottSwimVariant}}.png",
         },
         {
             "LogName": "George Swimsuits Character Sprites",
