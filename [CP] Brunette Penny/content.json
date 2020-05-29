@@ -1,9 +1,9 @@
 {
-    "Format": "1.10",
+    "Format": "1.14.0",
     "DynamicTokens": [
 
-       // Standard Dynamic Tokens
-       
+        // Standard Dynamic Tokens
+
         {
             "Name": "IndoorVariant", // Indoors
             "Value": "_Indoor",
@@ -25,7 +25,7 @@
             "Value": "_Sun",
             "When":
             {
-                "Season": "spring, summer, fall",
+                "Season": "spring, summer, fall, winter",
                 "Weather": "sun, wind",
             },
         },
@@ -44,7 +44,7 @@
             "When":
             {
                 "Season": "winter",
-                "Weather": "sun, wind, snow",
+                "Weather": "snow",
             },
         },
 
@@ -240,11 +240,11 @@
         {
             "AllowValues": "true, false",
             "Default": "true"
-        },       
+        },
     },
 
     "Changes": [
-        
+
         // Penny
 
         {
@@ -267,29 +267,28 @@
                 "HasFile:{{Target}}/Penny_{{season}}{{WeatherVariant}}.png": true,
             },
         },
-
         {
             "LogName": "Penny Spring Sun",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green, Jumper, White | PennySpringSunVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green | PennySpringSunVariant}}.png",
             "When":
             {
                 "Season": "spring",
                 "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green, Jumper, White | PennySpringSunVariant}}.png": true,
+                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green | PennySpringSunVariant}}.png": true,
             },
         },
         {
             "LogName": "Penny Summer Sun",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Fruitcake, Lime, Green | PennySummerSunVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerSunVariant}}.png",
             "When":
             {
                 "Season": "summer",
                 "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Fruitcake, Lime, Green | PennySummerSunVariant}}.png": true,
+                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerSunVariant}}.png": true,
             },
         },
         {
@@ -308,12 +307,12 @@
             "LogName": "Penny Fall Sun",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed, Frills, Sweater | PennyFallSunVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallSunVariant}}.png",
             "When":
             {
                 "Season": "fall",
                 "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed, Frills, Sweater | PennyFallSunVariant}}.png": true,
+                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallSunVariant}}.png": true,
             },
         },
         {
@@ -342,7 +341,6 @@
                 "Relationship:Penny": "Married, Engaged",
             },
             "PatchMode": "Overlay",
-            "Disabled": true,
         },
         {
             "LogName": "Penny Pendant",
@@ -355,7 +353,75 @@
                 "Relationship:Penny": "Married, Engaged",
             },
             "PatchMode": "Overlay",
-            "Disabled": true,
+        },
+        {
+            "LogName": "Penny Spring Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green | PennySpringSunVariant}}.png",
+            "When":
+            {
+                "Season": "spring",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green | PennySpringSunVariant}}.png": true,
+                "Relationship:Penny": "Married, Engaged",
+            },
+            "PatchMode": "Overlay",
+        },
+        {
+            "LogName": "Penny Summer Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerSunVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerSunVariant}}.png": true,
+                "Relationship:Penny": "Married, Engaged",
+            },
+            "PatchMode": "Overlay",
+        },
+        {
+            "LogName": "Penny Summer Rain",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{WeatherVariant}}_{{Random:Denim, White, Yellow | PennySummerRainVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "Weather": "rain, storm",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{WeatherVariant}}_{{Random:Denim, White, Yellow | PennySummerRainVariant}}.png": true,
+                "Relationship:Penny": "Married, Engaged",
+            },
+            "PatchMode": "Overlay",
+        },
+        {
+            "LogName": "Penny Fall Sun",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallSunVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "Weather": "sun, wind",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallSunVariant}}.png": true,
+                "Relationship:Penny": "Married, Engaged",
+            },
+            "PatchMode": "Overlay",
+        },
+        {
+            "LogName": "Penny Winter",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png",
+            "When":
+            {
+                "Season": "winter",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
+                "Relationship:Penny": "Married, Engaged",
+            },
+            "PatchMode": "Overlay",
         },
 
         // B E G I N  M A T E R N I T Y  S P R I T E S
@@ -383,7 +449,7 @@
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,                
+                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
             },
         },
 
@@ -405,19 +471,18 @@
         // E N D  F E S T I V A L  P O R T R A I T S    
 
         // B E G I N  S W I M S U I T  C H A R A C T E R S
-       
+
         {
             "LogName": "Penny Swimsuits Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Penny",
             "FromFile": "Characters/{{Swimsuits}}/PennySwim_{{Random:blue, yellow}}.png",
-            "Disabled": true
         },
 
         //  E N D  S W I M S U I T  C H A R A C T E R S
 
         // B E G I N  S W I M S U I T  P O R T R A I T S
-        
+
         {
             "LogName": "Penny Swimsuits Portrait Sprites",
             "Action": "EditImage",
@@ -439,7 +504,7 @@
             "ToArea":
             {
                 "X": 0,
-                "Y": 228,
+                "Y": 288,
                 "Width": 48,
                 "Height": 32
             },
