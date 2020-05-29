@@ -1561,7 +1561,7 @@
             "LogName": "Marnie Spring - Apron Overlay Portrait",
             "Action": "EditImage",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}Work_{{Random:Green, Yellow | MarnieSpringVariant}}.png",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:Green, Yellow | MarnieSpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
@@ -1573,7 +1573,7 @@
             "LogName": "Marnie Summer - Apron Overlay Portrait",
             "Action": "EditImage",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}{{IndoorVariant}}Work_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png",
             "When":
             {
                 "Season": "summer",
@@ -1585,7 +1585,7 @@
             "LogName": "Marnie Fall - Apron Overlay Portrait",
             "Action": "EditImage",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}{{IndoorVariant}}Work_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
             "When":
             {
                 "Season": "fall",
@@ -1597,7 +1597,7 @@
             "LogName": "Marnie Winter - Apron Overlay Portrait",
             "Action": "EditImage",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}{{IndoorVariant}}Work_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png",
             "When":
             {
                 "Season": "winter",
