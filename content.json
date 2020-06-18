@@ -388,6 +388,25 @@
             }
         },
 
+        // Krobus Style
+
+        {
+            "Name": "KrobusStyle",
+            "Value": "Vanilla",
+            "When":
+            {
+                "HasMod:minervamaga.CP.StandardizedKrobus": false
+            }
+        },
+        {
+            "Name": "KrobusStyle",
+            "Value": "Standardized",
+            "When":
+            {
+                "HasMod:minervamaga.CP.StandardizedKrobus": true
+            }
+        },
+
     ],
 
     "ConfigSchema":
@@ -1212,7 +1231,7 @@
             "LogName": "Krobus Standard",
             "Action": "EditImage",
             "Target": "Characters/Krobus, Portraits/Krobus",
-            "FromFile": "{{Target}}/Krobus_Scarf.png",
+            "FromFile": "{{Target}}/{{KrobusStyle}}/Krobus_Scarf.png",
             "When":
             {
                 "Weather": "sun, wind",
@@ -1225,7 +1244,7 @@
             "LogName": "Krobus Trenchcoat",
             "Action": "EditImage",
             "Target": "Characters/Krobus_Trenchcoat, Portraits/Krobus_Trenchcoat",
-            "FromFile": "{{Target}}/Krobus_Trenchcoat.png",
+            "FromFile": "{{Target}}/{{KrobusStyle}}Krobus_Trenchcoat.png",
             "When":
             {
                 "HasFile:{{Target}}/Krobus_Trenchcoat.png": true
