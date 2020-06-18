@@ -491,14 +491,14 @@
         // Marnie
 
         {
-            "LogName": "Cursors Marnie Spring",
+            "LogName": "Cursors Marnie Spring & Winter",
             "Action": "EditImage",
             "Target": "LooseSprites/Cursors",
-            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Green, Yellow | MarnieSpringVariant}}.png",
+            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:1, 2 | MarnieSpringWinterVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Green, Yellow | MarnieSpringVariant}}.png": true,
+                "Season": "spring, winter",
+                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:1, 2 | MarnieSpringWinterVariant}}.png": true,
             },
             "ToArea":
             {
@@ -510,52 +510,14 @@
             "PatchMode": "Replace",
         },
         {
-            "LogName": "Cursors Marnie Summer",
+            "LogName": "Cursors Marnie Summer & Fall",
             "Action": "EditImage",
             "Target": "LooseSprites/Cursors",
-            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png",
+            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:1, 2, 3 | MarnieSummerFallVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png": true,
-            },
-            "ToArea":
-            {
-                "X": 558,
-                "Y": 1423,
-                "Width": 60,
-                "Height": 28
-            },
-            "PatchMode": "Replace",
-        },
-        {
-            "LogName": "Cursors Marnie Fall",
-            "Action": "EditImage",
-            "Target": "LooseSprites/Cursors",
-            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png": true,
-            },
-            "ToArea":
-            {
-                "X": 558,
-                "Y": 1423,
-                "Width": 60,
-                "Height": 28
-            },
-            "PatchMode": "Replace",
-        },
-        {
-            "LogName": "Cursors Marnie Winter",
-            "Action": "EditImage",
-            "Target": "LooseSprites/Cursors",
-            "FromFile": "Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png": true,
+                "Season": "summer, fall",
+                "HasFile:Cursors/Marnie/Marnie_{{Season}}_Outdoor{{WeatherVariant}}_{{Random:1, 2, 3 | MarnieSummerFallVariant}}.png": true,
             },
             "ToArea":
             {
@@ -813,18 +775,7 @@
         // Caroline
 
         {
-            "LogName": "Caroline Fall",
-            "Action": "EditImage",
-            "Target": "Characters/Caroline, Portraits/Caroline",
-            "FromFile": "{{Target}}/Caroline_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown | CarolineFallRainVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "HasFile:{{Target}}/Caroline_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown | CarolineFallRainVariant}}.png": true
-            },
-        },
-        {
-            "LogName": "Caroline Spring Rain",
+            "LogName": "Caroline Spring Sun",
             "Action": "EditImage",
             "Target": "Characters/Caroline, Portraits/Caroline",
             "FromFile": "{{Target}}/Caroline_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:StripedKnit, SweaterCollar | CarolineSpringSunVariant}}.png",
@@ -845,6 +796,17 @@
                 "Season": "spring",
                 "Weather": "rain, storm",
                 "HasFile:{{Target}}/Caroline_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Creme, Brown, Blue | CarolineSpringRainVariant}}.png": true
+            },
+        },
+        {
+            "LogName": "Caroline Fall",
+            "Action": "EditImage",
+            "Target": "Characters/Caroline, Portraits/Caroline",
+            "FromFile": "{{Target}}/Caroline_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown | CarolineFallRainVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
+                "HasFile:{{Target}}/Caroline_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Red, Brown | CarolineFallRainVariant}}.png": true
             },
         },
 
@@ -868,44 +830,10 @@
             "LogName": "Demetrius Spring",
             "Action": "EditImage",
             "Target": "Characters/Demetrius, Portraits/Demetrius",
-            "FromFile": "{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | DemetriusSpringVariant}}.png",
+            "FromFile": "{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | DemetriusVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "HasFile:{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | DemetriusSpringVariant}}.png": true
-            },
-        },
-        {
-            "LogName": "Demetrius Summer",
-            "Action": "EditImage",
-            "Target": "Characters/Demetrius, Portraits/Demetrius",
-            "FromFile": "{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Grey | DemetriusSummerVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "HasFile:{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Grey | DemetriusSummerVariant}}.png": true
-            },
-        },
-        {
-            "LogName": "Demetrius Fall",
-            "Action": "EditImage",
-            "Target": "Characters/Demetrius, Portraits/Demetrius",
-            "FromFile": "{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}_{{Random:Orange, Green | DemetriusFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "HasFile:{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}_{{Random:Orange, Green | DemetriusFallVariant}}.png": true
-            },
-        },
-        {
-            "LogName": "Demetrius Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Demetrius, Portraits/Demetrius",
-            "FromFile": "{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Grey, Blue | DemetriusWinterVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Grey, Blue | DemetriusWinterVariant}}g": true
+                "HasFile:{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | DemetriusVariant}}.png": true
             },
         },
 
@@ -981,38 +909,14 @@
         // Emily
 
         {
-            "LogName": "Emily Spring",
+            "LogName": "Emily Spring & Summer",
             "Action": "EditImage",
             "Target": "Characters/Emily, Portraits/Emily",
-            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Red, Short | EmilySpringVariant}}.png",
+            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | EmilySpringSummerVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Red, Short | EmilySpringVariant}}.png": true,
-            }
-        },
-        {
-            "LogName": "Emily Summer - Sun",
-            "Action": "EditImage",
-            "Target": "Characters/Emily, Portraits/Emily",
-            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png": true,
-            }
-        },
-        {
-            "LogName": "Emily Summer - Rain",
-            "Action": "EditImage",
-            "Target": "Characters/Emily, Portraits/Emily",
-            "FromFile": "{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "rain, storm",
-                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png": true,
+                "Season": "spring, summer",
+                "HasFile:{{Target}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | EmilySpringSummerVariant}}.png": true,
             }
         },
         {
@@ -1030,40 +934,14 @@
         // Emily Portrait Mermaid Pendant
 
         {
-            "LogName": "Emily Spring - Mermaid Pendant",
+            "LogName": "Emily Spring & Summer- Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Red, Short | EmilySpringVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | EmilySpringSummerVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Red, Short | EmilySpringVariant}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Emily Summer - Sun - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Yellow, Orange, Pink | EmilySummerSunVariant}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Emily Summer - Rain - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Emily",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Flower, Orange, Pink | EmilySummerRainVariant}}.png": true,
+                "Season": "spring, summer",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Emily_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | EmilySpringSummerVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
@@ -1112,25 +990,14 @@
         // Haley
 
         {
-            "LogName": "Haley Spring",
+            "LogName": "Haley Spring & Summer",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | HaleySpringSummerVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png": true,
-            }
-        },
-        {
-            "LogName": "Haley Summer",
-            "Action": "EditImage",
-            "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png": true,
+                "Season": "spring, summer",
+                "HasFile:{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | HaleySpringSummerVariant}}.png": true,
             }
         },
         {
@@ -1172,26 +1039,14 @@
         // Haley Portrait Mermaid Pendant
 
         {
-            "LogName": "Haley Spring - Mermaid Pendant",
+            "LogName": "Haley Spring & Summer - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | HaleySpringSummerVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Haley Summer - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png": true,
+                "Season": "spring, summer",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | HaleySpringSummerVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
@@ -1223,27 +1078,15 @@
         // Haley Cow Photos
 
         {
-            "LogName": "Haley Spring - Cow Photos",
+            "LogName": "Haley Spring & Summer - Cow Photos",
             "Action": "EditImage",
             "Target": "LooseSprites/cowPhotos",
-            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png",
+            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | HaleySpringSummerVariant}}.png",
             "When":
             {
-                "Season": "spring",
+                "Season": "spring, summer",
                 "Weather": "sun, wind",
-                "HasFile:Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Sunglasses, Sunglasses2, Stripes | HaleySpringOutfit}}.png": true,
-            }
-        },
-        {
-            "LogName": "Haley Summer - Cow Photos",
-            "Action": "EditImage",
-            "Target": "LooseSprites/cowPhotos",
-            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "sun, wind",
-                "HasFile:Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Lavender, Pink, White | HaleySummerOutfit}}.png": true,
+                "HasFile:Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | HaleySpringSummerVariant}}.png": true,
             }
         },
         {
@@ -1281,6 +1124,7 @@
             {
                 "Season": "spring",
                 "Weather": "sun, wind",
+                "HasFile:{{Target}}/Harvey_{{Season}}{{WeatherVariant}}_{{Random:Sweater, NoVest | HarveySpringVariant}}.png": true
             },
         },
         {
@@ -1291,7 +1135,8 @@
             "When":
             {
                 "Season": "fall",
-                "Weather": "rain, storm"
+                "Weather": "rain, storm",
+                "HasFile:{{Target}}/Harvey_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Scarf, Green | HarveyFallRainVariant}}.png": true
             },
         },
         {
@@ -1328,7 +1173,7 @@
                 "LocationName": "Farm"
             },
             "PatchMode": "Overlay"
-        },        
+        },
 
         // Harvey Portrait Mermaid Pendant
 
@@ -1508,50 +1353,27 @@
         // Marnie Main
 
         {
-            "LogName": "Marnie Spring Main",
+            "LogName": "Marnie Spring & Winter Main",
             "Action": "EditImage",
             "Target": "Characters/Marnie, Portraits/Marnie",
-            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Yellow | MarnieSpringVariant}}.png",
+            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | MarnieSpringWinterVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Yellow | MarnieSpringVariant}}.png": true,
+                "Season": "spring, winter",
+                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | MarnieSpringWinterVariant}}.png": true,
             },
         },
         {
-            "LogName": "Marnie Summer Main",
+            "LogName": "Marnie Summer & Fall Main",
             "Action": "EditImage",
             "Target": "Characters/Marnie, Portraits/Marnie",
-            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png",
+            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | MarnieSummerFallVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png": true,
+                "Season": "summer, fall",
+                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 | MarnieSummerFallVariant}}.png": true,
             },
         },
-        {
-            "LogName": "Marnie Fall Main",
-            "Action": "EditImage",
-            "Target": "Characters/Marnie, Portraits/Marnie",
-            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png": true,
-            },
-        },
-        {
-            "LogName": "Marnie Winter Main",
-            "Action": "EditImage",
-            "Target": "Characters/Marnie, Portraits/Marnie",
-            "FromFile": "{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{Target}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png": true,
-            },
-        },
-
 
         // Marnie Work
 
@@ -1567,49 +1389,25 @@
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Marnie Spring - Apron Overlay Portrait",
+            "LogName": "Marnie Spring & Winter - Apron Overlay Portrait",
             "Action": "EditImage",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:Green, Yellow | MarnieSpringVariant}}.png",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:1, 2 | MarnieSpringWinterVariant}}.png",
             "When":
             {
-                "Season": "spring",
+                "Season": "spring, winter",
                 "LocationName": "AnimalShop"
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Marnie Summer - Apron Overlay Portrait",
+            "LogName": "Marnie Summer & Fall - Apron Overlay Portrait",
             "Action": "EditImage",
             "Target": "Portraits/Marnie",
-            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:Blue, White, Yellow | MarnieSummerVariant}}.png",
+            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:1, 2, 3 | MarnieSummerFallVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "LocationName": "AnimalShop"
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Marnie Fall - Apron Overlay Portrait",
-            "Action": "EditImage",
-            "Target": "Portraits/Marnie",
-            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:Brown, Pattern, Tan | MarnieFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "LocationName": "AnimalShop"
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Marnie Winter - Apron Overlay Portrait",
-            "Action": "EditImage",
-            "Target": "Portraits/Marnie",
-            "FromFile": "{{Target}}/ApronOverlays/Marnie_{{Season}}_Work_{{Random:Scarf, Earmuffs | MarnieWinterVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
+                "Season": "summer, fall",
                 "LocationName": "AnimalShop"
             },
             "PatchMode": "Overlay"
@@ -1693,7 +1491,8 @@
                 "DayEvent:stardew valley fair": false,
                 "DayEvent:wedding": false,
                 "HasFile:{{Target}}/Bandannas/Maru_Bandanna_{{Random:1, 2, 3, 4, 5, 6, null, null, null, null, null, null | MaruBandannas}}.png": true
-            }
+            },
+            "PatchMode": "Overlay"
         },
 
         // Maru Hospital
@@ -1846,28 +1645,15 @@
         // Penny Main
 
         {
-            "LogName": "Penny Spring - Sun",
+            "LogName": "Penny Spring, Summer & Fall- Sun",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Brown | PennySpringVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySpringSummerFallSunVariant}}.png",
             "When":
             {
-                "Season": "spring",
+                "Season": "spring, summer, fall",
                 "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Brown | PennySpringVariant}}.png": true,
-
-            },
-        },
-        {
-            "LogName": "Penny Summer - Sun",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png": true,
+                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySpringSummerFallSunVariant}}.png": true,
 
             },
         },
@@ -1881,19 +1667,6 @@
                 "Season": "summer",
                 "Weather": "rain, storm",
                 "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png": true,
-            },
-        },
-        {
-            "LogName": "Penny Fall - Sun",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallVariant}}.png": true,
-
             },
         },
         {
@@ -1911,28 +1684,15 @@
         // Penny Portraits Mermaid Pendant
 
         {
-            "LogName": "Penny Spring - Sun - Mermaid Pendant",
+            "LogName": "Penny Spring, Summer & Fall- Sun - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Brown | PennySpringVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySpringSummerFallSunVariant}}.png",
             "When":
             {
-                "Season": "spring",
+                "Season": "spring, summer, fall",
                 "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Brown | PennySpringVariant}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Penny Summer - Sun - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerVariant}}.png": true,
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySpringSummerFallSunVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
@@ -1946,20 +1706,6 @@
                 "Season": "summer",
                 "Weather": "rain, storm",
                 "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Penny Fall - Sun - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallVariant}}.png": true,
-
             },
             "PatchMode": "Overlay"
         },
@@ -1979,49 +1725,38 @@
         // Robin Main
 
         {
-            "LogName": "Robin Spring - Rain",
-            "Action": "EditImage",
-            "Target": "Characters/Robin, Portraits/Robin",
-            "FromFile": "{{Target}}/Robin_{{Season}}{{WeatherVariant}}{{Random:1, 2 | RobinSpringRainVariant}}.png",
-            "When":
-            {
-                "Season": "spring",
-                "Weather": "rain, storm",
-                "HasFile:{{Target}}/Robin_{{Season}}{{WeatherVariant}}{{Random:1, 2 | RobinSpringRainVariant}}.png": true
-            },
-        },
-        {
             "LogName": "Robin Spring - Sun",
             "Action": "EditImage",
             "Target": "Characters/Robin, Portraits/Robin",
-            "FromFile": "{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}{{Random:1, 2 | RobinSpringSunVariant}}.png",
+            "FromFile": "{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | RobinSpringSunVariant}}.png",
             "When":
             {
                 "Season": "spring",
                 "Weather": "sun, wind",
-                "HasFile:{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}{{Random:1, 2 | RobinSpringSunVariant}}.png": true
+                "HasFile:{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | RobinSpringSunVariant}}.png": true
             },
         },
         {
-            "LogName": "Robin Fall",
+            "LogName": "Robin Spring - Rain",
             "Action": "EditImage",
             "Target": "Characters/Robin, Portraits/Robin",
-            "FromFile": "{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}{{Random:Orange, Yellow | RobinFallVariant}}.png",
+            "FromFile": "{{Target}}/Robin_{{Season}}{{WeatherVariant}}_{{Random:1, 2 | RobinSpringRainVariant}}.png",
             "When":
             {
-                "Season": "fall",
-                "HasFile:{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{Random:Orange, Yellow | RobinFallVariant}}.png": true
+                "Season": "spring",
+                "Weather": "rain, storm",
+                "HasFile:{{Target}}/Robin_{{Season}}{{WeatherVariant}}_{{Random:1, 2 | RobinSpringRainVariant}}.png": true
             },
         },
         {
-            "LogName": "Robin Winter",
+            "LogName": "Robin Fall & Winter",
             "Action": "EditImage",
             "Target": "Characters/Robin, Portraits/Robin",
-            "FromFile": "{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}{{Random:Red, Black | RobinWinterVariant}}.png",
+            "FromFile": "{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | RobinFallWinterVariant}}.png",
             "When":
             {
-                "Season": "winter",
-                "HasFile:{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}{{Random:Red, Black | RobinWinterVariant}}.png": true
+                "Season": "fall, winter",
+                "HasFile:{{Target}}/Robin_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | RobinFallWinterVariant}}.png": true
             },
         },
 
