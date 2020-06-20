@@ -1244,7 +1244,7 @@
             "LogName": "Krobus Trenchcoat",
             "Action": "EditImage",
             "Target": "Characters/Krobus_Trenchcoat, Portraits/Krobus_Trenchcoat",
-            "FromFile": "{{Target}}/{{KrobusStyle}}Krobus_Trenchcoat.png",
+            "FromFile": "{{Target}}/{{KrobusStyle}}/Krobus_Trenchcoat.png",
             "When":
             {
                 "HasFile:{{Target}}/Krobus_Trenchcoat.png": true
