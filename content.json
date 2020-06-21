@@ -1528,7 +1528,7 @@
         {
             "LogName": "Maru Glasses",
             "Action": "EditImage",
-            "Target": "Characters/Maru_Hospital",
+            "Target": "Characters/Maru",
             "FromFile": "{{Target}}/Maru_Glasses.png",
             "When":
             {
@@ -1537,7 +1537,7 @@
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Maru Hospital Gkasses",
+            "LogName": "Maru Hospital Glasses",
             "Action": "EditImage",
             "Target": "Characters/Maru_Hospital",
             "FromFile": "{{Target}}/Maru_Glasses.png",
@@ -1664,79 +1664,77 @@
         // Penny Main
 
         {
-            "LogName": "Penny Spring, Summer & Fall- Sun",
+            "LogName": "Penny Spring",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySpringSummerFallSunVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 | PennySpringVariant}}.png",
             "When":
             {
-                "Season": "spring, summer, fall",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySpringSummerFallSunVariant}}.png": true,
+                "Season": "spring",
+                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 | PennySpringVariant}}.png": true,
+
+            },
+        },        
+        {
+            "LogName": "Penny Summer & Winter",
+            "Action": "EditImage",
+            "Target": "Characters/Penny, Portraits/Penny",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySummerWinterVariant}}.png",
+            "When":
+            {
+                "Season": "summer, winter",
+                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySummerWinterVariant}}.png": true,
 
             },
         },
         {
-            "LogName": "Penny Summer - Rain",
+            "LogName": "Penny Fall",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 5 | PennyFallVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "Weather": "rain, storm",
-                "HasFile:{{Target}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png": true,
-            },
-        },
-        {
-            "LogName": "Penny Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
+                "Season": "fall",
+                "HasFile:{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 5 | PennyFallVariant}}.png": true,
+
             },
         },
 
         // Penny Portraits Mermaid Pendant
 
         {
-            "LogName": "Penny Spring, Summer & Fall- Sun - Mermaid Pendant",
+            "LogName": "Penny Spring - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySpringSummerFallSunVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 | PennySpringVariant}}.png",
             "When":
             {
-                "Season": "spring, summer, fall",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySpringSummerFallSunVariant}}.png": true,
+                "Season": "spring",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 | PennySpringVariant}}.png": true,
+            },
+            "PatchMode": "Overlay"
+        },       
+        {
+            "LogName": "Penny Summer & Winter - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySummerWinterVariant}}.png",
+            "When":
+            {
+                "Season": "summer, winter",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 | PennySummerWinterVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
-        {
-            "LogName": "Penny Summer - Rain - Mermaid Pendant",
+         {
+            "LogName": "Penny Fall - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 5 | PennyFallVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{WeatherVariant}}_{{Random:White, Yellow | PennySummerRain}}.png": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Penny Winter - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
+                "Season": "fall",
+                "HasFile:Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 5 | PennyFallVariant}}.png": true,
             },
             "PatchMode": "Overlay"
         },
