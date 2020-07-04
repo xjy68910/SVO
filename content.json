@@ -398,6 +398,11 @@
             "AllowValues": "true, false",
             "Default": "false"
         },
+        "SebastianPiercings":
+        {
+            "AllowValues": "true, false",
+            "Default": "false"
+        },
 
         // Wizard
 
@@ -1598,27 +1603,96 @@
         // Sebastian Glasses
 
         {
-            "LogName": "Sebastian Glasses",
+            "LogName": "Sebastian Glasses - Spring, Fall & Winter",
             "Action": "EditImage",
-            "Target": "Characters/Sebastian, Portraits/Sebastian",
-            "FromFile": "{{Target}}/Sebastian_Glasses.png",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "{{Target}}/Glasses/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=SebastianSpringFallWinterVariant}}.png",
             "When":
             {
                 "SebastianGlasses": true,
-                "DayEvent |contains=spirit's eve": false,
+                "Season": "spring, fall, winter",
+                "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Sebastian Glasses",
+            "LogName": "Sebastian Glasses - Summer",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "{{Target}}/Glasses/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3. 4 |key=SebastianSummerVariant}}.png",
+            "When":
+            {
+                "SebastianGlasses": true,
+                "Season": "summer",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Sebastian Glasses - Spirit's Eve",
             "Action": "EditImage",
             "Target": "Characters/Sebastian, Portraits/Sebastian",
-            "FromFile": "{{Target}}/Sebastian_Glasses.png",
+            "FromFile": "{{Target}}/Glasses/Festivals/Sebastian_Glasses_Overlay_{{Festival}}_{{Random:1, 2, 3 |key=SebastianSpiritsEveIceVariant}}.png",
             "When":
             {
                 "SebastianGlasses": true,
                 "DayEvent": "spirit's eve",
-                "LocationName": "Farm"
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Sebastian Glasses - Other Festivals",
+            "Action": "EditImage",
+            "Target": "Characters/Sebastian, Portraits/Sebastian",
+            "FromFile": "{{Target}}/Glasses/Festivals/Sebastian_Glasses_Overlay_{{Festival}}.png",
+            "When":
+            {
+                "SebastianGlasses": true,
+                "DayEvent": "Egg Festival, flower dance, stardew valley fair, luau",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+
+        // Sebastian Piercings
+        
+        {
+            "LogName": "Sebastian Piercings",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "{{Target}}/Piercings/Sebastian_Piercings_Overlay_General.png",
+            "When":
+            {
+                "SebastianPiercings": true,    
+                "HasFile:{{FromFile}}": true,   
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Sebastian Piercings - Rain",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "{{Target}}/Piercings/Sebastian_Piercings_Overlay_Rain.png",
+            "When":
+            {
+                "SebastianPiercings": true,
+                "IsOutdoors": true,
+                "Weather": "rain, storm, snow",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Sebastian Piercings - Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "{{Target}}/Piercings/Festivals/Sebastian_Piercings_Overlay_{{Festival}}_{{Random:1, 2, 3 |key=SebastianSpiritsEveIceVariant}}.png",
+            "When":
+            {
+                "SebastianPiercings": true,
+                "DayEvent": "spirit's eve, festival of ice",
+                "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
         },
@@ -1626,7 +1700,7 @@
         // Sebastian 10-Heart Event
 
         {
-            "LogName": "Sebastian Helmet", // Ride for the Slide
+            "LogName": "Sebastian Helmet", 
             "Action": "EditImage",
             "Target": "Portraits/Sebastian",
             "FromFile": "{{Target}}/Sebastian_Motorbike_Helmet.png",
@@ -1686,7 +1760,7 @@
 
         // Shane Portraits Mermaid Pendant
 
-         {
+        {
             "LogName": "Shane All Seasons",
             "Action": "EditImage",
             "Target": "Portraits/Shane",
