@@ -42,7 +42,7 @@
             "Value": "_Snow",
             "When":
             {
-                "Season": "winter",
+                "Season": "fall, winter", // Fall added for support for CoF
                 "Weather": "snow",
             },
         },
@@ -865,6 +865,20 @@
             }
         },
 
+        // Gus
+
+        {
+            "LogName": "Gus Summer",
+            "Action": "EditImage",
+            "Target": "Characters/Gus, Portraits/Gus",
+            "FromFile": "{{Target}}/Gus_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=GusSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "HasFile:{{FromFile}}": true
+            },
+        },
+
         // Haley
 
         {
@@ -994,29 +1008,16 @@
         // Harvey Main  
 
         {
-            "LogName": "Harvey Spring - Indoor",
+            "LogName": "Harvey Spring & Fall",
             "Action": "EditImage",
             "Target": "Characters/Harvey, Portraits/Harvey",
-            "FromFile": "{{Target}}/Harvey_{{Season}}{{WeatherVariant}}_{{Random:Sweater, NoVest |key=HarveySpringVariant}}.png",
+            "FromFile": "{{Target}}/Harvey_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=HarveySpringFallVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "Weather": "sun, wind",
+                "Season": "spring, fall",
                 "HasFile:{{FromFile}}": true
             },
-        },
-        {
-            "LogName": "Harvey Fall - Indoor Rain",
-            "Action": "EditImage",
-            "Target": "Characters/Harvey, Portraits/Harvey",
-            "FromFile": "{{Target}}/Harvey_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Scarf, Green |key=HarveyFallRainVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "rain, storm",
-                "HasFile:{{FromFile}}": true
-            },
-        },
+        },        
         {
             "LogName": "Harvey - Labcoat",
             "Action": "EditImage",
@@ -1056,27 +1057,13 @@
         // Harvey Portrait Mermaid Pendant
 
         {
-            "LogName": "Harvey Spring Sun - Mermaid Pendant",
+            "LogName": "Harvey Spring & Fall - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Harvey",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Harvey_{{Season}}{{WeatherVariant}}_{{Random:NoVest, Sweater |key=HarveySpringVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Harvey_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=HarveySpringFallVariant}}.png",
             "When":
             {
-                "Season": "spring",
-                "Weather": "sun, wind",
-                "HasFile:{{FromFile}}": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Harvey Fall Rain - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Harvey",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Harvey_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Scarf, Green |key=HarveyFallRainVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "Weather": "rain, storm",
+                "Season": "spring, fall",
                 "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
@@ -1605,7 +1592,7 @@
         {
             "LogName": "Sebastian Glasses - Spring, Fall & Winter",
             "Action": "EditImage",
-            "Target": "Portraits/Sebastian",
+            "Target": "Characters/Sebastian, Portraits/Sebastian",
             "FromFile": "{{Target}}/Glasses/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=SebastianSpringFallWinterVariant}}.png",
             "When":
             {
@@ -1618,7 +1605,7 @@
         {
             "LogName": "Sebastian Glasses - Summer",
             "Action": "EditImage",
-            "Target": "Portraits/Sebastian",
+            "Target": "Characters/Sebastian, Portraits/Sebastian",
             "FromFile": "{{Target}}/Glasses/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3. 4 |key=SebastianSummerVariant}}.png",
             "When":
             {
@@ -1707,7 +1694,7 @@
             "When":
             {
                 "Hearts:Sebastian": "10, 11, 12, 13",
-                "HasSeenEvent currentPlayer |contains=384882": false,
+                "HasSeenEvent: currentPlayer |contains=384882": false,
                 "LocationName": "Mountain"
             },
         },
