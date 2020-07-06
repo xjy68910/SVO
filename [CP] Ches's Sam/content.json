@@ -1,0 +1,308 @@
+{
+    "Format": "1.15.0",
+    "DynamicTokens": [
+
+        // Standard Dynamic Tokens
+
+        {
+            "Name": "IndoorVariant", // Indoors
+            "Value": "_Indoor"
+        },
+        {
+            "Name": "IndoorVariant", // Outdoors
+            "Value": "_Outdoor",
+            "When":
+            {
+                "IsOutdoors": "true"
+            },
+        },
+        {
+            "Name": "WeatherVariant", // Indoors/Outdoors
+            "Value": "_Sun"
+        },
+        {
+            "Name": "WeatherVariant", // Rain Indoors/Outdoors
+            "Value": "_Rain",
+            "When":
+            {
+                "Season": "spring, summer, fall",
+                "Weather": "rain, storm",
+            },
+        },
+        {
+            "Name": "WeatherVariant", // Snow Indoors/Outdoors
+            "Value": "_Snow",
+            "When":
+            {
+                "Season": "fall, winter", // Fall added for support for CoF
+                "Weather": "snow",
+            },
+        },
+
+
+        // Festivals
+
+        {
+            "Name": "Festival",
+            "Value": "EggFestival",
+            "When":
+            {
+                "DayEvent": "egg festival",
+                "LocationName": "town, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "FlowerDance",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "LocationName": "Forest, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "IceFestival",
+            "When":
+            {
+                "DayEvent": "festival of ice",
+                "LocationName": "Forest, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "Luau",
+            "When":
+            {
+                "DayEvent": "luau",
+                "LocationName": "Beach, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "MoonlightJellies",
+            "When":
+            {
+                "DayEvent": "dance of the moonlight jellies",
+                "LocationName": "Beach, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "SpiritsEve",
+            "When":
+            {
+                "DayEvent": "spirit's eve",
+                "LocationName": "town, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "SVFair",
+            "When":
+            {
+                "DayEvent": "stardew valley fair",
+                "LocationName": "town, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "WinterStar",
+            "When":
+            {
+                "DayEvent": "feast of the winter star",
+                "LocationName": "town, temp"
+            }
+        },
+        {
+            "Name": "Wedding",
+            "Value": "WeddingOutfits",
+            "When":
+            {
+                "DayEvent": "wedding",
+            }
+        },
+
+        // Mermaid Pendants
+
+        {
+            "Name": "MermaidPendantOverlay_Relationship",
+            "Value": "Sam",
+            "When":
+            {
+                "Relationship:Sam": "Married, Engaged",
+            }
+        },
+
+        // Misc
+
+        {
+            "Name": "Swimsuits",
+            "Value": "Swimsuits",
+            "When":
+            {
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent:Luau": false,
+                "DayEvent:Dance of the Moonlight Jellies": false,
+                "SwimSuitsEnabled": "true"
+            }
+        },
+        {
+            "Name": "MermaidPendantOverlay",
+            "Value": "MermaidPendantOverlay",
+            "When":
+            {
+                "EnableMermaidPendants": "true"
+            }
+        },
+    ],
+
+    "ConfigSchema":
+    {
+        "SwimSuitsEnabled":
+        {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "EnableMermaidPendants":
+        {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+    },
+
+    "Changes": [
+
+        // Penny
+
+        {
+            "LogName": "Sam Main",
+            "Action": "EditImage",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{Target}}/{{Random:Blue, Green |key=SamJacketColor}}/Sam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            },
+        },
+        {
+            "LogName": "Sam Main",
+            "Action": "EditImage",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{Target}}/{{Random:Blue, Green |key=SamJacketColor}}/Sam_{{season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            },
+        },
+
+        // Sam Main
+
+        {
+            "LogName": "Sam Summer Main",
+            "Action": "EditImage",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{Target}}/{{Random:Blue, Green |key=SamJacketColor}}/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=SamSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "HasFile:{{FromFile}}": true,
+            }
+        },
+
+        // Sam Mermaid Pendant       
+
+        {
+            "LogName": "Sam Summer - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=SamSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+
+        // B E G I N  F E S T I V A L  S P I T E S
+
+        {
+            "LogName": "Festival Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true
+            },
+        },
+
+        // Sam
+
+        {
+            "LogName": "Sam Spirit's Eve Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
+            "When":
+            {
+                "DayEvent": "spirit's eve"
+            },
+        },
+
+        // E N D  F E S T I V A L  C H A R A C T E R S
+
+        // B E G I N  F E S T I V A L  P O R T R A I T S    
+
+        {
+            "LogName": "Festival Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true
+            },
+        },
+
+        // Penny
+
+        {
+            "LogName": "Sam Spirit's Eve Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
+            "When":
+            {
+                "DayEvent": "spirit's eve"
+            },
+        },
+
+        // E N D  F E S T I V A L  P O R T R A I T S    
+
+        // B E G I N  S W I M S U I T  C H A R A C T E R S
+
+        {
+            "LogName": "Sam Swimsuits Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/{{Swimsuits}}/SamSwim.png",
+        },
+
+        //  E N D  S W I M S U I T  C H A R A C T E R S
+
+        // B E G I N  S W I M S U I T  P O R T R A I T S
+
+        {
+            "LogName": "Sam Swimsuits Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{Swimsuits}}/SamPortraitSwim.png",
+
+        },
+
+        // E N D  S W I M S U I T  P O R T R A I T S
+    ]
+}
