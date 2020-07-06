@@ -1520,6 +1520,21 @@
             }
         },
 
+        // Sam Mermaid Pendant       
+
+        {
+            "LogName": "Sam Summer - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=SamSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+
         // Sandy Standard & Sivs
 
         {
