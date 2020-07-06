@@ -1,16 +1,12 @@
 {
-    "Format": "1.14.0",
+    "Format": "1.15.0",
     "DynamicTokens": [
 
         // Standard Dynamic Tokens
 
         {
             "Name": "IndoorVariant", // Indoors
-            "Value": "_Indoor",
-            "When":
-            {
-                "IsOutdoors": "false"
-            },
+            "Value": "_Indoor"
         },
         {
             "Name": "IndoorVariant", // Outdoors
@@ -22,12 +18,7 @@
         },
         {
             "Name": "WeatherVariant", // Indoors/Outdoors
-            "Value": "_Sun",
-            "When":
-            {
-                "Season": "spring, summer, fall, winter",
-                "Weather": "sun, wind",
-            },
+            "Value": "_Sun"
         },
         {
             "Name": "WeatherVariant", // Rain Indoors/Outdoors
@@ -43,10 +34,11 @@
             "Value": "_Snow",
             "When":
             {
-                "Season": "winter",
+                "Season": "fall, winter", // Fall added for support for CoF
                 "Weather": "snow",
             },
         },
+
 
         // Festivals
 
@@ -56,7 +48,7 @@
             "When":
             {
                 "DayEvent": "egg festival",
-                "LocationName": "Town"
+                "LocationName": "town, temp"
             }
         },
         {
@@ -65,7 +57,7 @@
             "When":
             {
                 "DayEvent": "flower dance",
-                "LocationName": "Forest"
+                "LocationName": "Forest, temp"
             }
         },
         {
@@ -74,7 +66,7 @@
             "When":
             {
                 "DayEvent": "festival of ice",
-                "LocationName": "Forest"
+                "LocationName": "Forest, temp"
             }
         },
         {
@@ -83,7 +75,7 @@
             "When":
             {
                 "DayEvent": "luau",
-                "LocationName": "Beach"
+                "LocationName": "Beach, temp"
             }
         },
         {
@@ -92,7 +84,7 @@
             "When":
             {
                 "DayEvent": "dance of the moonlight jellies",
-                "LocationName": "Beach"
+                "LocationName": "Beach, temp"
             }
         },
         {
@@ -101,7 +93,7 @@
             "When":
             {
                 "DayEvent": "spirit's eve",
-                "LocationName": "Town"
+                "LocationName": "town, temp"
             }
         },
         {
@@ -110,7 +102,7 @@
             "When":
             {
                 "DayEvent": "stardew valley fair",
-                "LocationName": "Town"
+                "LocationName": "town, temp"
             }
         },
         {
@@ -119,7 +111,7 @@
             "When":
             {
                 "DayEvent": "feast of the winter star",
-                "LocationName": "Town"
+                "LocationName": "town, temp"
             }
         },
         {
@@ -131,77 +123,14 @@
             }
         },
 
-        // Experimental Festival Stuff
+        // Mermaid Pendants
+
         {
-            "Name": "Festival",
-            "Value": "EggFestival",
+            "Name": "MermaidPendantOverlay_Relationship",
+            "Value": "Penny",
             "When":
             {
-                "DayEvent": "egg festival",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "FlowerDance",
-            "When":
-            {
-                "DayEvent": "flower dance",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "IceFestival",
-            "When":
-            {
-                "DayEvent": "festival of ice",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "Luau",
-            "When":
-            {
-                "DayEvent": "luau",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "MoonlightJellies",
-            "When":
-            {
-                "DayEvent": "dance of the moonlight jellies",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "SpiritsEve",
-            "When":
-            {
-                "DayEvent": "spirit's eve",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "SVFair",
-            "When":
-            {
-                "DayEvent": "stardew valley fair",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "WinterStar",
-            "When":
-            {
-                "DayEvent": "feast of the winter star",
-                "LocationName": "Temp"
+                "Relationship:Penny": "Married, Engaged",
             }
         },
 
@@ -254,7 +183,7 @@
             "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
             "When":
             {
-                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
+                "HasFile:{{FromFile}}": true,
             },
         },
         {
@@ -264,165 +193,88 @@
             "FromFile": "{{Target}}/Penny_{{season}}{{WeatherVariant}}.png",
             "When":
             {
-                "HasFile:{{Target}}/Penny_{{season}}{{WeatherVariant}}.png": true,
+                "HasFile:{{FromFile}}": true,
             },
         },
+
+        // Penny Main
+
         {
-            "LogName": "Penny Spring Sun",
+            "LogName": "Penny Spring",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green | PennySpringSunVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 |key=PennySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green | PennySpringSunVariant}}.png": true,
+                "HasFile:{{FromFile}}": true,
+
             },
         },
         {
-            "LogName": "Penny Summer Sun",
+            "LogName": "Penny Summer & Winter",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerSunVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=PennySummerWinterVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerSunVariant}}.png": true,
+                "Season": "summer, winter",
+                "HasFile:{{FromFile}}": true,
+
             },
         },
         {
-            "LogName": "Penny Summer Rain",
+            "LogName": "Penny Fall",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{season}}{{WeatherVariant}}_{{Random:Denim, White, Yellow | PennySummerRainVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "rain, storm",
-                "HasFile:{{Target}}/Penny_{{season}}{{WeatherVariant}}_{{Random:Denim, White, Yellow | PennySummerRainVariant}}.png": true,
-            },
-        },
-        {
-            "LogName": "Penny Fall Sun",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallSunVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 5 |key=PennyFallVariant}}.png",
             "When":
             {
                 "Season": "fall",
-                "Weather": "sun, wind",
-                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallSunVariant}}.png": true,
-            },
-        },
-        {
-            "LogName": "Penny Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{Target}}/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
+                "HasFile:{{FromFile}}": true,
+
             },
         },
 
         // Penny Portraits Mermaid Pendant
 
-
         {
-            "LogName": "Penny Pendant",
+            "LogName": "Penny Spring - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{WeatherVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
-            },
-            "PatchMode": "Overlay",
-        },
-        {
-            "LogName": "Penny Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
-            },
-            "PatchMode": "Overlay",
-        },
-        {
-            "LogName": "Penny Spring Sun",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green | PennySpringSunVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 |key=PennySpringVariant}}.png",
             "When":
             {
                 "Season": "spring",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, Green | PennySpringSunVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
+                "HasFile:{{FromFile}}": true,
             },
-            "PatchMode": "Overlay",
+            "PatchMode": "Overlay"
         },
         {
-            "LogName": "Penny Summer Sun",
+            "LogName": "Penny Summer & Winter - Mermaid Pendant",
             "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerSunVariant}}.png",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=PennySummerWinterVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Blue, Green | PennySummerSunVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
+                "Season": "summer, winter",
+                "HasFile:{{FromFile}}": true,
             },
-            "PatchMode": "Overlay",
+            "PatchMode": "Overlay"
         },
         {
-            "LogName": "Penny Summer Rain",
+            "LogName": "Penny Fall - Mermaid Pendant",
             "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{WeatherVariant}}_{{Random:Denim, White, Yellow | PennySummerRainVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{WeatherVariant}}_{{Random:Denim, White, Yellow | PennySummerRainVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
-            },
-            "PatchMode": "Overlay",
-        },
-        {
-            "LogName": "Penny Fall Sun",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallSunVariant}}.png",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 5 |key=PennyFallVariant}}.png",
             "When":
             {
                 "Season": "fall",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Brown, DeepRed | PennyFallSunVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
+                "HasFile:{{FromFile}}": true,
             },
-            "PatchMode": "Overlay",
+            "PatchMode": "Overlay"
         },
-        {
-            "LogName": "Penny Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Penny/Penny_{{season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Green, Blue | PennyWinterVariant}}.png": true,
-                "Relationship:Penny": "Married, Engaged",
-            },
-            "PatchMode": "Overlay",
-        },
+
 
         // B E G I N  M A T E R N I T Y  S P R I T E S
 
@@ -449,7 +301,20 @@
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
+                "HasFile:{{FromFile}}": true
+            },
+        },
+
+        // Penny
+
+        {
+            "LogName": "Penny Egg Festival & Spirit's Eve Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Penny",
+            "FromFile": "Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{Random:1, 2 |key=PennyEggFestivalSpiritsEveVariant}}.png",
+            "When":
+            {
+                "DayEvent": "Egg Festival, spirit's eve"
             },
         },
 
@@ -464,7 +329,20 @@
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png": true,
+                "HasFile:{{FromFile}}": true
+            },
+        },
+
+        // Penny
+
+        {
+            "LogName": "Penny Egg Festival & Spirit's Eve Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Penny",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Penny_{{Festival}}_{{Random:1, 2 |key=PennyEggFestivalSpiritsEveVariant}}.png",
+            "When":
+            {
+                "DayEvent": "Egg Festival, spirit's eve"
             },
         },
 
@@ -488,7 +366,6 @@
             "Action": "EditImage",
             "Target": "Portraits/Penny",
             "FromFile": "Portraits/{{Swimsuits}}/PennyPortraitSwim_{{Random:blue, yellow}}.png",
-            "Disabled": true,
 
         },
 
