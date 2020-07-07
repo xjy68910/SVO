@@ -1,16 +1,12 @@
 {
-    "Format": "1.11",
+    "Format": "1.15.0",
     "DynamicTokens": [
 
         // Standard Dynamic Tokens
 
         {
             "Name": "IndoorVariant", // Indoors
-            "Value": "_Indoor",
-            "When":
-            {
-                "IsOutdoors": "false"
-            },
+            "Value": "_Indoor"
         },
         {
             "Name": "IndoorVariant", // Outdoors
@@ -22,12 +18,7 @@
         },
         {
             "Name": "WeatherVariant", // Indoors/Outdoors
-            "Value": "_Sun",
-            "When":
-            {
-                "Season": "spring, summer, fall, winter",
-                "Weather": "sun, wind",
-            },
+            "Value": "_Sun"
         },
         {
             "Name": "WeatherVariant", // Rain Indoors/Outdoors
@@ -43,10 +34,11 @@
             "Value": "_Snow",
             "When":
             {
-                "Season": "winter",
+                "Season": "fall, winter", // Fall added for support for CoF
                 "Weather": "snow",
             },
         },
+
 
         // Festivals
 
@@ -56,7 +48,7 @@
             "When":
             {
                 "DayEvent": "egg festival",
-                "LocationName": "Town"
+                "LocationName": "town, temp"
             }
         },
         {
@@ -65,7 +57,7 @@
             "When":
             {
                 "DayEvent": "flower dance",
-                "LocationName": "Forest"
+                "LocationName": "Forest, temp"
             }
         },
         {
@@ -74,7 +66,7 @@
             "When":
             {
                 "DayEvent": "festival of ice",
-                "LocationName": "Forest"
+                "LocationName": "Forest, temp"
             }
         },
         {
@@ -83,7 +75,7 @@
             "When":
             {
                 "DayEvent": "luau",
-                "LocationName": "Beach"
+                "LocationName": "Beach, temp"
             }
         },
         {
@@ -92,7 +84,7 @@
             "When":
             {
                 "DayEvent": "dance of the moonlight jellies",
-                "LocationName": "Beach"
+                "LocationName": "Beach, temp"
             }
         },
         {
@@ -101,7 +93,7 @@
             "When":
             {
                 "DayEvent": "spirit's eve",
-                "LocationName": "Town"
+                "LocationName": "town, temp"
             }
         },
         {
@@ -110,7 +102,7 @@
             "When":
             {
                 "DayEvent": "stardew valley fair",
-                "LocationName": "Town"
+                "LocationName": "town, temp"
             }
         },
         {
@@ -119,86 +111,31 @@
             "When":
             {
                 "DayEvent": "feast of the winter star",
-                "LocationName": "Town"
-            }
-        },
-
-        // Experimental Festival Stuff
-        {
-            "Name": "Festival",
-            "Value": "EggFestival",
-            "When":
-            {
-                "DayEvent": "egg festival",
-                "LocationName": "Temp"
+                "LocationName": "town, temp"
             }
         },
         {
-            "Name": "Festival",
-            "Value": "FlowerDance",
+            "Name": "Wedding",
+            "Value": "WeddingOutfits",
             "When":
             {
-                "DayEvent": "flower dance",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "IceFestival",
-            "When":
-            {
-                "DayEvent": "festival of ice",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "Luau",
-            "When":
-            {
-                "DayEvent": "luau",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "MoonlightJellies",
-            "When":
-            {
-                "DayEvent": "dance of the moonlight jellies",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "SpiritsEve",
-            "When":
-            {
-                "DayEvent": "spirit's eve",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "SVFair",
-            "When":
-            {
-                "DayEvent": "stardew valley fair",
-                "LocationName": "Temp"
-            }
-        },
-        {
-            "Name": "Festival",
-            "Value": "WinterStar",
-            "When":
-            {
-                "DayEvent": "feast of the winter star",
-                "LocationName": "Temp"
+                "DayEvent": "wedding",
             }
         },
 
         // Misc
 
+        {
+            "Name": "Swimsuits",
+            "Value": "Swimsuits",
+            "When":
+            {
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent |contains=Luau, Dance of the Moonlight Jellies": false,
+                "SwimSuitsEnabled": "true"
+            }
+        },
         {
             "Name": "MermaidPendantOverlay",
             "Value": "MermaidPendantOverlay",
@@ -207,9 +144,25 @@
                 "EnableMermaidPendants": "true"
             }
         },
+
+        // Mermaid Pendants
+
+        {
+            "Name": "MermaidPendantOverlay_Relationship",
+            "Value": "Elliott",
+            "When":
+            {
+                "Relationship:Elliott": "Married, Engaged",
+            }
+        },
     ],
     "ConfigSchema":
     {
+        "SwimSuitsEnabled":
+        {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
         "EnableMermaidPendants":
         {
             "AllowValues": "true, false",
@@ -228,7 +181,7 @@
     },
     "Changes": [
 
-        // Elliott Portrait 
+        // Elliott
 
         {
             "LogName": "Elliott Portrait #1",
@@ -238,7 +191,7 @@
             "When":
             {
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
-                "HasFile:{{Target}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
+                "HasFile:{{FromFile}}": true,
             }
         },
         {
@@ -249,91 +202,58 @@
             "When":
             {
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
-                "HasFile:{{Target}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}.png": true,
+                "HasFile:{{FromFile}}": true,
             }
         },
         {
-            "LogName": "Elliott Summer Sun Portraits",
+            "LogName": "Elliott Summer & Fall",
             "Action": "EditImage",
             "Target": "Portraits/Elliott",
-            "FromFile": "{{Target}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:NoSuspenders, Suspenders | ElliottSummerSunVariant}}.png",
+            "FromFile": "{{Target}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=ElliottSummerFallVariant}}.png",
             "When":
             {
-                "Season": "summer",
-                "Weather": "sun, wind",
+                "Season": "summer, fall",
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
-                "HasFile:{{Target}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:NoSuspenders, Suspenders | ElliottSummerSunVariant}}.png": true,
-            }
-        },
-        {
-            "LogName": "Elliott Summer Rain Portraits",
-            "Action": "EditImage",
-            "Target": "Portraits/Elliott",
-            "FromFile": "{{Target}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:Vest, NoVest | ElliottSummerRainVariant}}.png",
-            "When":
-            {
-                "Season": "summer",
-                "Weather": "rain, storm",
-                "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
-                "HasFile:{{Target}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Vest, NoVest | ElliottSummerRainVariant}}.png": true,
+                "HasFile:{{FromFile}}": true,
             }
         },
 
         // Elliott Portrait Mermaid Pendant
 
         {
-            "LogName": "Elliott Spring - Indoor Portraits - Mermaid Pendant",
+            "LogName": "Elliott Mermaid Pendant #1",
             "Action": "EditImage",
-            "Target": "Portraits/Elliott",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
             "When":
             {
-                "ElliottPortraitStyle": "FrontFacingSabreene",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png": true,
-                "Relationship:Elliott": "Married, Engaged",
+                "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
+                "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Elliott Spring - Indoor Portraits - Mermaid Pendant",
+            "LogName": "Elliott Mermaid Pendant #2",
             "Action": "EditImage",
-            "Target": "Portraits/Elliott",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}.png",
+            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}.png",
             "When":
             {
-                "ElliottPortraitStyle": "FrontFacingSabreene",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}.png": true,
-                "Relationship:Elliott": "Married, Engaged",
+                "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
+                "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
         },
         {
-            "LogName": "Elliott Summer - Indoor Portraits - Mermaid Pendant",
+            "LogName": "Elliott Summer & Fall - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Elliott",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:NoSuspenders, Suspenders | ElliottSummerSunVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=ElliottSummerFallVariant}}.png",
             "When":
             {
-                "ElliottPortraitStyle": "FrontFacingSabreene",
-                "Season": "summer",
-                "Weather": "sun, wind",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:NoSuspenders, Suspenders | ElliottSummerSunVariant}}.png": true,
-                "Relationship:Elliott": "Married, Engaged",
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Elliott Summer - Indoor Portraits - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Elliott",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:Vest, NoVest | ElliottSummerRainVariant}}.png",
-            "When":
-            {
-                "ElliottPortraitStyle": "FrontFacingSabreene",
-                "Season": "summer",
-                "Weather": "rain, storm",
-                "HasFile:Portraits/{{MermaidPendantOverlay}}/Elliott/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}_{{Random:Vest, NoVest | ElliottSummerRainVariant}}.png": true,
-                "Relationship:Elliott": "Married, Engaged",
+                "Season": "summer, fall",
+                "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
+                "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
         },
@@ -347,9 +267,23 @@
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png",
             "When":
             {
-                "HasFile:Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}_{{ElliottPortraitStyle}}.png": true,
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
+                "HasFile:{{FromFile}}": true,
             },
+        },
+
+        // Swimsuits
+
+        {
+            "LogName": "Swimsuits Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Elliott",
+            "FromFile": "Portraits/{{Swimsuits}}/ElliottPortraitSwim_{{ElliottPortraitStyle}}.png",
+            "When":
+            {
+                "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
+                "HasFile:{{FromFile}}": true,
+            }
         },
     ]
 }

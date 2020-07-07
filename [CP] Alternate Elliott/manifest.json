@@ -1,9 +1,10 @@
 {
     "Name": "Alternate Elliott for SVO for ContentPatcher",
     "Author": "Tanpoponoko (Art) Paradigmnomad (Coding) & Various Contributors",
-    "Version": "1.0.1",
+    "Version": "1.1.0",
     "Description": "A selection of different Elliott portraits. Requires SVO.",
     "UniqueID": "AlternateElliott.SeasonalOutfits",
+"UpdateKeys": ["Nexus:2449@AlternativeElliott"],
     "MinimumApiVersion": "3.3.2",
     "ContentPackFor":
     {
