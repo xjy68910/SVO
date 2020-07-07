@@ -732,12 +732,24 @@
         // Demetrius
 
         {
-            "LogName": "Demetrius Spring",
+            "LogName": "Demetrius Spring, Summer & Winter",
             "Action": "EditImage",
             "Target": "Characters/Demetrius, Portraits/Demetrius",
             "FromFile": "{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=DemetriusVariant}}.png",
             "When":
             {
+                "Season": "spring, summer, winter",
+                "HasFile:{{FromFile}}": true
+            },
+        },
+        {
+            "LogName": "Demetrius Fall",
+            "Action": "EditImage",
+            "Target": "Characters/Demetrius, Portraits/Demetrius",
+            "FromFile": "{{Target}}/Demetrius_{{Season}}{{IndoorVariant}}_{{Random:1, 2 |key=DemetriusVariant}}.png",
+            "When":
+            {
+                "Season": "fall",
                 "HasFile:{{FromFile}}": true
             },
         },
@@ -748,10 +760,11 @@
             "LogName": "Demetrius Work",
             "Action": "EditImage",
             "Target": "Characters/Demetrius, Portraits/Demetrius",
-            "FromFile": "{{Target}}/Demetrius_LabCoat.png",
+            "FromFile": "{{Target}}/Work/Demetrius_{{Season}}_Indoor_{{Random:1, 2 |key=DemetriusVariant}}.png",
             "When":
             {
-                "LocationName": "ScienceHouse"
+                "LocationName": "ScienceHouse",
+                "HasFile:{{FromFile}}": true
             },
         },
 
@@ -1019,12 +1032,24 @@
             },
         },        
         {
-            "LogName": "Harvey - Labcoat",
+            "LogName": "Harvey - Labcoat Summer & Winter",
             "Action": "EditImage",
             "Target": "Characters/Harvey, Portraits/Harvey",
-            "FromFile": "{{Target}}/Harvey_Doctor.png",
+            "FromFile": "{{Target}}/Work/Harvey_{{Season}}_Work.png",
             "When":
             {
+                "Season": "summer, winter",
+                "LocationName": "Hospital"
+            },
+        },
+        {
+            "LogName": "Harvey - Labcoat Spring & Fall",
+            "Action": "EditImage",
+            "Target": "Characters/Harvey, Portraits/Harvey",
+            "FromFile": "{{Target}}/Work/Harvey_{{Season}}_{{Random:1, 2 |key=HarveySpringFallVariant}}_Work.png",
+            "When":
+            {
+                "Season": "spring, fall",
                 "LocationName": "Hospital"
             },
         },
