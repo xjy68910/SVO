@@ -170,6 +170,11 @@
             "AllowValues": "true, false",
             "Default": "true"
         },
+        "SamEyeColor":
+        {
+            "AllowValues": "blue, green",
+            "Default": "blue"
+        }
     },
 
     "Changes": [
@@ -180,9 +185,10 @@
             "LogName": "Sam Main",
             "Action": "EditImage",
             "Target": "Characters/Sam, Portraits/Sam",
-            "FromFile": "{{Target}}/{{Random:Blue, Green |key=SamJacketColor}}/Sam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "FromFile": "{{Target}}/{{SamEyeColor}}/Sam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
             "When":
             {
+                "SamEyeColor": "blue, green",
                 "HasFile:{{FromFile}}": true,
             },
         },
@@ -190,9 +196,10 @@
             "LogName": "Sam Main",
             "Action": "EditImage",
             "Target": "Characters/Sam, Portraits/Sam",
-            "FromFile": "{{Target}}/{{Random:Blue, Green |key=SamJacketColor}}/Sam_{{season}}{{WeatherVariant}}.png",
+            "FromFile": "{{Target}}/{{SamEyeColor}}/Sam_{{season}}{{WeatherVariant}}.png",
             "When":
             {
+                "SamEyeColor": "blue, green",
                 "HasFile:{{FromFile}}": true,
             },
         },
@@ -203,10 +210,11 @@
             "LogName": "Sam Summer Main",
             "Action": "EditImage",
             "Target": "Characters/Sam, Portraits/Sam",
-            "FromFile": "{{Target}}/{{Random:Blue, Green |key=SamJacketColor}}/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=SamSummerVariant}}.png",
+            "FromFile": "{{Target}}/{{SamEyeColor}}/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=SamSummerVariant}}.png",
             "When":
             {
                 "Season": "summer",
+                "SamEyeColor": "blue, green",
                 "HasFile:{{FromFile}}": true,
             }
         },
@@ -232,10 +240,11 @@
             "LogName": "Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Sam",
-            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "FromFile": "Characters/{{SamEyeColor}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:{{FromFile}}": true
+                "SamEyeColor": "blue, green",
+                "HasFile:{{FromFile}}": true,
             },
         },
 
@@ -245,10 +254,11 @@
             "LogName": "Sam Spirit's Eve Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Sam",
-            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
+            "FromFile": "Characters/{{SamEyeColor}}/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
             "When":
             {
-                "DayEvent": "spirit's eve"
+                "SamEyeColor": "blue, green",
+                "DayEvent": "spirit's eve",
             },
         },
 
@@ -260,10 +270,11 @@
             "LogName": "Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Sam",
-            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "FromFile": "Portraits/{{SamEyeColor}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
-                "HasFile:{{FromFile}}": true
+                "HasFile:{{FromFile}}": true,
+                "SamEyeColor": "blue, green"
             },
         },
 
@@ -273,10 +284,11 @@
             "LogName": "Sam Spirit's Eve Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Sam",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
+            "FromFile": "Portraits/{{SamEyeColor}}/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
             "When":
             {
-                "DayEvent": "spirit's eve"
+                "DayEvent": "spirit's eve",
+                "SamEyeColor": "blue, green"
             },
         },
 
@@ -288,7 +300,11 @@
             "LogName": "Sam Swimsuits Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Sam",
-            "FromFile": "Characters/{{Swimsuits}}/SamSwim.png",
+            "FromFile": "Characters/{{Swimsuits}}/SamSwim_{{SamEyeColor}}.png",
+            "When":
+            {
+                "SamEyeColor": "blue, green"
+            },
         },
 
         //  E N D  S W I M S U I T  C H A R A C T E R S
@@ -299,8 +315,11 @@
             "LogName": "Sam Swimsuits Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{Swimsuits}}/SamPortraitSwim.png",
-
+            "FromFile": "Portraits/{{Swimsuits}}/SamPortraitSwim_{{SamEyeColor}}.png",
+            "When":
+            {
+                "SamEyeColor": "blue, green"
+            },
         },
 
         // E N D  S W I M S U I T  P O R T R A I T S
