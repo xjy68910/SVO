@@ -687,7 +687,8 @@
             {
                 "Season": "spring, summer, fall",
                 "HasFile:{{FromFile}}": true
-            }
+            },
+            "PatchMode": "Overlay"
         },
 
         // Caroline
