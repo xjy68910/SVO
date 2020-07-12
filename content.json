@@ -1900,7 +1900,7 @@
             "LogName": "Abigail Egg Festival & Spirit's Eve Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Abigail",
-            "FromFile": "Characters/Festivals/{{Festival}}/Abigail_{{Festival}}_{{Random:Standard, Alternative |key=AbigailEggFestSpiritsEveVariant}}.png",
+            "FromFile": "Characters/Festivals/{{Festival}}/Abigail_{{Festival}}_{{Random:1, 2 |key=AbigailEggFestSpiritsEveVariant}}.png",
             "When":
             {
                 "DayEvent": "Egg Festival, spirit's eve"
@@ -2114,7 +2114,7 @@
             "LogName": "Abigail Egg Festival & Spirit's Eve Character Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Abigail",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Abigail_{{Festival}}_{{Random:Standard, Alternative |key=AbigailEggFestSpiritsEveVariant}}.png",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Abigail_{{Festival}}_{{Random:1, 2 |key=AbigailEggFestSpiritsEveVariant}}.png",
             "When":
             {
                 "DayEvent": "Egg Festival, spirit's eve",
