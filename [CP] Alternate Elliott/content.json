@@ -114,14 +114,6 @@
                 "LocationName": "town, temp"
             }
         },
-        {
-            "Name": "Wedding",
-            "Value": "WeddingOutfits",
-            "When":
-            {
-                "DayEvent": "wedding",
-            }
-        },
 
         // Misc
 
@@ -195,17 +187,6 @@
             }
         },
         {
-            "LogName": "Elliott Portrait #2",
-            "Action": "EditImage",
-            "Target": "Portraits/Elliott",
-            "FromFile": "{{Target}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
-                "HasFile:{{FromFile}}": true,
-            }
-        },
-        {
             "LogName": "Elliott Summer & Fall",
             "Action": "EditImage",
             "Target": "Portraits/Elliott",
@@ -225,18 +206,6 @@
             "Action": "EditImage",
             "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
             "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
-            "When":
-            {
-                "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
-                "HasFile:{{FromFile}}": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Elliott Mermaid Pendant #2",
-            "Action": "EditImage",
-            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{ElliottPortraitStyle}}/Elliott_{{Season}}{{WeatherVariant}}.png",
             "When":
             {
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
