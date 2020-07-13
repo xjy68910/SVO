@@ -385,11 +385,6 @@
             "AllowValues": "true, false",
             "Default": "false"
         },
-        "SandyVersion":
-        {
-            "AllowValues": "Standard, Sivs, Dizor, Poltergeister",
-            "Default": "Standard"
-        },
 
         // Sebastian
 
@@ -712,6 +707,20 @@
             "When":
             {
                 "Season": "summer, fall",
+                "HasFile:{{FromFile}}": true
+            },
+        },
+
+        // Clint
+
+        {
+            "LogName": "Clint Spring, Summer & Fall",
+            "Action": "EditImage",
+            "Target": "Characters/Clint, Portraits/Clint",
+            "FromFile": "{{Target}}/Clint_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2|key=ClintVariant}}.png",
+            "When":
+            {
+                "Season": "spring, summer, fall",
                 "HasFile:{{FromFile}}": true
             },
         },
@@ -1561,45 +1570,17 @@
             "PatchMode": "Overlay"
         },
 
-        // Sandy Standard & Sivs
+        // Sandy Main
 
         {
-            "LogName": "Sandy All Seasons - Standard/Sivs",
+            "LogName": "Sandy Main",
             "Action": "EditImage",
             "Target": "Characters/Sandy, Portraits/Sandy",
-            "FromFile": "{{Target}}/{{SandyVersion}}/Sandy_{{Season}}_Base.png",
+            "FromFile": "{{Target}}/Sandy_{{Season}}_{{Random:1, 2 |key=SandyVariant}}.png",
             "When":
             {
                 "HasFile:{{FromFile}}": true,
                 "SandyEnabled": "true",
-                "SandyVersion": "Standard, Sivs"
-            }
-        },
-
-        // Sandy Dizor & Poltergeister
-
-        {
-            "LogName": "Sandy All Seasons - Dizor/Poltergeister Characters",
-            "Action": "EditImage",
-            "Target": "Characters/Sandy",
-            "FromFile": "{{Target}}/Standard/Sandy_{{Season}}_Base.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "SandyEnabled": "true",
-                "SandyVersion": "Dizor, Poltergeister"
-            }
-        },
-        {
-            "LogName": "Sandy All Seasons - Dizor/Poltergeister Portraits",
-            "Action": "EditImage",
-            "Target": "Portraits/Sandy",
-            "FromFile": "{{Target}}/{{SandyVersion}}/Sandy_{{Season}}_Base.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "SandyEnabled": "true",
-                "SandyVersion": "Dizor, Poltergeister"
             }
         },
 

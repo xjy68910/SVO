@@ -1,0 +1,38 @@
+{
+    "Format": "1.15.0",
+    "ConfigSchema":
+    {
+        "SandyVersion":
+        {
+            "AllowValues": "Sivs, Dizor, Poltergeister",
+            "Default": "Poltergeister"
+        },
+    },
+
+    "Changes": [
+
+        // Sandy
+
+        {
+            "LogName": "Sandy Alternate Characters",
+            "Action": "EditImage",
+            "Target": "Characters/Sandy",
+            "FromFile": "{{Target}}/Sandy_{{Season}}_{{Random:1, 2 |key=SandyAltVariant}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            }
+        },
+        {
+            "LogName": "Sandy Alternate Portraits",
+            "Action": "EditImage",
+            "Target": "Portraits/Sandy",
+            "FromFile": "{{Target}}/{{SandyVersion}}/Sandy_{{Season}}_{{Random:1, 2 |key=SandyAltVariant}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+                "SandyVersion": "Sivs, Dizor, Poltergeister"
+            }
+        },
+    ]
+}
