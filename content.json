@@ -1040,6 +1040,20 @@
                 "Season": "spring, fall",
                 "HasFile:{{FromFile}}": true
             },
+        },
+
+        // Harvey Work
+
+        {
+            "LogName": "Harvey - Labcoat Spring & Fall",
+            "Action": "EditImage",
+            "Target": "Characters/Harvey, Portraits/Harvey",
+            "FromFile": "{{Target}}/Work/Harvey_{{Season}}_{{Random:1, 2 |key=HarveySpringFallVariant}}_Work.png",
+            "When":
+            {
+                "Season": "spring, fall",
+                "LocationName": "Hospital"
+            },
         },        
         {
             "LogName": "Harvey - Labcoat Summer & Winter",
@@ -1051,18 +1065,10 @@
                 "Season": "summer, winter",
                 "LocationName": "Hospital"
             },
-        },
-        {
-            "LogName": "Harvey - Labcoat Spring & Fall",
-            "Action": "EditImage",
-            "Target": "Characters/Harvey, Portraits/Harvey",
-            "FromFile": "{{Target}}/Work/Harvey_{{Season}}_{{Random:1, 2 |key=HarveySpringFallVariant}}_Work.png",
-            "When":
-            {
-                "Season": "spring, fall",
-                "LocationName": "Hospital"
-            },
-        },
+        },   
+
+        // Harvey Mustache
+
         {
             "LogName": "Harvey - Mustache Overlay",
             "Action": "EditImage",
@@ -1071,20 +1077,6 @@
             "When":
             {
                 "HarveyFacialHair": "Mustache",
-                "DayEvent |contains=spirit's eve": false,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Harvey - Mustache Overlay",
-            "Action": "EditImage",
-            "Target": "Characters/Harvey, Portraits/Harvey",
-            "FromFile": "{{Target}}/Harvey_MustacheOverlay.png",
-            "When":
-            {
-                "HarveyFacialHair": "Mustache",
-                "DayEvent": "spirit's eve",
-                "LocationName": "Farm"
             },
             "PatchMode": "Overlay"
         },
@@ -1867,7 +1859,7 @@
         {
             "LogName": "Festival Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Alex, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Lewis, Characters/Linus, Characters/Marlon, Characters/Marnie, Characters/Pam, Characters/Pierre, Characters/Robin, Characters/Shane, Characters/Willy",
+            "Target": "Characters/Alex, Characters/Abigail, Characters/Caroline, Characters/Clint, Characters/Demetrius, Characters/Elliott, Characters/Emily, Characters/Evelyn, Characters/George, Characters/Gus, Characters/Haley, Characters/Jas, Characters/Jodi, Characters/Kent, Characters/Leah, Characters/Lewis, Characters/Linus, Characters/Marlon, Characters/Marnie, Characters/Maru, Characters/Pam, Characters/Penny, Characters/Pierre, Characters/Robin, Characters/Sam, Characters/Sebastian, Characters/Shane, Characters/Vincent, Characters/Willy",
             "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -1915,26 +1907,27 @@
         },
 
         // Harvey
-
+        
         {
-            "LogName": "Harvey Spirit's Eve Character Sprites",
+            "LogName": "Harvey Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Harvey",
-            "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}_{{Random:PlagueDoctor, Pilot |key=HarveySpiritsEveVariant}}_{{HarveyFacialHair}}.png",
+            "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "DayEvent": "spirit's eve",
+                "HasFile:{{FromFile}}": true,
                 "HarveyFacialHair": "Mustache, Shaved"
             },
         },
         {
-            "LogName": "Harvey Egg & SV Fair Character Sprites",
+            "LogName": "Harvey Spirit, Egg & SV Fair Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Harvey",
-            "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}_{{Random:1, 2 |key=HarveyEggSVFairVariant}}.png",
+            "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}_{{Random:1, 2 |key=HarveySpiritEggSVFairVariant}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "DayEvent": "Egg Festvial, stardew valley fair",
+                "DayEvent": "Egg Festvial, stardew valley fair, spirit's eve",                
+                "HarveyFacialHair": "Mustache, Shaved"
             },
         },
 
@@ -2014,65 +2007,7 @@
             {
                 "DayEvent": "spirit's eve"
             },
-        },
-
-        // Other Festivals
-
-        {
-            "LogName": "Sam, Vincent Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Harvey, Characters/Sam, Characters/Vincent",
-            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=spirit's eve": false
-            },
-        },
-        {
-            "LogName": "Sebastian Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Sebastian",
-            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=spirit's eve, festival of ice": false
-            },
-        },
-        {
-            "LogName": "Emily, & Leah Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Emily, Characters/Leah",
-            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=Egg Festival": false,
-            },
-        },
-        {
-            "LogName": "Abigail, Haley & Penny Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": "Characters/Abigail, Characters/Haley, Characters/Penny",
-            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=spirit's eve, Egg Festival": false
-            },
-        },
-        {
-            "LogName": "Maru Festival Character Sprites",
-            "Action": "EditImage",
-            "Target": " Characters/Maru",
-            "FromFile": "Characters/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=spirit's eve, Egg Festival, feast of the winter star": false
-            },
-        },
+        },        
 
         // E N D  F E S T I V A L  C H A R A C T E R S
 
@@ -2081,7 +2016,7 @@
         {
             "LogName": "Festival Portrait Sprites",
             "Action": "EditImage",
-            "Target": "Portraits/Alex, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Lewis, Portraits/Linus, Portraits/Marlon, Portraits/Marnie, Portraits/Pam, Portraits/Pierre, Portraits/Robin, Portraits/Shane, Portraits/Willy",
+            "Target": "Portraits/Alex, Portraits/Abigail, Portraits/Caroline, Portraits/Clint, Portraits/Demetrius, Portraits/Elliott, Portraits/Emily, Portraits/Evelyn, Portraits/George, Portraits/Gus, Portraits/Haley, Portraits/Jas, Portraits/Jodi, Portraits/Kent, Portraits/Leah, Portraits/Lewis, Portraits/Linus, Portraits/Marlon, Portraits/Marnie, Portraits/Maru, Portraits/Pam, Portraits/Penny, Portraits/Pierre, Portraits/Robin, Portraits/Sam, Portraits/Sebastian, Portraits/Shane, Portraits/Vincent, Portraits/Willy",
             "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
@@ -2131,24 +2066,25 @@
         // Harvey
 
         {
-            "LogName": "Harvey Spirit's Eve Portrait Sprites",
+            "LogName": "Harvey Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Harvey",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{Random:PlagueDoctor, Pilot |key=HarveySpiritsEveVariant}}_{{HarveyFacialHair}}.png",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "DayEvent": "spirit's eve",
+                "HasFile:{{FromFile}}": true,
                 "HarveyFacialHair": "Mustache, Shaved"
             },
         },
         {
-            "LogName": "Harvey Egg & SV Fair Portrait Sprites",
+            "LogName": "Harvey Spirit, Egg & SV Fair Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Harvey",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{Random:1, 2 |key=HarveyEggSVFairVariant}}.png",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{Random:1, 2 |key=HarveySpiritEggSVFairVariant}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "DayEvent": "Egg Festvial, stardew valley fair",
+                "DayEvent": "Egg Festvial, stardew valley fair, spirit's eve",                
+                "HarveyFacialHair": "Mustache, Shaved"
             },
         },
 
@@ -2229,64 +2165,6 @@
             "When":
             {
                 "DayEvent": "spirit's eve"
-            },
-        },
-
-        // Other Festivals
-
-        {
-            "LogName": "Sam, Vincent Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Harvey, Portraits/Sam, Portraits/Vincent",
-            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=spirit's eve": false
-            },
-        },
-        {
-            "LogName": "Sebastian Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Sebastian",
-            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=spirit's eve, festival of ice": false,
-            },
-        },
-        {
-            "LogName": "Emily, & Leah Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Emily, Portraits/Leah",
-            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=Egg Festival": false,
-            },
-        },
-        {
-            "LogName": "Abigail, Haley & Penny Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Abigail, Portraits/Haley, Portraits/Penny",
-            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=spirit's eve, Egg Festival": false,
-            },
-        },
-        {
-            "LogName": "Maru Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": " Portraits/Maru",
-            "FromFile": "Portraits/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "DayEvent |contains=spirit's eve, Egg Festival, feast of the winter star": false,
             },
         },
 
