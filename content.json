@@ -1054,7 +1054,7 @@
                 "Season": "spring, fall",
                 "LocationName": "Hospital"
             },
-        },        
+        },
         {
             "LogName": "Harvey - Labcoat Summer & Winter",
             "Action": "EditImage",
@@ -1065,7 +1065,7 @@
                 "Season": "summer, winter",
                 "LocationName": "Hospital"
             },
-        },   
+        },
 
         // Harvey Mustache
 
@@ -1657,7 +1657,7 @@
         },
 
         // Sebastian Piercings
-        
+
         {
             "LogName": "Sebastian Piercings",
             "Action": "EditImage",
@@ -1665,8 +1665,8 @@
             "FromFile": "{{Target}}/Piercings/Sebastian_Piercings_Overlay_General.png",
             "When":
             {
-                "SebastianPiercings": true,    
-                "HasFile:{{FromFile}}": true,   
+                "SebastianPiercings": true,
+                "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
         },
@@ -1701,7 +1701,7 @@
         // Sebastian 10-Heart Event
 
         {
-            "LogName": "Sebastian Helmet", 
+            "LogName": "Sebastian Helmet",
             "Action": "EditImage",
             "Target": "Portraits/Sebastian",
             "FromFile": "{{Target}}/Sebastian_Motorbike_Helmet.png",
@@ -1907,7 +1907,7 @@
         },
 
         // Harvey
-        
+
         {
             "LogName": "Harvey Festival Character Sprites",
             "Action": "EditImage",
@@ -1915,7 +1915,6 @@
             "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "HasFile:{{FromFile}}": true,
                 "HarveyFacialHair": "Mustache, Shaved"
             },
         },
@@ -1926,7 +1925,7 @@
             "FromFile": "Characters/Festivals/{{Festival}}/Harvey_{{Festival}}_{{Random:1, 2 |key=HarveySpiritEggSVFairVariant}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "DayEvent": "Egg Festvial, stardew valley fair, spirit's eve",                
+                "DayEvent": "Egg Festvial, stardew valley fair, spirit's eve",
                 "HarveyFacialHair": "Mustache, Shaved"
             },
         },
@@ -2007,7 +2006,7 @@
             {
                 "DayEvent": "spirit's eve"
             },
-        },        
+        },
 
         // E N D  F E S T I V A L  C H A R A C T E R S
 
@@ -2072,7 +2071,6 @@
             "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "HasFile:{{FromFile}}": true,
                 "HarveyFacialHair": "Mustache, Shaved"
             },
         },
@@ -2083,7 +2081,7 @@
             "FromFile": "Portraits/Festivals/{{Festival}}/Harvey_{{Festival}}_{{Random:1, 2 |key=HarveySpiritEggSVFairVariant}}_{{HarveyFacialHair}}.png",
             "When":
             {
-                "DayEvent": "Egg Festvial, stardew valley fair, spirit's eve",                
+                "DayEvent": "Egg Festvial, stardew valley fair, spirit's eve",
                 "HarveyFacialHair": "Mustache, Shaved"
             },
         },
