@@ -5,7 +5,6 @@
 
 // ⚠ ANY MODIFICATIONS TO THIS FILE AND THEN REPORTS OF ISSUES WITH SAID MODIFIED FILE WILL BE PROMPTLY DELETED AS I DO NOT OFFER SUPPORT FOR USER EDITS. ⚠
 
-
 {
     "Format": "1.15.0",
     "DynamicTokens": [
@@ -1773,6 +1772,28 @@
             "PatchMode": "Overlay"
         },
 
+        // Shane's New Job Compatibility
+
+        {
+            "LogName": "Shane New Job",
+            "Action": "EditImage",
+            "Target": "Characters/Shane",
+            "FromFile": "{{Target}}/Shane_NewJob/Shane_{{Season}}_Indoor{{WeatherVariant}}_{{Random:1, 2 |key=ShaneVariant}}.png",
+            "ToArea":
+            {
+                "X": 0,
+                "Y": 288,
+                "Width": 64,
+                "Height": 64,
+            },
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+                "HasMod": "Ran.ShanesNewJob"
+            },
+            "PatchMode": "Replace"
+        },
+
         // Wizard Main
 
         {
@@ -1886,7 +1907,7 @@
             "LogName": "Emily Egg Festival Character Sprites",
             "Action": "EditImage",
             "Target": "Characters/Emily",
-            "FromFile": "Characters/Festivals/{{Festival}}/Emily_{{Festival}}_{{Random:Standard, AltBlue, AltRed |key=EmilyEggFestivalVariant}}.png",
+            "FromFile": "Characters/Festivals/{{Festival}}/Emily_{{Festival}}_{{Random:Standard, AltBlue, AltRed, AltPink |key=EmilyEggFestivalVariant}}.png",
             "When":
             {
                 "DayEvent": "Egg Festival"
@@ -1965,7 +1986,7 @@
             "FromFile": "Characters/Festivals/{{Festival}}/Penny_{{Festival}}_{{Random:1, 2 |key=PennyEggFestivalSpiritsEveVariant}}.png",
             "When":
             {
-                "DayEvent": "Egg Festival, spirit's eve"
+                "DayEvent": "Egg Festival, spirit's eve",
             },
         },
 
@@ -2042,7 +2063,7 @@
             "LogName": "Emily Egg Festival Portrait Sprites",
             "Action": "EditImage",
             "Target": "Portraits/Emily",
-            "FromFile": "Portraits/Festivals/{{Festival}}/Emily_{{Festival}}_{{Random:Standard, AltBlue, AltRed |key=EmilyEggFestivalVariant}}.png",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Emily_{{Festival}}_{{Random:Standard, AltBlue, AltRed, AltPink |key=EmilyEggFestivalVariant}}.png",
             "When":
             {
                 "DayEvent": "Egg Festival",
