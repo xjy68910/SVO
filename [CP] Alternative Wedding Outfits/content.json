@@ -1,0 +1,86 @@
+{
+    "Format": "1.15.0",
+    "DynamicTokens": [
+        
+        {
+            "Name": "Wedding",
+            "Value": "WeddingOutfits",
+            "When":
+            {
+                "DayEvent": "wedding",
+            }
+        },
+    ],
+    "ConfigSchema":
+    {
+        "HaleyWeddingOutfit":
+        {
+            "AllowValues": "BlackSuitBouquet, BlackSuitCorsage, WeddingDress, WhiteSuitBouquet, WhiteSuitCorage, NotSnufffie, Disabled",
+            "Default": "Disabled"
+        },
+        "EmilyWeddingOutfit":
+        {
+            "AllowValues": "daftpatience, Disabled",
+            "Default": "Disabled"
+        },
+        "LeahWeddingOutfit":
+        {
+            "AllowValues": "tanpoponoko, Disabled",
+            "Default": "Disabled"
+        },
+    },
+    "Changes": [
+
+        {
+            "LogName": "Haley Wedding Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Haley",
+            "FromFile": "assets/{{Wedding}}/Haley_Wedding_{{HaleyWeddingOutfit}}.png",
+            "ToArea":
+            {
+                "X": 0,
+                "Y": 288,
+                "Width": 48,
+                "Height": 32
+            },
+            "When":
+            {
+                "HaleyWeddingOutfit": "BlackSuitBouquet, BlackSuitCorsage, WeddingDress, WhiteSuitBouquet, WhiteSuitCorage, NotSnufffie"
+            }
+        },
+        {
+            "LogName": "Emily Wedding Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Emily",
+            "FromFile": "assets/{{Wedding}}/Emily_Wedding_{{EmilyWeddingOutfit}}.png",
+            "ToArea":
+            {
+                "X": 0,
+                "Y": 288,
+                "Width": 48,
+                "Height": 32
+            },
+            "When":
+            {
+                "EmilyWeddingOutfit": "daftpatience"
+            }
+        },
+        {
+            "LogName": "Leah Wedding Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Leah",
+            "FromFile": "assets/{{Wedding}}/Leah_Wedding_{{LeahWeddingOutfit}}.png",
+            "ToArea":
+            {
+                "X": 0,
+                "Y": 288,
+                "Width": 48,
+                "Height": 32
+            },
+            "When":
+            {
+                "LeahWeddingOutfit": "tanpoponoko"
+            }
+        },
+    ]
+}
