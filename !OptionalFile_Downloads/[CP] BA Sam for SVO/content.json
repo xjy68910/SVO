@@ -1,0 +1,354 @@
+{
+    "Format": "1.15.0",
+    "DynamicTokens": [
+
+        // Standard Dynamic Tokens
+
+        {
+            "Name": "IndoorVariant", // Indoors
+            "Value": "_Indoor"
+        },
+        {
+            "Name": "IndoorVariant", // Outdoors
+            "Value": "_Outdoor",
+            "When":
+            {
+                "IsOutdoors": "true"
+            },
+        },
+        {
+            "Name": "WeatherVariant", // Indoors/Outdoors
+            "Value": "_Sun"
+        },
+        {
+            "Name": "WeatherVariant", // Rain Indoors/Outdoors
+            "Value": "_Rain",
+            "When":
+            {
+                "Season": "spring, summer, fall",
+                "Weather": "rain, storm",
+            },
+        },
+        {
+            "Name": "WeatherVariant", // Snow Indoors/Outdoors
+            "Value": "_Snow",
+            "When":
+            {
+                "Season": "fall, winter", // Fall added for support for CoF
+                "Weather": "snow",
+            },
+        },
+
+        // Festivals
+
+        {
+            "Name": "Festival",
+            "Value": "EggFestival",
+            "When":
+            {
+                "DayEvent": "egg festival",
+                "LocationName": "town, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "FlowerDance",
+            "When":
+            {
+                "DayEvent": "flower dance",
+                "LocationName": "Forest, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "IceFestival",
+            "When":
+            {
+                "DayEvent": "festival of ice",
+                "LocationName": "Forest, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "Luau",
+            "When":
+            {
+                "DayEvent": "luau",
+                "LocationName": "Beach, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "MoonlightJellies",
+            "When":
+            {
+                "DayEvent": "dance of the moonlight jellies",
+                "LocationName": "Beach, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "SpiritsEve",
+            "When":
+            {
+                "DayEvent": "spirit's eve",
+                "LocationName": "town, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "SVFair",
+            "When":
+            {
+                "DayEvent": "stardew valley fair",
+                "LocationName": "town, temp"
+            }
+        },
+        {
+            "Name": "Festival",
+            "Value": "WinterStar",
+            "When":
+            {
+                "DayEvent": "feast of the winter star",
+                "LocationName": "town, temp"
+            }
+        },
+        {
+            "Name": "Wedding",
+            "Value": "WeddingOutfits",
+            "When":
+            {
+                "DayEvent": "wedding",
+            }
+        },
+
+        // Misc
+
+        {
+            "Name": "Swimsuits",
+            "Value": "Swimsuits",
+            "When":
+            {
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent |contains=Luau, Dance of the Moonlight Jellies": false,
+                "SwimSuitsEnabled": "true"
+            }
+        },
+        {
+            "Name": "MermaidPendantOverlay",
+            "Value": "MermaidPendantOverlay",
+            "When":
+            {
+                "EnableMermaidPendants": "true"
+            }
+        },
+
+        // Mermaid Pendants
+
+        {
+            "Name": "MermaidPendantOverlay_Relationship",
+            "Value": "Sam",
+            "When":
+            {
+                "Relationship:Sam": "Married, Engaged",
+            }
+        },
+    ],
+
+    "ConfigSchema":
+    {
+        "SwimSuitsEnabled":
+        {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+        "EnableMermaidPendants":
+        {
+            "AllowValues": "true, false",
+            "Default": "true"
+        },
+    },
+
+    "Changes": [        
+
+        // Mermaid Pendants
+
+        {
+            "LogName": "Mermaid Pendant #1",
+            "Action": "EditImage",
+            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Mermaid Pendant #2",
+            "Action": "EditImage",
+            "Target": "Portraits/{{MermaidPendantOverlay_Relationship}}",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{MermaidPendantOverlay_Relationship}}_{{Season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+
+        // Sam
+
+        {
+            "LogName": "Sam 1",
+            "Action": "EditImage",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{Target}}/Sam_{{season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            }
+        },
+        {
+            "LogName": "Sam 2",
+            "Action": "EditImage",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{Target}}/Sam_{{season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            }
+        },
+
+        // Sam Main
+
+        {
+            "LogName": "Sam Summer Main",
+            "Action": "EditImage",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{Target}}/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=SamSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "HasFile:{{FromFile}}": true,
+            }
+        },
+
+        // Sam Mermaid Pendant       
+
+        {
+            "LogName": "Sam Summer - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Sam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=SamSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+
+        // B E G I N  F E S T I V A L  S P I T E S
+
+        // Sam
+
+        {
+            "LogName": "Sam Spirit's Eve Festival Characters Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:Scarecrow_Facepaint, Scarecrow_NoFacepaint, MadScientist |key=SamSpiritsEve}}.png",
+            "When":
+            {
+                "DayEvent": "spirit's eve"
+            },
+        },
+        {
+            "LogName": "Sam Festival Characters Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/Festivals/{{Festival}}/Sam_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            },
+        },
+
+        // E N D  F E S T I V A L  C H A R A C T E R S
+
+        // B E G I N  F E S T I V A L  P O R T R A I T S    
+
+        // Sam
+
+        {
+            "LogName": "Sam Spirit's Eve Festival Portraits Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:Scarecrow_Facepaint, Scarecrow_NoFacepaint, MadScientist |key=SamSpiritsEve}}.png",
+            "When":
+            {
+                "DayEvent": "spirit's eve"
+            },
+        },
+        {
+            "LogName": "Sam Festival Portraits Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/Festivals/{{Festival}}/Sam_{{Festival}}.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            },
+        },
+
+        // E N D  F E S T I V A L  P O R T R A I T S    
+
+        // B E G I N  S W I M S U I T  C H A R A C T E R S
+
+        {
+            "LogName": "Swimsuits Character Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            }
+        },
+
+        //  E N D  S W I M S U I T  C H A R A C T E R S
+
+        // B E G I N  S W I M S U I T  P O R T R A I T S
+
+        {
+            "LogName": "Sam Swimsuit Portrait Sprites",
+            "Action": "EditImage",
+            "Target": "Portraits/Sam",
+            "FromFile": "Portraits/{{Swimsuits}}/{{TargetWithoutPath}}PortraitSwim.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            }
+        },
+
+        // E N D  S W I M S U I T  P O R T R A I T S
+
+        // B E G I N  W E D D I N G  C H A R A C T E R S
+
+        {
+            "LogName": "Wedding Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Sam",
+            "FromFile": "Characters/{{Wedding}}/{{TargetWithoutPath}}_Wedding.png",
+            "ToArea":
+            {
+                "X": 0,
+                "Y": 384,
+                "Width": 48,
+                "Height": 32
+            },
+        },
+
+        // E N D  W E D D I N G  C H A R A C T E R S
+    ]
+}
