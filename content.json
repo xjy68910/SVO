@@ -881,10 +881,6 @@
             "Action": "EditImage",
             "Target": "Characters/Gunther, Portraits/Gunther",
             "FromFile": "{{Target}}/Gunther_{{Season}}_Base.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true
-            }
         },
 
         // Gus
@@ -904,13 +900,13 @@
         // Haley
 
         {
-            "LogName": "Haley Spring & Summer",
+            "LogName": "Haley Spring, Summer & Winter",
             "Action": "EditImage",
             "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=HaleySpringSummerVariant}}.png",
+            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=HaleySpringSummerWinterVariant}}.png",
             "When":
             {
-                "Season": "spring, summer",
+                "Season": "spring, summer, winter",
                 "HasFile:{{FromFile}}": true,
             }
         },
@@ -923,17 +919,6 @@
             {
                 "Season": "fall",
                 "HasFile:{{FromFile}}": true,
-            }
-        },
-        {
-            "LogName": "Haley Winter",
-            "Action": "EditImage",
-            "Target": "Characters/Haley, Portraits/Haley",
-            "FromFile": "{{Target}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey |key=HaleyWinterColor}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{FromFile}}": true
             }
         },
         {
@@ -953,13 +938,13 @@
         // Haley Portrait Mermaid Pendant
 
         {
-            "LogName": "Haley Spring & Summer - Mermaid Pendant",
+            "LogName": "Haley Spring, Summer & Winter - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=HaleySpringSummerVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=HaleySpringSummerWinterVariant}}.png",
             "When":
             {
-                "Season": "spring, summer",
+                "Season": "spring, summer, winter",
                 "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
@@ -976,29 +961,17 @@
             },
             "PatchMode": "Overlay"
         },
-        {
-            "LogName": "Haley Winter - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Haley",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey |key=HaleyWinterColor}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{FromFile}}": true
-            },
-            "PatchMode": "Overlay"
-        },
 
         // Haley Cow Photos
 
         {
-            "LogName": "Haley Spring & Summer - Cow Photos",
+            "LogName": "Haley Spring, Summer & Winter - Cow Photos",
             "Action": "EditImage",
             "Target": "LooseSprites/cowPhotos",
-            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=HaleySpringSummerVariant}}.png",
+            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=HaleySpringSummerWinterVariant}}.png",
             "When":
             {
-                "Season": "spring, summer",
+                "Season": "spring, summer, winter",
                 "Weather": "sun, wind",
                 "HasFile:{{FromFile}}": true,
             }
@@ -1013,17 +986,6 @@
                 "Season": "fall",
                 "Weather": "sun, wind",
                 "HasFile:{{FromFile}}": true,
-            }
-        },
-        {
-            "LogName": "Haley Winter - Cow Photos",
-            "Action": "EditImage",
-            "Target": "LooseSprites/cowPhotos",
-            "FromFile": "Characters/Haley/cowPhotos/{{HaleyCowPhotoVariant}}/Haley_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:Pink, Grey |key=HaleyWinterColor}}.png",
-            "When":
-            {
-                "Season": "winter",
-                "HasFile:{{FromFile}}": true
             }
         },
 
@@ -1443,13 +1405,13 @@
         // Penny Main
 
         {
-            "LogName": "Penny Spring",
+            "LogName": "Penny Spring & Fall",
             "Action": "EditImage",
             "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 |key=PennySpringVariant}}.png",
+            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 |key=PennySpringFallVariant}}.png",
             "When":
             {
-                "Season": "spring",
+                "Season": "spring, fall",
                 "HasFile:{{FromFile}}": true,
 
             },
@@ -1466,29 +1428,17 @@
 
             },
         },
-        {
-            "LogName": "Penny Fall",
-            "Action": "EditImage",
-            "Target": "Characters/Penny, Portraits/Penny",
-            "FromFile": "{{Target}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 5 |key=PennyFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
-                "HasFile:{{FromFile}}": true,
-
-            },
-        },
 
         // Penny Portraits Mermaid Pendant
 
         {
-            "LogName": "Penny Spring - Mermaid Pendant",
+            "LogName": "Penny Spring & Fall - Mermaid Pendant",
             "Action": "EditImage",
             "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 |key=PennySpringVariant}}.png",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3, 4, 5 |key=PennySpringFallVariant}}.png",
             "When":
             {
-                "Season": "spring",
+                "Season": "spring, fall",
                 "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
@@ -1501,18 +1451,6 @@
             "When":
             {
                 "Season": "summer, winter",
-                "HasFile:{{FromFile}}": true,
-            },
-            "PatchMode": "Overlay"
-        },
-        {
-            "LogName": "Penny Fall - Mermaid Pendant",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Penny_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 5 |key=PennyFallVariant}}.png",
-            "When":
-            {
-                "Season": "fall",
                 "HasFile:{{FromFile}}": true,
             },
             "PatchMode": "Overlay"
