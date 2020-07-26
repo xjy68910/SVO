@@ -36,7 +36,6 @@ options                        | valid values (select only one, values are seper
 ----------------------------   | ------- 
 `MaruGlasses`                  | true false
 `SandyEnabled`                 | true false
-`SandyVersion`                 | standard sivs dizor poltergeister
 `WizardEnabled`                | true false
 
 
