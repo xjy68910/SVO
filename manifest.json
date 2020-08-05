@@ -4,10 +4,23 @@
     "Version": "2.2.5",
     "Description": "Changes what the villagers wear to match the season.",
     "UniqueID": "Tanpoponoko.SeasonalOutfits",
-    "MinimumApiVersion": "3.2.0",
+    "MinimumApiVersion": "3.6.1",
     "UpdateKeys": ["Nexus:2449"],
     "ContentPackFor":
     {
         "UniqueID": "Pathoschild.ContentPatcher",
     },
+    "ModUpdater":
+    {
+        "Repository": "SVO",
+        "User": "Paradigmnomad",
+        "Directory": "_releases",
+        "ModFolder": "[CP] Seasonal Villager Outfits"
+    },
+    "Dependencies": [
+      {
+        "UniqueID": "Platonymous.ModUpdater",
+        "IsRequired": false
+      },
+  ]
 }
