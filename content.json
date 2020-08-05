@@ -1,6 +1,6 @@
 // Hey! What are you doing in here!
 // If you're here to edit something keep in mind this is an advanced content patcher pack.
-// It heavily utilizes dyanmic tokens and pinned random. Content Patcher was rewrote 4 times to accomodate features for this pack.
+// It heavily utilizes dynamic tokens and pinned random. Content Patcher was rewrote 4 times to accomodate features for this pack.
 // If you don't know what you're doing close out of this.
 
 // ⚠ ANY MODIFICATIONS TO THIS FILE AND THEN REPORTS OF ISSUES WITH SAID MODIFIED FILE WILL BE PROMPTLY DELETED AS I DO NOT OFFER SUPPORT FOR USER EDITS. ⚠
@@ -733,7 +733,7 @@
             "FromFile": "{{Target}}/Clint_Apron.png",
             "When":
             {
-                "LocationName": "Blacksmith"
+                "LocationName": "Blacksmith",
             },
             "PatchMode": "Overlay"
         },
@@ -1646,7 +1646,8 @@
             {
                 "Hearts:Sebastian": "10, 11, 12, 13",
                 "HasSeenEvent: currentPlayer |contains=384882": false,
-                "LocationName": "Mountain"
+                "LocationName": "Mountain",
+                //"Time": "1020"
             },
         },
 
