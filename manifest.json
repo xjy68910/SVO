@@ -10,17 +10,4 @@
     {
         "UniqueID": "Pathoschild.ContentPatcher",
     },
-    "ModUpdater":
-    {
-        "Repository": "SVO",
-        "User": "Paradigmnomad",
-        "Directory": "_releases",
-        "ModFolder": "[CP] Seasonal Villager Outfits"
-    },
-    "Dependencies": [
-      {
-        "UniqueID": "Platonymous.ModUpdater",
-        "IsRequired": false
-      },
-  ]
 }
