@@ -1,0 +1,62 @@
+{
+    "Changes": [
+
+        {
+            "LogName": "Emily Maternity Tattoos",
+            "Action": "EditImage",
+            "Target": "Characters/Emily, Portraits/Emily",
+            "FromFile": "{{Target}}/Tattoos/Emily_Maternity.png",
+            "When":
+            {
+                "Spouse": "Emily",
+                "Pregnant": "Emily",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Emily Aerobics Tattoos",
+            "Action": "EditImage",
+            "Target": "Characters/Emily, Portraits/Emily",
+            "FromFile": "{{Target}}/Tattoos/Emily_Aerobics.png",
+            "When":
+            {
+                "DayOfWeek": "Tuesday",
+                "LocationName": "SeedShop",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Emily Festival Tattoos",
+            "Action": "EditImage",
+            "Target": "Characters/Emily, Portraits/Emily",
+            "FromFile": "{{Target}}/Tattoos/Festivals/Emily_{{Festival}}.png",
+            "When":
+            {
+                "DayEvent": "flower dance, luau, feast of the winter star, dance of the moonlight jellies",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Emily Swim Tattoos",
+            "Action": "EditImage",
+            "Target": "Characters/Emily, Portraits/Emily",
+            "FromFile": "{{Target}}/Tattoos/EmilySwim.png",
+            "When":
+            {
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent |contains=Luau, Dance of the Moonlight Jellies": false,
+                "SwimSuitsEnabled": "true",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+    ]
+}

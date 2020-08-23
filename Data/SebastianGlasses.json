@@ -1,0 +1,58 @@
+{
+    "Changes": [        
+
+        // Sebastian Glasses
+
+        {
+            "LogName": "Sebastian Glasses - Spring, Fall & Winter",
+            "Action": "EditImage",
+            "Target": "Characters/Sebastian, Portraits/Sebastian",
+            "FromFile": "{{Target}}/Glasses/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=SebastianSpringFallWinterVariant}}.png",
+            "When":
+            {
+                "Season": "spring, fall, winter",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Sebastian Glasses - Summer",
+            "Action": "EditImage",
+            "Target": "Characters/Sebastian, Portraits/Sebastian",
+            "FromFile": "{{Target}}/Glasses/Sebastian_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3. 4 |key=SebastianSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Sebastian Glasses - Spirit's Eve",
+            "Action": "EditImage",
+            "Target": "Characters/Sebastian, Portraits/Sebastian",
+            "FromFile": "{{Target}}/Glasses/Festivals/Sebastian_Glasses_Overlay_{{Festival}}_{{Random:1, 2, 3 |key=SebastianSpiritsEveIceVariant}}.png",
+            "When":
+            {
+                "DayEvent": "spirit's eve",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Sebastian Glasses - Other Festivals",
+            "Action": "EditImage",
+            "Target": "Characters/Sebastian, Portraits/Sebastian",
+            "FromFile": "{{Target}}/Glasses/Festivals/Sebastian_Glasses_Overlay_{{Festival}}.png",
+            "When":
+            {
+                "DayEvent": "Egg Festival, flower dance, stardew valley fair, luau",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+    ]
+}

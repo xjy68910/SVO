@@ -1,0 +1,44 @@
+{
+    "Changes": [             
+
+        // Sebastian Piercings
+
+        {
+            "LogName": "Sebastian Piercings",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "{{Target}}/Piercings/Sebastian_Piercings_Overlay_General.png",
+            "When":
+            {
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+        {
+            "LogName": "Sebastian Piercings - Rain",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "{{Target}}/Piercings/Sebastian_Piercings_Overlay_Rain.png",
+            "When":
+            {
+                "IsOutdoors": true,
+                "Weather": "rain, storm, snow",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Sebastian Piercings - Festivals",
+            "Action": "EditImage",
+            "Target": "Portraits/Sebastian",
+            "FromFile": "{{Target}}/Piercings/Festivals/Sebastian_Piercings_Overlay_{{Festival}}_{{Random:1, 2, 3 |key=SebastianSpiritsEveIceVariant}}.png",
+            "When":
+            {
+                "DayEvent": "spirit's eve, festival of ice",
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay"
+        },
+    ]
+}
