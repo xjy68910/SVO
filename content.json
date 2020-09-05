@@ -1,10 +1,12 @@
 // Hey! What are you doing in here!
 // If you're here to edit something keep in mind this is an advanced content patcher pack.
-// It heavily utilizes dynamic tokens and pinned random. Content Patcher was rewrote 4 times to accomodate features for this pack.
+// It heavily utilizes dynamic tokens and pinned random. Content Patcher was rewrote 4 times to accommodate features for this pack and this pack may have been the reason a memory leak was discovered due to its size.
 // If you don't know what you're doing close out of this.
 // For the sake of organization, some of the larger toggleable files have been moved to different json files under Data. 
 
 // ⚠ ANY MODIFICATIONS TO THIS FILE AND THEN REPORTS OF ISSUES WITH SAID MODIFIED FILE WILL BE PROMPTLY DELETED AS I DO NOT OFFER SUPPORT FOR USER EDITS. ⚠
+
+// PS This isn't open source. If you're gonna steal it at least change the variables.
 
 {
     "Format": "1.17.0",
