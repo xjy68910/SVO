@@ -1,7 +1,6 @@
 {
-    "Format": "1.15.0",
+    "Format": "1.18.0",
     "DynamicTokens": [
-        
         {
             "Name": "Wedding",
             "Value": "WeddingOutfits",
@@ -16,17 +15,20 @@
         "HaleyWeddingOutfit":
         {
             "AllowValues": "BlackSuitBouquet, BlackSuitCorsage, WeddingDress, WhiteSuitBouquet, WhiteSuitCorage, NotSnufffie, Disabled",
-            "Default": "Disabled"
+            "Default": "Disabled",
+            "Description": "The style of wedding outfit for Haley. See the wiki/list of options for previews."
         },
         "EmilyWeddingOutfit":
         {
             "AllowValues": "daftpatience, Disabled",
-            "Default": "Disabled"
+            "Default": "Disabled",
+            "Description": "The style of wedding outfit for Emily. See the wiki/list of options for previews."
         },
         "LeahWeddingOutfit":
         {
             "AllowValues": "tanpoponoko, Disabled",
-            "Default": "Disabled"
+            "Default": "Disabled",
+            "Description": "The style of wedding outfit for Leah. See the wiki/list of options for previews."
         },
     },
     "Changes": [

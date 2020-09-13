@@ -1,5 +1,5 @@
 {
-    "Format": "1.15.0",
+    "Format": "1.18.0",
     "DynamicTokens": [
 
         // Standard Dynamic Tokens
@@ -125,8 +125,33 @@
                 "LocationName": "beach",
                 "Season": "summer",
                 "DayEvent |contains=Luau, Dance of the Moonlight Jellies": false,
+                "HasMod |contains=spacechase0.SurfingFestival": false,
                 "SwimSuitsEnabled": "true"
-            }
+            },
+        },
+        {
+            "Name": "Swimsuits",
+            "Value": "Swimsuits",
+            "When":
+            {
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent |contains=Luau, Dance of the Moonlight Jellies": false,
+                "HasMod": "spacechase0.SurfingFestival",
+                "SwimSuitsEnabled": "true"
+            },
+        },
+        {
+            "Name": "Swimsuits",
+            "Value": "Swimsuits",
+            "When":
+            {
+                "LocationName": "beach, temp",
+                "Season": "summer",
+                "Day": "5",
+                "HasMod": "spacechase0.SurfingFestival",
+                "SwimSuitsEnabled": "true"
+            },
         },
         {
             "Name": "MermaidPendantOverlay",
@@ -153,12 +178,14 @@
         "SwimSuitsEnabled":
         {
             "AllowValues": "true, false",
-            "Default": "true"
+            "Default": "true",
+            "Description": "Enables the villagers wearing swimsuits when at the beach or during beach-location festivals."
         },
         "EnableMermaidPendants":
         {
             "AllowValues": "true, false",
-            "Default": "true"
+            "Default": "true",
+            "Description": "Enables mermaid pendant overlays for engaged/married NPCs. Portraits only."
         },
 
         // Seasonal Villager Outfits
@@ -169,6 +196,7 @@
         {
             "AllowValues": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
             "Default": "FrontFacingEemie",
+            "Description": "The artists style of portrait for Elliott. See the wiki/list of options for previews."
         },
     },
     "Changes": [
@@ -184,7 +212,8 @@
             {
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
                 "HasFile:{{FromFile}}": true,
-            }
+            },
+            "Update": "OnLocationChange"
         },
         {
             "LogName": "Elliott Summer & Fall",
@@ -196,7 +225,8 @@
                 "Season": "summer, fall",
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
                 "HasFile:{{FromFile}}": true,
-            }
+            },
+            "Update": "OnLocationChange"
         },
 
         // Elliott Portrait Mermaid Pendant
@@ -211,7 +241,8 @@
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
                 "HasFile:{{FromFile}}": true,
             },
-            "PatchMode": "Overlay"
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
         },
         {
             "LogName": "Elliott Summer & Fall - Mermaid Pendant",
@@ -224,7 +255,8 @@
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
                 "HasFile:{{FromFile}}": true,
             },
-            "PatchMode": "Overlay"
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
         },
 
         // Festivals
@@ -239,6 +271,7 @@
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
                 "HasFile:{{FromFile}}": true,
             },
+            "Update": "OnLocationChange"
         },
 
         // Swimsuits
@@ -252,7 +285,8 @@
             {
                 "ElliottPortraitStyle": "FrontFacingEemie, FrontFacingLumen, FrontFacingSabreene",
                 "HasFile:{{FromFile}}": true,
-            }
+            },
+            "Update": "OnLocationChange"
         },
     ]
 }

@@ -9,7 +9,7 @@
 // PS This isn't open source. If you're gonna steal it at least change the variables.
 
 {
-    "Format": "1.17.0",
+    "Format": "1.18.0",
     "DynamicTokens": [
 
         // Standard Dynamic Tokens
@@ -355,27 +355,32 @@
         "SwimSuitsEnabled":
         {
             "AllowValues": "true, false",
-            "Default": "true"
+            "Default": "true",
+            "Description": "Enables the villagers wearing swimsuits when at the beach or during beach-location festivals."
         },
         "EnableMermaidPendants":
         {
             "AllowValues": "true, false",
-            "Default": "true"
+            "Default": "true",
+            "Description": "Enables mermaid pendant overlays for engaged/married NPCs. Portraits only."
         },
         "WeddingStyle":
         {
             "AllowValues": "VCSO, DesertDove, SCS, Vanilla",
-            "Default": "DesertDove"
+            "Default": "DesertDove",
+            "Description": "The style of wedding outfit. See the wiki/list of options for previews."
         },
         "EnableFlowerQueen":
         {
             "AllowValues": "true, false",
-            "Default": "true"
+            "Default": "true",
+            "Description": "Allows other NPCs to be crowned flower queen besides Haley."
         },
         "AllowBachelorsToBeFlowerKing":
         {
             "AllowValues": "true, false",
-            "Default": "true"
+            "Default": "true",
+            "Description": "Allows the bachelors to be crowned flower king."
         },
 
         // Seasonal Villager Outfits 
@@ -385,7 +390,8 @@
         "EmilyTattoos":
         {
             "AllowValues": "true, false",
-            "Default": "false"
+            "Default": "false",
+            "Description": "Enables tattoo overlays for Emily."
         },       
 
         // Haley
@@ -393,7 +399,8 @@
         "HaleyCowPhotoVariant":
         {
             "AllowValues": "Seasonal, Vanilla",
-            "Default": "Seasonal"
+            "Default": "Seasonal",
+            "Description": "Changes Haley's 8-heart event photos to be seasonal or vanilla."
         },
 
         // Harvey
@@ -401,12 +408,14 @@
         "HarveyFacialHair":
         {
             "AllowValues": "Mustache, Shaved",
-            "Default": "Mustache"
+            "Default": "Mustache",
+            "Description": "Keeps Harvey's mustache or shaves it off."
         },
         "HarveyEyeColor":
         {
             "AllowValues": "Green, Brown",
-            "Default": "Green"
+            "Default": "Green",
+            "HarveyEyeColor": "Changes the color of Harvey's eyes."
         },
 
         // Maru - Effects the Character sprite only.
@@ -414,7 +423,8 @@
         "MaruGlasses":
         {
             "AllowValues": "true, false",
-            "Default": "false"
+            "Default": "false",
+            "Description": "Enables glasses overlays for Maru. Character only."
         },
 
         // Sandy
@@ -422,7 +432,8 @@
         "SandyEnabled":
         {
             "AllowValues": "true, false",
-            "Default": "false"
+            "Default": "false",
+            "Description": "Enable SVO for Sandy."
         },
 
         // Sebastian
@@ -430,12 +441,14 @@
         "SebastianGlasses":
         {
             "AllowValues": "true, false",
-            "Default": "false"
+            "Default": "false",
+            "Description": "Enables glasses overlay for Sebastian. Can toggle both glasses & piercings."
         },
         "SebastianPiercings":
         {
             "AllowValues": "true, false",
-            "Default": "false"
+            "Default": "false",
+            "Description": "Enables piecings over for Sebastian. Can toggle both glasses & piercings."
         },
 
         // Wizard
@@ -443,7 +456,8 @@
         "WizardEnabled":
         {
             "AllowValues": "true, false",
-            "Default": "false"
+            "Default": "false",
+            "Description": "Enable SVO for the Wizard."
         },
 
         // Swimsuit Config
@@ -453,7 +467,8 @@
         "LinusSwimVariant":
         {
             "AllowValues": "Censored, GrassSkirt",
-            "Default": "Censored"
+            "Default": "Censored",
+            "Description": "Changes Linus's swim outfit to either be censored with a black bar or give him a grass skirt. Character only."
         },
     },
 
@@ -1523,7 +1538,7 @@
         // B E G I N  F E S T I V A L 
 
         {
-            "LogName": "Festival Portrait Sprites",
+            "LogName": "Festival Sprites",
             "Action": "EditImage",
             "Target": "Characters/Abigail, Portraits/Abigail, Characters/Alex, Portraits/Alex, Characters/Caroline, Portraits/Caroline, Characters/Clint, Portraits/Clint, Characters/Demetrius, Portraits/Demetrius, Characters/Emily, Portraits/Emily, Characters/Elliott, Portraits/Elliott, Characters/Evelyn, Portraits/Evelyn, Characters/George, Portraits/George, Characters/Gus, Portraits/Gus, Characters/Haley, Portraits/Haley, Characters/Jas, Portraits/Jas, Characters/Jodi, Portraits/Jodi, Characters/Kent, Portraits/Kent, Characters/Leah, Portraits/Leah, Characters/Lewis, Portraits/Lewis, Characters/Linus, Portraits/Linus, Characters/Maru, Portraits/Maru, Characters/Marnie, Portraits/Marnie, Characters/Pam, Portraits/Pam, Characters/Penny, Portraits/Penny, Characters/Pierre, Portraits/Pierre, Characters/Robin, Portraits/Robin, Characters/Sam, Portraits/Sam, Characters/Sebastian, Portraits/Sebastian, Characters/Shane, Portraits/Shane, Characters/Willy, Portraits/Willy, Characters/Vincent, Portraits/Vincent,",
             "FromFile": "{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",

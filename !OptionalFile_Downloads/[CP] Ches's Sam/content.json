@@ -1,5 +1,5 @@
 {
-    "Format": "1.15.0",
+    "Format": "1.18.0",
     "DynamicTokens": [
 
         // Standard Dynamic Tokens
@@ -144,8 +144,33 @@
                 "LocationName": "beach",
                 "Season": "summer",
                 "DayEvent |contains=Luau, Dance of the Moonlight Jellies": false,
+                "HasMod |contains=spacechase0.SurfingFestival": false,
                 "SwimSuitsEnabled": "true"
-            }
+            },
+        },
+        {
+            "Name": "Swimsuits",
+            "Value": "Swimsuits",
+            "When":
+            {
+                "LocationName": "beach",
+                "Season": "summer",
+                "DayEvent |contains=Luau, Dance of the Moonlight Jellies": false,
+                "HasMod": "spacechase0.SurfingFestival",
+                "SwimSuitsEnabled": "true"
+            },
+        },
+        {
+            "Name": "Swimsuits",
+            "Value": "Swimsuits",
+            "When":
+            {
+                "LocationName": "beach, temp",
+                "Season": "summer",
+                "Day": "5",
+                "HasMod": "spacechase0.SurfingFestival",
+                "SwimSuitsEnabled": "true"
+            },
         },
         {
             "Name": "MermaidPendantOverlay",
@@ -162,17 +187,20 @@
         "SwimSuitsEnabled":
         {
             "AllowValues": "true, false",
-            "Default": "true"
+            "Default": "true",
+            "Description": "Enables the villagers wearing swimsuits when at the beach or during beach-location festivals."
         },
         "EnableMermaidPendants":
         {
             "AllowValues": "true, false",
-            "Default": "true"
+            "Default": "true",
+            "Description": "Enables mermaid pendant overlays for engaged/married NPCs. Portraits only."
         },
         "SamEyeColor":
         {
             "AllowValues": "blue, green",
-            "Default": "blue"
+            "Default": "blue",
+            "Description": "Changes the color of Sam's eyes."
         }
     },
 
@@ -190,6 +218,7 @@
                 "SamEyeColor": "blue, green",
                 "HasFile:{{FromFile}}": true,
             },
+            "Update": "OnLocationChange"
         },
         {
             "LogName": "Sam Main",
@@ -201,6 +230,7 @@
                 "SamEyeColor": "blue, green",
                 "HasFile:{{FromFile}}": true,
             },
+            "Update": "OnLocationChange"
         },
 
         // Sam Main
@@ -215,7 +245,8 @@
                 "Season": "summer",
                 "SamEyeColor": "blue, green",
                 "HasFile:{{FromFile}}": true,
-            }
+            },
+            "Update": "OnLocationChange"
         },
 
         // Sam Mermaid Pendant       
@@ -230,21 +261,23 @@
                 "Season": "summer",
                 "HasFile:{{FromFile}}": true,
             },
-            "PatchMode": "Overlay"
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
         },
 
-        // B E G I N  F E S T I V A L  S P I T E S
+        // B E G I N  F E S T I V A L 
 
         {
             "LogName": "Festival Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Sam",
-            "FromFile": "Characters/{{SamEyeColor}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{TargetPathOnly}}/{{SamEyeColor}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
             "When":
             {
                 "SamEyeColor": "blue, green",
                 "HasFile:{{FromFile}}": true,
             },
+            "Update": "OnLocationChange"
         },
 
         // Sam
@@ -252,75 +285,32 @@
         {
             "LogName": "Sam Spirit's Eve Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Sam",
-            "FromFile": "Characters/{{SamEyeColor}}/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{TargetPathOnly}}/{{SamEyeColor}}/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
             "When":
             {
                 "SamEyeColor": "blue, green",
                 "DayEvent": "spirit's eve",
             },
+            "Update": "OnLocationChange"
         },
 
-        // E N D  F E S T I V A L  C H A R A C T E R S
+        // E N D  F E S T I V A L 
 
-        // B E G I N  F E S T I V A L  P O R T R A I T S    
-
-        {
-            "LogName": "Festival Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Sam",
-            "FromFile": "Portraits/{{SamEyeColor}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
-            "When":
-            {
-                "HasFile:{{FromFile}}": true,
-                "SamEyeColor": "blue, green"
-            },
-        },
-
-        // Penny
-
-        {
-            "LogName": "Sam Spirit's Eve Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Sam",
-            "FromFile": "Portraits/{{SamEyeColor}}/Festivals/{{Festival}}/Sam_{{Festival}}_{{Random:1, 2 |key=SamSpiritsEveVariant}}.png",
-            "When":
-            {
-                "DayEvent": "spirit's eve",
-                "SamEyeColor": "blue, green"
-            },
-        },
-
-        // E N D  F E S T I V A L  P O R T R A I T S    
-
-        // B E G I N  S W I M S U I T  C H A R A C T E R S
+        // B E G I N  S W I M S U I T  
 
         {
             "LogName": "Sam Swimsuits Character Sprites",
             "Action": "EditImage",
-            "Target": "Characters/Sam",
-            "FromFile": "Characters/{{Swimsuits}}/SamSwim_{{SamEyeColor}}.png",
+            "Target": "Characters/Sam, Portraits/Sam",
+            "FromFile": "{{TargetPathOnly}}/{{Swimsuits}}/SamSwim_{{SamEyeColor}}.png",
             "When":
             {
                 "SamEyeColor": "blue, green"
             },
+            "Update": "OnLocationChange"
         },
 
-        //  E N D  S W I M S U I T  C H A R A C T E R S
-
-        // B E G I N  S W I M S U I T  P O R T R A I T S
-
-        {
-            "LogName": "Sam Swimsuits Portrait Sprites",
-            "Action": "EditImage",
-            "Target": "Portraits/Penny",
-            "FromFile": "Portraits/{{Swimsuits}}/SamPortraitSwim_{{SamEyeColor}}.png",
-            "When":
-            {
-                "SamEyeColor": "blue, green"
-            },
-        },
-
-        // E N D  S W I M S U I T  P O R T R A I T S
+        //  E N D  S W I M S U I T          
     ]
 }
