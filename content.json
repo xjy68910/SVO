@@ -1892,7 +1892,7 @@
         // Mermaid Pendant Overlays
 
         {
-            "LogName": "Mermaid Pendany Overlays",
+            "LogName": "Mermaid Pendant Overlays",
             "Action": "Include",
             "FromFile": "Data/MermaidPendantOverlay.json",
             "When":
