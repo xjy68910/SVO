@@ -1,0 +1,265 @@
+{
+    "Changes": [
+
+        // Clint
+
+        {
+            "LogName": "Clint Spring, Summer & Fall - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Clint",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Clint_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2|key=ClintVariant}}.png",
+            "When":
+            {
+                "Season": "spring, summer, fall",
+                "HasFile:{{FromFile}}": true,
+                "DateClint": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },        
+
+        // Gus
+
+        {
+            "LogName": "Gus Spring, Fall, & Winter - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Gus",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Gus_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "Season": "spring, fall, winter",
+                "DateGus": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Gus Summer - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Gus",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Gus_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=GusSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "DateGus": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+
+        // Lewis
+
+        {
+            "LogName": "Lewis Location - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Lewis",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Lewis_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "DateLewis": true,
+                "HasFile:{{FromFile}}": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Lewis Standard - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Lewis",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Lewis_{{Season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "DateLewis": true,
+                "HasFile:{{FromFile}}": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+
+        // Linus
+
+        {
+            "LogName": "Linus Location - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Linus",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Linus_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "DateLinus": true,
+                "HasFile:{{FromFile}}": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Linus Standard - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Linus",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Linus_{{Season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "DateLinus": true,
+                "HasFile:{{FromFile}}": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+
+        // Marnie
+
+        {
+            "LogName": "Marnie Spring & Winter Main - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Marnie",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=MarnieSpringWinterVariant}}.png",
+            "When":
+            {
+                "Season": "spring, winter",
+                "DateMarnie": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Marnie Summer & Fall Main - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Marnie",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Marnie_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2, 3 |key=MarnieSummerFallVariant}}.png",
+            "When":
+            {
+                "Season": "summer, fall",
+                "DateMarnie": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+
+        // Marnie Work
+
+        {
+            "LogName": "Marnie Spring & Winter - Work Portrait - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Marnie",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Work/Marnie_{{Season}}_Work_{{Random:1, 2 |key=MarnieSpringWinterVariant}}.png",
+            "When":
+            {
+                "Season": "spring, winter",
+                "LocationName": "AnimalShop",
+                "DateMarnie": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Marnie Summer & Fall - Work Portrait - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Marnie",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Work/Marnie_{{Season}}_Work_{{Random:1, 2, 3 |key=MarnieSummerFallVariant}}.png",
+            "When":
+            {
+                "Season": "summer, fall",
+                "LocationName": "AnimalShop",
+                "DateMarnie": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+
+        // Pam
+
+        {
+            "LogName": "Pam Spring, Fall, & Winter - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Pam",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "Season": "spring, fall, winter",
+                "DatePam": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Pam Summer - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Pam",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_{{Random:1, 2 |key=PamSummerVariant}}.png",
+            "When":
+            {
+                "Season": "summer",
+                "DatePam": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+
+        // Pam Bus Stop Repair
+
+        {
+            "LogName": "Pam - Rain/Snow Bus Stop Repair CC Completion - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Pam",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/PostBus/Pam_{{Season}}{{IndoorVariant}}{{WeatherVariant}}_PostBus.png",
+            "When":
+            {
+                "Weather": "rain, storm, snow",
+                "HasFlag": "ccVault, jojaVault",
+                "DatePam": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+
+        // Sandy
+
+        {
+            "LogName": "Sandy Main - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Sandy",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/{{SandyStyle}}/Sandy.png",
+            "When":
+            {
+                "DateSandy": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "PatchMode": "Overlay",
+        },
+
+        // Willy
+
+        {
+            "LogName": "Willy Location - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Willy",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Willy_{{Season}}{{IndoorVariant}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "DateWilly": true,
+                "HasFile:{{FromFile}}": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Willy Standard - Mermaid Pendant",
+            "Action": "EditImage",
+            "Target": "Portraits/Willy",
+            "FromFile": "Portraits/{{MermaidPendantOverlay}}/{{MermaidPendantOverlay_Relationship}}/Willy_{{Season}}{{WeatherVariant}}.png",
+            "When":
+            {
+                "DateWilly": true,
+                "HasFile:{{FromFile}}": true
+            },
+            "PatchMode": "Overlay",
+            "Update": "OnLocationChange"
+        },
+    ]
+}

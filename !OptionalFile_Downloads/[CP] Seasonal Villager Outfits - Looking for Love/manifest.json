@@ -1,0 +1,25 @@
+{
+    "Name": "[CP] Looking for Love for SVO",
+    "Author": "sivolobwho and foggywizard (LfL Authors) Airyn (Art Updated) Paradigmnomad (Coding)",
+    "Description": "Seasonal companion mod to Looking for Love, read the included ReadMe",
+    "Version": "1.0.0",
+    "UniqueID": "SVO.LfLCompatibility",
+    "ContentPackFor":
+    {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+    {
+        "UniqueID": "Tanpoponoko.SeasonalOutfits",
+        "IsRequired": true
+    },		
+    {
+        "UniqueID": "foggy.LfL",
+        "IsRequired": true
+    }, 
+    {
+        "UniqueID": "AlternateSandy.SeasonalOutfits",
+        "IsRequired": false
+    },],
+    "UpdateKeys": ["Nexus:2449@LfL"],
+}

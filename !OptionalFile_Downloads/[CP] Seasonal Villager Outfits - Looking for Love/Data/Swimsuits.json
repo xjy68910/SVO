@@ -1,0 +1,80 @@
+{
+    "Changes": [
+    {
+        "LogName": "Clint Swimsuits Sprites",
+        "Action": "EditImage",
+        "Target": "Characters/Clint, Portraits/Clint",
+        "FromFile": "{{TargetPathOnly}}/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
+        "When":
+        {
+            "DateClint": true,
+        },
+        "Update": "OnLocationChange"
+    },
+    {
+        "LogName": "Gus Swimsuits Sprites",
+        "Action": "EditImage",
+        "Target": "Characters/Gus, Portraits/Gus",
+        "FromFile": "{{TargetPathOnly}}/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
+        "When":
+        {
+            "DateGus": true,
+        },
+        "Update": "OnLocationChange"
+    },
+    {
+        "LogName": "Lewis Swimsuits Sprites",
+        "Action": "EditImage",
+        "Target": "Characters/Lewis, Portraits/Lewis",
+        "FromFile": "{{TargetPathOnly}}/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
+        "When":
+        {
+            "DateLewis": true,
+        },
+        "Update": "OnLocationChange"
+    },
+    {
+        "LogName": "Linus Swimsuits Sprites",
+        "Action": "EditImage",
+        "Target": "Characters/Linus, Portraits/Linus",
+        "FromFile": "{{TargetPathOnly}}/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
+        "When":
+        {
+            "DateLinus": true,
+        },
+        "Update": "OnLocationChange"
+    },
+    {
+        "LogName": "Marnie Swimsuits Sprites",
+        "Action": "EditImage",
+        "Target": "Characters/Marnie, Portraits/Marnie",
+        "FromFile": "{{TargetPathOnly}}/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
+        "When":
+        {
+            "DateMarnie": true,
+        },
+        "Update": "OnLocationChange"
+    },
+    {
+        "LogName": "Pam Swimsuits Sprites",
+        "Action": "EditImage",
+        "Target": "Characters/Pam, Portraits/Pam",
+        "FromFile": "{{TargetPathOnly}}/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
+        "When":
+        {
+            "DatePam": true,
+        },
+        "Update": "OnLocationChange"
+    },
+    {
+        "LogName": "Willy Swimsuits Sprites",
+        "Action": "EditImage",
+        "Target": "Characters/Willy, Portraits/Willy",
+        "FromFile": "{{TargetPathOnly}}/{{Swimsuits}}/{{TargetWithoutPath}}Swim.png",
+        "When":
+        {
+            "DateWilly": true,
+        },
+        "Update": "OnLocationChange"
+    }, ]
+}

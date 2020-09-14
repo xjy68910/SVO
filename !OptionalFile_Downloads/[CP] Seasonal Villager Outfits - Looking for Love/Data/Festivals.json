@@ -1,0 +1,87 @@
+{
+    "Changes": [
+    {
+            "LogName": "Clint Festival Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Clint, Portraits/Clint",
+            "FromFile": "{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "DateClint": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Gus Festival Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Gus, Portraits/Gus",
+            "FromFile": "{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "DateGus": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Lewis Festival Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Lewis, Portraits/Lewis",
+            "FromFile": "{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "DateLewis": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Linus Festival Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Linus, Portraits/Linus",
+            "FromFile": "{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "DateLinus": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Marnie Festival Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Marnie, Portraits/Marnie",
+            "FromFile": "{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "DateMarnie": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Pam Festival Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Pam, Portraits/Pam",
+            "FromFile": "{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "DatePam": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Willy Festival Sprites",
+            "Action": "EditImage",
+            "Target": "Characters/Willy, Portraits/Willy",
+            "FromFile": "{{TargetPathOnly}}/Festivals/{{Festival}}/{{TargetWithoutPath}}_{{Festival}}.png",
+            "When":
+            {
+                "DateWilly": true,
+                "HasFile:{{FromFile}}": true,
+            },
+            "Update": "OnLocationChange"
+        }, ]
+}
